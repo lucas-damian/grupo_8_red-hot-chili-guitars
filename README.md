@@ -14,7 +14,7 @@ Nos dedicamos a la venta de Instrumentos y accesorios musicales, ofrecemos las m
 
 ## Breve descripcion de nuestro cliente:
 
-Apuntamos a adolescentes, niños y adultos que muestren interés o deseen incursionar en la música que a sido una fuente de inspiración tanto como temas de Rock , Blus, Cumbia, Reggae, etc. Consiguiendo una de los instrumentos mas fieles "La Guitarra" usadas por John Frusciante, Saul Hudson (Slash), Raúl Rosales, Bob Marley , etc. 
+Apuntamos a adolescentes, niños y adultos que muestren interés o deseen incursionar en la música que a sido una gran fuente de inspiración tanto como temas de Rock , Blus, Cumbia, Reggae, etc. Consiguiendo uno de los instrumentos mas fieles "La Guitarra" usadas por John Frusciante, Saul Hudson (Slash), Raúl Rosales, Bob Marley , etc. 
 
 ## Breve descripcion de los integrantes del grupo 
 
