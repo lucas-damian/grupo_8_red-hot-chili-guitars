@@ -13,7 +13,7 @@
 
 ## Breve descripcion de nuestro cliente:
 
-Apuntamos a adolescentes, niños y adultos que muestren interés o deseen incursionar en la música que a sido una gran fuente de inspiración tanto como temas de Rock , Blus, Cumbia, Reggae, etc.
+Nuestro modelo de página web está orientada a personas que se encuentran en el rango de 15 a 35 años de edad, que busquen iniciar o mejorar su carrera musical. Está especialmente pensada para cualquier adepto de la música y acompaña a los mismos con una experiencia de jovialidad, fuerza y pasión.  Entendemos que los iniciados, son personas que por demás tienen la cabeza puesta en el final del camino, el estrellato directo, por eso, dirijimos nuestros esfuerzos para, de alguna forma, nivelarles el camino y que su primer y más importante elección, la del instrumento con el cual empezar, sea de manera simple y directa, sin olvidarnos de la experiencia limpia, práctica y sencilla de manejo de productos, que nuestros músicos mas avanzados e intermedios, necesitan.
 
 ## Breve descripcion de la oferta de productos:
 
