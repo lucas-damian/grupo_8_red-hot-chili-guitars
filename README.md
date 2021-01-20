@@ -9,14 +9,18 @@
 
 ## Nuestro Proyecto:
 
-Nos dedicamos a la venta de Instrumentos y accesorios musicales, ofrecemos las mejores marcas y calidad en cada producto que vendemos, para que los nuevos y viejos rockstars puedan disfrutar de la mejor manera la música que tanto nos gusta.
 
 
 ## Breve descripcion de nuestro cliente:
 
 Apuntamos a adolescentes, niños y adultos que muestren interés o deseen incursionar en la música que a sido una gran fuente de inspiración tanto como temas de Rock , Blus, Cumbia, Reggae, etc.
 
-## Breve descripcion de los integrantes del grupo 
+##Breve descripcion de la oferta de productos:
+
+Nos dedicamos a la venta de Instrumentos y accesorios musicales, ofrecemos las mejores marcas y calidad en cada producto que vendemos, para que los nuevos y viejos rockstars puedan disfrutar de la mejor manera la música que tanto nos gusta.
+
+
+## Breve descripcion de los integrantes del grupo:
 
 ### Red hot chili guitars es un grupo integrado por 4 personas, nos inspiramos en la banda Red Hot Chili Peppers para orientarnos, todos tenemos un gusto en común que nos representa y es el amor por la música y el Rock, estos son algunos datos de nosotros para que nos conozcas mas :
 
