@@ -15,7 +15,7 @@
 
 Apuntamos a adolescentes, niños y adultos que muestren interés o deseen incursionar en la música que a sido una gran fuente de inspiración tanto como temas de Rock , Blus, Cumbia, Reggae, etc.
 
-##Breve descripcion de la oferta de productos:
+## Breve descripcion de la oferta de productos:
 
 Nos dedicamos a la venta de Instrumentos y accesorios musicales, ofrecemos las mejores marcas y calidad en cada producto que vendemos, para que los nuevos y viejos rockstars puedan disfrutar de la mejor manera la música que tanto nos gusta.
 
