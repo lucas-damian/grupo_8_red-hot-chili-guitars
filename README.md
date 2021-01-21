@@ -9,6 +9,7 @@
 
 ## Nuestro Proyecto:
 
+Nuestro proyecto comenzó con la consigna de crear un e-commerce, ese mismo día el equipo se reunió a plantear las posibles ideas sobre la temática del sitio, entre todas esas, salió la elección de una casa de venta de instrumentos musicales, como nos inspiramos? fue fácil, a todos nos gustaba la música, y también la banda de rock red hot chili peppers, entonces decidimos hacerles un homenaje e inspirarnos con su imagen. Esa misma tarde ya nos sentamos a debatir la idea, y empezamos con la búsqueda de referencias de otros sitios del mismo rubro. Al día siguiente, una vez buscadas las referencias, nos pasamos la tarde definiendo de como iba a ser el sitio, incorporar todas las ideas y referencias que cada uno encontró, y así llegar a los resultados de los bocetos que tenemos hecho.
 
 
 ## Breve descripcion de nuestro cliente:
