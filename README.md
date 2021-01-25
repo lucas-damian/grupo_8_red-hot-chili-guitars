@@ -37,3 +37,6 @@ acróbata callejero por hobbie, estudiando de todo y jugador de todo lo que sea 
 
 • Lucas Herlan, tengo 21 años, finalicé mis estudios secundarios en Nuestra Señora Del Buen Viaje, hice varios cursos de informática y trabaje en una carpintería en el sector de armador, en mis tiempos libres leo libros y me gusta informarme en lo que sea.
 
+## tablero de trello:
+
+https://trello.com/b/TrTbix0U/grupo-8-red-hot-chili-guitars
