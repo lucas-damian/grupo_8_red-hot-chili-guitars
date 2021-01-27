@@ -26,12 +26,17 @@ a {
 
 /* FOOTER */
 
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 footer{
   background-image: url("/images/footer_fondo.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 500px; 
   /* display: flex;
   align-items: center; */
 }
