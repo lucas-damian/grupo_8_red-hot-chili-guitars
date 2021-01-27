@@ -1,0 +1,106 @@
+*,*:after,
+*:before{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: inherit;
+}
+
+
+.btn{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* ----------------------------------- */
+
+.header{
+    width: 100vw;
+    height: 20rem;
+    background-image: url(/img/header_fondo\ copy.svg);
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+    background-position-y:-5rem;
+}
+
+.header__container{
+    margin: 0 auto;
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0 0 2rem;
+}
+
+
+.header__form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-bar{
+    background-color: khaki;
+    border-radius: .5rem;
+    padding: .8rem 1rem;
+}
+
+.barra-busqueda{
+    border: none;
+    background-color: transparent;
+}
+
+.btn--search{
+    background-color: transparent;
+    border: none;
+}
+
+.login{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar{
+    background-color: darkred;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+
+.list--header{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.btn--header{
+    display: inline-block;
+    background-color: cornflowerblue;
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+
+.btn--header:last-child{
+    margin-left: 2rem;
+}
+.img__logo{
+    width: 30rem;
+}
