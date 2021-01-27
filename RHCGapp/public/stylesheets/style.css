@@ -1,8 +1,49 @@
+*{
+  box-sizing: border-box;
+ 
+}
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lobster', cursive;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  color: #00B7FF;
+  color: #f6eec9;
 }
+
+
+
+
+/* FOOTER */
+
+
+footer{
+  background-image: url("/images/footer_fondo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  /* display: flex;
+  align-items: center; */
+}
+
+
+
+footer .nav-footer{
+  font-size: x-large;
+  margin-top: 80px;
+}
+
+footer .nav-footer ul li{
+  display: inline-flex;
+}
+
