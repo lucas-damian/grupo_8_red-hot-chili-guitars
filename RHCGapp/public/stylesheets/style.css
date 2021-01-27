@@ -9,6 +9,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Lobster', cursive;
+  overflow-x: hidden;
+}
+
+main{
+  height: 100vh;
 }
 
 ul{
@@ -52,3 +57,16 @@ footer .nav-footer ul li{
   display: inline-flex;
 }
 
+.nav__footer{
+  margin-top: 12rem;
+}
+
+.logo-footer{
+  display: inline-block;
+  width: 44.5rem;
+  margin-top: 6rem;
+}
+
+.logo-footer img{
+  width: 100%;
+}

@@ -28,12 +28,12 @@ body{
     background-image: url(/img/header_fondo\ copy.svg);
     background-repeat: no-repeat;
     padding-top: 2rem;
-    background-position-y:-5rem;
+    background-position-y:-2rem;
 }
 
 .header__container{
     margin: 0 auto;
-    width: 60vw;
+    width: 80vw;
     display: flex;
     justify-content: space-between;
 }
@@ -53,14 +53,16 @@ body{
 }
 
 .search-bar{
-    background-color: khaki;
-    border-radius: .5rem;
-    padding: .8rem 1rem;
+    background-color: #db9e6c;
+    border-radius: .9rem;
+    padding: .6rem 1rem;
 }
 
 .barra-busqueda{
     border: none;
     background-color: transparent;
+    font-family: "arimo";
+    font-size: 1.4rem;
 }
 
 .btn--search{
@@ -73,34 +75,59 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 2rem;
 }
 
 .nav-bar{
-    background-color: darkred;
-    padding: 1rem;
+    background-color: #4c0505;
     border-radius: 1.5rem;
     margin-top: 1.5rem;
+    padding: 1rem 0;
 }
+
 
 
 .list--header{
     list-style: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
+
+.item--header:not(:last-child){
+    border-right: .4rem solid burlywood ;
+    border-radius: .2rem;
+}
+
+.item--header:nth-child(4){
+    padding: 1rem 1rem 1rem .5rem;
+}
+
+
+
 .btn--header{
     display: inline-block;
-    background-color: cornflowerblue;
-    font-size: 1.5rem;
-    width: 80%;
+    font-size: 1.8rem;
+    line-height: 1;
+    width: 90%;
+    color:#f6efca;
+    transition: color .2s;
 }
+
 
 
 .btn--header:last-child{
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
+
+
+.btn--header:hover{
+    color:#a20a0a;
+}
+
+
 .img__logo{
-    width: 30rem;
+    width: 44.5rem;
 }
