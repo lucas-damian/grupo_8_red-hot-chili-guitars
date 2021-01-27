@@ -1,12 +1,18 @@
-<%- include("partials/head") %> 
-<body>
-<%- include("partials/header") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
 
-  <main>
-    red hot chili guitars
-  </main>  
 
 
-<%- include("partials/footer") %> 
-</body>
+
+<!-- footer -->
+    <%- include('partials/footer')  %> 
+<!-- /footer -->
+  </body>
 </html>
