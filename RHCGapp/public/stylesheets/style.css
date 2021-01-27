@@ -1,6 +1,7 @@
 *{
   box-sizing: border-box;
- 
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -57,16 +58,21 @@ footer .nav-footer ul li{
   display: inline-flex;
 }
 
-.nav__footer{
+footer .nav__footer{
   margin-top: 12rem;
 }
 
-.logo-footer{
+footer .logo-footer{
   display: inline-block;
   width: 44.5rem;
   margin-top: 6rem;
 }
 
-.logo-footer img{
+footer .logo-footer img{
   width: 100%;
+}
+
+footer .pagos{
+  display: flex;
+  text-align: end;
 }
