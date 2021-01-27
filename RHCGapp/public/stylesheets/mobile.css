@@ -27,8 +27,9 @@ body{
     height: 20rem;
     background-image: url(/img/header_fondo\ copy.svg);
     background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 2rem;
-    background-position-y:-2rem;
+    background-position-y:-4.5rem;
 }
 
 .header__container{
