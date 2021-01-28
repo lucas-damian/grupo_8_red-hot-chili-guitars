@@ -98,11 +98,13 @@ footer .icons{
  
 
 
-footer .icons img{
-
-  /* PORQUE MIERDA NO ME APARECE */
-  
+.img--mercadolibre{
+  width: 10rem;
+  background-color: blue;
 }
+
+/* maty y daro, prueben así, ponerle una clase entendible y menejenlo así le dejé eso para que 
+entendieran pero arreglenlo. no se olviden de hacer el mobile first que ya está subido en git */
 
 
 footer .contacto{
