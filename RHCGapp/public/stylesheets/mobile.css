@@ -21,7 +21,7 @@ body{
 
 
 /* ----------------------------------- */
-/*
+
 .header{
     width: 100vw;
     position: relative;
@@ -93,7 +93,7 @@ body{
     margin-top: 1.5rem;
     padding: 1rem 0;
 }
-
+ 
 
 
 .list--header{
@@ -159,14 +159,18 @@ body{
  .img__logo{
      display: none;
  }
- .nav-bar{
+
+ /* LO COMENTE YO MATI PARA QUE ME APAREZCA EL NAV A MI */
+/*  .nav-bar{
      display: none;
- }
- .login{
+ } */
+
+
+.login{
      display: none;
  }
 .header{
-    /* position: fixed; */
+     /* position: fixed; */
      bottom: 90vh;
      left: 0;
      width:100vw;
@@ -192,4 +196,4 @@ body{
      justify-content: flex-end;
      align-items: flex-end;
      align-content: flex-end;
- }
+ } 

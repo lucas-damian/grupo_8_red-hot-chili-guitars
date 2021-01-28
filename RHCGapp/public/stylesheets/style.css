@@ -42,7 +42,7 @@ footer{
   background-image: url("/img/footer_fondo.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 500px; 
+  height: 560px; 
   overflow: hidden;
 }
 
@@ -51,6 +51,54 @@ footer{
 footer .nav__footer{
   margin-top: 12rem;
 }
+
+/* EXTRAIDO DEL OTRO CSS */
+
+.nav-bar{
+  background-color: #4c0505;
+  border-radius: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+}
+
+
+
+.list--header{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+.item--header:not(:last-child){
+  border-right: .4rem solid burlywood ;
+  border-radius: .2rem;
+}
+
+.item--header:nth-child(4){
+  padding: 1rem 1rem 1rem .5rem;
+}
+
+
+
+.btn--header{
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 1;
+  width: 90%;
+  color:#f6efca;
+  transition: color .2s, background-color;
+}
+
+
+
+.btn--header:last-child{
+  margin-left: 1rem;
+}
+
+/* EXTRAIDO DEL OTRO CSS */
 
 
 
@@ -74,7 +122,7 @@ footer .container2 .pagos h2{
   color: #f6eec9;
   font-size: 3rem;
   position: relative;
-  left:215px;
+  left: 637px;
   
 }
 
@@ -93,7 +141,7 @@ footer .icons{
   color: #f6eec9;
   font-size: 4rem;
   position: relative;
-  left: 370px;
+  left: 800px;
 
 }
 
@@ -123,7 +171,7 @@ footer .contacto{
   margin-bottom: 5px;
   color: #f6eec9;
   position: relative;
-  right: 220px;
+  left: 205px;
   top: 80px;
 }
 
@@ -142,7 +190,7 @@ footer .contacto h2{
   margin-bottom: 5px;
   color: #f6eec9;
   position: relative;
-  right: 150px;
+  left: 270px;
   top: 80px;
 }
 
@@ -152,9 +200,33 @@ footer .contacto h2{
 
 
 .marcaRegistrada h3{
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  top: 12rem;
+  left: 10rem;
+  color: #f6eec9;
+  font-size: 2.5rem;
+  font-family: 'Arimo', sans-serif;
+  
 }
+.marcaRegistrada h3::after{
+  content: '';
+  background-color: #f6eec9;
+  width: 700%;
+  height: 5px;
+  position: absolute;  
+  top: -22px;
+  left: -90px;
+  /* font-weight: 100; */
+}
+
+
+
+
+
+
+
+
+
 
 /* .redes i{
   padding: 8px;
