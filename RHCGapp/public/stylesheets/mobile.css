@@ -21,7 +21,7 @@ body{
 
 
 /* ----------------------------------- */
-
+/* 
 .header{
     width: 100vw;
     position: relative;
@@ -153,3 +153,43 @@ body{
     width: 100%;
     height: 100%;
 }
+
+/* Mobile 320 */
+
+ .img__logo{
+     display: none;
+ }
+ .nav-bar{
+     display: none;
+ }
+ .login{
+     display: none;
+ }
+.header{
+    /* position: fixed; */
+     bottom: 90vh;
+     left: 0;
+     width:100vw;
+     height: 20vh;
+     justify-content: flex-end;
+}
+
+ .header__bg{
+     background-image:linear-gradient(
+        125deg, 
+        #f07c4d,#8d2e21); 
+     width: 100vw;
+     height: 10vh;
+     
+ }
+ .img--slider{
+     display: none;
+ }
+ .search-bar{
+     justify-content: flex-end;
+ }
+ .barra-busqueda{
+     justify-content: flex-end;
+     align-items: flex-end;
+     align-content: flex-end;
+ }
