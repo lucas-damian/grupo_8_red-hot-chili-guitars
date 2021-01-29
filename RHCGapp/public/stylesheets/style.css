@@ -52,7 +52,7 @@ footer .nav__footer{
   margin-top: 12rem;
 }
 
-/* EXTRAIDO DEL OTRO CSS */
+/* EXTRAIDO DEL OTRO CSS  */
 
 .nav-bar{
   background-color: #4c0505;
@@ -102,23 +102,152 @@ footer .nav__footer{
 
 
 
-footer .logo-footer{
+.logo-footer{
   display: inline-block;
   width: 44.5rem;
   margin-top: 6rem;
 }
 
-footer .logo-footer img{
+ .logo-footer img{
   width: 100%;
 }
 
+/* FOOTER-CONTAINER */
 
-footer .container2{
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40vw;
+  align-self: flex-end;
+  margin-right: 20rem;
+}
+
+.container-arriba{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5rem;
+  color: #f6eec9;
+}
+
+.medios-de-pago{
+  display: flex;
+  /* align-items: center; */
+}
+
+.medios-texto{
+  position: relative;
+}
+
+.medios-texto::after{
+  content: '';
+  background-color: #f6eec9;
+  width: 100%;
+  height: 6px;
+  border-radius: 20px;
+  position: absolute;  
+  top: 45px;
+  left: 0;
+}
+
+.container-arriba .iconos{
+  font-size: 4rem;
+  display:flex ;
+  align-items: flex-start;
+  position: relative;
+  right: 80px;
+  bottom: 13px;
+}
+
+.container-arriba .iconos i{
+  padding: 20px;
+}
+
+.container-arriba .iconos img{
+  position: relative;
+  bottom: 13px;
+}
+
+
+.container-abajo{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #f6eec9;
+}
+
+.contacto{
+  background-color: #4c0505;
+  height: 35px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.contacto p{
+  position: relative;
+  top: 3px;
+  padding: 5px ;
+}
+
+.contacto i{
+  padding: 15px;
+  position: relative;
+}
+
+  
+
+.redes{
+  background-color: #4c0505;
+  height: 35px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.redes p{
+  position: relative;
+  top: 3px;
+  padding: 5px ;
+}
+.redes i{
+  padding: 10px;
+  position: relative;
+}
+.footer-text{
+  align-self: flex-start;
+  
+  display: inline;
+
+}
+
+
+
+
+
+/* ----------------------------- */
+
+/* .container2{
   display: flex;
   justify-content: flex-end;
 }
 
-footer .container2 .pagos h2{
+.container2 .pagos h2{
   color: #f6eec9;
   font-size: 3rem;
   position: relative;
@@ -126,7 +255,7 @@ footer .container2 .pagos h2{
   
 }
 
-footer .container2 .pagos h2::after{
+.container2 .pagos h2::after{
   content: '';
   background-color: #f6eec9;
   width: 100%;
@@ -154,14 +283,8 @@ footer .icons{
 .img--mercadolibre{
   width: 10rem;
 
-  /* position: relative;
-  left: 140px; */
-  
-  /* background-color: blue */;
+ 
 }
-
-/* maty y daro, prueben así, ponerle una clase entendible y menejenlo así le dejé eso para que 
-entendieran pero arreglenlo. no se olviden de hacer el mobile first que ya está subido en git */
 
 
 footer .contacto{
@@ -216,16 +339,15 @@ footer .contacto h2{
   position: absolute;  
   top: -22px;
   left: -90px;
-  /* font-weight: 100; */
 }
 
+ */
 
 
 
 
 
-
-
+/* ----------------------- */
 
 
 /* .redes i{
