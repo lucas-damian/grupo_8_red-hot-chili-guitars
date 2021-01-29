@@ -145,7 +145,7 @@ footer .nav__footer{
 
 .medios-de-pago{
   position: relative;
-  right: 10px;
+  right: 5px;
   
 }
 
@@ -169,7 +169,7 @@ footer .nav__footer{
   display:flex ;
   align-items: flex-start;
   position: relative;
-  right: 80px;
+  right: 70px;
   bottom: 13px;
 }
 
@@ -202,7 +202,7 @@ footer .nav__footer{
   padding-left: 5px;
   border-radius: 30px;
   position: relative;
-  right: 10px;
+  right: 5px;
 }
 
 .contacto p{
@@ -226,7 +226,7 @@ footer .nav__footer{
   padding-left: 5px;
   border-radius: 30px;
   position: relative;
-  left: 70px; 
+  left: 80px; 
 }
 
 .redes p{
