@@ -145,7 +145,7 @@ footer .nav__footer{
 
 .medios-de-pago{
   position: relative;
-  right: 5px;
+  right: 10px;
   
 }
 
@@ -169,7 +169,7 @@ footer .nav__footer{
   display:flex ;
   align-items: flex-start;
   position: relative;
-  right: 70px;
+  right: 80px;
   bottom: 13px;
 }
 
@@ -202,7 +202,7 @@ footer .nav__footer{
   padding-left: 5px;
   border-radius: 30px;
   position: relative;
-  right: 5px;
+  right: 10px;
 }
 
 .contacto p{
@@ -213,9 +213,11 @@ footer .nav__footer{
 
 .contacto i{
   padding: 15px;
+
 }
 
   
+
 .redes{
   background-color: #4c0505;
   height: 35px;
@@ -226,7 +228,7 @@ footer .nav__footer{
   padding-left: 5px;
   border-radius: 30px;
   position: relative;
-  left: 80px; 
+  left: 70px; 
 }
 
 .redes p{
@@ -261,5 +263,7 @@ footer .nav__footer{
   top: -22px;
   left: -90px;
 }
+
+
 
 
