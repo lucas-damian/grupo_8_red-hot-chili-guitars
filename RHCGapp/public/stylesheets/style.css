@@ -181,6 +181,8 @@ footer .nav__footer{
   display: flex;
   justify-content: space-between;
   color: #f6eec9;
+  padding: 10px;
+
 }
 
 .contacto{
@@ -218,12 +220,14 @@ footer .nav__footer{
   padding-left: 5px;
   border-radius: 30px;
   position: relative;
+  
 }
 
 .redes p{
   position: relative;
   top: 3px;
   padding: 5px ;
+  padding-right: 50px;
 }
 .redes i{
   padding: 10px;
