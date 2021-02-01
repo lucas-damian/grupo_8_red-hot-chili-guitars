@@ -19,10 +19,20 @@ body{
     text-decoration: none;
 }
 
+:root{
+--color-primary-red: #a20a0a;
+--color-primary-darkRed: #4c0505;
+--color-primary-orange: #c5704a;
+--color-primary-yellow: #f6eec9;
+--color-primary-green: #799351;
+
+}
+
+
 
 /* ----------------------------------- */
 
-.header{
+/* .header{
     width: 100vw;
     position: relative;
 }
@@ -153,47 +163,161 @@ body{
     width: 100%;
     height: 100%;
 }
+ */
 
-/* Mobile 320 */
+
+
+ /* Mobile 320 */
 
  .img__logo{
      display: none;
  }
 
  /* LO COMENTE YO MATI PARA QUE ME APAREZCA EL NAV A MI */
-/*  .nav-bar{
-     display: none;
- } */
-
-
-.login{
-     display: none;
- }
-.header{
-     /* position: fixed; */
-     bottom: 90vh;
-     left: 0;
-     width:100vw;
-     height: 20vh;
-     justify-content: flex-end;
+ 
+.link--logo{
+    display: none;
 }
 
- .header__bg{
-     background-image:linear-gradient(
-        125deg, 
-        #f07c4d,#8d2e21); 
-     width: 100vw;
-     height: 10vh;
-     
- }
  .img--slider{
      display: none;
  }
- .search-bar{
-     justify-content: flex-end;
+
+ .header--svg{
+     display: none;
  }
- .barra-busqueda{
-     justify-content: flex-end;
-     align-items: flex-end;
-     align-content: flex-end;
- } 
+
+.header{
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width:100vw;
+     height: 5rem;
+     background-image:linear-gradient(
+        125deg, #f07c4d,#8d2e21);
+     box-shadow: 0 -.2rem .5rem rgba(0, 0, 0, 0.4);
+     display: flex;
+
+}
+
+ .header__bg{
+   display: none;
+ }
+
+ .hamburguer{
+     display: inline-block;
+     cursor: pointer;
+     position: relative;
+     left: 1rem;
+     top: -2.5rem;
+     width: 5rem;
+ }
+
+
+.nav__container{
+    position: relative;
+    right: -8rem;
+    top: -7rem;
+    width: 60vw;
+}
+
+.header__form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn--search{
+    padding: .5rem .8rem;
+    background-color: var(--color-primary-red);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color:var(--color-primary-yellow);
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.4);
+}
+
+
+
+.barra-busqueda{
+    display: none;
+}
+
+.login{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+.login a {
+    background-color: var(--color-primary-red);
+    color:var(--color-primary-yellow);
+    padding: .5rem .8rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.4);
+}
+
+.fa-shopping-cart{
+    margin-left: -.2rem;
+}
+
+.btn--logeoRegistro{
+    display: none;
+}
+
+.nav-bar{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.288);
+    transform:translateX(100%);
+    transition: all .3s;
+}
+
+#barra:target{
+    transform: translateX(0%);
+}
+
+.list--header{
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 55vw;
+    height: 100vh;
+    background-color: var(--color-primary-darkRed);
+    padding-top: 2rem;
+}
+
+
+
+.item--header:not(:last-child){
+    margin-bottom: 2rem;
+    border-bottom: .2rem solid var(--color-primary-yellow);
+}
+
+.btn--header{
+    color: var(--color-primary-yellow);
+    width: 50vw;
+    padding:0 0 1rem 2rem;
+    font-size: 1.8rem;
+    text-align:center;
+}
+
+.btn--cross{
+    position: relative;
+    top: -6.9rem;
+    left: 2rem;
+    z-index: 10;
+    padding: .5rem .6rem;
+    font-size: 2rem;
+    background-color: var(--color-primary-red);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
