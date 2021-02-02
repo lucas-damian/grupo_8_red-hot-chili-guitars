@@ -20,19 +20,24 @@ body{
 }
 
 :root{
+--main-width: 90vw;
 --color-primary-red: #a20a0a;
 --color-primary-darkRed: #4c0505;
 --color-primary-orange: #c5704a;
 --color-primary-yellow: #f6eec9;
 --color-primary-green: #799351;
+--bg-color-orange:#f07c4d;
+--bg-color-darkRed: #8d2e21;
+--primary-shadow-up: 0 -.2rem .5rem rgba(0, 0, 0, 0.4);
+--primary-shadow-down: 0 .3rem .5rem rgba(0, 0, 0, 0.4);
 
 }
 
 
 
-/* ----------------------------------- */
-
-/* .header{
+/* --------------------- DESKTOP ------------- 
+ 
+.header{
     width: 100vw;
     position: relative;
 }
@@ -163,17 +168,22 @@ body{
     width: 100%;
     height: 100%;
 }
- */
+ 
+
+
+------------------------------------------*/
 
 
 
- /* Mobile 320 */
+/*-------------------- Mobile 320  ---------------*/
 
+
+
+/* ----------- INICIO HEADER ------------------- */
  .img__logo{
      display: none;
  }
 
- /* LO COMENTE YO MATI PARA QUE ME APAREZCA EL NAV A MI */
  
 .link--logo{
     display: none;
@@ -194,8 +204,8 @@ body{
      width:100vw;
      height: 5rem;
      background-image:linear-gradient(
-        125deg, #f07c4d,#8d2e21);
-     box-shadow: 0 -.2rem .5rem rgba(0, 0, 0, 0.4);
+        125deg, var(--bg-color-orange), var(--bg-color-darkRed));
+     box-shadow:var(--primary-shadow-down);
      display: flex;
 
 }
@@ -233,7 +243,7 @@ body{
     border-radius: 50%;
     font-size: 1.5rem;
     color:var(--color-primary-yellow);
-    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.4);
+    box-shadow: var(--primary-shadow--up)
 }
 
 
@@ -269,10 +279,10 @@ body{
 }
 
 .nav-bar{
-    
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.288);
@@ -313,7 +323,7 @@ body{
     position: relative;
     top: -6.9rem;
     left: 2rem;
-    z-index: 10;
+    z-index: 11;
     padding: .5rem .6rem;
     font-size: 2rem;
     background-color: var(--color-primary-red);
@@ -321,3 +331,144 @@ body{
     cursor: pointer;
 }
 
+/* ----------- FIN HEADER ------------------- */
+
+
+
+/* ------------ INICIO MAIN --------------------*/
+
+
+
+/* .slider{
+    width: 100vw;
+    height: 25vh;
+    background-color: crimson;
+    margin-bottom: 4rem;
+}
+ */
+.home__main{
+    width: 100vw;
+    background-image:   linear-gradient(#f6eec95b,#f6eec96b),url(/img/fondos/texturas_19.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.kits--title{
+    text-align: center;
+    color: var(--color-primary-red);
+    margin-bottom: 2rem;
+}
+
+.kits--sub-title{
+    font-size: 2.5rem;
+}
+
+.kits--logo{
+    width: 5rem;
+    position: absolute;
+    top: 0;
+    right: -2rem;
+}
+
+/* .kit-slider{
+    width: 100%;
+    padding-left: 2rem;
+    width: 100vw;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-left: 2.5rem;
+    scrollbar-width: none; 
+}
+
+
+
+.slide {
+    flex-shrink: 0;
+    display: flex;
+    padding: 2rem 0;
+} */
+
+.slider-destacados {
+
+    width: 100vw;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-left: 2.5rem;
+    scrollbar-width: none;
+  }
+
+.slide {
+    flex-shrink: 0;
+    display: flex;
+    padding: 2rem 0;
+}
+
+
+.article--sub-title{
+    font-family: "arimo";
+    font-size: 1.5rem;
+}
+
+.article-container{
+    position: relative;
+    margin-right: 2.5rem;
+    background-color: yellowgreen;
+    width: 20rem;
+/*     padding: 1rem 1rem 1rem 0; */
+}
+
+.article--content{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3rem;
+    padding: 0 2rem;
+}
+
+.article--text{
+    margin-top: 2rem;
+}
+
+
+.description{
+   background-color: var(--color-primary-yellow);
+   border-radius: 3rem;
+   box-shadow: var(--primary-shadow-down);
+}
+
+.article--figure{
+    width: 10rem;
+    position: relative;
+    top: -2.5rem;
+    right: -2rem;
+    z-index: 1;
+}
+
+.article--img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.article--valor{
+    margin-top: -.8rem;
+    font-size: 2rem;
+}
+
+
+.article--btn{
+    display: inline-block;
+    padding: .5rem 4rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-primary-darkRed);
+    font-size: 2rem;
+    position: relative;
+    top: -1.5rem;
+    left: 5rem;
+    z-index: 1;
+    box-shadow: var(--primary-shadow-down);
+}
