@@ -472,3 +472,70 @@ body{
     z-index: 1;
     box-shadow: var(--primary-shadow-down);
 }
+
+
+/* CATEGORIAS */
+h3{
+    margin: -19px 0px 0px -21px
+}
+p{
+    margin: 26px 0px 0px -15px;
+}
+.tarjeta-categoria{
+
+    width: 100%;
+    border-radius: 25px;
+    height: 100%;
+    background-size: cover;
+    font-family:  "arimo", "lobster" ;
+}
+.img-guitarra{
+    background-image: url("/img/bg-images/bg-guitarra.jpg"); 
+}
+.img-piano{
+    background-image: url("/img/bg-images/bg-piano.jpg");
+}
+.img-bateria{
+    background-image: url("/img/bg-images/bg-bateria.jpg");
+}
+.img-viento{
+    background-image: url("/img/bg-images/bg-saxo.jpg");
+}
+.img-ampli{
+    background-image: url("/img/bg-images/bg-ampli.jpg");
+}
+.transparencia{
+width: 50%;
+height: 100%;
+border-radius: 25px 0px 0px 25px;
+color: white;
+padding: 30px;
+}
+.transp-guitarra{
+    background-color: rgba(230, 121, 89 , .5);
+}
+.transp-piano{
+    background-color: rgba(185, 206, 162 , .5);
+}
+.transp-bateria{
+    background-color: rgba(134, 149, 19, .5);
+}
+.transp-viento{
+    background-color: rgba(172, 182, 147, .5);
+}
+.transp-ampli{
+    background-color: rgba(181, 152, 119, .5);
+}
+.transparencia h3 p{
+color: white;
+}
+
+.foto{
+     height: 100%;
+     width: 100%;
+     border-radius: 25px;
+     
+}
+.col-12{
+    border-radius: 25px;
+}
