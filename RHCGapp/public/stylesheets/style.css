@@ -1,4 +1,4 @@
-*{
+ *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -44,6 +44,10 @@ a {
  
 }
 
+.categorias{
+  display: none;
+}
+
 footer{
   background: linear-gradient(0.40turn, #4c0505, #f6eec9);
   display: flex;
@@ -51,33 +55,40 @@ footer{
   justify-content: center;
   align-self: flex-start;
   color: #f6eec9;
+  width: 100vw;
 }
  
 
-.container .nav__container .nav__footer{
+.container .nav_container .nav_footer{
   display: none
 } 
 
-.row{
+/* .row{
   margin-bottom: 80px;
 }
-
+ */
 .logo-footer{
-  width: 22rem;
-  margin-top: 3rem;
-  margin-left: 5rem;
+  display: inline-block;
+  width: 70vw;
 }
 
 
-/* .footer__container{
+ .footer__container{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.logo-container{
+  display: flex;
   justify-content: center;
-  align-self: flex-start;
-  color: #f6eec9;
- 
-  height: 350px;
-} */
+  align-items: center;
+  width: 100%;
+  border-bottom: .6rem solid  #f6eec9;
+  padding-bottom: 20px;
+}
 
 .container-arriba{
   display: flex;
@@ -85,7 +96,7 @@ footer{
 
 }
 
-.container-arriba::after{
+/* .container-arriba::after{
   content: '';
   background-color: #f6eec9;
   width:100%; 
@@ -93,25 +104,28 @@ footer{
   border-radius:50px;
   position: relative; 
   bottom: 170px;
+} */
+
+.medios-de-pago{
+  margin-top: 30px;
 }
-
-
 .medios-texto{
   display: flex;
  justify-content: center;
  font-size: 2.2rem;
  text-decoration: 5px solid #f6eec9;;
+ /* border-bottom: .3rem solid  #f6eec9; */
 }
 
- .medios-texto::after{
+.medios-texto::after{
   content: '';
   background-color: #f6eec9;
   width: 130px; 
   height: 3px;
-  border-radius:50px;
+  border-radius:60px;
   position: absolute; 
   margin-top: 34px;
-}
+} 
  
 .iconos{
   display: inline-flex;
@@ -132,10 +146,6 @@ footer{
   height: 50px;
 }
 
-.container-abajo{
- 
-}
-
 .redes{
   background-color: #4c0505;
   border-radius: 30px;
@@ -143,6 +153,7 @@ footer{
   margin: 0 30px;
   padding: 0px;
   height: 20px;
+  margin-top: 5px;
 }
 
 .redes-text{
@@ -152,12 +163,14 @@ footer{
   text-align: flex-end;
   flex-grow: 1;
   margin-left: 10px;
+  margin-top: .5px;
 }
 
 .redes i{
   padding: 2px;
   font-size: 15px;
   margin-right: 5px;
+  margin-top: .5px;
 }
 
 
@@ -517,10 +530,3 @@ footer .nav__footer{
 }
 
  */
-
-
-
-
-
-
-
