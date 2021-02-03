@@ -11,6 +11,10 @@ html{
 
 body{
     box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 
@@ -207,6 +211,7 @@ body{
         125deg, var(--bg-color-orange), var(--bg-color-darkRed));
      box-shadow:var(--primary-shadow-down);
      display: flex;
+     z-index: 10;
 
 }
 
@@ -228,7 +233,7 @@ body{
     position: relative;
     right: -8rem;
     top: -7rem;
-    width: 60vw;
+    width: 70vw;
 }
 
 .header__form{
@@ -253,7 +258,7 @@ body{
 }
 
 .login{
-    width: 45%;
+    width: 35%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -351,8 +356,16 @@ body{
     background-image:   linear-gradient(#f6eec95b,#f6eec96b),url(/img/fondos/texturas_19.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+
+.kits{
+    margin: 6rem 0;
+    background-color: cornflowerblue;
+}
 
 .kits--title{
     text-align: center;
@@ -474,6 +487,74 @@ body{
 }
 
 
-/* 
------------------------FIN KITS SLIDER -------------------
-*/
+/* CATEGORIAS */
+.categorias{
+    background-color: cornflowerblue;
+    margin: 6rem 0;
+/*     display: none; */
+}
+
+h3{
+    margin: -19px 0px 0px -21px
+}
+p{
+    margin: 26px 0px 0px -15px;
+}
+.tarjeta-categoria{
+
+    width: 100%;
+    border-radius: 25px;
+    height: 100%;
+    background-size: cover;
+    font-family:  "arimo", "lobster" ;
+}
+.img-guitarra{
+    background-image: url("/img/bg-images/bg-guitarra.jpg"); 
+}
+.img-piano{
+    background-image: url("/img/bg-images/bg-piano.jpg");
+}
+.img-bateria{
+    background-image: url("/img/bg-images/bg-bateria.jpg");
+}
+.img-viento{
+    background-image: url("/img/bg-images/bg-saxo.jpg");
+}
+.img-ampli{
+    background-image: url("/img/bg-images/bg-ampli.jpg");
+}
+.transparencia{
+width: 50%;
+height: 100%;
+border-radius: 25px 0px 0px 25px;
+color: white;
+padding: 30px;
+}
+.transp-guitarra{
+    background-color: rgba(230, 121, 89 , .5);
+}
+.transp-piano{
+    background-color: rgba(185, 206, 162 , .5);
+}
+.transp-bateria{
+    background-color: rgba(134, 149, 19, .5);
+}
+.transp-viento{
+    background-color: rgba(172, 182, 147, .5);
+}
+.transp-ampli{
+    background-color: rgba(181, 152, 119, .5);
+}
+.transparencia h3 p{
+color: white;
+}
+
+.foto{
+     height: 100%;
+     width: 100%;
+     border-radius: 25px;
+     
+}
+.col-12{
+    border-radius: 25px;
+}
