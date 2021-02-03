@@ -11,8 +11,30 @@
 <main class="home__main">
   <section class="slider">
     <!-- slider acá -->
+    <div class="conteinerSlider">
+      <img name="slider" width="100%" height="10%">
+      <script>
+        window.addEventListener('load', function(){
+          console.log('el contenido ha cargado!');
+          var imagenes = [];
+          imagenes[0]='./img/sliders/slider_00.jpg';
+          imagenes[1]='./img/sliders/slider_01.jpg';
+          imagenes[2]='./img/sliders/slider_02.jpeg';
+          var indiceImagenes =0;
+          function cambiarImagenes(){
+           document.slider.src=imagenes[indiceImagenes];
+           if(indiceImagenes < 2 ) {
+             indiceImagenes ++ ;
+           }else{
+             indiceImagenes = 0;
+           }
+         }
+         setInterval(cambiarImagenes, 3000)
+        });
+      </script>
+    </div>
   </section>
-      
+  
       <section class="kits">
         <h2 class="kits--title">Kits para principiantes</h2>
         <!-- slider de instrumentos acá -->
