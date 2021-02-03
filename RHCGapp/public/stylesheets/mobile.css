@@ -391,7 +391,7 @@ body{
     padding: 2rem 0;
 } */
 
-.slider-destacados {
+.kits--slider {
 
     width: 100vw;
     display: flex;
@@ -472,3 +472,8 @@ body{
     z-index: 1;
     box-shadow: var(--primary-shadow-down);
 }
+
+
+/* 
+-----------------------FIN KITS SLIDER -------------------
+*/
