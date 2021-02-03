@@ -11,6 +11,9 @@ html{
 
 body{
     box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -475,6 +478,10 @@ body{
 
 
 /* CATEGORIAS */
+.categorias{
+    height: 100vh;
+}
+
 h3{
     margin: -19px 0px 0px -21px
 }
