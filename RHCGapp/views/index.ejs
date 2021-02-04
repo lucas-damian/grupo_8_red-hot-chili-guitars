@@ -4,194 +4,197 @@
 
 <body class="body--home">
 
-<!-- header -->    
+  <div class="home--container">
+  <!-- header -->    
     <%- include('partials/header')  %>
-<!-- /header -->
+  <!-- /header -->
 
-<main class="home__main">
-      <!-- slider acá -->
-  <section class="slider">
-    <div class="conteinerSlider">
-      <img name="slider" width="100%" height="10%">
-      <script>
-        window.addEventListener('load', function(){
-          console.log('el contenido ha cargado!');
-          var imagenes = [];
-          imagenes[0]='./img/sliders/slider_00.jpg';
-          imagenes[1]='./img/sliders/slider_01.jpg';
-          imagenes[2]='./img/sliders/slider_02.jpeg';
-          var indiceImagenes =0;
-          function cambiarImagenes(){
-           document.slider.src=imagenes[indiceImagenes];
-           if(indiceImagenes < 2 ) {
-             indiceImagenes ++ ;
-           }else{
-             indiceImagenes = 0;
-           }
-         }
-         setInterval(cambiarImagenes, 3000)
-        });
-      </script>
-    </div>
-  </section>
-  
-  <section class="kits">
-        <h2 class="kits--title">Kits para principiantes</h2>
-        <!-- slider de instrumentos acá -->
-        
-        <!-- <div class="kit-slider">
-          <div class="slide">
-            <article class="article-container">
-              <h3 class="article--title">Guitarras</h3>
-              <img class="kits--logo" src="/img/icons/icon_sketch.svg" alt="">
-              <div class="description">  
-                <div class="article--content">
-                  <figcaption class="article--text">
-                    <div class="marca">
-                      <h3 class="article--sub-title">marca:</h3>
-                      <p class="article--valor">Gibson</p>
-                    </div>
-                    <div class="tipo">
-                      <h3 class="article--sub-title">tipo:</h3>
-                      <p class="article--valor">electrica</p>
-                    </div>
-                    <div class="modelo">
-                      <h3 class="article--sub-title">modelo:</h3>
-                      <p class="article--valor">ABC-123</p>
-                    </div>
-                    <div class="valor">
-                      <h3 class="article--sub-title">valor:</h3>
-                      <p class="article--valor">$10000</p>
-                    </div>
-                  </figcaption>
-                  <figure class="article--figure">
-                    <img src="/img/guitarras/guitar_00.png" alt="instrumento" class="article--img">
-                  </figure>
-                </div>
-
-              </div>
-              <a href="#" class="article--btn">+ info</a>
-            </article>
-            <article class="article-container">
-              <h3 class="article--title">Guitarras</h3>
-              <img class="kits--logo" src="/img/icons/icon_sketch.svg" alt="">
-              <div class="description">  
-                <div class="article--content">
-                  <figcaption class="article--text">
-                    <div class="marca">
-                      <h3 class="article--sub-title">marca:</h3>
-                      <p class="article--valor">Gibson</p>
-                    </div>
-                    <div class="tipo">
-                      <h3 class="article--sub-title">tipo:</h3>
-                      <p class="article--valor">electrica</p>
-                    </div>
-                    <div class="modelo">
-                      <h3 class="article--sub-title">modelo:</h3>
-                      <p class="article--valor">ABC-123</p>
-                    </div>
-                    <div class="valor">
-                      <h3 class="article--sub-title">valor:</h3>
-                      <p class="article--valor">$10000</p>
-                    </div>
-                  </figcaption>
-                  <figure class="article--figure">
-                    <img src="/img/guitarras/guitar_00.png" alt="instrumento" class="article--img">
-                  </figure>
-                </div>
-
-              </div>
-              <a href="#" class="article--btn">+ info</a>
-            </article>
-            
-          </div>
-        </div> -->
-      
-        <div class="kis--slider">
-          <div class="slide">
-            <div class="article-container">
-              <div class="article--card">
-                texto texto texto
-              </div>
-            </div>
-            <div class="article-container">
-              <div class="description row">
-                texto texto texto
-              </div>
-            </div>
-            <div class="article-container">
-              <div class="description row">
-                texto texto texto
-              </div>
-            </div>
-    
-          </div>
-        </div>
-      
-  </section>
-      
-  <section class="categorias">
-        
-    <div class="container">
-      <div class="row">
-          <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-              <a href="">
-                  <div class="tarjeta-categoria img-guitarra">
-                      <div class="transparencia transp-guitarra">
-                          <h3>guitarras</h3>
-                          <p>las mejores guitarras e instrumentos de cuerda</p>
-                      </div>
-                  </div>
-              </a>
-          </div>
-          <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-              <a href="">
-                  <div class="tarjeta-categoria img-piano">
-                      <div class="transparencia transp-piano">
-                          <h3>pianos</h3>
-                          <p>los mejores pianos y teclados</p>
-                      </div>
-                  </div>
-              </a>
-          </div>
-          <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-              <a href="">
-                  <div class="tarjeta-categoria img-bateria">
-                      <div class="transparencia transp-bateria">
-                          <h3>baterias</h3>
-                          <p>instrumentos de percucion y baterias</p>
-                      </div>
-                  </div>
-              </a>
-          </div>
-          <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-              <a href="#">
-                  <div class="tarjeta-categoria img-viento">
-                      <div class="transparencia transp-viento">
-                          <h3>vientos</h3>
-                          <p>los mejores instrumentos de viento</p>
-                      </div>
-                  </div>
-              </a>
-          </div>
-          <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-              <a href="#">
-                  <div class="tarjeta-categoria img-ampli">
-                      <div class="transparencia transp-ampli">
-                          <h3>Amplis y Accesorios</h3>
-                          <p>amplis y todo lo que necesitas para hacer buena musica</p>
-                      </div>
-                  </div>
-              </a>
-          </div>
+  <main class="home__main">
+        <!-- slider acá -->
+    <section class="slider">
+      <div class="conteinerSlider">
+        <img class="slider--img" name="slider" width="100%" >
+        <script>
+          window.addEventListener('load', function(){
+            console.log('el contenido ha cargado!');
+            var imagenes = [];
+            imagenes[0]='./img/sliders/slider_00.jpg';
+            imagenes[1]='./img/sliders/slider_01.jpg';
+            imagenes[2]='./img/sliders/slider_02.jpeg';
+            var indiceImagenes =0;
+            function cambiarImagenes(){
+            document.slider.src=imagenes[indiceImagenes];
+            if(indiceImagenes < 2 ) {
+              indiceImagenes ++ ;
+            }else{
+              indiceImagenes = 0;
+            }
+          }
+          setInterval(cambiarImagenes, 3000)
+          });
+        </script>
       </div>
-  </div>
-  </section>
-</main>
+    </section>
+    
+    <section class="kits">
+          <h2 class="kits--title">Kits para principiantes</h2>
+          <!-- slider de instrumentos acá -->
+          
+          <!-- <div class="kit-slider">
+            <div class="slide">
+              <article class="article-container">
+                <h3 class="article--title">Guitarras</h3>
+                <img class="kits--logo" src="/img/icons/icon_sketch.svg" alt="">
+                <div class="description">  
+                  <div class="article--content">
+                    <figcaption class="article--text">
+                      <div class="marca">
+                        <h3 class="article--sub-title">marca:</h3>
+                        <p class="article--valor">Gibson</p>
+                      </div>
+                      <div class="tipo">
+                        <h3 class="article--sub-title">tipo:</h3>
+                        <p class="article--valor">electrica</p>
+                      </div>
+                      <div class="modelo">
+                        <h3 class="article--sub-title">modelo:</h3>
+                        <p class="article--valor">ABC-123</p>
+                      </div>
+                      <div class="valor">
+                        <h3 class="article--sub-title">valor:</h3>
+                        <p class="article--valor">$10000</p>
+                      </div>
+                    </figcaption>
+                    <figure class="article--figure">
+                      <img src="/img/guitarras/guitar_00.png" alt="instrumento" class="article--img">
+                    </figure>
+                  </div>
 
-<!-- footer -->
+                </div>
+                <a href="#" class="article--btn">+ info</a>
+              </article>
+              <article class="article-container">
+                <h3 class="article--title">Guitarras</h3>
+                <img class="kits--logo" src="/img/icons/icon_sketch.svg" alt="">
+                <div class="description">  
+                  <div class="article--content">
+                    <figcaption class="article--text">
+                      <div class="marca">
+                        <h3 class="article--sub-title">marca:</h3>
+                        <p class="article--valor">Gibson</p>
+                      </div>
+                      <div class="tipo">
+                        <h3 class="article--sub-title">tipo:</h3>
+                        <p class="article--valor">electrica</p>
+                      </div>
+                      <div class="modelo">
+                        <h3 class="article--sub-title">modelo:</h3>
+                        <p class="article--valor">ABC-123</p>
+                      </div>
+                      <div class="valor">
+                        <h3 class="article--sub-title">valor:</h3>
+                        <p class="article--valor">$10000</p>
+                      </div>
+                    </figcaption>
+                    <figure class="article--figure">
+                      <img src="/img/guitarras/guitar_00.png" alt="instrumento" class="article--img">
+                    </figure>
+                  </div>
+
+                </div>
+                <a href="#" class="article--btn">+ info</a>
+              </article>
+              
+            </div>
+          </div> -->
+        
+          <div class="kits--slider">
+            <div class="slide">
+              <div class="article-container">
+                <div class="article--card">
+                  texto texto texto
+                </div>
+              </div>
+              <div class="article-container">
+                <div class="article--card">
+                  texto texto texto
+                </div>
+              </div>
+              <div class="article-container">
+                <div class="article--card">
+                  texto texto texto
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        
+    </section>
+        
+    <section class="categorias">
+          
+      <div class="container">
+        <div class="row">
+            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
+                <a href="">
+                    <div class="tarjeta-categoria img-guitarra">
+                        <div class="transparencia transp-guitarra">
+                            <h3>guitarras</h3>
+                            <p>las mejores guitarras e instrumentos de cuerda</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
+                <a href="">
+                    <div class="tarjeta-categoria img-piano">
+                        <div class="transparencia transp-piano">
+                            <h3>pianos</h3>
+                            <p>los mejores pianos y teclados</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
+                <a href="">
+                    <div class="tarjeta-categoria img-bateria">
+                        <div class="transparencia transp-bateria">
+                            <h3>baterias</h3>
+                            <p>instrumentos de percucion y baterias</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
+                <a href="#">
+                    <div class="tarjeta-categoria img-viento">
+                        <div class="transparencia transp-viento">
+                            <h3>vientos</h3>
+                            <p>los mejores instrumentos de viento</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
+                <a href="#">
+                    <div class="tarjeta-categoria img-ampli">
+                        <div class="transparencia transp-ampli">
+                            <h3>Amplis y Accesorios</h3>
+                            <p>amplis y todo lo que necesitas para hacer buena musica</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </section>
+  </main>
+
+  <!-- footer -->
     <%- include('partials/footer')  %> 
-<!-- /footer -->
+  <!-- /footer -->
+  </div>
+
 
 
 <!-- scripts de bootstrap -->
@@ -205,5 +208,6 @@
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
     <script src="/javascript/slider.js"></script>
+    
   </body>
 </html>

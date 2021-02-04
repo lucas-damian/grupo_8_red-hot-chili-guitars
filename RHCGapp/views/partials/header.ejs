@@ -1,7 +1,7 @@
 <header class="header">
      <div class="header__container">  
         <a class="link--logo" href="/" class="link">
-            <img class="header__logo" src="/img/logo_01 copy.svg" alt="" class="img__logo">
+            <img class="header__logo" src="/img/icons/logo_01.svg" alt="" class="img__logo">
         </a>
         <a  class="hamburguer" href="#barra">
             <img class="mobile-logo" src="/img/icons/icon_sketch.svg" alt="">
@@ -9,24 +9,46 @@
         <div class="nav__container">
             <form class="header__form" action="">
                 <div class="search-bar">
-                    <input class="barra-busqueda" type="text" placeholder="buscá tú instrrumento...">
-                    <button class="btn btn--search">
-                        <i class="fas fa-search"></i>
-                    </button>   
+                    <input class="barra-busqueda" type="text" placeholder="buscá tú instrrumento..." name="busqueda">
+                        <button  class="btn btn--search" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
                 </div>
                 <div class="login">
-                    <button class="btn btn--logeoRegistro">
-                        logeate/registrate
-                    </button>
+                   
                     <a href="" class="link--message">
                         <i class="far fa-envelope"></i>
                     </a>
                     <a href="" class="link--kart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
+                    <button class="btn btn--logeoRegistro">
+                        logeate/registrate
+                    </button>
                 </div>
             </form>
+<!-- copiar y pega ren footer -->
            
+            <nav class="nav-bar--desktop">
+                <ul class="list--header__desktop">
+                    <li class="item item--header">
+                        <a href="" class="btn btn--header__desktop">guitarras/ cuerdas</a>
+                    </li>
+                    <li class="item item--header">
+                        <a href="" class="btn btn--header__desktop">baterias/ percusion</a>
+                    </li>
+                    <li class="item item--header">
+                        <a href="" class="btn btn--header__desktop">pianos/ teclados</a>
+                    </li>
+                    <li class="item item--header">
+                        <a href="" class="btn btn--header__desktop">vientos </a>
+                    </li>
+                    <li class="item item--header">
+                        <a href="" class="btn btn--header__desktop">amplis/ accesorios/ electronicos</a>
+                    </li>
+                </ul>
+            </nav>
+<!--  -------------------------------------->
             <svg class="header--svg" width="1366" height="176" viewBox="0 0 1366 176" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d)">
             <clipPath id="path">
@@ -54,7 +76,7 @@
     <div class="header__bg"></div>
 </header>
 <nav class="nav-bar" id="barra">
-    <ul class="list list--header">
+    <ul class="list--header">
         <li class="item item--header">
             <a href="" class="btn btn--header">guitarras/ cuerdas</a>
         </li>
