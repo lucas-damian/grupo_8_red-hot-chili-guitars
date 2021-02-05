@@ -415,6 +415,12 @@ body{
         width: 45vw;
         font-size: 1.5rem;
     }
+    .bat-categoria{
+        height: 400px !important; 
+        margin-bottom: 10px;
+        position: relative;
+        top: -207px;
+    }
     
 }
 
@@ -529,7 +535,7 @@ body{
     justify-content: space-between;
     padding-left: 2rem;
 }
-  
+
 
 }
 
