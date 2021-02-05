@@ -39,145 +39,33 @@ body{
 }
 
 
+/* 
 
-/* --------------------- DESKTOP ------------- 
- 
-.header{
-    width: 100vw;
-    position: relative;
-}
+---------------- ANIMACIONES
 
-.header__bg{
-    width: 100vw;
-    height: 20rem;
-    background-image: linear-gradient(250deg, #c5704a, #7a2e1f );
-    clip-path: url(#path);
-    position: relative;
-    top: -35rem;
-    box-shadow: 1rem -5rem 1rem black;
-}
+*/
 
-.header__container{
-    position: relative;
-    z-index:2;
-    top: 0;
-    left:10rem;
-    width: 50vw;
-    display: flex;
-}
+@keyframes pulse{
+    0%{
+        transform: scale(.9);
+    }
 
-.nav__container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem 0 0 2rem;
-    margin-top: 4rem;
-}
+    70%{
+        transform: scale(1);
 
-
-.header__form{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.search-bar{
-    background-color: #db9e6c;
-    border-radius: .9rem;
-    padding: .6rem 1rem;
-}
-
-.barra-busqueda{
-    border: none;
-    background-color: transparent;
-    font-family: "arimo";
-    font-size: 1.4rem;
-}
-
-.btn--search{
-    background-color: transparent;
-    border: none;
-}
-
-.login{
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2rem;
-}
-
-.nav-bar{
-    background-color: #4c0505;
-    border-radius: 1.5rem;
-    margin-top: 1.5rem;
-    padding: 1rem 0;
-}
- 
-
-
-.list--header{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-
-.item--header:not(:last-child){
-    border-right: .4rem solid burlywood ;
-    border-radius: .2rem;
-}
-
-.item--header:nth-child(4){
-    padding: 1rem 1rem 1rem .5rem;
+    }
+    100%{
+        transform: scale(.9);
+    } 
 }
 
 
 
-.btn--header{
-    display: inline-block;
-    font-size: 1.8rem;
-    line-height: 1;
-    width: 90%;
-    color:#f6efca;
-    transition: color .2s, background-color;
-}
+/* 
 
+----------------FIN ANIMACIONES
 
-
-.btn--header:last-child{
-    margin-left: 1rem;
-}
-
-
-.btn--header:hover{
-    color:#a20a0a;
-    background-color:#f6efca;
-}
-
-
-.img__logo{
-    width: 44.5rem;
-}
-
-
-.hero-slider{
-    width: 100vw;
-    height: 85vh;
-    margin-top: -41rem;
-}
-
-.img--slider{
-    width: 100%;
-    height: 100%;
-}
- 
-
-
-------------------------------------------*/
-
+*/
 
 
 /*-------------------- Mobile 320  ---------------*/
@@ -236,6 +124,7 @@ body{
      display: inline-block;
      cursor: pointer;
      width: 5rem;
+     animation: pulse 2s infinite;
  }
 
 
@@ -365,7 +254,7 @@ body{
 
 
 
-@media screen and (min-width: 725px){
+@media screen and (min-width: 768px){
     
     .login{
         width: 20%;
@@ -381,6 +270,7 @@ body{
         
         width: 7rem;
         margin-right: 2rem;
+        animation: pulse 2s infinite;
     }
 
     .btn--cross{
@@ -414,6 +304,7 @@ body{
         outline: none;
         font-size: 1.6rem;
         color: var(--color-primary-yellow);
+        font-family: arimo;
 
     }
 
@@ -471,6 +362,7 @@ body{
         background-image: none;
         background-image: url(/img/fondos/header_fondo\ copy.svg);
         background-repeat: no-repeat;
+        box-shadow: unset;
    }
 
 /*    .header__bg{
