@@ -124,6 +124,7 @@ a {
  width: 14rem;
  border-bottom: .3rem solid  #f6eec9;
  border-radius: 4%;
+ font-weight: unset;
 }
 
 
@@ -166,6 +167,7 @@ a {
   display: flex;
   margin: unset;
   margin-left: 10px ;
+  font-weight: unset;
 }
 
 
@@ -196,6 +198,7 @@ a {
 .contactanos-text{
   padding: 10px;
   margin: unset;
+  font-weight: unset;
 }
 
 .contacto i{
@@ -211,6 +214,54 @@ a {
  
 
 
+@media screen and (min-width: 500px){
+  .medios-texto{
+    margin-left: 16vw;
+    font-size: 30px;
+    width: 18rem;
+    border-bottom: 0.5rem solid #f6eec9;
+  }
+  
+  .medios-de-pago i{
+    padding: 21px;
+    font-size: 4rem;
+  }
+
+  .iconos img{
+    margin-left: 5px;
+    margin-top: 12px;
+    width: 163px;
+    height: 68px;
+  }
+
+  .redes{
+    height: 34px;
+    margin-top: 24px;
+  }
+
+  .redes-text{
+    font-size: 2rem;
+  }
+
+  .redes i{
+    font-size: 22px;
+    
+  }
+  .contacto{
+    justify-content: center;
+    margin: 60px 165px;
+    height: 32px;
+    
+  }
+  .contactanos-text{
+    font-size: 2rem;
+    
+  }
+
+  .contacto i{ 
+   font-size: 20px;
+  }
+}
 
 
 @media screen and (min-width: 725px){
@@ -318,10 +369,34 @@ a {
 }
 
 
+@media screen and (min-width: 960px){
+
+  
+  .logo-footer img{
+    width: 36%;
+  }
 
 
+  .segundo-container{
+    margin-left: 7vw;
+  }
+  
+}
+
+@media screen and (min-width: 1182px){
+
+  .logo-footer img{
+    margin-top: 26px;
+    width: 33%;
+  }
 
 
+ /*  .segundo-container{
+    margin-left: 7vw;
+  } */
+
+}
+ 
 
 
 @media screen and (min-width: 1200px){
