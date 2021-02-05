@@ -1,46 +1,46 @@
 <!-- head -->
-  <%- include('partials/head')  %>
-<!-- /head --> 
+<%- include('partials/head') %>
+  <!-- /head -->
 
-<body class="body--home">
+  <body class="body--home">
 
-  <div class="home--container">
-  <!-- header -->    
-    <%- include('partials/header')  %>
-  <!-- /header -->
+    <div class="home--container">
+      <!-- header -->
+      <%- include('partials/header') %>
+        <!-- /header -->
 
-  <main class="home__main">
-        <!-- slider acá -->
-    <section class="slider">
-      <div class="conteinerSlider">
-        <img class="slider--img" name="slider" width="100%" >
-        <script>
-          window.addEventListener('load', function(){
-            console.log('el contenido ha cargado!');
-            var imagenes = [];
-            imagenes[0]='./img/sliders/slider_00.jpg';
-            imagenes[1]='./img/sliders/slider_01.jpg';
-            imagenes[2]='./img/sliders/slider_02.jpeg';
-            var indiceImagenes =0;
-            function cambiarImagenes(){
-            document.slider.src=imagenes[indiceImagenes];
-            if(indiceImagenes < 2 ) {
-              indiceImagenes ++ ;
-            }else{
-              indiceImagenes = 0;
-            }
-          }
-          setInterval(cambiarImagenes, 3000)
-          });
-        </script>
-      </div>
-    </section>
-    
-    <section class="kits">
-          <h2 class="kits--title">Kits para principiantes</h2>
-          <!-- slider de instrumentos acá -->
-          
-          <!-- <div class="kit-slider">
+        <main class="home__main">
+          <!-- slider acá -->
+          <section class="slider">
+            <div class="conteinerSlider">
+              <img class="slider--img" name="slider" width="100%">
+              <script>
+                window.addEventListener('load', function () {
+                  console.log('el contenido ha cargado!');
+                  var imagenes = [];
+                  imagenes[0] = './img/sliders/slider_00.jpg';
+                  imagenes[1] = './img/sliders/slider_01.jpg';
+                  imagenes[2] = './img/sliders/slider_02.jpeg';
+                  var indiceImagenes = 0;
+                  function cambiarImagenes() {
+                    document.slider.src = imagenes[indiceImagenes];
+                    if (indiceImagenes < 2) {
+                      indiceImagenes++;
+                    } else {
+                      indiceImagenes = 0;
+                    }
+                  }
+                  setInterval(cambiarImagenes, 3000)
+                });
+              </script>
+            </div>
+          </section>
+
+          <section class="kits">
+            <h2 class="kits--title">Kits para principiantes</h2>
+            <!-- slider de instrumentos acá -->
+
+            <!-- <div class="kit-slider">
             <div class="slide">
               <article class="article-container">
                 <h3 class="article--title">Guitarras</h3>
@@ -107,107 +107,114 @@
               
             </div>
           </div> -->
-        
-          <div class="kits--slider">
-            <div class="slide">
-              <div class="article-container">
-                <div class="article--card">
-                  texto texto texto
+
+            <div class="kits--slider">
+              <div class="slide">
+                <div class="article-container">
+                  <div class="article--card">
+                    texto texto texto
+                  </div>
                 </div>
-              </div>
-              <div class="article-container">
-                <div class="article--card">
-                  texto texto texto
+                <div class="article-container">
+                  <div class="article--card">
+                    texto texto texto
+                  </div>
                 </div>
-              </div>
-              <div class="article-container">
-                <div class="article--card">
-                  texto texto texto
+                <div class="article-container">
+                  <div class="article--card">
+                    texto texto texto
+                  </div>
                 </div>
+
               </div>
-      
             </div>
-          </div>
-        
-    </section>
-        
-    <section class="categorias">
-          
-      <div class="container">
-        <div class="row">
-            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-                <a href="">
+
+          </section>
+
+          <section class="categorias">
+
+            <div class="container">
+              <div class="row">
+                <div class="row col-12">
+                <div class="col-xs-8 col-sm-8" style="height: 200px;     margin-bottom: 10px;">
+                  <a href="">
                     <div class="tarjeta-categoria img-guitarra">
-                        <div class="transparencia transp-guitarra">
-                            <h3>guitarras</h3>
-                            <p>las mejores guitarras e instrumentos de cuerda</p>
-                        </div>
+                      <div class="transparencia transp-guitarra">
+                        <h3>guitarras</h3>
+                        <p>las mejores guitarras e instrumentos de cuerda</p>
+                      </div>
                     </div>
-                </a>
-            </div>
-            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-                <a href="">
+                  </a>
+                </div>
+                <div class="col-xs-8 col-sm-4" style="height: 200px;     margin-bottom: 10px;">
+                  <a href="">
                     <div class="tarjeta-categoria img-piano">
-                        <div class="transparencia transp-piano">
-                            <h3>pianos</h3>
-                            <p>los mejores pianos y teclados</p>
-                        </div>
+                      <div class="transparencia transp-piano">
+                        <h3>pianos</h3>
+                        <p>los mejores pianos y teclados</p>
+                      </div>
                     </div>
-                </a>
-            </div>
-            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-                <a href="">
-                    <div class="tarjeta-categoria img-bateria">
+                  </a>
+                </div>
+              </div>
+                <div class="row col-12">
+                  <div class="col-xs-8 col-sm-8" style="height: 200px;     margin-bottom: 10px;">
+                    <a href="">
+                      <div class="tarjeta-categoria img-bateria">
                         <div class="transparencia transp-bateria">
-                            <h3>baterias</h3>
-                            <p>instrumentos de percucion y baterias</p>
+                          <h3>baterias</h3>
+                          <p>instrumentos de percucion y baterias</p>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-                <a href="#">
-                    <div class="tarjeta-categoria img-viento">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-xs-8 col-sm-8" style="height: 200px;     margin-bottom: 10px;">
+                    <a href="#">
+                      <div class="tarjeta-categoria img-viento">
                         <div class="transparencia transp-viento">
-                            <h3>vientos</h3>
-                            <p>los mejores instrumentos de viento</p>
+                          <h3>vientos</h3>
+                          <p>los mejores instrumentos de viento</p>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12" style="height: 200px;     margin-bottom: 10px;">
-                <a href="#">
+                      </div>
+                    </a>
+                  </div>
+                
+                <div class="col-xs-8 col-sm-4 bat-categoria" style="height: 200px;     margin-bottom: 10px;">
+                  <a href="#">
                     <div class="tarjeta-categoria img-ampli">
-                        <div class="transparencia transp-ampli">
-                            <h3>Amplis y Accesorios</h3>
-                            <p>amplis y todo lo que necesitas para hacer buena musica</p>
-                        </div>
+                      <div class="transparencia transp-ampli">
+                        <h3>Amplis y Accesorios</h3>
+                        <p>amplis y todo lo que necesitas para hacer buena musica</p>
+                      </div>
                     </div>
-                </a>
+                  </a>
+                </div>
+              </div>
+              </div>
             </div>
-        </div>
+            
+          </section>
+        </main>
+
+        <!-- footer -->
+        <%- include('partials/footer') %>
+          <!-- /footer -->
     </div>
-    </section>
-  </main>
-
-  <!-- footer -->
-    <%- include('partials/footer')  %> 
-  <!-- /footer -->
-  </div>
 
 
 
-<!-- scripts de bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
+    <!-- scripts de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"></script>
     <script src="/javascript/slider.js"></script>
-    
+
   </body>
-</html>
+
+  </html>

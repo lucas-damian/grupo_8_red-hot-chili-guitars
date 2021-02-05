@@ -258,11 +258,8 @@ footer{
  text-decoration: 5px solid #f6eec9;;
 }
 
-<<<<<<< HEAD
 /*  .medios-texto::after{
-=======
 .medios-texto::after{
->>>>>>> 7827543e7ae534de06c9b21b32116039fe222b09
   content: '';
   background-color: #f6eec9;
   width: 130px; 

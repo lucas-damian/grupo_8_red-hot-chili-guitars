@@ -417,6 +417,12 @@ body{
         width: 45vw;
         font-size: 1.5rem;
     }
+    .bat-categoria{
+        height: 400px !important; 
+        margin-bottom: 10px;
+        position: relative;
+        top: -207px;
+    }
     
 }
 
@@ -747,10 +753,14 @@ body{
 }
 
 h3{
-    margin: -19px 0px 0px -21px
+    margin: -19px 0px 0px -21px;
+    font-weight: bolder;
+    font-size: 20px;
 }
 p{
     margin: 26px 0px 0px -15px;
+    font-weight: bolder;
+    font-size: 12px;
 }
 .tarjeta-categoria{
 
