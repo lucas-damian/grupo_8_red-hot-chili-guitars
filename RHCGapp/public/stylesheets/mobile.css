@@ -273,7 +273,8 @@ body{
 
 }
 
-.login a {
+.link--message,
+.link--kart {
     background-color: var(--color-primary-red);
     color:var(--color-primary-yellow);
     padding: .5rem .8rem;
@@ -290,6 +291,19 @@ body{
     display: none;
 }
 
+.btn--logeoRegistro__mobile{
+    display: inline-block;
+    position: relative;
+    top: -7.5rem;
+    left: 4rem;
+    z-index: 11;
+    background-color: var(--color-primary-red);
+    color: var(--color-primary-yellow);
+    border-radius: 1rem;
+    font-family: lobster;
+    font-size: 1.6rem;
+}
+
 .nav-bar{
     position: fixed;
     top: 0;
@@ -300,7 +314,7 @@ body{
     background-color: rgba(0, 0, 0, 0.288);
     transform:translateX(100%);
     transition: all .3s;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .nav-bar--desktop{
@@ -378,6 +392,13 @@ body{
 
     }
 
+    .btn--logeoRegistro__mobile{
+
+        top: -8.3rem;
+        left: 8rem;
+        font-size: 1.8rem;
+    }
+
 
     .search-bar{
         display: flex;
@@ -433,6 +454,11 @@ body{
 
     .hamburguer{
         display: none;
+    }
+    
+    .btn--logeoRegistro__mobile{
+
+      display: none;
     }
 
    .header{
@@ -508,6 +534,7 @@ body{
 
    .list--header__desktop{
     display: flex;
+    align-items: center;
    }
 
    .item--header{
@@ -521,8 +548,8 @@ body{
     border-radius: .2rem;
 }
 
-.item--header:nth-child(4){
-    padding: 1rem 1rem 1rem .5rem;
+.item--header{
+    padding: 0rem 1rem;
 }
 
 
@@ -532,8 +559,14 @@ body{
     font-size: 1.8rem;
     line-height: 1;
     color:#f6efca;
-    transition: color .2s;
+    transition: color .3s;
     font-family: lobster;
+}
+
+.btn--header__desktop:hover{
+    color: var(--color-primary-darkRed);
+    background-color: var(--color-primary-orange);
+    text-decoration: none;
 }
 
 
@@ -544,7 +577,37 @@ body{
 
 .btn--logeoRegistro{
     display: block;
+    background-color: var(--color-primary-red);
+    color: var(--color-primary-yellow);
+    font-size: 1.6rem;
+    font-family: lobster;
+    border-radius: 1rem;
+    transition: all .2s;
+    box-shadow: var(--primary-shadow-down);
 }
+
+.link--kart,
+.link--message{
+    transition: all .2s;
+}
+
+
+.btn--logeoRegistro:hover,
+.link--message:hover,
+.link--kart:hover{
+    color: var(--color-primary-yellow);
+    text-decoration: none;
+    transform: scale(1.1);
+    background-color: var(--color-primary-darkRed);
+}
+
+.btn--logeoRegistro:active,
+.link--message:active,
+.link--kart:active{
+    transform: scale(1);
+
+}
+
 
 .login{
     width: 50%;
