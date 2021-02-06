@@ -14,6 +14,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-x: hidden;
 
 }
 
@@ -38,145 +39,33 @@ body{
 }
 
 
+/* 
 
-/* --------------------- DESKTOP ------------- 
- 
-.header{
-    width: 100vw;
-    position: relative;
-}
+---------------- ANIMACIONES
 
-.header__bg{
-    width: 100vw;
-    height: 20rem;
-    background-image: linear-gradient(250deg, #c5704a, #7a2e1f );
-    clip-path: url(#path);
-    position: relative;
-    top: -35rem;
-    box-shadow: 1rem -5rem 1rem black;
-}
+*/
 
-.header__container{
-    position: relative;
-    z-index:2;
-    top: 0;
-    left:10rem;
-    width: 50vw;
-    display: flex;
-}
+@keyframes pulse{
+    0%{
+        transform: scale(.9);
+    }
 
-.nav__container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem 0 0 2rem;
-    margin-top: 4rem;
-}
+    70%{
+        transform: scale(1);
 
-
-.header__form{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.search-bar{
-    background-color: #db9e6c;
-    border-radius: .9rem;
-    padding: .6rem 1rem;
-}
-
-.barra-busqueda{
-    border: none;
-    background-color: transparent;
-    font-family: "arimo";
-    font-size: 1.4rem;
-}
-
-.btn--search{
-    background-color: transparent;
-    border: none;
-}
-
-.login{
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 2rem;
-}
-
-.nav-bar{
-    background-color: #4c0505;
-    border-radius: 1.5rem;
-    margin-top: 1.5rem;
-    padding: 1rem 0;
-}
- 
-
-
-.list--header{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-
-.item--header:not(:last-child){
-    border-right: .4rem solid burlywood ;
-    border-radius: .2rem;
-}
-
-.item--header:nth-child(4){
-    padding: 1rem 1rem 1rem .5rem;
+    }
+    100%{
+        transform: scale(.9);
+    } 
 }
 
 
 
-.btn--header{
-    display: inline-block;
-    font-size: 1.8rem;
-    line-height: 1;
-    width: 90%;
-    color:#f6efca;
-    transition: color .2s, background-color;
-}
+/* 
 
+----------------FIN ANIMACIONES
 
-
-.btn--header:last-child{
-    margin-left: 1rem;
-}
-
-
-.btn--header:hover{
-    color:#a20a0a;
-    background-color:#f6efca;
-}
-
-
-.img__logo{
-    width: 44.5rem;
-}
-
-
-.hero-slider{
-    width: 100vw;
-    height: 85vh;
-    margin-top: -41rem;
-}
-
-.img--slider{
-    width: 100%;
-    height: 100%;
-}
- 
-
-
-------------------------------------------*/
-
+*/
 
 
 /*-------------------- Mobile 320  ---------------*/
@@ -235,6 +124,7 @@ body{
      display: inline-block;
      cursor: pointer;
      width: 5rem;
+     animation: pulse 2s infinite;
  }
 
 
@@ -272,7 +162,8 @@ body{
 
 }
 
-.login a {
+.link--message,
+.link--kart {
     background-color: var(--color-primary-red);
     color:var(--color-primary-yellow);
     padding: .5rem .8rem;
@@ -289,6 +180,19 @@ body{
     display: none;
 }
 
+.btn--logeoRegistro__mobile{
+    display: inline-block;
+    position: relative;
+    top: -7.5rem;
+    left: 4rem;
+    z-index: 11;
+    background-color: var(--color-primary-red);
+    color: var(--color-primary-yellow);
+    border-radius: 1rem;
+    font-family: lobster;
+    font-size: 1.6rem;
+}
+
 .nav-bar{
     position: fixed;
     top: 0;
@@ -299,7 +203,7 @@ body{
     background-color: rgba(0, 0, 0, 0.288);
     transform:translateX(100%);
     transition: all .3s;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .nav-bar--desktop{
@@ -333,6 +237,7 @@ body{
     padding:0 0 1rem 2rem;
     font-size: 1.8rem;
     text-align:center;
+    font-family: lobster;
 }
 
 .btn--cross{
@@ -349,7 +254,197 @@ body{
 
 
 
-@media screen and (min-width: 725px){
+/* 
+
+/////////////////////// INICIO CARRITO
+
+*/
+.carrito-mobile{
+    display: block;
+    width:100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: all .2s;
+}
+
+.back{
+    display:block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+
+}
+
+.carrito-container{
+    display: block;
+    width: 80vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    background-color: chocolate;
+    padding: .5rem 1.5rem .5rem 1rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+
+
+.carrito-link{
+    display: inline-block;
+    background-color: crimson;
+    font-size: 2rem;
+    padding: .1rem .5rem;
+    border-radius: 50%;
+}
+
+.carrito-content{
+    width: 100%;
+    background-color: var(--color-primary-yellow);
+}
+
+.carrito--list{
+    width: 100%;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.carrito-subTotal{
+    width: 100%;
+    background-color: var(--color-primary-darkRed);
+    color: var(--color-primary-yellow);
+    border-radius: 0 0 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 2rem 2rem;
+}
+
+.carrito-text,
+.carrito-value{
+    margin: unset;
+    font-weight: unset;
+    font-size: unset;
+    display: inline-block;
+    width: 100%;
+}
+
+.carrito-text{
+    font-family: arimo;
+    font-size: 1.8rem;
+}
+
+.carrito-value{
+    font-size: 2.5rem;
+}
+
+.carrito--item{
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn--expand:after{
+    content: "";
+    display: block;
+    width: 5rem;
+    height: .5rem;
+    background-color: var(--color-primary-darkRed);
+    position: relative;
+    right: 3rem;
+    bottom: -.5rem;
+}
+
+.btn--carrito{
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: var(--color-primary-darkRed);
+    font-size: 2rem;
+}
+
+#carrito:target{
+    transform: translateX(0);
+}
+
+.btn--expand{
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+    color: var(--color-primary-yellow);
+    background-color: var(--color-primary-orange);
+    padding: .5rem;
+}
+
+
+.carrito--row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.carrito-extended{
+    display: inline-block;
+    width: 100%;
+    background-color: var(--color-primary-darkRed);
+    display: flex;
+    flex-direction: column;
+    padding:0;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.extended--img{
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img--carrito{
+    width: 30%;
+}
+
+.extended--text{
+    display: block;
+    padding: 1rem;
+}
+
+.carrito--description{
+    display: block;
+    margin: unset;
+    font-weight: unset;
+    font-size: unset;
+    color:var(--color-primary-yellow);
+}
+
+/* #extended:target .carrito-extended{
+    width: 100%;
+    display: inline-block;
+} */
+
+/* 
+
+/////////////////////// FIN CARRITO
+
+*/
+
+@media screen and (min-width: 768px){
     
     .login{
         width: 20%;
@@ -365,6 +460,7 @@ body{
         
         width: 7rem;
         margin-right: 2rem;
+        animation: pulse 2s infinite;
     }
 
     .btn--cross{
@@ -374,6 +470,13 @@ body{
         font-size: 2.5rem;
         padding: .5rem .9rem;
 
+    }
+
+    .btn--logeoRegistro__mobile{
+
+        top: -8.3rem;
+        left: 8rem;
+        font-size: 1.8rem;
     }
 
 
@@ -391,6 +494,7 @@ body{
         outline: none;
         font-size: 1.6rem;
         color: var(--color-primary-yellow);
+        font-family: arimo;
 
     }
 
@@ -441,33 +545,55 @@ body{
     .hamburguer{
         display: none;
     }
+    
+    .btn--logeoRegistro__mobile{
+
+      display: none;
+    }
 
    .header{
        position: relative;
        width:100vw;
        height: unset;
+       bottom: unset;
        left: 0;
        top: 0;
-       background-image: none;
+        background-image: none;
+        background-image: url(/img/fondos/header_fondo\ copy.svg);
+        background-repeat: no-repeat;
+        box-shadow: unset;
    }
 
-   .header__bg{
-    display: none;
+/*    .header__bg{
+     display: block;
     width: 100vw;
     height: 20rem;
     background-image: linear-gradient(250deg, #c5704a, #7a2e1f );
     clip-path: url(#path);
     position: relative;
-    top: -35rem;
+    top: 0;
+    left: 0;
     box-shadow: 1rem -5rem 1rem black;
-   }
+    display: block;
+    width: 100%;
+    position: relative;  
+    display: block;
+    width: 100vw;
+    position: relative;
+    left: -100rem;
+    top: -1rem;
+    z-index: -1;
+   } */
+
+
 
    .header__container{
+       margin: 6rem auto 0 auto;
        width: 80vw;
-       background-color: var(--color-primary-yellow);
-       position: unset;
+       position: relative;
        display: flex;
        align-items: unset;
+       z-index: 2;
    }
 
    .link--logo{
@@ -499,6 +625,7 @@ body{
 
    .list--header__desktop{
     display: flex;
+    align-items: center;
    }
 
    .item--header{
@@ -512,8 +639,8 @@ body{
     border-radius: .2rem;
 }
 
-.item--header:nth-child(4){
-    padding: 1rem 1rem 1rem .5rem;
+.item--header{
+    padding: 0rem 1rem;
 }
 
 
@@ -523,8 +650,14 @@ body{
     font-size: 1.8rem;
     line-height: 1;
     color:#f6efca;
-    transition: color .2s;
+    transition: color .3s;
     font-family: lobster;
+}
+
+.btn--header__desktop:hover{
+    color: var(--color-primary-darkRed);
+    background-color: var(--color-primary-orange);
+    text-decoration: none;
 }
 
 
@@ -535,7 +668,37 @@ body{
 
 .btn--logeoRegistro{
     display: block;
+    background-color: var(--color-primary-red);
+    color: var(--color-primary-yellow);
+    font-size: 1.6rem;
+    font-family: lobster;
+    border-radius: 1rem;
+    transition: all .2s;
+    box-shadow: var(--primary-shadow-down);
 }
+
+.link--kart,
+.link--message{
+    transition: all .2s;
+}
+
+
+.btn--logeoRegistro:hover,
+.link--message:hover,
+.link--kart:hover{
+    color: var(--color-primary-yellow);
+    text-decoration: none;
+    transform: scale(1.1);
+    background-color: var(--color-primary-darkRed);
+}
+
+.btn--logeoRegistro:active,
+.link--message:active,
+.link--kart:active{
+    transform: scale(1);
+
+}
+
 
 .login{
     width: 50%;
@@ -544,14 +707,12 @@ body{
     justify-content: space-between;
     padding-left: 2rem;
 }
-.transp-guitarra{
-    display: none;
+  
+.home--container{
+    overflow-x: hidden;
+    width: 100vw;
 }
-.transp-piano{
-    display: none;
-}
-.transp-viento{
-    display: none;
+
 }
 .transp-ampli{
     display: none;
@@ -561,7 +722,7 @@ body{
 }
 /* .bat-categoria{
     /* right: 40px; */
-} */
+ */
 
 /* ----------- FIN HEADER ------------------- */
 
@@ -754,7 +915,6 @@ body{
 
 .categorias{
     margin: 6rem 0;
-/*     display: none; */
 }
 
 h3{
