@@ -1033,14 +1033,16 @@ p {
 .col-12 {
 	border-radius: 25px;
 }
-.container {
-	width: 100%;
+.container{
+    width: 100%;
+    margin: unset;
+    padding: unset;
 }
 
-.row {
-	margin: unset;
-	width: 80vw;
-	margin: 0 auto;
+.row{
+    margin: unset;
+    width: 80vw;
+    margin: 0 auto;
 }
 
 /* 

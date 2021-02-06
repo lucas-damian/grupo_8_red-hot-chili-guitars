@@ -1,0 +1,256 @@
+*,*:after,
+*:before{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+body{
+    box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.container-main{
+    background-image:   linear-gradient(#f6eec95b,#f6eec96b),url(/img/fondos/texturas_19.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;  
+    height: 243vh;
+}
+
+.subcontainer-main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title-main{
+    background: linear-gradient(90deg, rgba(240,124,77,1) 0%, rgba(93,48,48,1) 100%);
+    width: 100vw;
+    height: 8vh ;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+    z-index: 44;
+}
+
+.title-main h1{
+    margin-left: 25px;
+    color: #4c0505;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.title-guitar{
+    background: linear-gradient(90deg, rgba(197,112,74,1) 0%, rgba(246,238,201,1) 100%);
+    width: 100vw;
+    padding-top: 3px;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.title-guitar h2{
+    margin-left: 25px;
+    color: #4c0505;
+}
+
+.product-img{
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    margin-bottom: 20px;
+}
+
+.price{
+    background-image: linear-gradient(157deg, rgba(251,185,130,1) 0%, rgba(247,222,180,1) 60%);
+    border-radius: 34px;
+    width: 19rem;
+    height: 18rem;
+    margin: 0;
+    margin-left: 65px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+}
+
+
+.price p{
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    font-family: "Arimo", "Lobster";
+    margin: 0;
+    color:  #4c0505;
+    font-weight: bolder;
+}
+
+.price, .modelo{
+    font-size: 25px;
+}
+
+.precionum{
+    border-bottom: 4px solid #4c0505;
+    width: 135px;
+}
+
+p.marca{
+    padding: 0px 22px;
+    font-size: 26px;
+    border-bottom: 4px solid #4c0505;
+}
+.precio, .marca{
+    font-size: 25px;
+    margin: 0 5px 0 2px; 
+    padding: 0px 11px;
+   
+}
+
+p.modelo{
+    font-size: 27px;
+}
+
+.buttons-product{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 27px;
+    font-size: 25px;
+   
+}
+
+.buy{
+    display: flex;
+    justify-content: center;
+    height: 55px;
+}
+
+.buy a{
+    background-color: #799351;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+}
+
+.carrito{
+    display: flex;
+    justify-content: center;
+    color: #f6eec9;
+    height: 55px;
+    margin-top: 11px
+}
+
+.carrito a{
+    background-color: #4c0505;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+}
+
+
+.description-product{
+    background-image: linear-gradient(157deg, rgba(251,185,130,1) 0%, rgba(247,222,180,1) 60%);
+    border-radius: 34px;
+    width: 19rem;
+    margin: 0;
+    margin-left: 65px;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: flex;
+    align-items: center;
+    font-family: 'Arimo';
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+    color: #4c0505;
+    font-weight: bold;
+}
+
+
+.description-product p{
+    margin: 0;
+    font-weight: bold;
+    margin: 4px 6px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.title-description{
+    margin-top: 11px;
+    font-size: 29px;
+    font-weight: bold;
+}
+
+
+.title-payment-method{
+    background: rgb(210,128,90);
+    background-image: linear-gradient(114deg, rgba(210,128,90,0.8519782913165266) 46%, rgba(76,5,5,0.8883928571428571) 100%);
+    /* background: linear-gradient(90deg, rgba(240,124,77,1) 0%, rgba(93,48,48,1) 100%); */
+    margin: 40px 0px;
+}
+.title-payment-method h3{
+    margin: 0;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    margin-left:25px ;
+    font-size: 22px;
+    color: #4c0505;
+    font-weight: unset;
+}
+
+.payment-method-main{
+    
+    background-image: linear-gradient(157deg, rgba(251,185,130,1) 0%, rgba(247,222,180,1) 60%);
+   
+    border-radius: 34px;
+    width: 19rem;
+    height: 23rem;
+    padding: 21px 0px;
+    margin-left: 66px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: flex;
+    align-items: center;
+    font-family: 'Arimo';
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+    color: #4c0505;
+    font-weight: bold;
+
+}
+
+.payment-method-main p{
+    margin: 2px 14px;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 36px;
+}
+
+.deb, .cred, .mp, .pg{
+    border-bottom: 4px solid #4c0505;
+    width: 150px;
+
+}
