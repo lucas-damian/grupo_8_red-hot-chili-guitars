@@ -525,6 +525,15 @@ body{
         position: relative;
         top: -207px;
     }
+    .img-bateria{
+        background-position: 25%;
+    }
+    .img-guitarra{
+        background-position: 25%;
+    }
+    .img-viento{
+        background-position: 25% 64%;
+    }
     
 }
 
@@ -705,6 +714,15 @@ body{
 }
 
 }
+.transp-ampli{
+    display: none;
+}
+.transp-bateria{
+    display: none;
+}
+/* .bat-categoria{
+    /* right: 40px; */
+ */
 
 /* ----------- FIN HEADER ------------------- */
 
@@ -736,7 +754,9 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0 0 4rem 0;
+    overflow-x: hidden ;
 }
+
 
 
 
@@ -894,6 +914,7 @@ body{
 ///////////////// INICIO CATEGORIAS
 
 */
+
 .categorias{
     margin: 6rem 0;
 }
@@ -927,6 +948,7 @@ p{
 }
 .img-viento{
     background-image: url("/img/bg-images/bg-saxo.jpg");
+    background-position: 25% 64%;
 }
 .img-ampli{
     background-image: url("/img/bg-images/bg-ampli.jpg");
@@ -965,6 +987,16 @@ color: white;
 }
 .col-12{
     border-radius: 25px;
+}
+.container{
+    width: 100%;
+}
+
+.row{
+    margin: unset;
+    width: 80vw;
+    margin: 0 auto;
+
 }
 
 
