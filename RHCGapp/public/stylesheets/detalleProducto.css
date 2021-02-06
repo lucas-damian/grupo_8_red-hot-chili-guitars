@@ -1,0 +1,243 @@
+*,*:after,
+*:before{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+body{
+    box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.container-main{
+    background-image:   linear-gradient(#f6eec95b,#f6eec96b),url(/img/fondos/texturas_19.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;  
+}
+
+.subcontainer-main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title-main{
+    background: linear-gradient(90deg, rgba(240,124,77,1) 0%, rgba(93,48,48,1) 100%);
+    width: 100vw;
+    height: 7vh ;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+    z-index: 44;
+}
+
+.title-main h1{
+    margin-left: 25px;
+    color: #4c0505;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.title-guitar{
+    background: linear-gradient(90deg, rgba(197,112,74,1) 0%, rgba(246,238,201,1) 100%);
+    width: 100vw;
+    padding-top: 3px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.title-guitar h2{
+    margin-left: 25px;
+    color: #4c0505;
+}
+
+.product-img{
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    margin-bottom: 20px;
+}
+
+.price{
+    background-image: linear-gradient(157deg, rgba(251,185,130,1) 0%, rgba(247,222,180,1) 60%);
+    border-radius: 34px;
+    width: 19rem;
+    height: 18rem;
+    margin: 0;
+    margin-left: 85px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+}
+
+
+.price p{
+    display: flex;
+    justify-content: center;
+    font-size: 33px;
+    font-family: "Arimo", "Lobster";
+    margin: 0;
+    color:  #4c0505;
+    font-weight: bolder;
+}
+
+.price, .modelo{
+    font-size: 25px;
+}
+
+.precionum{
+    border-bottom: 4px solid #4c0505;
+    width: 135px;
+}
+
+.marca{
+    border-bottom: 4px solid #4c0505;
+}
+.precio, .marca{
+    font-size: 25px;
+    margin: 0 5px 0 2px; 
+    padding: 0px 11px;
+   
+}
+
+.buttons-product{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 27px;
+    font-size: 25px;
+   
+}
+
+.buy{
+    display: flex;
+    justify-content: center;
+    height: 55px;
+}
+
+.buy a{
+    background-color: #799351;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+}
+
+.carrito{
+    display: flex;
+    justify-content: center;
+    color: #f6eec9;
+    height: 55px;
+    margin-top: 11px
+}
+
+.carrito a{
+    background-color: #4c0505;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+}
+
+
+.description-product{
+    background-image: linear-gradient(157deg, rgba(251,185,130,1) 0%, rgba(247,222,180,1) 60%);
+    border-radius: 34px;
+    width: 19rem;
+    margin: 0;
+    margin-left: 84px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: flex;
+    align-items: center;
+    font-family: 'Arimo';
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+    color: #4c0505;
+    font-weight: bold;
+}
+
+
+.description-product p{
+    margin: 0;
+    font-weight: bold;
+    margin: 4px 22px;
+    margin-bottom: 25px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.title-description{
+    margin-top: 11px;
+    font-size: 29px;
+    font-weight: bold;
+}
+
+
+.title-payment-method{
+    background: linear-gradient(90deg, rgba(240,124,77,1) 0%, rgba(93,48,48,1) 100%);
+    margin: 40px 0px;
+}
+.title-payment-method h3{
+    margin: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-left:25px ;
+    color: #4c0505;
+    font-weight: bold;
+}
+
+.payment-method-main{
+    background-image: linear-gradient(157deg, rgba(251,185,130,1) 0%, rgba(247,222,180,1) 60%);
+    border-radius: 34px;
+    width: 19rem;
+    margin: 0;
+    margin-left: 84px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: flex;
+    align-items: center;
+    font-family: 'Arimo';
+    box-shadow: 0px 5px 8px #0b0b0b6e;
+    color: #4c0505;
+    font-weight: bold;
+}
+
+.payment-method-main p{
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 32px;
+}
+
+.deb, .cred, .mp, .pg{
+    border-bottom: 4px solid #4c0505;
+    width: 135px;
+}
+
+.deb{
+    /* margin-top: 10px; */
+}
