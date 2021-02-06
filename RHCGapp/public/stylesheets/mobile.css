@@ -804,6 +804,8 @@ body{
     flex-shrink: 0;
     display: flex;
     padding: 2rem 0;
+    background-color: var(--color-primary-green);
+    padding-left: 3rem;
 }
 
 
@@ -815,16 +817,16 @@ body{
 .article-container{
     position: relative;
     margin-right: 2.5rem;
-    width: 20rem;
+    width: 22rem;
     padding: 1rem 1rem 1rem 0;
 }
 
 .article--card{
     background-color: var(--color-primary-yellow);
     border-radius: 3rem;
-    margin-right: 2.5rem;
     padding: 1.5rem;
-
+    position: relative;
+    height: 22rem;
 }
 
 .article--content{
@@ -846,10 +848,10 @@ body{
 }
 
 .article--figure{
-    width: 10rem;
-    position: relative;
+    width: 15rem;
+    position: absolute;
     top: -2.5rem;
-    right: -2rem;
+    right: -3rem;
     z-index: 1;
 }
 
