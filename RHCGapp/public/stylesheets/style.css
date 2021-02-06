@@ -13,10 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-main{
-  height: 100vh;
-}
-
 ul{
   list-style: none;
   margin: 0;
@@ -40,9 +36,9 @@ a {
 
 
 
-.categorias{
+/* .categorias{
   display: none;
-}
+} */
 
 .slider{
   display: none;
