@@ -147,6 +147,7 @@ p.modelo{
     align-items: center;
     border-radius: 11px;
     box-shadow: 0px 5px 8px #0b0b0b6e;
+    text-decoration: none;
 }
 
 .carrito{
@@ -165,6 +166,7 @@ p.modelo{
     align-items: center;
     border-radius: 11px;
     box-shadow: 0px 5px 8px #0b0b0b6e;
+    text-decoration: none;
 }
 
 
@@ -253,4 +255,172 @@ p.modelo{
     border-bottom: 4px solid #4c0505;
     width: 150px;
 
+}
+
+@media screen and (min-width: 425px){
+
+    .container-main{
+        height: 250vh;
+    }
+
+    .product-img{
+        height: 50vh;
+    }
+
+    .price{
+        width: 23rem;
+        margin-left: 107px;
+    }
+
+    .precionum{
+        width: 170px; 
+    }
+
+    p.marca{
+        width: 170px;
+    }
+
+    .description-product{
+        width: 23rem;
+        margin-left: 107px;
+    }
+
+    .payment-method-main{
+        width: 23rem;
+        margin-left: 107px;
+    }
+
+    .payment-method-main p{
+        font-size: 20px;
+    }
+
+    .deb, .cred, .mp, .pg {
+        width: 180px;
+    }
+
+    @media screen and (min-width: 768px) {
+
+        .container-main{
+            height: 270vh;
+        }
+
+        .product-img {
+            height: 65vh;
+        }
+
+        .price {
+            width: 25rem;
+            height: 20rem;
+            margin-left: 263px;
+        }
+
+        .description-product {
+            width: 26rem;
+            height: 23rem;
+            margin-left: 263px;
+        }
+
+        .description-product p{
+            margin: 10px 21px;
+            font-size: 20px;
+        }
+
+        .title-description{
+            font-size: 33px;
+        }
+
+        .payment-method-main{
+            width: 25rem;
+            margin-left: 263px;
+        }
+    
+        .payment-method-main p{
+            font-size: 
+        }
+    
+        .deb, .cred, .mp, .pg {
+            width: 
+        }
+        
+        @media screen and (min-width: 1200px){
+
+            .container-main{
+                height: 290vh;
+            }
+
+
+            .price{
+                width: 65rem;
+                height: 25rem;
+                margin-left: 275px;
+                margin-top: 8rem;
+                margin-bottom: 8rem;
+            }
+
+            .price p{
+                font-size: 50px;
+            }
+
+            .precionum{
+                width: 44rem;
+            }
+
+            p.marca{
+                width: 44rem;
+                font-size: 44px;
+            }
+
+            .modelo{
+                font-size: 36px;
+            }
+            .buttons-product{
+                font-size: 46px;
+            }
+            .buy{
+                height: 74px;
+            }
+
+            .buy a{
+                font-size: 46px,
+            }
+
+            .carrito{
+                height: 74px;
+            }
+
+            .description-product{
+                width: 65rem;
+                height: 21rem;
+                margin-left: 275px;
+            }
+
+            .title-description{
+                font-size: 43px;
+            }
+            .description-product p{
+                font-size: 30px;
+            }
+
+            .title-payment-method{
+                margin-top: 75px;
+                margin-bottom: 50px;
+            }
+
+            .title-payment-method h3{
+                height: 60px;
+                margin-left: 70px;
+                font-size: 37px;
+            }
+
+            .payment-method-main  {
+                width: 65rem;
+                height: 32rem;
+                margin-left: 275px;
+            } 
+
+            .payment-method-main p{
+                font-size: 30px;
+                height: 53px;
+                width: 44rem;
+            }
 }
