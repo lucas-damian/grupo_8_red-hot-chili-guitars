@@ -1,0 +1,90 @@
+<!-- head -->
+<%- include('partials/head') %>
+  <!-- /head -->
+
+  
+<body class="body--home">
+    <div class="form-container">
+
+    <!-- header -->
+    <%- include('partials/header') %>
+    <!-- /header -->
+
+    <!-- carrito -->
+    <%- include('partials/carrito') %>
+    <!-- /carrito -->
+    
+    
+    <main class="cargaProductos">
+      <form class="carga">
+          <div class="carjaIzquierda">
+              <div class="cajainstrumento">
+              <label class="Instrumento" for="inputGroupSelect01">Tipo de instrumento :</label>
+                <select class="formSelect" id="inputGroupSelect01">
+                  <option selected>Instrumento...</option>
+                  <option value="1">Guitarra</option>
+                  <option value="2">Piano</option>
+                  <option value="3">Bateria</option>
+                </select>
+             </div>
+              <div class="cajaMarca">
+              <label class="Marca" for="inputGroupSelect01">Marca :</label>
+                <select class="formSelect" id="inputGroupSelect01">
+                  <option selected>Todas...</option>
+                  <option value="1">Gipson</option>
+                  <option value="2">Fender</option>
+                  <option value="3">Ibanez</option>
+                </select>
+            </div>
+              <div class="tituloPubli">
+              <label for="Titulo" class="log--label">Titulo de la publicacion :</label>
+              <input class="log--input" type="text" placeholder="Escribe tu titulo" id="userName">
+              </div>
+            <div class="descripcion">
+            <label for="Descripcion" class="log--label">Descripcion :</label>
+            <input class="log--input" type="text" placeholder="Descripcion del producto" id="userName">
+            </div>
+          
+         </div>
+          <div class="carjaDerecha">
+              <div class="log-row">
+              <label for="userName" class="log--label">Color :</label>
+              <input class="log--input" type="text" placeholder="Color..." id="userName">
+               </div>
+             <div class="log-row">
+            <label for="userName" class="log--label">Precio :</label>
+            <input class="log--input" type="text" placeholder="Precio..." id="userName">
+             </div>
+              <div class="cajaimagen">
+                <label for="exampleFormControlFile1">Fotos :</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+           <div> <input class="cargaPro" type="button" value="Enviar"> </div>
+           </div>
+
+      </form>
+      
+   </main>
+   
+
+
+<!-- footer -->
+   <%- include('partials/footer') %>
+ <!-- /footer -->
+
+</div>
+   
+   
+   
+   
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+   integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+   crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+   integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+   crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+   crossorigin="anonymous"></script>
+ <script src="/javascript/slider.js"></script>
+  </body>

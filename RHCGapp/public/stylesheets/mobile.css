@@ -1899,3 +1899,73 @@ justify-content: space-between;
 ////////////////////////// FIN REGISTRO
 
 */
+/*////////////// Carga De Producto  //////////////////////////*/
+ 
+.cargaProductos{
+	display: flex;
+	width: 100vw;
+	height: 100%;
+	padding: 4rem 0;
+	background-image: 
+	linear-gradient(#f6eec973, #f07b4d7e),url(/img/fondos/texturas_19.jpg);
+	justify-content: center;
+} 
+.carga{
+	padding: 2rem;
+	background-color: cornsilk;
+	margin: 0 auto;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	border-radius: 2rem;
+	font-size: 1.5rem;
+}
+.carga div{	
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;	
+}
+.cargaPro{
+	background-color: crimson;
+	color: cornsilk ;
+	border-radius: 8px;
+}
+.formSelect{
+	border-radius: 1rem;
+	padding: .3rem 1rem;
+	background-color: transparent;
+	opacity: .8;
+	box-shadow: inset 0.3rem 0.3rem 1rem rgb(126 126 126 / 40%), inset -0.3rem -0.3rem 1rem rgb(126 126 126 / 40%);
+}
+@media screen and (min-width: 1200px) {
+.cargaProductos{
+	padding: 15rem 0 22rem 0;
+}
+.carga{
+	position: relative;
+    width: 60vw !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    background-color: cornsilk;
+    border-radius: 1rem;
+    box-shadow: var(--primary-shadow-down);
+}
+.carjaIzquierda,.carjaDerecha{
+	width: 48%;
+    border-radius: 1rem;
+    padding-top: 1rem;
+}
+.carjaIzquierda ::after{
+    content: "";
+    display: block;
+    width: .5rem;
+    height: 90%;
+    background-color: rgba(128, 128, 128, 0.2);
+    position: absolute;
+    top: 2rem;
+    right: 50%;
+    border-radius: .3rem;
+}
+}
+
+/*////////////// Fin Carga De Producto  //////////////////////////*/
