@@ -154,7 +154,7 @@ body {
 	justify-content: space-between;
 }
 
-.btn--sesion{
+.btn--home{
 	display: none;
 }
 
@@ -764,7 +764,7 @@ body {
 	.btn--logeoRegistro:hover,
 	.link--message:hover,
 	.link--kart:hover ,
-	.btn--sesion:hover{
+	.btn--home:hover{
 		color: var(--color-primary-yellow);
 		text-decoration: none;
 		transform: scale(1.1);
@@ -774,7 +774,7 @@ body {
 	.btn--logeoRegistro:active,
 	.link--message:active,
 	.link--kart:active ,
-	.btn--sesion:active{
+	.btn--home:active{
 		transform: scale(1);
 	}
 
@@ -792,7 +792,7 @@ body {
 		width: 40%;
 	}
 
-	.btn--sesion{
+	.btn--home{
 		display: inline-block;
 		background-color: var(--color-primary-red);
 		color: var(--color-primary-yellow);
