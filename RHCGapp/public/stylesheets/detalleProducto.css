@@ -298,6 +298,8 @@ p.modelo{
         width: 180px;
     }
 
+}
+
     @media screen and (min-width: 768px) {
 
         .container-main{
@@ -334,13 +336,15 @@ p.modelo{
             margin-left: 263px;
         }
     
-        .payment-method-main p{
+       /*  .payment-method-main p{
             font-size: 
-        }
+        } */
     
-        .deb, .cred, .mp, .pg {
+       /*  .deb, .cred, .mp, .pg {
             width: 
-        }
+        } */
+
+    }
         
         @media screen and (min-width: 1200px){
 
