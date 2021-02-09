@@ -148,6 +148,16 @@ body {
 	flex-direction: row-reverse;
 }
 
+.login-container{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.btn--home{
+	display: none;
+}
+
 .link--message,
 .link--kart {
 	background-color: var(--color-primary-red);
@@ -157,6 +167,8 @@ body {
 	font-size: 1.5rem;
 	box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
 }
+
+
 
 .fa-shopping-cart {
 	margin-left: -0.2rem;
@@ -751,7 +763,8 @@ body {
 
 	.btn--logeoRegistro:hover,
 	.link--message:hover,
-	.link--kart:hover {
+	.link--kart:hover ,
+	.btn--home:hover{
 		color: var(--color-primary-yellow);
 		text-decoration: none;
 		transform: scale(1.1);
@@ -760,7 +773,8 @@ body {
 
 	.btn--logeoRegistro:active,
 	.link--message:active,
-	.link--kart:active {
+	.link--kart:active ,
+	.btn--home:active{
 		transform: scale(1);
 	}
 
@@ -770,6 +784,23 @@ body {
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		padding-left: 2rem;
+	}
+
+	.login-container{
+		display: flex;
+		justify-content: space-between;
+		width: 40%;
+	}
+
+	.btn--home{
+		display: inline-block;
+		background-color: var(--color-primary-red);
+		color: var(--color-primary-yellow);
+		padding: 0.5rem 1rem !important;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+		transition: all .2s;
 	}
 
 	.home--container {
@@ -884,6 +915,10 @@ body {
 		padding: .5rem 1rem;
 	}
 
+	.kits{
+		padding: 20rem 0 !important;
+	}
+
 	.form-container{
 		display: flex;
 		flex-direction: column;
@@ -893,8 +928,8 @@ body {
 		position: relative;
 		left: 0;
 		top: -14rem;
-		padding:20rem 0 !important;
-		margin-bottom: -25rem;
+		padding:30rem 0 20rem 0 !important;
+		margin-bottom: -10rem;
 		z-index: 1;
 	}
 
@@ -1299,7 +1334,7 @@ p {
 	background-color: #c5714a79;
 	color: var(--color-primary-darkRed);
 }
-#cat-vietos{
+#cat-vientos{
 	background-color: #f6eec97c;
 	color: var(--color-primary-darkRed);
 
@@ -1862,3 +1897,73 @@ justify-content: space-between;
 ////////////////////////// FIN REGISTRO
 
 */
+/*////////////// Carga De Producto  //////////////////////////*/
+ 
+.cargaProductos{
+	display: flex;
+	width: 100vw;
+	height: 100%;
+	padding: 4rem 0;
+	background-image: 
+	linear-gradient(#f6eec973, #f07b4d7e),url(/img/fondos/texturas_19.jpg);
+	justify-content: center;
+} 
+.carga{
+	padding: 2rem;
+	background-color: cornsilk;
+	margin: 0 auto;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	border-radius: 2rem;
+	font-size: 1.5rem;
+}
+.carga div{	
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;	
+}
+.cargaPro{
+	background-color: crimson;
+	color: cornsilk ;
+	border-radius: 8px;
+}
+.formSelect{
+	border-radius: 1rem;
+	padding: .3rem 1rem;
+	background-color: transparent;
+	opacity: .8;
+	box-shadow: inset 0.3rem 0.3rem 1rem rgb(126 126 126 / 40%), inset -0.3rem -0.3rem 1rem rgb(126 126 126 / 40%);
+}
+@media screen and (min-width: 1200px) {
+.cargaProductos{
+	padding: 15rem 0 22rem 0;
+}
+.carga{
+	position: relative;
+    width: 60vw !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    background-color: cornsilk;
+    border-radius: 1rem;
+    box-shadow: var(--primary-shadow-down);
+}
+.carjaIzquierda,.carjaDerecha{
+	width: 48%;
+    border-radius: 1rem;
+    padding-top: 1rem;
+}
+.carjaIzquierda ::after{
+    content: "";
+    display: block;
+    width: .5rem;
+    height: 90%;
+    background-color: rgba(128, 128, 128, 0.2);
+    position: absolute;
+    top: 2rem;
+    right: 50%;
+    border-radius: .3rem;
+}
+}
+
+/*////////////// Fin Carga De Producto  //////////////////////////*/
