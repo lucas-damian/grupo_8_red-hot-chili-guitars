@@ -789,7 +789,7 @@ body {
 	.login-container{
 		display: flex;
 		justify-content: space-between;
-		width: 40%;
+		width: 45%;
 	}
 
 	.btn--home{
@@ -908,7 +908,7 @@ body {
 		width: 30vw;
 		height: 5rem;
 		flex-direction: row;
-		transform: translate(-105%, 740%);
+		transform: translate(-105%, 666%);
 	}
 
 	.btn--carrito{
@@ -1618,7 +1618,7 @@ p {
 	}
 
 	.login {
-		width: 50%;
+		width: 53%;
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;
@@ -1691,7 +1691,7 @@ p {
 	}
 
 	.btn--carrito {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 
 	.carrito-extended {
