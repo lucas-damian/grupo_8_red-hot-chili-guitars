@@ -1,5 +1,5 @@
 # grupo_8_red-hot-chili-guitars
-!(https://github.com/lucas-damian/grupo_8_red-hot-chili-guitars/blob/main/iconos/logo_01.svg)
+!(grupo_8_red-hot-chili-guitars/blob/main/iconos/logo_01.svg)
 ## Integrantes :
  - Lucas Herlan
  - Matías Gonzalez
