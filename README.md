@@ -1,5 +1,5 @@
 # grupo_8_red-hot-chili-guitars
-!(/iconos/logo_01.svg)
+![logotipo](/iconos/logo_01.svg)
 ## Integrantes :
  - Lucas Herlan
  - Matías Gonzalez
