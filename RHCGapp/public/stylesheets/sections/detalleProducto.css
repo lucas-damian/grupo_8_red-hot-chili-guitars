@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100vw;  
-    height: 188vh;
+    height: 240vh;
 }
 
 .subcontainer-main{
@@ -32,6 +32,7 @@
     color: #4c0505;
     height: 32px;
     margin-top: 10px;
+    font-family: 'lobster';
 }
 
 .title-guitar{
@@ -47,6 +48,7 @@
 .title-guitar h2{
     margin-left: 25px;
     color: #4c0505;
+    font-family: 'lobster';
 }
 
 .product-img{
@@ -117,6 +119,7 @@ p.modelo{
    
 }
 
+
 .buy{
     display: flex;
     justify-content: center;
@@ -132,7 +135,13 @@ p.modelo{
     border-radius: 11px;
     box-shadow: 0px 5px 8px #0b0b0b6e;
     text-decoration: none;
+    font-family: 'lobster';
+    color: white;
 }
+
+
+
+
 
 .carrito{
     display: flex;
@@ -151,6 +160,14 @@ p.modelo{
     border-radius: 11px;
     box-shadow: 0px 5px 8px #0b0b0b6e;
     text-decoration: none;
+    font-family: 'lobster';
+    color: white;
+}
+
+.buy:hover,
+.carrito:hover{
+    background-color: white;
+    transform: scale(1.1);
 }
 
 
@@ -204,6 +221,7 @@ p.modelo{
     font-size: 22px;
     color: #4c0505;
     font-weight: unset;
+    font-family: 'lobster';
 }
 
 .payment-method-main{
@@ -345,9 +363,12 @@ p.modelo{
         @media screen and (min-width: 1200px){
 
             .container-main{
-                height: 290vh;
+                height: 360vh;
             }
 
+            .title-main{
+                margin-top: 102px;
+            }
 
             .price{
                 width: 65rem;
