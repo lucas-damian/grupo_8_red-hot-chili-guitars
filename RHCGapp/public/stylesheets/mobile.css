@@ -971,7 +971,35 @@ body {
 		position: relative;
 		z-index: 2;
 	}
+
+/*     .categorias--item:nth-child(1){
+		display: inline-block;
+        height: 500px;
+		width: 50%;
+    }
+    .categorias--item:nth-child(2){
+		display: inline-block;
+		height: 199px;
+        width: 44%;
+    }
+    .categorias--item:nth-child(3){
+		display:inline-block;
+		height: 199px;
+        width: 44%;
+    }
+	.categorias--item:nth-child(4){
+		display: inline-block;
+		width: 80%;
+	}
+	.categorias--item:nth-child(5){
+		display: inline-block;
+		width: 25%;
+	} */
+
+
 }
+
+
 
 
 
@@ -1186,89 +1214,6 @@ body {
 
 */
 
-/* .categorias {
-	margin: 6rem 0;
-}
-
-h3 {
-	margin: -19px 0px 0px -21px;
-	font-weight: bolder;
-	font-size: 20px;
-}
-p {
-	margin: 26px 0px 0px -15px;
-	font-weight: bolder;
-	font-size: 12px;
-}
-.tarjeta-categoria {
-	width: 100%;
-	border-radius: 25px;
-	height: 100%;
-	background-size: cover;
-	font-family: "arimo", "lobster";
-}
-.img-guitarra {
-	background-image: url("/img/bg-images/bg-guitarra.jpg");
-}
-.img-piano {
-	background-image: url("/img/bg-images/bg-piano.jpg");
-}
-.img-bateria {
-	background-image: url("/img/bg-images/bg-bateria.jpg");
-}
-.img-viento {
-	background-image: url("/img/bg-images/bg-saxo.jpg");
-	background-position: 25% 64%;
-}
-.img-ampli {
-	background-image: url("/img/bg-images/bg-ampli.jpg");
-}
-.transparencia {
-	width: 50%;
-	height: 100%;
-	border-radius: 25px 0px 0px 25px;
-	color: white;
-	padding: 30px;
-}
-.transp-guitarra {
-	background-color: rgba(230, 121, 89, 0.5);
-}
-.transp-piano {
-	background-color: rgba(185, 206, 162, 0.5);
-}
-.transp-bateria {
-	background-color: rgba(134, 149, 19, 0.5);
-}
-.transp-viento {
-	background-color: rgba(172, 182, 147, 0.5);
-}
-.transp-ampli {
-	background-color: rgba(181, 152, 119, 0.5);
-}
-.transparencia h3 p {
-	color: white;
-}
-
-.foto {
-	height: 100%;
-	width: 100%;
-	border-radius: 25px;
-}
-.col-12 {
-	border-radius: 25px;
-}
-.container {
-	width: 100%;
-	margin: unset;
-	padding: unset;
-}
-
-.row {
-	margin: unset;
-	width: 80vw;
-	margin: 0 auto;
-} */
-
 
 .categorias{
 	width: 100vw;
@@ -1370,9 +1315,9 @@ p {
 	background-position: 50% 10%;
 
 }
-
-
-
+.box-c{
+	display: none;
+}
 
 /* 
 
@@ -1748,6 +1693,77 @@ p {
 		padding: 10rem 0 30rem 0;
 		/* margin-bottom: -30rem; */
 	}
+	.box-c{
+		display: block;
+	}
+	.categorias{
+		display: none;
+	}
+	.box-c{
+		width: 80vw;
+		margin: 0 auto;
+		height: 800px;
+		display: flex;
+	}
+	.box-i{
+		width: 50%;
+		height: 80%;
+		display: flex;
+		flex-direction: column;
+	}
+	.box-d{
+		width: 50%;
+		height: 80%;
+		display: flex;
+		flex-direction: column;
+	}
+	.guitarra{
+		height: 50%;
+	}
+	.bateria{
+		height: 40%;
+	}
+	.bg-guitarra{
+		height: 100%;
+		width: 100%;
+		
+	}
+	.bg-bateria{
+		height: 100%;
+		width: 100%;
+	
+	}
+	.botton{
+		height: 50%;
+		display: flex;
+	}
+	.viento{
+		width: 50%;
+	}
+	.bg-viento{
+		height: 100%;
+		width: 100%;
+	}
+	.ampli{
+		width: 50%;
+	}
+	.bg-ampli{
+		height: 100%;
+		width: 100%;
+	}
+	.piano{
+		height: 60%;
+	}
+	.bg-piano{
+		height: 100%;
+		width: 100%;
+	}
+	.box-d-botton{
+		height: 60%;
+	}
+	.categorias--title{
+		text-align: center;
+	}
 }
 
 /* 
@@ -1967,3 +1983,6 @@ justify-content: space-between;
 }
 
 /*////////////// Fin Carga De Producto  //////////////////////////*/
+
+
+
