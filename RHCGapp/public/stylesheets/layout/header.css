@@ -64,6 +64,7 @@
 	font-size: 1.5rem;
 	color: var(--color-primary-yellow);
 	box-shadow: var(--primary-shadow--up);
+	border: none;
 }
 
 .header .barra-busqueda {
@@ -171,7 +172,11 @@
 	font-size: 1.8rem;
 	text-align: center;
 	font-family: lobster;
+}
 
+.btn--header:hover{
+	color: var(--color-primary-yellow);
+	text-decoration: none;
 }
 
 .btn--cross {
@@ -184,17 +189,28 @@
 	background-color: var(--color-primary-red);
 	border-radius: 50%;
 	cursor: pointer;
+	color: var(--color-primary-yellow);
+}
+
+.btn--cross:hover{
+	color: var(--color-primary-yellow);
 }
 
 .btn--logeoRegistro__mobile {
     position: relative;
-    top: -7rem;
+    top: -7.5rem;
     left: 5rem;
     font-size: 1.8rem;
     padding: .5rem 1.5rem;
     border-radius: .8rem;
     z-index: 10;
     background-color: var(--color-primary-red);
+	font-family: lobster;
+	color: var(--color-primary-yellow);
+}
+
+.btn--logeoRegistro__mobile:hover{
+	color: var(--color-primary-yellow);
 }
 
 /* 
@@ -322,7 +338,7 @@
 		width: 100%;
 		height: 100%;
 	}
-	
+
     .nav__container {
 		display: flex;
 		flex-direction: column;
@@ -368,6 +384,7 @@
 		color: #f6efca;
 		transition: color 0.3s;
 		font-family: lobster;
+		width: 100%;
 	}
 
     .btn--header__desktop:hover {
@@ -394,8 +411,8 @@
 		box-shadow: var(--primary-shadow-down);
 	}
 
-	.header .link--kart,
-	.header .link--message {
+	.link--kart,
+	.link--message {
 		transition: all 0.2s;
 	}
 
