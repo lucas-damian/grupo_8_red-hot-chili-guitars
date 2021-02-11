@@ -260,7 +260,7 @@
 		width: 50vw;
 	}
 
-	.header .item--header:not(:last-child) {
+	.item--header:not(:last-child) {
 		margin-bottom: 1rem;
 	}
 
@@ -322,8 +322,8 @@
 		width: 100%;
 		height: 100%;
 	}
-
-    .header .nav__container {
+	
+    .nav__container {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -331,7 +331,7 @@
 		margin-top: 4rem;
 	}
 
-	.header .nav-bar--desktop {
+	.nav-bar--desktop {
 		display: block;
 		background-color: var(--color-primary-darkRed);
 		border-radius: 1.5rem;
@@ -339,27 +339,29 @@
 		padding: 1rem 0;
 	}
 
-	.header .list--header__desktop {
+	.list--header__desktop {
 		display: flex;
 		align-items: center;
+		margin-bottom: unset;
 	}
 
-    .header .item--header {
+    .item--header {
 		border-bottom: none;
+		margin-bottom: 0;
 	}
 
-	.header .item--header:not(:last-child) {
+	.item--header:not(:last-child) {
 		margin-bottom: 0;
 		border-bottom: none;
 		border-right: 0.4rem solid burlywood;
 		border-radius: 0.2rem;
 	}
 
-	.header .item--header {
+	.item--header {
 		padding: 0rem 1rem;
 	}
 
-	.header .btn--header__desktop {
+	.btn--header__desktop {
 		display: inline-block;
 		font-size: 1.8rem;
 		line-height: 1;
@@ -368,16 +370,16 @@
 		font-family: lobster;
 	}
 
-    .header .btn--header__desktop:hover {
+    .btn--header__desktop:hover {
 		color: var(--color-primary-darkRed);
 		background-color: var(--color-primary-orange);
 		text-decoration: none;
 	}
 
-	.header .btn--header__desktoplast-child {
-		margin-left: 1rem;
+	.btn--header__desktop:last-child {
+		margin: .5rem 0;
+		width: 100%;
 	}
-
 
 
 
