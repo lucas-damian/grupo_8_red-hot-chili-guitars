@@ -6,6 +6,8 @@
     align-self: flex-start;
     color: #f6eec9;
     width: 100vw;
+    position: relative;
+    z-index: 2;
   }
    
   .footer .footer__container{
@@ -62,6 +64,7 @@
    border-bottom: .3rem solid  #f6eec9;
    border-radius: 4%;
    font-weight: unset;
+   font-family: 'lobster';
   }
   
   
@@ -105,6 +108,7 @@
     margin: unset;
     margin-left: 10px ;
     font-weight: unset;
+    font-family: 'lobster';
   }
   
   
@@ -130,18 +134,22 @@
     height: 25px;
     margin-bottom: 90px;
     margin-top: 40px;
+    text-decoration: none;
   }
   
   .footer .contactanos-text{
     padding: 10px;
     margin: unset;
     font-weight: unset;
+    font-family: 'lobster';
+    color: #f6eec9;
   }
-  
+
   .footer .contacto i{
     padding: 2px;
     font-size: 15px;
     margin-right: 10px;
+    color: #f6eec9;
   }
   
   .footer .footer-text{

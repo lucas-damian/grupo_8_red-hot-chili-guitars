@@ -4,7 +4,7 @@
 
   
 <body class="body--home">
-    <div class="form-container">
+  
 
     <!-- header -->
     <%- include('partials/header') %>
@@ -14,8 +14,8 @@
     <%- include('partials/carrito') %>
     <!-- /carrito -->
     
-    
-    <main class="cargaProductos">
+    <div class="form-container">
+      <main class="cargaProductos">
       <form class="carga">
           <div class="carjaIzquierda">
               <div class="cajainstrumento">
@@ -64,16 +64,11 @@
 
       </form>
       
-   </main>
-   
-
-
-<!-- footer -->
+      </main>
+    </div>
+   <!-- footer -->
    <%- include('partials/footer') %>
  <!-- /footer -->
-
-</div>
-   
    
    
    
@@ -87,4 +82,4 @@
    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
    crossorigin="anonymous"></script>
  <script src="/javascript/slider.js"></script>
-  </body>
+</body>

@@ -64,6 +64,7 @@
 	font-size: 1.5rem;
 	color: var(--color-primary-yellow);
 	box-shadow: var(--primary-shadow--up);
+	border: none;
 }
 
 .header .barra-busqueda {
@@ -171,7 +172,11 @@
 	font-size: 1.8rem;
 	text-align: center;
 	font-family: lobster;
+}
 
+.btn--header:hover{
+	color: var(--color-primary-yellow);
+	text-decoration: none;
 }
 
 .btn--cross {
@@ -184,17 +189,28 @@
 	background-color: var(--color-primary-red);
 	border-radius: 50%;
 	cursor: pointer;
+	color: var(--color-primary-yellow);
+}
+
+.btn--cross:hover{
+	color: var(--color-primary-yellow);
 }
 
 .btn--logeoRegistro__mobile {
     position: relative;
-    top: -7rem;
+    top: -7.5rem;
     left: 5rem;
     font-size: 1.8rem;
     padding: .5rem 1.5rem;
     border-radius: .8rem;
     z-index: 10;
     background-color: var(--color-primary-red);
+	font-family: lobster;
+	color: var(--color-primary-yellow);
+}
+
+.btn--logeoRegistro__mobile:hover{
+	color: var(--color-primary-yellow);
 }
 
 /* 
@@ -260,7 +276,7 @@
 		width: 50vw;
 	}
 
-	.header .item--header:not(:last-child) {
+	.item--header:not(:last-child) {
 		margin-bottom: 1rem;
 	}
 
@@ -323,7 +339,7 @@
 		height: 100%;
 	}
 
-    .header .nav__container {
+    .nav__container {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -331,7 +347,7 @@
 		margin-top: 4rem;
 	}
 
-	.header .nav-bar--desktop {
+	.nav-bar--desktop {
 		display: block;
 		background-color: var(--color-primary-darkRed);
 		border-radius: 1.5rem;
@@ -339,45 +355,48 @@
 		padding: 1rem 0;
 	}
 
-	.header .list--header__desktop {
+	.list--header__desktop {
 		display: flex;
 		align-items: center;
+		margin-bottom: unset;
 	}
 
-    .header .item--header {
+    .item--header {
 		border-bottom: none;
+		margin-bottom: 0;
 	}
 
-	.header .item--header:not(:last-child) {
+	.item--header:not(:last-child) {
 		margin-bottom: 0;
 		border-bottom: none;
 		border-right: 0.4rem solid burlywood;
 		border-radius: 0.2rem;
 	}
 
-	.header .item--header {
+	.item--header {
 		padding: 0rem 1rem;
 	}
 
-	.header .btn--header__desktop {
+	.btn--header__desktop {
 		display: inline-block;
 		font-size: 1.8rem;
 		line-height: 1;
 		color: #f6efca;
 		transition: color 0.3s;
 		font-family: lobster;
+		width: 100%;
 	}
 
-    .header .btn--header__desktop:hover {
+    .btn--header__desktop:hover {
 		color: var(--color-primary-darkRed);
 		background-color: var(--color-primary-orange);
 		text-decoration: none;
 	}
 
-	.header .btn--header__desktoplast-child {
-		margin-left: 1rem;
+	.btn--header__desktop:last-child {
+		margin: .5rem 0;
+		width: 100%;
 	}
-
 
 
 
@@ -392,8 +411,8 @@
 		box-shadow: var(--primary-shadow-down);
 	}
 
-	.header .link--kart,
-	.header .link--message {
+	.link--kart,
+	.link--message {
 		transition: all 0.2s;
 	}
 
