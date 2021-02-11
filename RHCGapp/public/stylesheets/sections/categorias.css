@@ -1,0 +1,107 @@
+.categorias{
+	width: 100vw;
+	height: 100%;
+	padding: 4rem 0;
+}
+
+.categorias .categorias--list{
+	width: 80vw;
+	margin: 0 auto;
+}
+
+.categorias .categorias--title{
+	width: 80vw;
+	margin: 0 auto 2rem auto;
+	font-size: 3rem;
+	text-transform: capitalize;
+	color: var(--color-primary-red);
+
+}
+
+.categorias .categorias--item{
+	width: 100%;
+	height: 16rem;
+	border-radius: 1rem;
+	background-size: cover;
+}
+
+.categorias .categorias--link{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+
+}
+
+.categorias .categorias--sub-title{
+	font-size: 2.4rem;
+}
+
+.categorias .categorias--text{
+	font-size: 1.4rem;
+}
+
+.categorias .categorias--content{
+	width: 65%;
+	height: 100%;
+	padding: 1rem;
+	border-radius: 1rem 0 0 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+
+#cat-guitarras{
+	background-color: #a20a0a7c;
+}
+
+#cat-pianos{
+	background-color: #79935171;
+}
+#cat-baterias{
+	background-color: #c5714a79;
+	color: var(--color-primary-darkRed);
+}
+#cat-vientos{
+	background-color: #f6eec97c;
+	color: var(--color-primary-darkRed);
+
+}
+#cat-amplis{
+	background-color: #4c050575;
+}
+
+.categorias .categorias--item:not(:last-of-type){
+	margin-bottom: 2rem;
+}
+
+.categorias .categorias--item:nth-child(1){
+	background-image: url(/img/bg-images/bg-guitarra.jpg);
+}
+
+.categorias .categorias--item:nth-child(2){
+	background-image: url(/img/bg-images/bg-piano.jpg);
+	background-position: 50% 50%;
+}
+
+.categorias .categorias--item:nth-child(3){
+	background-image: url(/img/bg-images/bg-bateria.jpg);
+}
+
+.categorias .categorias--item:nth-child(4){
+	background-image: url(/img/bg-images/bg-saxo.jpg);
+	background-position: 50% 50%;
+}
+
+.categorias .categorias--item:nth-child(5){
+	background-image: url(/img/bg-images/bg-ampli.jpg);
+	background-position: 50% 10%;
+
+}
+
+@media screen and (min-width: 1200px){
+    .categorias{
+        background-color: var(--color-primary-yellow);
+        padding: 10rem 0 30rem 0;
+    }
+}

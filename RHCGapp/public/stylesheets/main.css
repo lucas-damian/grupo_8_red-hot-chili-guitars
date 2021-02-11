@@ -1,0 +1,18 @@
+@import "abstract/animaciones.css";
+@import "abstract/variables.css";
+
+@import "base/base.css";
+
+@import "forms/cargaDeProductos.css";
+@import "forms/carrito.css";
+@import "forms/ingreso.css";
+
+@import "layout/footer.css";
+@import "layout/header.css";
+
+@import "sections/categorias.css";
+@import "sections/detalleProducto.css";
+@import "sections/error404.css";
+@import "sections/home.css";
+@import "sections/kits.css";
+@import "sections/slider.css";

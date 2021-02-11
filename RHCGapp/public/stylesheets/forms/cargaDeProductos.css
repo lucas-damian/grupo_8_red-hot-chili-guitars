@@ -1,0 +1,72 @@
+.cargaProductos{
+	display: flex;
+	width: 100vw;
+	height: 100%;
+	padding: 4rem 0 8rem 0;
+	background-image:var(--background);
+	justify-content: center;
+} 
+.cargaProductos .carga{
+	padding: 2rem;
+	background-color:  var(--color-primary-yellow);
+	margin: 0 auto;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	border-radius: 2rem;
+	font-size: 1.5rem;
+    box-shadow: var(--primary-shadow-down);
+}
+.cargaProductos .carga div{	
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;	
+}
+.cargaProductos .cargaPro{
+	background-color: var(--color-primary-red);
+	color: var(--color-primary-yellow) ;
+	border-radius: 8px;
+	border: none;
+}
+.cargaProductos .formSelect{
+    border: none;
+	border-radius: 1rem;
+	padding: .3rem 1rem;
+	background-color: transparent;
+	opacity: .8;
+	box-shadow: inset 0.3rem 0.3rem 1rem rgb(126 126 126 / 40%), inset -0.3rem -0.3rem 1rem rgb(126 126 126 / 40%);
+}
+
+
+@media screen and (min-width: 1200px){
+    .cargaProductos{
+        padding: 15rem 0 25rem 0;
+    }
+
+	.cargaProductos .carga{
+		position: relative;
+		width: 60vw;
+		flex-direction: row;
+		justify-content: space-between;
+		border-radius: 1rem;
+		box-shadow: var(--primary-shadow-down);
+		padding: 2rem;
+	}
+	
+	.cargaProductos .carjaIzquierda,
+	.cargaProductos .carjaDerecha{
+		width: 48%;
+	}
+	
+	.cargaProductos .carjaIzquierda ::after{
+		content: "";
+		display: block;
+		width: .5rem;
+		height: 85%;
+		background-color: rgba(204, 203, 203, 0.2);
+		position: absolute;
+		top: 2rem;
+		right: 50%;
+		border-radius: .3rem;
+	}
+}
