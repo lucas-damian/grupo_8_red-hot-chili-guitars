@@ -1,0 +1,22 @@
+.slider--img {
+	height: 20rem;
+	border: none;
+	outline: none;
+}
+
+
+@media screen and (min-width: 1200px) {
+	
+	.conteinerSlider{
+			height: 52rem;
+			border: none;
+	}
+	
+	.conteinerSlider img{
+			width: 100%;
+			height: 100%;
+	}
+	
+}
+
+

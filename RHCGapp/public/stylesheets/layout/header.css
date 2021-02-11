@@ -1,0 +1,460 @@
+.header .img__logo {
+	display: none;
+}
+
+.header .link--logo {
+	display: none;
+}
+
+.header .img--slider {
+	display: none;
+}
+
+.header .header--svg {
+	display: none;
+}
+
+.header {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 5rem;
+	background-image: linear-gradient(
+		125deg,
+		var(--bg-color-orange),
+		var(--bg-color-darkRed)
+	);
+	box-shadow: var(--primary-shadow-down);
+	display: flex;
+	z-index: 10;
+}
+
+.header .header__container {
+	width: 90vw;
+	margin: 0 auto;
+	position: relative;
+	top: -3rem;
+	left: 0;
+	display: flex;
+	align-items: center;
+}
+
+.header .hamburguer {
+	display: inline-block;
+	cursor: pointer;
+	width: 5rem;
+	animation: pulse 2s infinite;
+}
+
+.header .nav__container {
+	width: 70vw;
+}
+
+.header .header__form {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header .btn--search {
+	padding: 0.5rem 0.8rem;
+	background-color: var(--color-primary-red);
+	border-radius: 50%;
+	font-size: 1.5rem;
+	color: var(--color-primary-yellow);
+	box-shadow: var(--primary-shadow--up);
+}
+
+.header .barra-busqueda {
+	display: none;
+}
+
+.header .login {
+	width: 35%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+}
+
+.header .login-container{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header .btn--home{
+	display: none;
+}
+
+.header .link--message,
+.header .link--kart {
+	background-color: var(--color-primary-red);
+	color: var(--color-primary-yellow);
+	padding: 0.5rem 0.8rem;
+	border-radius: 50%;
+	font-size: 1.5rem;
+	box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+
+
+.header .fa-shopping-cart {
+	margin-left: -0.2rem;
+}
+
+.header .btn--logeoRegistro {
+	display: none;
+}
+
+.header .btn--logeoRegistro__mobile {
+	display: inline-block;
+	position: relative;
+	top: -7.5rem;
+	left: 4rem;
+	z-index: 11;
+	background-color: var(--color-primary-red);
+	color: var(--color-primary-yellow);
+	border-radius: 1rem;
+	font-family: lobster;
+	font-size: 1.6rem;
+}
+
+/* 
+
+////////// NAV-BAR ESCONDIDA (mobile)
+
+*/
+
+.nav-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.288);
+	transform: translateX(100%);
+	transition: all 0.3s;
+	overflow: hidden;
+}
+
+.nav-bar--desktop {
+	display: none;
+}
+
+#barra:target {
+	transform: translateX(0%);
+}
+
+.list--header {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 55vw;
+	height: 100%;
+	background-color: var(--color-primary-darkRed);
+	padding-top: 2rem;
+}
+
+.item--header:not(:last-child) {
+	margin-bottom: 2rem;
+	border-bottom: 0.2rem solid var(--color-primary-yellow);
+}
+
+.btn--header {
+    display: inline-block;
+	color: var(--color-primary-yellow);
+	width: 50vw;
+	padding: 0 0 1rem 2rem;
+	font-size: 1.8rem;
+	text-align: center;
+	font-family: lobster;
+
+}
+
+.btn--cross {
+	position: relative;
+	top: -6.9rem;
+	left: 2rem;
+	z-index: 11;
+	padding: 0.5rem 0.8rem;
+	font-size: 2rem;
+	background-color: var(--color-primary-red);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.btn--logeoRegistro__mobile {
+    position: relative;
+    top: -7rem;
+    left: 5rem;
+    font-size: 1.8rem;
+    padding: .5rem 1.5rem;
+    border-radius: .8rem;
+    z-index: 10;
+    background-color: var(--color-primary-red);
+}
+
+/* 
+
+////////// FIN NAV-BAR ESCONDIDA (mobile)
+
+*/
+
+
+@media screen and (min-width: 768px) {
+    
+    .header .login {
+        width: 20%;
+    }
+	
+    .header .login a {
+		padding: 0.5rem 0.8rem;
+		font-size: 2rem;
+	}
+	
+    .header .hamburguer {
+		width: 7rem;
+		margin-right: 2rem;
+		animation: pulse 2s infinite;
+	}
+
+	.btn--cross {
+		left: 4.8rem;
+		top: -7.5rem;
+		font-size: 2.5rem;
+		padding: 0.5rem 0.9rem;
+	}
+
+
+
+	.header .search-bar {
+		display: flex;
+		background-color: var(--color-primary-darkRed);
+		border-radius: 1rem;
+	}
+
+	.header .barra-busqueda {
+		display: block;
+		background-color: transparent;
+		padding: 0 1rem;
+		border: none;
+		outline: none;
+		font-size: 1.6rem;
+		color: var(--color-primary-yellow);
+		font-family: arimo;
+	}
+
+	.header .barra-busqueda::placeholder {
+		color: var(--color-primary-yellow);
+	}
+
+	.header .btn--search {
+		padding: 0.8rem 1rem;
+		background-color: transparent;
+	}
+
+	.header .list--header {
+		width: 50vw;
+	}
+
+	.header .item--header:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+
+	.header .btn--header {
+		width: 45vw;
+		font-size: 1.5rem;
+	}
+    .btn--logeoRegistro__mobile {
+		top: -8.3rem;
+		left: 8rem;
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (min-width: 1200px){
+
+    .nav-bar {
+		display: none;
+	}
+
+    .header .hamburguer {
+		display: none;
+	}
+
+	.btn--logeoRegistro__mobile {
+		display: none;
+	}
+
+	.header {
+		position: relative;
+		width: 100vw;
+		height: unset;
+		bottom: unset;
+		left: 0;
+		top: 0;
+		background-image: none;
+		background-image: url(/img/fondos/header_fondo\ copy.svg);
+		background-repeat: no-repeat;
+		box-shadow: unset;
+		margin-bottom: -15rem;
+	}
+
+    .header .header__container {
+		margin: 6rem auto 0 auto;
+		width: 80vw;
+		position: relative;
+		display: flex;
+		align-items: unset;
+		z-index: 2;
+	}
+
+	.header .link--logo {
+		display: block;
+		width: 44vw;
+	}
+
+	.header .header__logo {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+    .header .nav__container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: 1rem 0 0 2rem;
+		margin-top: 4rem;
+	}
+
+	.header .nav-bar--desktop {
+		display: block;
+		background-color: var(--color-primary-darkRed);
+		border-radius: 1.5rem;
+		margin-top: 1.5rem;
+		padding: 1rem 0;
+	}
+
+	.header .list--header__desktop {
+		display: flex;
+		align-items: center;
+	}
+
+    .header .item--header {
+		border-bottom: none;
+	}
+
+	.header .item--header:not(:last-child) {
+		margin-bottom: 0;
+		border-bottom: none;
+		border-right: 0.4rem solid burlywood;
+		border-radius: 0.2rem;
+	}
+
+	.header .item--header {
+		padding: 0rem 1rem;
+	}
+
+	.header .btn--header__desktop {
+		display: inline-block;
+		font-size: 1.8rem;
+		line-height: 1;
+		color: #f6efca;
+		transition: color 0.3s;
+		font-family: lobster;
+	}
+
+    .header .btn--header__desktop:hover {
+		color: var(--color-primary-darkRed);
+		background-color: var(--color-primary-orange);
+		text-decoration: none;
+	}
+
+	.header .btn--header__desktoplast-child {
+		margin-left: 1rem;
+	}
+
+
+
+
+	.header .btn--logeoRegistro {
+		display: block;
+		background-color: var(--color-primary-red);
+		color: var(--color-primary-yellow);
+		font-size: 1.6rem;
+		font-family: lobster;
+		border-radius: 1rem;
+		transition: all 0.2s;
+		box-shadow: var(--primary-shadow-down);
+	}
+
+	.header .link--kart,
+	.header .link--message {
+		transition: all 0.2s;
+	}
+
+
+	.header .btn--logeoRegistro,
+	.header .link--message,
+	.header .link--kart,
+    .header .btn--home{
+		box-shadow: var(--primary-shadow-down);
+	}
+
+	.header .btn--logeoRegistro:hover,
+	.header .link--message:hover,
+	.header .link--kart:hover,
+    .header .btn--home:hover {
+		color: var(--color-primary-yellow);
+		text-decoration: none;
+		transform: scale(1.1);
+		background-color: var(--color-primary-darkRed);
+	}
+
+	.header .btn--logeoRegistro:active,
+	.header .link--message:active,
+	.header .link--kart:active {
+		transform: scale(1);
+	}
+
+	.header .login {
+		width: 53%;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		padding-left: 2rem;
+	}
+
+    .header .login-container{
+		display: flex;
+		justify-content: space-between;
+		width: 45%;
+	}
+
+    .header .btn--home{
+		display: inline-block;
+		background-color: var(--color-primary-red);
+		color: var(--color-primary-yellow);
+		padding: 0.5rem 1rem !important;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+		transition: all .2s;
+	}
+
+	.header .home--container {
+		width: 100vw;
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-image: linear-gradient(#f6eec95b, #f6eec96b),
+			url(/img/fondos/texturas_19.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}

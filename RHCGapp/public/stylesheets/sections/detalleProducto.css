@@ -1,18 +1,3 @@
-*,*:after,
-*:before{
-   margin:0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-
-body{
-    box-sizing: inherit;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 
 .container-main{
     background-image:   linear-gradient(#f6eec95b,#f6eec96b),url(/img/fondos/texturas_19.jpg);
