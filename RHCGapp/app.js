@@ -3,9 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var multer = require("multer");
+var expressValidato = require("express-validator");
+var methodOverride = require("method-override");
+var session = require("express-session");
 
 var indexRouter = require('./routes/index');
-var logRouter = require('./routes/logIn');
+var logRouter = require('./routes/users');
 var usersRouter = require('./routes/users');
 var cargaProductoRouter = require('./routes/cargaProducto');
 
@@ -20,6 +24,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride("method"));
+app.use(session({secret: "red hot chilli guitars"}));
+
 
 app.use('/', indexRouter);
 app.use('/detalle-del-producto', indexRouter);

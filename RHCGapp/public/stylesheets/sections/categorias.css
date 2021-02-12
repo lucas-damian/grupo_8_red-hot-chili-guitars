@@ -1,4 +1,3 @@
-
 .categorias{
 	width: 100vw;
 	height: 100%;
@@ -16,6 +15,7 @@
 	font-size: 3rem;
 	text-transform: capitalize;
 	color: var(--color-primary-red);
+	font-family: lobster;
 
 }
 
@@ -35,10 +35,12 @@
 
 .categorias .categorias--sub-title{
 	font-size: 2.4rem;
+	font-family: lobster;
 }
 
 .categorias .categorias--text{
 	font-size: 1.4rem;
+	font-family: arimo;
 }
 
 .categorias .categorias--content{
@@ -54,10 +56,13 @@
 
 #cat-guitarras{
 	background-color: #a20a0a7c;
+	color: var(--color-primary-yellow);
 }
 
 #cat-pianos{
 	background-color: #79935171;
+	color: var(--color-primary-yellow);
+
 }
 #cat-baterias{
 	background-color: #c5714a79;
@@ -70,6 +75,8 @@
 }
 #cat-amplis{
 	background-color: #4c050575;
+	color: var(--color-primary-yellow);
+
 }
 
 .categorias .categorias--item:not(:last-of-type){
@@ -98,6 +105,12 @@
 	background-image: url(/img/bg-images/bg-ampli.jpg);
 	background-position: 50% 10%;
 
+}
+.box-c{
+	display: none;
+}
+.title-escritorio{
+	display: none;
 }
 
 @media screen and (min-width: 1200px){
@@ -134,14 +147,18 @@
 		height: 100%;
 		width: 100%;
 		background-size: cover;
+		color: var(--color-primary-yellow);
 	}
-	.guitarra:hover{
-		border:1px solid blue;
-		width: 100%;
+	.guitarra:before{
 		display: block;
+		height: 100%;
+		width: 100%;
+		border:1px solid blue;
 		content: "";
 		background-color: rgba(167, 38, 38, 0.507);
 		translate: (100%);
+		transition: .9s;
+
 	}
 
 	.viento{
@@ -149,25 +166,28 @@
 		height: 100%;
 		width: 100%;
 		background-size: cover;
-		background-color: rgba(167, 38, 38, 0.507); 
+		color: var(--color-primary-yellow);
 	}
 	.bateria{
 		background-image: url("/img/bg-images/bg-bateria.jpg");
 		height: 40%;
 		width: 100%;
 		background-size: cover;
+		color: var(--color-primary-yellow);
 	}
 	.ampli{
 		background-image: url("/img/bg-images/bg-ampli.jpg");
 		height: 100%;
 		width: 100%;
 		background-size: cover;
+		color: var(--color-primary-yellow);
 	}
 	.piano{
 		background-image: url("/img/bg-images/bg-piano.jpg");
 		height: 100%;
 		width: 100%;
 		background-size: cover;
+		color: var(--color-primary-yellow);
 	}
 	.botton{
 		height: 50%;
@@ -176,7 +196,28 @@
 	.box-d-botton{
 		height: 60%;
 	}
-	.categorias--title{
+	.categorias .categorias--title{
+		font-size: 3rem;
 		text-align: center;
+	}
+	.categorias--sub-title{
+		padding: 0 16px;
+		font-size: 4.4rem;
+		font-family: lobster;
+	}
+	
+	.categorias--text{
+		padding: 0 16px;
+		font-size: 1.9rem;
+		font-family: arimo;
+	}
+	.categorias--title{
+		display: block;
+		width: 80vw;
+		margin: 0 auto 2rem auto;
+		font-size: 3rem;
+		text-transform: capitalize;
+		color: var(--color-primary-red);
+		font-family: lobster;
 	}
 }
