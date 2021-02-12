@@ -1693,82 +1693,10 @@ body {
 		padding: 10rem 0 30rem 0;
 		/* margin-bottom: -30rem; */
 	}
-	.box-c{
-		display: block;
-	}
-	.categorias{
-		display: none;
-	}
-	.box-c{
-		width: 80vw;
-		margin: 0 auto;
-		height: 800px;
-		display: flex;
-	}
-	.box-i{
-		width: 50%;
-		height: 80%;
-		display: flex;
-		flex-direction: column;
-	}
-	.box-d{
-		width: 50%;
-		height: 80%;
-		display: flex;
-		flex-direction: column;
-	}
-	.guitarra{
-		background-image: url("/img/bg-images/bg-guitarra.jpg");
-		height: 100%;
-		width: 100%;
-		height: 50%;
-	}
-	.bateria{
-		height: 40%;
-	}
-/* 	.bg-guitarra{
-
-		
-	} */
-	.bg-bateria{
-		height: 100%;
-		width: 100%;
 	
-	}
-	.botton{
-		height: 50%;
-		display: flex;
-	}
-	.viento{
-		width: 50%;
-	}
-	.bg-viento{
-		height: 100%;
-		width: 100%;
-	}
-	.ampli{
-		width: 50%;
-	}
-	.bg-ampli{
-		height: 100%;
-		width: 100%;
-	}
-	.piano{
-		height: 60%;
-	}
-	.bg-piano{
-		height: 100%;
-		width: 100%;
-	}
-	.box-d-botton{
-		height: 60%;
-	}
-	.categorias--title{
-		text-align: center;
-	}
+	
 
 }
-
 /* 
 
 ////////////////////////// INICIO REGISTRO
