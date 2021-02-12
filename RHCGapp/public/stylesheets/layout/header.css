@@ -85,12 +85,12 @@
 	justify-content: space-between;
 }
 
-.header .btn--home{
+.btn--home{
 	display: none;
 }
 
-.header .link--message,
-.header .link--kart {
+.link--message,
+.link--kart {
 	background-color: var(--color-primary-red);
 	color: var(--color-primary-yellow);
 	padding: 0.5rem 0.8rem;
@@ -105,11 +105,11 @@
 	margin-left: -0.2rem;
 }
 
-.header .btn--logeoRegistro {
+.btn--logeoRegistro {
 	display: none;
 }
 
-.header .btn--logeoRegistro__mobile {
+.btn--logeoRegistro__mobile {
 	display: inline-block;
 	position: relative;
 	top: -7.5rem;
@@ -280,7 +280,7 @@
 		margin-bottom: 1rem;
 	}
 
-	.header .btn--header {
+	.btn--header {
 		width: 45vw;
 		font-size: 1.5rem;
 	}
@@ -385,6 +385,9 @@
 		transition: color 0.3s;
 		font-family: lobster;
 		width: 100%;
+		padding: unset;
+		margin: unset;
+		border-radius: .3rem;
 	}
 
     .btn--header__desktop:hover {
@@ -398,9 +401,17 @@
 		width: 100%;
 	}
 
+	.header .btn--search{
+		position: relative;
+		top: 0;
+		right: 6rem;
+	}
 
+	.header .search-bar{
+		width: 40%;
+	}
 
-	.header .btn--logeoRegistro {
+	.btn--logeoRegistro {
 		display: block;
 		background-color: var(--color-primary-red);
 		color: var(--color-primary-yellow);
@@ -417,31 +428,32 @@
 	}
 
 
-	.header .btn--logeoRegistro,
-	.header .link--message,
-	.header .link--kart,
-    .header .btn--home{
-		box-shadow: var(--primary-shadow-down);
+	.btn--logeoRegistro,
+	.link--message,
+	.link--kart,
+    .btn--home{
+		box-shadow: var(--primary-shadow-down)!important;
+		font-size: 1.8rem !important;
 	}
 
-	.header .btn--logeoRegistro:hover,
-	.header .link--message:hover,
-	.header .link--kart:hover,
-    .header .btn--home:hover {
+	.btn--logeoRegistro:hover,
+	.link--message:hover,
+	.link--kart:hover,
+    .btn--home:hover {
 		color: var(--color-primary-yellow);
 		text-decoration: none;
 		transform: scale(1.1);
 		background-color: var(--color-primary-darkRed);
 	}
 
-	.header .btn--logeoRegistro:active,
-	.header .link--message:active,
-	.header .link--kart:active {
+	.btn--logeoRegistro:active,
+	.link--message:active,
+	.link--kart:active {
 		transform: scale(1);
 	}
 
 	.header .login {
-		width: 53%;
+		width: 60%;
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: space-between;

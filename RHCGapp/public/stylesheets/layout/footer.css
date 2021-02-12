@@ -380,6 +380,7 @@
     flex-direction: unset;
     justify-content: space-between;
     margin-top: 30px; 
+    font-family: lobster;
    }
      
    .footer .iconos{ 
@@ -408,6 +409,8 @@
    .footer .contacto{
      height: 40px;
      margin: unset;
+     text-decoration: none;
+     color:var(--color-primary-yellow);
    }
 
 
@@ -420,16 +423,17 @@
       margin: 0;
      display: flex;
      align-items: center;
+     font-family: lobster;
    }
    
    
    .footer .redes{
      margin: unset;
+     font-family: lobster;
    }
    
    .footer .footer-text{
      color: #f6eec9;
-     font-family: arimo;
      font-size: 20px;
      border-top: .5rem solid;
      width: 100%;
