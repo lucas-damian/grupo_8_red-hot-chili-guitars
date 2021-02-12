@@ -231,7 +231,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 31px;
+      margin-top: 63px;
     }
     
     
@@ -408,6 +408,12 @@
    .footer .contacto{
      height: 40px;
      margin: unset;
+   }
+
+
+   .footer .contacto:hover{
+    background-color: #a20a0a;
+    transform: scale(1.1);
    }
    
    .footer .contactanos-text{
