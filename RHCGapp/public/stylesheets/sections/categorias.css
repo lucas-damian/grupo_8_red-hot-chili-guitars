@@ -1,3 +1,6 @@
+.categorias--desktop{
+	display: none;
+}
 .categorias{
 	width: 100vw;
 	height: 100%;
@@ -115,16 +118,238 @@
 
 @media screen and (min-width: 1200px){
     .categorias{
-        background-color: var(--color-primary-yellow);
-        padding: 10rem 0 30rem 0;
+        display: none;
     }
-/* 	.box-c{
+
+	.categorias--desktop{
 		display: block;
-	} */
-	 .categorias{
-		display: none;
+		width: 100%;
+		height: 100%;
+		background-color: var(--color-primary-yellow);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 10rem 0 30rem 0;
 	}
-	.box-c{
+
+	.categorias--title--desktop{
+		text-align: center;
+		font-size: 5rem;
+		font-family: lobster;
+		text-transform: capitalize;
+		color: var(--color-primary-red);
+		margin-bottom: 3rem;
+	}
+
+	.categorias--list--desktop{
+		width: 80vw;
+		display: flex;
+		justify-content: space-between;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+
+	.container--left,
+	.container--right{
+		width: 50%;
+	}
+
+	.container--left{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.container--right{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.container--down{
+		width: 100%;
+		display: flex;
+		height: 22rem;
+	}
+
+	#cat-guitarras__desktop{
+		display: inline-block;
+		background-image: url("/img/bg-images/bg-guitarra.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 25rem;
+		position: relative;
+		padding: 2rem;
+		color: var(--color-primary-yellow);
+
+	}
+
+	.categorias--link:hover{
+		text-decoration: none;
+	}
+
+	.categorias--content-1{
+		transition: all .5s;
+	}
+
+	.categorias--sub-title__desktop{
+		font-family: lobster;
+		font-size: 3rem;
+		margin-bottom: 2rem;
+		text-transform: capitalize;
+	}
+
+	.categorias--text__desktop{
+		font-family: arimo;
+		font-size: 1.8rem;
+		width: 70%;
+		line-height: 1.2;
+	}
+
+
+
+	#cat-guitarras__desktop:before,
+	#cat-vientos__desktop::before,
+	#cat-amplis__desktop:before,
+	#cat-baterias__desktop:before,
+	#cat-pianos__desktop:before{
+		display: block;
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.3);
+		transition: all .4s;
+	}
+
+	.categorias--content-1,
+	#cat-guitarras__desktop:before{
+		transform: translateX(-100%);
+	}
+
+
+	#cat-guitarras__desktop:hover:before,
+	#cat-guitarras__desktop:hover .categorias--content-1{
+		transform: translateX(0%);
+	}
+
+	#cat-vientos__desktop,
+	#cat-amplis__desktop{
+		display: block;
+		height: 100%;
+		padding: .5rem 1rem;
+		position: relative;
+		color: var(--color-primary-yellow);
+	}
+
+	#cat-vientos__desktop{
+		width: 25rem;
+		background-image: url("/img/bg-images/bg-saxo.jpg");
+		background-size: cover;
+	}
+
+	#cat-amplis__desktop{
+		background-image:url("/img/bg-images/bg-ampli.jpg");
+		background-size: cover;
+	}
+
+	#cat-amplis__desktop .categorias--content-2{
+		width: 100%;
+		font-size: 1.5rem;
+		transform:translateY(150%);
+		transition: all .5s;
+	}
+
+	#cat-vientos__desktop .categorias--content-2{
+		transform:translateY(200%);
+		transition: all .5s;
+
+	}
+
+	#cat-vientos__desktop::before,
+	#cat-amplis__desktop:before{
+		transform: translateY(100%);
+	}
+
+	#cat-vientos__desktop:hover:before,
+	#cat-amplis__desktop:hover:before,
+	#cat-vientos__desktop:hover .categorias--content-2,
+	#cat-amplis__desktop:hover .categorias--content-2{
+		transform: translateY(0);
+	}
+
+	#cat-pianos__desktop{
+		display: block;
+		background-image: url("/img/bg-images/bg-piano.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 30rem;
+		color: var(--color-primary-yellow);
+		position: relative;
+		transition:all .4s;
+		background-position: 50% 50%;
+
+	}
+
+	#cat-baterias__desktop{
+		display: block;
+		background-image: url("/img/bg-images/bg-bateria.jpg");
+		background-size: cover;
+		width: 100%;
+		height: 17rem;
+		color: var(--color-primary-yellow);
+		position: relative;
+		transition:all .4s;
+		background-position: 50% 35%;
+
+	}
+
+	.categorias--content-3{
+		padding: 1rem;
+		transition:all .5s;
+	}
+
+	#cat-baterias__desktop:before,
+	#cat-pianos__desktop:before,
+	.categorias--content-3{
+		transform: translateX(100%);
+	}
+
+	#cat-baterias__desktop:hover:before,
+	#cat-pianos__desktop:hover:before,
+	
+	#cat-baterias__desktop:hover .categorias--content-3,
+	#cat-pianos__desktop:hover .categorias--content-3{
+		transform: translateX(0);
+	}
+
+
+
+	
+
+
+
+
+
+/* 	#cat-amplis__desktop .categorias--content-2,
+	#cat-vientos__desktop .categorias--content-2{
+		position: relative;
+		z-index: 2;
+	} */
+
+	/* .categorias--content-2
+	{
+		transform: translateY(100%);
+	} */
+
+
+/* 	#cat-guitarras__desktop div{
+		background-color: brown;
+	} */
+
+	/* .box-c{
 		width: 80vw;
 		margin: 0 auto;
 		height: 800px;
@@ -153,7 +378,6 @@
 		display: block;
 		height: 100%;
 		width: 100%;
-		border:1px solid blue;
 		content: "";
 		background-color: rgba(167, 38, 38, 0.507);
 		translate: (100%);
@@ -219,5 +443,5 @@
 		text-transform: capitalize;
 		color: var(--color-primary-red);
 		font-family: lobster;
-	}
+	} */
 }
