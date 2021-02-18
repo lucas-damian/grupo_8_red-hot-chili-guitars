@@ -2,7 +2,7 @@
 	background-image: linear-gradient(#f6eec95b, #f6eec96b),
 		url(/img/fondos/texturas_19.jpg);
 	width: 100vw;
-	height: 100%;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -56,5 +56,16 @@
 		font-size: 2.5rem;
 		left: 85vw;
 		top: 10%;
+		transition: all .2s;
+	}
+
+	.error404 .btn-error404--home:hover{
+		text-decoration: none;
+		transform: scale(1.1);
+	}
+
+	.error404 .btn-error404--home:active{
+		transform: scale(.9);
+		opacity: .8;
 	}
 }

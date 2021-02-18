@@ -16,59 +16,65 @@
     
     
     <section class="ingreso">
-        <form action="" class="principal">
-            <div class="form-izq">
-                <div class="log-container">
-                    <div class="log-row">
-                        <label for="user" class="log--label">Usuario o email:</label>
-                        <input class="log--input" type="text" placeholder="ingresá tu usuario o email" id="user">
+        <div class="principal">
+            <form class="form-izq" action="/users/login" method="POST">
+                    <div class="log-container">
+                        <div class="log-row">
+                            <label for="user" class="log--label">Usuario o email:</label>
+                            <input class="log--input" type="text" placeholder="ingresá tu usuario o email" id="user" name="user-email">
+                        </div>
+                        <div class="log-row">
+                            <label for="pass" class="log--label">Contraseña:</label>
+                            <input class="log--input" type="password" placeholder="ingresá tu contraseña" id="pass" name="password">
+                        </div>
+
+                        <label for="check" style="width:100%; font-family:arimo; padding: 1rem; text-align:center">
+                        recordarme
+                        <input type="checkbox" id="check">
+                        </label>
+                        
+                    
+                        <button type="submit" class="btn--logIn">Ingresá</button>
                     </div>
-                    <div class="log-row">
-                        <label for="pass" class="log--label">Contraseña:</label>
-                        <input class="log--input" type="password" placeholder="ingresá tu contraseña" id="pass">
+    
+                    <div class="social-register">
+                        <a class="btn--faceLog" href="">ingresá con Facebook</a>
+                        <a class="btn--googLog" href="">ingresá con Google</a>
                     </div>
+            </form>
+            <form class="form-der" action="/users/register" method="POST">
+                    <div class="register-container">
+                        <div class="log-row">
+                            <label for="userName" class="log--label">Ingresá tú nombre:</label>
+                            <input class="log--input" type="text" placeholder="ingresá tú nombre" id="userName" name="userName">
+                        </div>
+    
+                        <div class="log-row">
+                            <label for="emailRegister" class="log--label">Ingresá un email:</label>
+                            <input class="log--input" type="emal" placeholder="ingresá un email" id="emailRegister" name="email">
+                        </div>
+                    
+                        <div class="log-row">  
+                            <label for="passRegister" class="log--label">Ingresá una contraseña:</label>
+                            <input class="log--input" type="password" placeholder="ingresá una contraseña" id="passRegister" name="pass">
+                        </div>
+    
+                        <div class="log-row">
+                            <label for="pass2-Register" class="log--label">Reingresá la contraseña:</label>
+                            <input class="log--input" type="password" placeholder="Rringresá la contraseña" id="pass2-Register" name="pass2">
+                        </div>
                 
-                    <button type="submit" class="btn--logIn">Ingresá</button>
-                </div>
-
-                <div class="social-register">
-                    <a class="btn--faceLog" href="">ingresá con Facebook</a>
-                    <a class="btn--googLog" href="">ingresá con Google</a>
-                </div>
-
-            </div>
-            <div class="form-der">
-                <div class="register-container">
-                    <div class="log-row">
-                        <label for="userName" class="log--label">Ingresá tú nombre:</label>
-                        <input class="log--input" type="text" placeholder="ingresá tú nombre" id="userName">
+                    <button type="submit" class="btn--register">Registrate</button>
                     </div>
-
-                    <div class="log-row">
-                        <label for="emailRegister" class="log--label">Ingresá un email:</label>
-                        <input class="log--input" type="emal" placeholder="ingresá un email" id="emailRegister">
+                    
+    
+                    <div class="social-register">
+                        <a class="btn--faceLog" href="">ingresá con Facebook</a>
+                        <a class="btn--googLog" href="">ingresá con Google</a>
                     </div>
-                
-                    <div class="log-row">  
-                        <label for="passRegister" class="log--label">Ingresá una contraseña:</label>
-                        <input class="log--input" type="password" placeholder="ingresá una contraseña"           id="passRegister">
-                    </div>
-
-                    <div class="log-row">
-                        <label for="pass2-Register" class="log--label">Reingresá la contraseña:</label>
-                        <input class="log--input" type="password" placeholder="Rringresá la contraseña" id="pass2-Register">
-                    </div>
-            
-                <button type="submit" class="btn--register">Registrate</button>
-                </div>
-                
-
-                <div class="social-register">
-                    <a class="btn--faceLog" href="">ingresá con Facebook</a>
-                    <a class="btn--googLog" href="">ingresá con Google</a>
-                </div>
-            </div>
-        </form>
+            </form>
+         
+        </div>
     </section>
    
 

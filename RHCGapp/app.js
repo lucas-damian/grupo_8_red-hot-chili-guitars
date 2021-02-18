@@ -4,14 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var multer = require("multer");
-var expressValidato = require("express-validator");
+var expressValidator = require("express-validator");
 var methodOverride = require("method-override");
 var session = require("express-session");
 
 var indexRouter = require('./routes/index');
 var logRouter = require('./routes/users');
 var usersRouter = require('./routes/users');
-var cargaProductoRouter = require('./routes/cargaProducto');
+var productRouter = require('./routes/producto');
 
 var app = express();
 
@@ -32,7 +32,7 @@ app.use('/', indexRouter);
 app.use('/detalle-del-producto', indexRouter);
 app.use('/users', usersRouter);
 app.use('/log-in', logRouter);
-app.use('/carga-producto', cargaProductoRouter)
+app.use('/products', productRouter)
 
 
 // catch 404 and forward to error handler
