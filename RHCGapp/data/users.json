@@ -28,5 +28,11 @@
     "userName": "",
     "email": "",
     "pass": "$2b$12$oo0otH5y05WSadHh4l3ffOVYzD9xvYEB948Ur8r6QPS0KaLP2mrTu"
+  },
+  {
+    "id": 6,
+    "userName": "Matias",
+    "email": "matyyassgonzalez89@gmail.com",
+    "pass": "$2b$12$EhQxUkx5.6JpnXdMOrEwc.zdYiWWVWs8S0iXKciF7OKxPJnDt8s4u"
   }
 ]
