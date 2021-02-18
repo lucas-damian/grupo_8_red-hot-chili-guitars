@@ -11,7 +11,7 @@ en principio se hablo de los siguientes temas:
 ## Nuestras conclusiones:
     
   ### lo que debemos dejar de hacer: 
-   - Por el momento contamos con una organización que no se topó con tareas que sean estrictamente limitantes o que entorpezcan nuestro trabajo en general o puntualmente. Pero, d eigual forma, decidimos que lo charlaríamos en el momento mismo en el uqe surgiese alguna.
+   - Por el momento contamos con una organización que no se topó con tareas que sean estrictamente limitantes o que entorpezcan nuestro trabajo en general o puntualmente. Pero, de igual forma, decidimos que lo charlaríamos en el momento mismo en el uqe surgiese alguna.
 
 
   ### lo que debemos hacer menos:
