@@ -353,6 +353,7 @@
 		border-radius: 1.5rem;
 		margin-top: 1.5rem;
 		padding: 1rem 0;
+		box-shadow: var(--primary-shadow-down);
 	}
 
 	.list--header__desktop {

@@ -1,0 +1,387 @@
+[
+    {
+        "id": 1,
+        "nombre": "acustica_00",
+        "tipo-de-instrumento": "acustica",
+        "marca": "cort",
+        "color": "ligth brown",
+        "img": "guitar-acustica_00.png"
+    },
+    {
+        "id": 2,
+        "nombre": "acustica_01",
+        "tipo-de-instrumento": "acustica",
+        "marca": "fender",
+        "color": "light brown",
+        "img": "guitar-acustica_01.png"
+    },
+    {
+        "id": 3,
+        "nombre": "acustica_02",
+        "tipo-de-instrumento": "acustica",
+        "marca": "yamaha",
+        "color": "black",
+        "img": "guitar-acustica_02.png"
+    },
+    {
+        "id": 4,
+        "nombre": "acustica_03",
+        "tipo-de-instrumento": "acustica",
+        "marca": "cort",
+        "color": "black",
+        "img": "guitar-acustica_03.png"
+    },
+    {
+        "id": 5,
+        "nombre": "acustica_04",
+        "tipo-de-instrumento": "acustica",
+        "marca": "fender",
+        "color": "light brown",
+        "img": "guitar-acustica_04.png"
+    },
+    {
+        "id": 6,
+        "nombre": "acustica_05",
+        "tipo-de-instrumento": "acustica",
+        "marca": "Gibson",
+        "color": "red",
+        "img": "guitar-acustica_05.png"
+    },
+    {
+        "id": 7,
+        "nombre": "criolla_00",
+        "tipo-de-instrumento": "criolla",
+        "marca": "alpujarra",
+        "color": "light brown",
+        "img": "guitar-criolla_00.png"
+    },
+    {
+        "id": 8,
+        "nombre": "criolla_01",
+        "tipo-de-instrumento": "criolla",
+        "marca": "alpujarra",
+        "color": "light brown",
+        "img": "guitar-criolla_01.png"
+    },
+    {
+        "id": 9,
+        "nombre": "criolla_02",
+        "tipo-de-instrumento": "criolla",
+        "marca": "alpujarra",
+        "color": "light brown",
+        "img": "guitar-criolla_02.png"
+    },
+    {
+        "id": 10,
+        "nombre": "criolla_03",
+        "tipo-de-instrumento": "criolla",
+        "marca": "alpujarra",
+        "color": "light brown",
+        "img": "guitar-criolla_03.png"
+    },
+    {
+        "id": 11,
+        "nombre": "criolla_04",
+        "tipo-de-instrumento": "criolla",
+        "marca": "nuniez",
+        "color": "light brown",
+        "img": "guitar-criolla_04.png"
+    },
+    {
+        "id": 12,
+        "nombre": "electrica_00",
+        "tipo-de-instrumento": "electrica",
+        "marca": "Gibson",
+        "color": "black",
+        "img": "guitar-electrica_00.png"
+    },
+    {
+        "id": 13,
+        "nombre": "electrica_01",
+        "tipo-de-instrumento": "electrica",
+        "marca": "MK",
+        "color": "black",
+        "img": "guitar-electrica_01.png"
+    },
+    {
+        "id": 14,
+        "nombre": "electrica_02",
+        "tipo-de-instrumento": "electrica",
+        "marca": "Voga",
+        "color": "orange",
+        "img": "guitar-electrica_02.png"
+    },
+    {
+        "id": 15,
+        "nombre": "electrica_03",
+        "tipo-de-instrumento": "electrica",
+        "marca": "Gibson",
+        "color": "red",
+        "img": "guitar-electrica_03.png"
+    },
+    {
+        "id": 16,
+        "nombre": "electrica_04",
+        "tipo-de-instrumento": "electrica",
+        "marca": "Cort",
+        "color": "brown",
+        "img": "guitar-electrica_04png"
+    },
+
+    {
+        "id": 17,
+        "nombre": "teclado_01",
+        "tipo-de-instrumento": "teclado",
+        "marca": "MK",
+        "color": "black",
+        "img": "teclado1.png"
+    },
+    {
+        "id": 18,
+        "nombre": "teclado_02",
+        "tipo-de-instrumento": "teclado",
+        "marca": "MQ",
+        "color": "black",
+        "img": "teclado2.png"
+    },
+    {
+        "id": 19,
+        "nombre": "teclado_03",
+        "tipo-de-instrumento": "teclado",
+        "marca": "MQ",
+        "color": "black",
+        "img": "teclado3.png"
+    },
+    {
+        "id": 20,
+        "nombre": "teclado_04",
+        "tipo-de-instrumento": "teclado",
+        "marca": "yamaha",
+        "color": "black",
+        "img": "tecladoYamha1.png"
+    },
+    {
+        "id": 21,
+        "nombre": "teclado_04",
+        "tipo-de-instrumento": "teclado",
+        "marca": "yamaha",
+        "color": "black",
+        "img": "tecladoYamha2.png"
+    },
+    {
+        "id": 22,
+        "nombre": "teclado_05",
+        "tipo-de-instrumento": "teclado",
+        "marca": "yamaha",
+        "color": "black",
+        "img": "tecladoYamha3.png"
+    },
+    {
+        "id": 23,
+        "nombre": "ukelele_00",
+        "tipo-de-instrumento": "ukelele",
+        "marca": "lanikai",
+        "color": "brown",
+        "img": "ukelele_00.png"
+    },
+    {
+        "id": 24,
+        "nombre": "ukelele_01",
+        "tipo-de-instrumento": "ukelele",
+        "marca": "korner",
+        "color": "brown",
+        "img": "ukelele_01.png"
+    },
+    {
+        "id": 25,
+        "nombre": "ukelele_02",
+        "tipo-de-instrumento": "ukelele",
+        "marca": "korner",
+        "color": "brown",
+        "img": "ukelele_02.png"
+    },
+    {
+        "id": 26,
+        "nombre": "bateria_00",
+        "tipo-de-instrumento": "bateria",
+        "marca": "yamaha",
+        "color": "black",
+        "img": "bateria_00.png"
+    },
+    {
+        "id": 27,
+        "nombre": "bateria_01",
+        "tipo-de-instrumento": "bateria",
+        "marca": "star",
+        "color": "red",
+        "img": "bateria_01.png"
+    },
+    {
+        "id": 28,
+        "nombre": "bateria_02",
+        "tipo-de-instrumento": "bateria",
+        "marca": "yamaha",
+        "color": "red",
+        "img": "bateria_02.png"
+    },
+    {
+        "id": 29,
+        "nombre": "bateria_03",
+        "tipo-de-instrumento": "bateria",
+        "marca": "mapex",
+        "color": "black",
+        "img": "bateria_03.png"
+    },
+    {
+        "id": 30,
+        "nombre": "bateria_04",
+        "tipo-de-instrumento": "bateria",
+        "marca": "premier",
+        "color": "black",
+        "img": "bateria_04.png"
+    },
+    {
+        "id": 31,
+        "nombre": "bajo_00",
+        "tipo-de-instrumento": "bajo",
+        "marca": "squier",
+        "color": "red",
+        "img": "bajo_00.png"
+    },
+    {
+        "id": 32,
+        "nombre": "bajo_01",
+        "tipo-de-instrumento": "bajo",
+        "marca": "cort",
+        "color": "black",
+        "img": "bajo_01.png"
+    },
+    {
+        "id": 33,
+        "nombre": "bajo_02",
+        "tipo-de-instrumento": "bajo",
+        "marca": "ibanez",
+        "color": "red",
+        "img": "bajo_02.png"
+    },
+    {
+        "id": 34,
+        "nombre": "bajo_03",
+        "tipo-de-instrumento": "bajo",
+        "marca": "fender",
+        "color": "brown",
+        "img": "bajo_03.png"
+    },
+    {
+        "id": 35,
+        "nombre": "ampli_00",
+        "tipo-de-instrumento": "amplificador",
+        "marca": "fender",
+        "color": "black",
+        "img": "ampli_00.png"
+    },
+    {
+        "id": 36,
+        "nombre": "ampli_01",
+        "tipo-de-instrumento": "amplificador",
+        "marca": "marshall",
+        "color": "black",
+        "img": "ampli_01.png"
+    },
+    {
+        "id": 37,
+        "nombre": "ampli_02",
+        "tipo-de-instrumento": "amplificador",
+        "marca": "bugera",
+        "color": "black",
+        "img": "ampli_02.png"
+    },
+    {
+        "id": 38,
+        "nombre": "ampli_03",
+        "tipo-de-instrumento": "amplificador",
+        "marca": "marshall",
+        "color": "grey",
+        "img": "ampli_03.png"
+    },
+    {
+        "id": 39,
+        "nombre": "ampli_04",
+        "tipo-de-instrumento": "amplificador",
+        "marca": "marshall",
+        "color": "black",
+        "img": "ampli_4.png"
+    },
+    {
+        "id": 40,
+        "nombre": "armonica_00",
+        "tipo-de-instrumento": "viento",
+        "marca": "hohner",
+        "color": "grey",
+        "img": "armonica_00.png"
+    },
+    {
+        "id": 41,
+        "nombre": "armonica_01",
+        "tipo-de-instrumento": "viento",
+        "marca": "marine band",
+        "color": "grey",
+        "img": "armonica_01.png"
+    },
+    {
+        "id": 42,
+        "nombre": "armonica_02",
+        "tipo-de-instrumento": "viento",
+        "marca": "puck",
+        "color": "grey",
+        "img": "armonica_02.png"
+    },
+    {
+        "id": 43,
+        "nombre": "armonica_03",
+        "tipo-de-instrumento": "viento",
+        "marca": "hohner",
+        "color": "grey",
+        "img": "armonica_03.png"
+    },
+    {
+        "id": 44,
+        "nombre": "armonica_04",
+        "tipo-de-instrumento": "viento",
+        "marca": "Fender",
+        "color": "grey",
+        "img": "armonica_04.png"
+    },
+    {
+        "id": 45,
+        "nombre": "flauta_00",
+        "tipo-de-instrumento": "viento",
+        "marca": "",
+        "color": "brown",
+        "img": "flauta_00.png"
+    },
+    {
+        "id": 46,
+        "nombre": "flauta_01",
+        "tipo-de-instrumento": "viento",
+        "marca": "",
+        "color": "brown",
+        "img": "flauta_01.png"
+    },
+    {
+        "id": 47,
+        "nombre": "flauta_02",
+        "tipo-de-instrumento": "viento",
+        "marca": "",
+        "color": "brown",
+        "img": "flauta_02.png"
+    },
+    {
+        "id": 48,
+        "nombre": "flauta_03",
+        "tipo-de-instrumento": "viento",
+        "marca": "",
+        "color": "white",
+        "img": "flauta_03.png"
+    }
+]
