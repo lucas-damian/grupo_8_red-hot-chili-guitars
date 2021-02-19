@@ -1,39 +1,53 @@
 const fs = require("fs");
 const path = require("path");
 const {validationResult} = require("express-validator")
-const hash = require("bcrypt");
+const userRout = "./data/users.json"
+const bcrypt = require("bcrypt");
+const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
 
-const users_db = JSON.parse(fs.readFileSync("./data/users.json","utf-8"));
+
 module.exports = {
 
     processRegister: (req,res) => {
 
         let errores = validationResult(req);
+        /* res.send(req.body); */
+       
+        if(!errores.isEmpty()){
+           res.render("logeo",{
+               title:"login page",
+                errores: errores.errors
+           })
+       } else {
+        
+        const{userName,email,pass} = req.body;
 
-        res.send(errores);
+       let lastID = 0;
+       users_db.forEach(user => {
+           if(user.id > lastID){
+               lastID = user.id;
+           }
+       });
 
-        const {userName,email,pass} = req.body;
+       let hashPass = bcrypt.hash(pass,12);
 
-        let lastID = 0;
-        users_db.forEach( user => {
-            if(user.id > lastID){
-                lastID = user.id;
-            }
-        })
+       let newUser = {
+           id: +lastID + 1,
+           userName,
+           email,
+           pass: hashPass
+       }
+       console.log(newUser)
+      
+       users_db.push(newUser);
+       
+       fs.writeFileSync(path.join("./data/users.json"), JSON.stringify(users_db,null,2),"utf-8");
 
-        let hashPass = hash.hashSync(pass,12);
+       
+       return res.redirect("/users");
+    
+    }
 
-        let newUser = {
-            id : +lastID + 1,
-            userName,
-            email,
-            pass: hashPass
-        }
-
-        users_db.push(newUser);
-
-        fs.writeFileSync(path.join("./data/users.json"), JSON.stringify(users_db,null,2));
-        res.redirect("users/log-in");
     },
 
     logIn:(req,res) => {

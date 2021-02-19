@@ -9,7 +9,6 @@ var methodOverride = require("method-override");
 var session = require("express-session");
 
 var indexRouter = require('./routes/index');
-var logRouter = require('./routes/users');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/producto');
 
@@ -31,8 +30,7 @@ app.use(session({secret: "red hot chilli guitars"}));
 app.use('/', indexRouter);
 app.use('/detalle-del-producto', indexRouter);
 app.use('/users', usersRouter);
-app.use('/log-in', logRouter);
-app.use('/products', productRouter)
+app.use('/products', productRouter);
 
 
 // catch 404 and forward to error handler

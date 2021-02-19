@@ -1,38 +1,8 @@
 [
   {
     "id": 1,
-    "userName": "popita",
-    "email": "popita@gmail.com",
-    "pass": "$2b$12$HgmQnGRmrxh5NBbg/5Lcbuq.ft4baKzcnufD8LGj/kDHyS7wM1Wv."
-  },
-  {
-    "id": 2,
     "userName": "sebastian",
-    "email": "abcs",
-    "pass": "$2b$12$HhA4vEVtqhHH09bf5Pp.guSpjiGLp5ZDd659c5mg5BwBOJAMp2p.y"
-  },
-  {
-    "id": 3,
-    "userName": "",
-    "email": "",
-    "pass": "$2b$12$jwjTx07ydHZVCojMBeFrhOzNNGOD2ZH4O1Aq.FZgR9o0fIUt5Or.S"
-  },
-  {
-    "id": 4,
-    "userName": "",
-    "email": "",
-    "pass": "$2b$12$Aly947kNqpcfCSC3VKFVPeb5b.YTXna7pr.Jib7nwqRrZ1T8ZOnoy"
-  },
-  {
-    "id": 5,
-    "userName": "",
-    "email": "",
-    "pass": "$2b$12$oo0otH5y05WSadHh4l3ffOVYzD9xvYEB948Ur8r6QPS0KaLP2mrTu"
-  },
-  {
-    "id": 6,
-    "userName": "Matias",
-    "email": "matyyassgonzalez89@gmail.com",
-    "pass": "$2b$12$EhQxUkx5.6JpnXdMOrEwc.zdYiWWVWs8S0iXKciF7OKxPJnDt8s4u"
+    "email": "sebastian@gmail.com",
+    "pass": {}
   }
 ]
