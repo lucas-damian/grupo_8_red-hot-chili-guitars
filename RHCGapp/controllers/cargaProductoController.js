@@ -1,6 +1,6 @@
 module.exports = {
     cargaProduc:(req,res) =>{
-        res.render("admin/cargaProducto", {
+        res.render("cargaProducto", {
             title: "Producto",
         });
     }
