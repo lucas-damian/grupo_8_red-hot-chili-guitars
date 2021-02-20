@@ -12,7 +12,7 @@
    - idem retro anterior
 
   ### lo que debemos hacer mas:
-   -  idem retro anterior
+   - idem retro anterior
 
   ### lo que debemos empezar a hacer:
    - Tenemos que tomar nota de las correcciones durante las reuniones de revisión y asignar miembros en las tareas para abanzar en los sprint

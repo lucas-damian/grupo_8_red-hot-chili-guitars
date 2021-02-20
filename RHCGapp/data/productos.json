@@ -162,7 +162,7 @@
     },
     {
         "id": 21,
-        "nombre": "teclado_04",
+        "nombre": "teclado_05",
         "tipo-de-instrumento": "teclado",
         "marca": "yamaha",
         "color": "black",
@@ -170,7 +170,7 @@
     },
     {
         "id": 22,
-        "nombre": "teclado_05",
+        "nombre": "teclado_06",
         "tipo-de-instrumento": "teclado",
         "marca": "yamaha",
         "color": "black",
