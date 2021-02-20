@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "acustica_00",
+        "tipo-de-instrumento": "acustica",
+        "marca": "cort",
+        "color": "ligth brown",
+        "img": "instrumentos/guitarras/guitar-acustica_00.png"
+    },
+    {
+        "id": 2,
+        "nombre": "criolla_00",
+        "tipo-de-instrumento": "criolla",
+        "marca": "alpujarra",
+        "color": "light brown",
+        "img": "instrumentos/guitarras/guitar-criolla_00.png"
+    },
+    {
+        "id": 3,
+        "nombre": "electrica_01",
+        "tipo-de-instrumento": "electrica",
+        "marca": "MK",
+        "color": "black",
+        "img": "instrumentos/guitarras/guitar-electrica_01.png"
+    }
+]

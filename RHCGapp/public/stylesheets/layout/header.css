@@ -43,7 +43,7 @@
 .header .hamburguer {
 	display: inline-block;
 	cursor: pointer;
-	width: 5rem;
+	width: 6.5rem;
 	animation: pulse 2s infinite;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .header .header__form {
-	width: 100%;
+	width: 90%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -60,8 +60,8 @@
 .header .btn--search {
 	padding: 0.5rem 0.8rem;
 	background-color: var(--color-primary-red);
-	border-radius: 50%;
-	font-size: 1.5rem;
+	border-radius: 4rem 4rem;
+	font-size: 1.8rem;
 	color: var(--color-primary-yellow);
 	box-shadow: var(--primary-shadow--up);
 	border: none;
@@ -72,7 +72,7 @@
 }
 
 .header .login {
-	width: 35%;
+	width: 40%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -95,7 +95,7 @@
 	color: var(--color-primary-yellow);
 	padding: 0.5rem 0.8rem;
 	border-radius: 50%;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
 }
 

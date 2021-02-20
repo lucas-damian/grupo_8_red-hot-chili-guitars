@@ -75,17 +75,19 @@
             </form>
          
         </div>
+
+        <% if (typeof errores !== "undefined") { %>
+            <ul>
+                <% errores.forEach(error => { %>
+                    <li><%= error.msg %> </li>
+                <% }); %>
+            </ul>
+         
+        <% } %>
+       
     </section>
 
-    <% if (typeof errores !== "undefined") { %>
-        <ul>
-            <% errores.forEach(error => { %>
-                <li><%= error.msg %> </li>
-            <% }); %>
-        </ul>
-     
-    <% } %>
-   
+    
    
 
 
