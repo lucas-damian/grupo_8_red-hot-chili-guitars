@@ -2,9 +2,10 @@
 	display: flex;
 	width: 100vw;
 	height: 100%;
+	flex-direction: column;
 	padding: 4rem 0 8rem 0;
 	background-image:var(--background);
-	justify-content: center;
+	align-items: center;
 } 
 .cargaProductos .carga{
 	padding: 2rem;
@@ -22,12 +23,7 @@
 	display: flex;
 	flex-direction: column;	
 }
-.cargaProductos .cargaPro{
-	background-color: var(--color-primary-red);
-	color: var(--color-primary-yellow) ;
-	border-radius: 8px;
-	border: none;
-}
+
 .cargaProductos .formSelect{
     border: none;
 	border-radius: 1rem;
@@ -35,6 +31,33 @@
 	background-color: transparent;
 	opacity: .8;
 	box-shadow: inset 0.3rem 0.3rem 1rem rgb(126 126 126 / 40%), inset -0.3rem -0.3rem 1rem rgb(126 126 126 / 40%);
+}
+
+.cargaProductos .btn--submit,
+.cargaProductos .btn--productos{
+
+	display: inline-block;
+	text-transform: capitalize;
+	border-radius: .3rem;
+	padding: .3rem 0;
+	text-align: center;
+	font-family: lobster;
+	font-size: 2rem;
+	box-shadow: var(--primary-shadow-down);
+
+}
+
+.cargaProductos .btn--submit{
+	background-color: var(--color-primary-darkRed);
+	color: var(--color-primary-yellow);
+	border: none;
+	margin-top: 2rem;
+	margin-bottom: 1.3rem;
+}
+
+.cargaProductos .btn--productos{
+	background-color: var(--color-primary-green);
+	color: var(--color-primary-yellow);
 }
 
 
