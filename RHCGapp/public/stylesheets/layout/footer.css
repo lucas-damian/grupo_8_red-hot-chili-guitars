@@ -96,17 +96,17 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 0 30px;
+    margin: 0 15px;
     padding: 0px;
-    height: 24px;
+    height: 35px;
     margin-top: 5px;
   }
   
   .footer .redes-text{
-    font-size: 1.5rem;
+    font-size: 17px;
     display: flex;
     margin: unset;
-    margin-left: 10px ;
+    margin-left: 5px ;
     font-weight: unset;
     font-family: 'lobster';
   }
@@ -114,13 +114,13 @@
   
   .footer .redes i{
     padding: 2px;
-    font-size: 15px;
+    font-size: 20px;
     margin-right: 5px;
     margin-top: .5px;
   }
   
   .footer .fa-facebook:before {
-      margin-left: 34px;
+      margin-left: 7px;
   }
   
   .footer .contacto{
@@ -129,9 +129,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 15px;
-    margin: 20px 100px;
-    height: 25px;
+    font-size: 18px;
+    margin: 20px 92px;
+    height: 33px;
     margin-bottom: 90px;
     margin-top: 40px;
     text-decoration: none;
@@ -147,7 +147,7 @@
 
   .footer .contacto i{
     padding: 2px;
-    font-size: 15px;
+    font-size: 22px;
     margin-right: 10px;
     color: #f6eec9;
   }

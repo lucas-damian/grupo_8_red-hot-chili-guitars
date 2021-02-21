@@ -5,7 +5,7 @@
         "tipo-de-instrumento": "acustica",
         "marca": "cort",
         "color": "ligth brown",
-        "img": "instrumentos/guitarras/guitar-acustica_00.png"
+        "img": "instrumentos/guitarras/guitarra_acustica_00.png"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "tipo-de-instrumento": "criolla",
         "marca": "alpujarra",
         "color": "light brown",
-        "img": "instrumentos/guitarras/guitar-criolla_00.png"
+        "img": "instrumentos/guitarras/guitarra_criolla_00.png"
     },
     {
         "id": 3,
@@ -21,6 +21,54 @@
         "tipo-de-instrumento": "electrica",
         "marca": "MK",
         "color": "black",
-        "img": "instrumentos/guitarras/guitar-electrica_01.png"
-    }
-]
+        "img": "instrumentos/guitarras/guitarra_electrica_01.png"
+    },
+    {
+        "id": 4,
+        "nombre": "ampli_01",
+        "tipo-de-instrumento": "amplificador",
+        "marca": "Marshall",
+        "color": "White",
+        "img": "intrumentos/amplificadores/ampli_01.png"
+    },
+    {
+        "id": 5,
+        "nombre": "micro_02",
+        "tipo-de-instrumento": "accesorios",
+        "marca": "MK",
+        "color": "Gray",
+        "img": "instrumentos/accesorios/micro_02.png"
+    },
+    {
+        "id": 6,
+        "nombre": "bajo_01",
+        "tipo-de-instrumento": "bajos",
+        "marca": "Fender",
+        "color": "Brown",
+        "img": "instrumentos/bajos/bajo_01.png"
+    },
+    {
+        "id": 7,
+        "nombre": "bateria_01",
+        "tipo-de-instrumento": "bateria",
+        "marca": "yamaha",
+        "color": "Red",
+        "img": "instrumentos/baterias/bateria_01.png"
+    },
+    {
+        "id": 8,
+        "nombre": "teclado_00",
+        "tipo-de-instrumento": "teclado",
+        "marca": "Akai",
+        "color": "Black",
+        "img": "instrumentos/teclados/teclado_00.png"
+    },
+    {
+        "id": 9,
+        "nombre": "trompeta_00",
+        "tipo-de-instrumento": "viento",
+        "marca": "Knight",
+        "color": "Golden",
+        "img": "instrumentos/vientos/trompeta_00.png"
+    } 
+] 
