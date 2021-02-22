@@ -1,5 +1,132 @@
 .productos{
     width: 100vw;
     height: 100%;
-    background-color: aqua;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: var(--background);
+}
+
+.productos .productos-title{
+    font-family: lobster;
+    font-size: 3rem;
+    color: var(--color-primary-red);
+    text-align: center;
+    line-height: .9;
+    margin-bottom: 3.5rem;
+}
+
+.productos .productos-container{
+    list-style: none;
+    width: 80vw;
+}
+
+.productos .productos-item{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary-yellow);
+    padding: 1.5rem 1.8rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--primary-shadow-down);
+    margin-bottom: 3rem;
+}
+
+/* .productos .productos-item:not(:last-child){
+    margin-bottom: 2.5rem;
+} */
+
+.producto-img{
+    width: 100%;
+    height: 30rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: .5rem 0;
+}
+
+.productos .img--productos{
+    width: 100%;
+    height: 100%;
+}
+
+.productos .productos-text{
+    color: var(--color-primary-darkRed);
+    font-family: arimo;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.productos .productos-text:nth-child(even){
+    background-color: rgba(255, 68, 0, 0.5);
+}
+
+
+.productos .btns--container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.productos .btn--editar,
+.productos .btn--borrar{
+    border: none;
+    padding: .2rem 1rem;
+    border-radius: .3rem;
+    box-shadow: var(--primary-shadow-down);
+    color: var(--color-primary-yellow);
+    font-size: 1.8rem;
+    font-family: lobster;
+    text-transform: capitalize;
+}
+
+.productos .btn--editar{
+    margin-bottom: 1.5rem;
+    background-color: var(--color-primary-green);
+
+}
+
+.productos .btn--borrar{
+    background-color: var(--color-primary-red);
+}
+
+
+.productos .btn--goTop{
+    background-color: var(--color-primary-darkRed);
+    color: var(--color-primary-yellow);
+    position: fixed;
+    right: 1rem;
+    bottom: 12rem;
+    font-size: 1.8rem;
+    padding: .5rem .8rem;
+    border-radius: 5rem;
+    box-shadow: var(--primary-shadow-down);
+}
+
+@media screen and (min-width:768px){
+    .productos .productos-container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .productos .productos-item{
+        width: 35vw;
+    }
+
+    .productos .productos-item:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .productos{
+        padding: 20rem 0;
+    }
+
+    .productos .productos-item{
+        width: 23vw;
+    }
 }

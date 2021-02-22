@@ -1,37 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&family=Lobster&display=swap" rel="stylesheet"> 
-  <link rel="shortcut icon" type="image/svg" href="img/icons/icon_sketch.svg">
-  <link rel="stylesheet" href="stylesheets/main.css">
-  <script src="https://kit.fontawesome.com/903a3d85a1.js" crossorigin="anonymous"></script>
-  <title><%= title %></title>
-</head>
-<body>
-    
-    
-    <!-- carrito -->
-        <%- include('partials/carrito') %>
+	<!-- carrito -->
+    <%- include('partials/head') %>
     <!-- /carrito -->
+	<body>
+		<!-- carrito -->
+		<%- include('partials/carrito') %>
+		<!-- /carrito -->
 
+		<!-- header -->
+		<%- include('partials/header') %>
+		<!-- /header -->
 
-    <!-- header -->
-        <%- include('partials/header') %>
-    <!-- /header -->
+		<section class="productos">
+			<h2 class="productos-title" id="top">Estos son tus instrumentos</h2>
+			<ul class="productos-container">
+				<% productos.forEach(producto => { %>
+				<li class="productos-item">
+                    <div class="producto-img">
+                        <img src="<%= producto.img %> " alt="<%= producto.name %> " class="img--productos">
+                    </div>
+                    
+                    <p class="productos-text">
+					<%= producto.nombre %>
+                    </p>
+                    
+                    <p class="productos-text">
+                    <%=producto.marca %>
+                    </p>
+                    
+                    <p class="productos-text">
+                    <%= producto.tipo %>  
+                    </p>
+                    
+                    <p class="productos-text">
+                    <%= producto.color %>
+                    </p>
 
-    <section class="productos">
-        <h2>estos son tus instrumentos</h2>
-    </section>
+                    <div class="btns--container">
+                        <button class="btn--editar" type="submit">editar</button>
+                        <button class="btn--borrar" type="submit">borrar</button>
+                    </div>
+				</li>
+				<% }) %>
+			</ul>
 
+            <a href="#top" class="btn--goTop"><i class="fas fa-chevron-circle-up"></i></a>
+		</section>
 
-    <!-- footer -->
-    <%- include('partials/footer') %>
-    <!-- /footer -->
-
-</body>
+		<!-- footer -->
+		<%- include('partials/footer') %>
+		<!-- /footer -->
+	</body>
 </html>
