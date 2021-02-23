@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100vw;  
-    height: 240vh;
+    height: 180vh;
 }
 
 .subcontainer-main{
@@ -56,6 +56,7 @@
     justify-content: center;
     height: 40vh;
     margin-bottom: 20px;
+    margin-top: 40px
 }
 
 .price{
@@ -274,7 +275,7 @@ p.modelo{
 @media screen and (min-width: 425px){
 
     .container-main{
-        height: 250vh;
+        height: 185vh;
     }
 
     .product-img{
@@ -317,7 +318,7 @@ p.modelo{
     @media screen and (min-width: 768px) {
 
         .container-main{
-            height: 270vh;
+            height: 210vh;
         }
 
         .product-img {
@@ -360,27 +361,41 @@ p.modelo{
 
     }
         
-        @media screen and (min-width: 1200px){
 
-            .container-main{
-                height: 360vh;
-            }
+    @media screen and (min-width: 1024px){
+        .price{
+            margin-left: 383px;
+        }
+        .description-product{
+            margin-left: 383px;
+        }
+        .payment-method-main{
+            margin-left: 383px;
+        }
+    }
 
-            .title-main{
-                margin-top: 102px;
-            }
 
-            .price{
-                width: 65rem;
-                height: 25rem;
-                margin-left: 275px;
-                margin-top: 8rem;
-                margin-bottom: 8rem;
-            }
+    @media screen and (min-width: 1200px){
 
-            .price p{
-                font-size: 50px;
-            }
+        .container-main{
+            height: 280vh;
+        }
+
+        .title-main{
+            margin-top: 102px;
+        }
+
+        .price{
+            width: 65rem;
+            height: 25rem;
+            margin-left: 275px;
+            margin-top: 8rem;
+            margin-bottom: 8rem;
+        }
+
+        .price p{
+            font-size: 50px;
+        }
 
             .precionum{
                 width: 44rem;
