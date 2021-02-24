@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "nombre": "acustica_00",
-        "tipo": "guitarra_acustica",
+        "nombre": "guitarra acustica_00",
+        "tipo": "acustica",
         "marca": "cort",
         "color": "ligth brown",
         "valor": "$1000",
@@ -10,8 +10,8 @@
     },
     {
         "id": 2,
-        "nombre": "acustica_01",
-        "tipo": "guitarra_acustica",
+        "nombre": "guitarra acustica_01",
+        "tipo": "acustica",
         "marca": "Gibson",
         "color": "red",
         "valor": "$1000",
@@ -19,8 +19,8 @@
     },
     {
         "id": 3,
-        "nombre": "criolla_00",
-        "tipo": "guitarra_criolla",
+        "nombre": "guitarra criolla_00",
+        "tipo": "criolla",
         "marca": "alpujarra",
         "color": "brown",
         "valor": "$1000",
@@ -28,8 +28,8 @@
     },
     {
         "id": 4,
-        "nombre": "criolla_01",
-        "tipo": "guitarra_criolla",
+        "nombre": "guitarra criolla_01",
+        "tipo": "criolla",
         "marca": "Gracia",
         "color": "light-brown",
         "valor": "$1000",
@@ -37,8 +37,8 @@
     },
     {
         "id": 5,
-        "nombre": "electrica_00",
-        "tipo": "guitarra_electrica",
+        "nombre": "guitarra electrica_00",
+        "tipo": "electrica",
         "marca": "MK",
         "color": "black",
         "valor": "$1000",
@@ -46,8 +46,8 @@
     },
     {
         "id": 6,
-        "nombre": "electrica_01",
-        "tipo": "guitarra_electrica",
+        "nombre": "guitarra electrica_01",
+        "tipo": "electrica",
         "marca": "Cort",
         "color": "brown",
         "valor": "$1000",
@@ -92,7 +92,7 @@
     {
         "id": 11,
         "nombre": "cuerdas_guitarra_00",
-        "tipo": "accesorios",
+        "tipo": "accesorio",
         "marca": "Ernie-ball",
         "color": "black",
         "valor": "$1000",
@@ -101,7 +101,7 @@
     {
         "id": 12,
         "nombre": "cuerdas_guitarra_01",
-        "tipo": "accesorios",
+        "tipo": "accesorio",
         "marca": "Ernie-ball",
         "color": "Gray",
         "valor": "$1000",
@@ -110,7 +110,7 @@
     {
         "id": 13,
         "nombre": "micro_00",
-        "tipo": "accesorios",
+        "tipo": "accesorio",
         "marca": "Shure",
         "color": "Black",
         "valor": "$1000",
@@ -119,7 +119,7 @@
     {
         "id": 14,
         "nombre": "micro_01",
-        "tipo": "accesorios",
+        "tipo": "accesorio",
         "marca": "MK",
         "color": "Black",
         "valor": "$1000",
@@ -128,7 +128,7 @@
     {
         "id": 15,
         "nombre": "micro_02",
-        "tipo": "accesorios",
+        "tipo": "accesorio",
         "marca": "MK",
         "color": "Gray",
         "valor": "$1000",
@@ -138,7 +138,7 @@
     {
         "id": 16,
         "nombre": "pie_micro_00",
-        "tipo": "accesorios",
+        "tipo": "accesorio",
         "marca": "Tiger",
         "color": "Black",
         "valor": "$1000",
@@ -147,7 +147,7 @@
     {
         "id": 17,
         "nombre": "pie_micro_01",
-        "tipo": "accesorios",
+        "tipo": "accesorio",
         "marca": "Pulse",
         "color": "Black",
         "valor": "$1000",
@@ -156,7 +156,7 @@
     {
         "id": 18,
         "nombre": "bajo_00",
-        "tipo": "bajos",
+        "tipo": "bajo",
         "marca": "Fender",
         "color": "White-red",
         "valor": "$1000",
@@ -165,7 +165,7 @@
     {
         "id": 19,
         "nombre": "bajo_01",
-        "tipo": "bajos",
+        "tipo": "bajo",
         "marca": "Fender",
         "color": "Brown",
         "valor": "$1000",
