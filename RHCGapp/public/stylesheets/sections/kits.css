@@ -154,6 +154,17 @@
 
 	.kits .kits--slider{
 		margin: 0 auto;
+		
+	}
+
+	.kits .slide{
+		width: 80vw;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.kits .article-container{
+		margin-bottom: 5rem;
 	}
 
 	.kits .article--title{

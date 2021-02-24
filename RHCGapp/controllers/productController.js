@@ -16,17 +16,14 @@ module.exports = {
            productos:productos
        });
     },
-
-    formDirect: (req,res) => {
-
-    },
-
+    
     crear: (req,res) => {
 
-    },
+        res.send(req.body);
 
-    produDetalle: (req,res) => {
 
+
+        res.redirect("/products/create")
     },
 
     produEdit: (req,res) => {

@@ -5,6 +5,7 @@
         "tipo": "guitarra_acustica",
         "marca": "cort",
         "color": "ligth brown",
+        "valor": "$1000",
         "img": "/img/instrumentos/guitarras/acustica/guitarra_acustica_00.png"
     },
     {
@@ -13,6 +14,7 @@
         "tipo": "guitarra_acustica",
         "marca": "Gibson",
         "color": "red",
+        "valor": "$1000",
         "img": "/img/instrumentos/guitarras/acustica/guitarra_acustica_01.png"
     },
     {
@@ -21,6 +23,7 @@
         "tipo": "guitarra_criolla",
         "marca": "alpujarra",
         "color": "brown",
+        "valor": "$1000",
         "img": "/img/instrumentos/guitarras/criollas/guitarra_criolla_00.png"
     },
     {
@@ -29,6 +32,7 @@
         "tipo": "guitarra_criolla",
         "marca": "Gracia",
         "color": "light-brown",
+        "valor": "$1000",
         "img": "/img/instrumentos/guitarras/criollas/guitarra_criolla_01.png"
     },
     {
@@ -37,6 +41,7 @@
         "tipo": "guitarra_electrica",
         "marca": "MK",
         "color": "black",
+        "valor": "$1000",
         "img": "/img/instrumentos/guitarras/electrica/guitarra_electrica_00.png"
     },
     {
@@ -45,6 +50,7 @@
         "tipo": "guitarra_electrica",
         "marca": "Cort",
         "color": "brown",
+        "valor": "$1000",
         "img": "/img/instrumentos/guitarras/electrica/guitarra_electrica_01.png"
     },
     {
@@ -53,6 +59,7 @@
         "tipo": "consola",
         "marca": "Pioneer",
         "color": "Black",
+        "valor": "$1000",
         "img": "/img/instrumentos/amplificadores/consolas/consola_00.png"
     },
     {
@@ -61,6 +68,7 @@
         "tipo": "consola",
         "marca": "Pioneer",
         "color": "Black",
+        "valor": "$1000",
         "img": "/img/instrumentos/amplificadores/consolas/consola_01.png"
     },
     {
@@ -69,6 +77,7 @@
         "tipo": "amplificador",
         "marca": "Fender",
         "color": "Black",
+        "valor": "$1000",
         "img": "/img/instrumentos/amplificadores/ampli_00.png"
     },
     {
@@ -77,6 +86,7 @@
         "tipo": "amplificador",
         "marca": "Marshall",
         "color": "White",
+        "valor": "$1000",
         "img": "/img/instrumentos/amplificadores/ampli_01.png"
     },
     {
@@ -85,6 +95,7 @@
         "tipo": "accesorios",
         "marca": "Ernie-ball",
         "color": "black",
+        "valor": "$1000",
         "img": "/img/instrumentos/accesorios/cuerdas_guitarra_00.png"
     },
     {
@@ -93,6 +104,7 @@
         "tipo": "accesorios",
         "marca": "Ernie-ball",
         "color": "Gray",
+        "valor": "$1000",
         "img": "/img/instrumentos/accesorios/cuerdas_guitarra_01.png"
     },
     {
@@ -101,6 +113,7 @@
         "tipo": "accesorios",
         "marca": "Shure",
         "color": "Black",
+        "valor": "$1000",
         "img": "/img/instrumentos/accesorios/micro_00.png"
     },
     {
@@ -109,6 +122,7 @@
         "tipo": "accesorios",
         "marca": "MK",
         "color": "Black",
+        "valor": "$1000",
         "img": "/img/instrumentos/accesorios/micro_01.png"
     },
     {
@@ -117,6 +131,7 @@
         "tipo": "accesorios",
         "marca": "MK",
         "color": "Gray",
+        "valor": "$1000",
         "img": "/img/instrumentos/accesorios/micro_02.png"
     },
 
@@ -126,6 +141,7 @@
         "tipo": "accesorios",
         "marca": "Tiger",
         "color": "Black",
+        "valor": "$1000",
         "img": "/img/instrumentos/accesorios/pie_micro_00.png"
     },
     {
@@ -134,6 +150,7 @@
         "tipo": "accesorios",
         "marca": "Pulse",
         "color": "Black",
+        "valor": "$1000",
         "img": "/img/instrumentos/accesorios/pie_micro_01.png"
     },
     {
@@ -142,6 +159,7 @@
         "tipo": "bajos",
         "marca": "Fender",
         "color": "White-red",
+        "valor": "$1000",
         "img": "/img/instrumentos/bajos/bajo_00.png"
     },
     {
@@ -150,6 +168,7 @@
         "tipo": "bajos",
         "marca": "Fender",
         "color": "Brown",
+        "valor": "$1000",
         "img": "/img/instrumentos/bajos/bajo_01.png"
     },
     {
@@ -158,6 +177,7 @@
         "tipo": "bateria",
         "marca": "yamaha",
         "color": "Blue",
+        "valor": "$1000",
         "img": "/img/instrumentos/baterias/bateria_00.png"
     },
     {
@@ -166,6 +186,7 @@
         "tipo": "bateria",
         "marca": "yamaha",
         "color": "Red",
+        "valor": "$1000",
         "img": "/img/instrumentos/baterias/bateria_01.png"
     },
     {
@@ -174,6 +195,7 @@
         "tipo": "teclado",
         "marca": "Akai",
         "color": "Black",
+        "valor": "$1000",
         "img": "/img/instrumentos/teclados/teclado_00.png"
     },
     {
@@ -182,6 +204,7 @@
         "tipo": "teclado",
         "marca": "Akai",
         "color": "Black",
+        "valor": "$1000",
         "img": "/img/instrumentos/teclados/teclado_01.png"
     },
     {
@@ -190,6 +213,7 @@
         "tipo": "ukelele",
         "marca": "Matn",
         "color": "brown",
+        "valor": "$1000",
         "img": "/img/instrumentos/ukeleles/uquelele_00.png"
     },
     {
@@ -198,6 +222,7 @@
         "tipo": "ukelele",
         "marca": "Lanai",
         "color": "brown",
+        "valor": "$1000",
         "img": "/img/instrumentos/ukeleles/uquelele_01.png"
     },
     {
@@ -206,22 +231,25 @@
         "tipo": "vientos",
         "marca": "Hohner",
         "color": "Gray",
+        "valor": "$1000",
         "img": "/img/instrumentos/vientos/armonica_00.png"
     },
     {
         "id": 27,
         "nombre": "flauta_00",
         "tipo": "viento",
-        "marca": "",
+        "marca": "Hammelin",
         "color": "brown",
+        "valor": "$1000",
         "img": "/img/instrumentos/vientos/flauta_00.png"
     },
     {
         "id": 28,
         "nombre": "flauta_01",
         "tipo": "viento",
-        "marca": "",
+        "marca": "Hudrogoth",
         "color": "brown",
+        "valor": "$1000",
         "img": "/img/instrumentos/vientos/flauta_01.png"
     },
     {
@@ -230,6 +258,7 @@
         "tipo": "viento",
         "marca": "Knight",
         "color": "Golden",
+        "valor": "$1000",
         "img": "/img/instrumentos/vientos/trompeta_00.png"
     },
     {
@@ -238,6 +267,7 @@
         "tipo": "viento",
         "marca": "Knight",
         "color": "Golden",
+        "valor": "$1000",
         "img": "/img/instrumentos/vientos/trompeta_01.png"
     }
 ]

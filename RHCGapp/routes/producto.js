@@ -6,9 +6,10 @@ const {cargaProduc,listar,formDirect,crear,produEdit,produDetalle}= require("../
 router.get('/', cargaProduc);
 
 router.get('/create', listar);
+router.post('/create',crear);
 
 
-/*router.post('/create',crear);
+/*
 
 router.get('/:id', produDetalle);
 router.get('/:id/edit',produEdit); 

@@ -36,24 +36,24 @@
 }
 
 
-.ingreso .log-row{
+.log-row{
 margin-bottom: 1rem;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 }
 
-.ingreso .log-row:last-of-type{
+.log-row:last-of-type{
 	margin-bottom: 2rem;
 }
 
-.ingreso .log--label{
+.log--label{
 	font-size: 1.5rem;
 	margin-bottom: -.2rem;
 	font-family: lobster;
 }
 
-.ingreso .log--input{
+.log--input{
 	border: none;
 	outline: none;
 	border-radius: .3rem;

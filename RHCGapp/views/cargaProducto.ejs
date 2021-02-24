@@ -14,54 +14,55 @@
     <%- include('partials/carrito') %>
     <!-- /carrito -->
     
-      <main class="cargaProductos">
-      <form class="carga">
-          <div class="carjaIzquierda">
-              <div class="cajainstrumento">
-              <label class="Instrumento" for="inputGroupSelect01">Tipo de instrumento :</label>
-                <select class="formSelect" id="inputGroupSelect01">
-                  <option selected>Instrumento...</option>
-                  <option value="1">Guitarra</option>
-                  <option value="2">Piano</option>
-                  <option value="3">Bateria</option>
-                </select>
-             </div>
-              <div class="cajaMarca">
-              <label class="Marca" for="inputGroupSelect01">Marca :</label>
-                <select class="formSelect" id="inputGroupSelect01">
-                  <option selected>Todas...</option>
-                  <option value="1">Gipson</option>
-                  <option value="2">Fender</option>
-                  <option value="3">Ibanez</option>
-                </select>
+    <main class="cargaProductos">
+      
+      <form class="carga" action="/products/create" method="POST">
+        
+        <div class="carjaIzquierda">
+            
+            <div class="log-row">
+              <label class="log--label" for="tipo">Tipo de instrumento :</label>
+              <input class="log--input" type="text" name="tipo" id="tipo" placeholder="electrica,acustica,etc..">
             </div>
-              <div class="tituloPubli">
-              <label for="Titulo" class="log--label">Titulo de la publicacion :</label>
-              <input class="log--input" type="text" placeholder="Escribe tu titulo" id="userName">
-              </div>
-            <div class="descripcion">
-            <label for="Descripcion" class="log--label">Descripcion :</label>
-            <input class="log--input" type="text" placeholder="Descripcion del producto" id="userName">
+            
+            <div class="log-row">
+              <label class="log--label" for="marca">Marca :</label>
+              <input class="log--input" type="text" name="marca" id="marca" placeholder="Gibson,Fender,Yamaha,etc..">
+            </div>
+            
+            <div class="log-row">
+              <label for="nombre" class="log--label">Nombre :</label>
+              <input class="log--input" type="text" name="nombre" placeholder="Nombre del artículo" id="nombre">
             </div>
           
-         </div>
-          <div class="carjaDerecha">
-              <div class="log-row">
-              <label for="userName" class="log--label">Color :</label>
-              <input class="log--input" type="text" placeholder="Color..." id="userName">
-               </div>
-             <div class="log-row">
-            <label for="userName" class="log--label">Precio :</label>
-            <input class="log--input" type="text" placeholder="Precio..." id="userName">
-             </div>
-              <div class="cajaimagen">
-                <label for="exampleFormControlFile1">Fotos :</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-              </div>
-       <button class="btn--submit">cargar</button>
-      <a href="/products/create" class="btn--productos">ver lista</a>
+        </div>
+
+        <div class="cajaDerecha">
+          
+          <div class="log-row">
+            <label for="color" class="log--label">Color :</label>
+            <input class="log--input" type="text"  name="color" placeholder="blanco,negro,etc..." id="color">
+          </div>
+         
+          <div class="log-row">
+            <label for="valor" class="log--label">Valor :</label>
+            <input class="log--input" type="text"  name="valor" placeholder="$10,$1000,etc.." id="valor">
+          </div>
+          
+          <div class="log-row">
+            <label for="formImg" class="log--label">Fotos :</label>
+            <input class="log--input" type="file"  name="file" class="form-control-file" id="formImg">
+          </div>
+        
+        <button class="btn--submit">cargar</button>
+            <a href="/products/create" class="btn--productos">ver lista</a>
+        
+        
+        </div>    
+            
       </form>
-      </main>
+      
+    </main>
    <!-- footer -->
    <%- include('partials/footer') %>
  <!-- /footer -->

@@ -1,20 +1,23 @@
 .slider--img {
-	height: 20rem;
+	width: 100%;
+	height: 100%;
 	border: none;
 	outline: none;
 }
 
 
+@media screen and (min-width: 768px){
+	.conteinerSlider{
+		height: 35rem;
+		border: none;
+}
+}
+
 @media screen and (min-width: 1200px) {
 	
 	.conteinerSlider{
-			height: 52rem;
+			height: 45rem;
 			border: none;
-	}
-	
-	.conteinerSlider img{
-			width: 100%;
-			height: 100%;
 	}
 	
 }
