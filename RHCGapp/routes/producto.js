@@ -1,14 +1,23 @@
 var express = require('express');
 var router = express.Router();
 let uploadImages = require("../middlewares/uploadImages")
-const {cargaProduc,listar,formDirect,crear,produEdit,produDetalle,search}= require("../controllers/productController");
+const {cargaProduc,listar,crear,store,produEdit,prodUpdate,borrar,search}= require("../controllers/productController");
 
 
 router.get('/', cargaProduc);
+router.post('/store',uploadImages.any(),store);
 
-router.get('/create', listar);
+
+router.get('/list', listar);
+
+
+router.get("/edit/:id", produEdit);
+router.put("/update/:id",uploadImages.any(), prodUpdate);
+
+router.delete('/delete/:id',borrar);
+
+
 router.get('/search', search);
-router.post('/create',uploadImages.any(),crear);
 
 
 /*
