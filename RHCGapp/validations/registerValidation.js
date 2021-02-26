@@ -4,10 +4,9 @@ const userRout = "./data/users.json"
 const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
 
 module.exports = [
-    body("userName")
-    .isLength({
-        min:1
-    }).withMessage("debes ingresar un usuario"),
+    check("userName")
+    .notEmpty().withMessage("debes ingresar un usuario"),
+
 
    check("email")
    .isEmail().withMessage("el email es requerido"),
@@ -26,12 +25,15 @@ module.exports = [
        }
    }).withMessage("el email, ya se encuentra registrado"),
 
-
    check("pass")
-   .isLength({
-       min: 3,
-       max: 6
-   }).withMessage("la contraseña debe tener, mínimo 3 y maximo 6 caracteres "),
+    .notEmpty().withMessage("Es necesario una contraseña"),
+    
+    check("pass")
+        .isLength({
+            min: 3,
+            max: 10,
+        }).withMessage("Minimo 3 caracteres y máximo 6 caracteres"),
+   
 
    body("pass2")
    .custom((value,{req}) => {
