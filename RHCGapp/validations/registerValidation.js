@@ -1,15 +1,17 @@
 const {check, body} = require("express-validator");
 const fs = require("fs");
-const path = require("path");
 const userRout = "./data/users.json"
 const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
 
 module.exports = [
-/*    check("userName")
-   .isEmpty().withMessage("el nombre de usuario es requerido"), */
+    body("userName")
+    .isLength({
+        min:1
+    }).withMessage("debes ingresar un usuario"),
 
    check("email")
    .isEmail().withMessage("el email es requerido"),
+
 
    body("email")
    .custom(value => {
@@ -29,7 +31,7 @@ module.exports = [
    .isLength({
        min: 3,
        max: 6
-   }).withMessage("la contraseña debe tener mínimo 3 caracteres y maximo 6"),
+   }).withMessage("la contraseña debe tener, mínimo 3 y maximo 6 caracteres "),
 
    body("pass2")
    .custom((value,{req}) => {

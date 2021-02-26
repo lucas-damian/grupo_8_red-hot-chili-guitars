@@ -16,46 +16,93 @@
     
     <main class="cargaProductos">
       
-        <h2 class="cargaProductos-title">editando instrumento</h2>
+      <h2 class="cargaProductos-title">editando instrumento</h2>
+      
       <form class="carga" action="/products/update/<%=producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         
         <div class="carjaIzquierda">
             
             <div class="log-row">
-              <label class="log--label" for="tipo">Tipo de instrumento :</label>
-              <input class="log--input" type="text" name="tipo" id="tipo" placeholder="electrica,acustica,etc.." value="<%= producto.tipo %> ">
+              <select class="log--input" name="instrumento" id="instrumento" value="<%= producto.tipo %>" selected="<%= producto.tipo %>">
+                <option value="elegí instrumento" disabled>
+                  elegí instrumento
+                </option>
+    
+                <option value="guitarra">guitarra</option>
+                <option value="bajo">bajo</option>
+                <option value="ukelele">ukelele</option>
+                <option value="bateria">bateria</option>
+                <option value="teclado">teclado</option>
+                <option value="piano">piano</option>
+                <option value="amplificador">amplificador</option>
+                <option value="cuerda">cuerda</option>
+                <option value="microfono">microfono</option>
+                <option value="pie">pie</option>
+                <option value="consola">consola</option>
+                <option value="accesorio">accesorio</option>
+                <option value="trompeta">trompeta</option>
+                <option value="flauta">flauta</option>
+                <option value="armonica">armonica</option>
+              </select>
+
+            </div>
+            
+            <div class="log-row">
+              <label class="log--label" for="marca">Tipo de Instrumento :</label>
+              
+              <input class="log--input" type="text" name="tipo" id="marca" placeholder="Gibson,Fender,Yamaha,etc.." value="<%= producto.tipo %> ">
             </div>
             
             <div class="log-row">
               <label class="log--label" for="marca">Marca :</label>
+              
               <input class="log--input" type="text" name="marca" id="marca" placeholder="Gibson,Fender,Yamaha,etc.." value="<%= producto.marca %> ">
             </div>
-            
+
             <div class="log-row">
-              <label for="nombre" class="log--label">Nombre :</label>
-              <input class="log--input" type="text" name="nombre" placeholder="Nombre del artículo" id="nombre" value="<%= producto.nombre %> ">
+              <label class="log--label" for="categoria">Categorias: </label>
+              <select class="log--input"  name="categoria" id="categoria" selected="<%= producto.categoria %>"  value="<%= producto.categoria %>">
+                <option value="accesorios" disabled>elegí tu categoria</option>
+                <option value="accesorios">accesorios</option>
+                <option value="cuerdas">cuerdas</option>
+                <option value="percusion">percusion</option>
+                <option value="teclados">teclados</option>
+                <option value="vientos">vientos</option>
+              </select>
+              
             </div>
+            
           
         </div>
 
         <div class="cajaDerecha">
           
           <div class="log-row">
+            <label for="color" class="log--label">Modelo :</label>
+            
+            <input class="log--input" type="text"  name="modelo" placeholder="blanco,negro,etc..." id="color"
+            value="<%= producto.modelo %> ">
+          </div>
+          
+          <div class="log-row">
             <label for="color" class="log--label">Color :</label>
+            
             <input class="log--input" type="text"  name="color" placeholder="blanco,negro,etc..." id="color"
             value="<%= producto.color %> ">
           </div>
          
           <div class="log-row">
             <label for="valor" class="log--label">Valor :</label>
+            
             <input class="log--input" type="text"  name="valor" placeholder="$10,$1000,etc.." id="valor"
             value="<%= producto.valor %> ">
           </div>
           
           <div class="log-row">
             <label for="formImg" class="log--label">Fotos :</label>
+            
             <input class="log--input" type="file"  name="file" class="form-control-file" id="formImg"
-            value="<%= producto.img %> " >
+            value="<%= producto.img %>" >
           </div>
         
         <button class="btn--submit">guardar cambios</button>

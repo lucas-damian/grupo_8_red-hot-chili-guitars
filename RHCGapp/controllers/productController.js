@@ -22,8 +22,16 @@ module.exports = {
    
 
     store: (req,res) => {
-        const {tipo,marca,nombre,valor} = req.body;
-        const img = req.files[0].filename;
+        const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
+        const img = req.files[0].filename; 
+
+/*         let img;
+        if(categoria.length !== 0){
+            img = categoria + req.files[0].filename;
+
+        } else {
+            img = req.files[0].filename; 
+        } */
 
         let lastId = 0;
         
@@ -37,8 +45,11 @@ module.exports = {
             id: +lastId + 1,
             tipo,
             marca,
-            nombre,
+            instrumento,
+            categoria,
+            modelo,
             valor,
+            color,
             img
         }
 
@@ -63,7 +74,7 @@ module.exports = {
 
     prodUpdate: (req, res) => {
         
-        const {tipo, marca,nombre, color, valor, file} = req.body
+        const {tipo, marca,instrumento,categoria, modelo, color, valor, file} = req.body
 
        productos.forEach( producto => {
         
@@ -72,7 +83,9 @@ module.exports = {
             producto.id = Number(req.params.id);
             producto.tipo = tipo;
             producto.marca = marca;
-            producto.nombre = nombre;
+            producto.categoria = categoria;
+            producto.instrumento = instrumento;
+            producto.modelo = modelo;
             producto.color = color;
             producto.valor = valor;
             producto.file = file;
@@ -105,7 +118,7 @@ module.exports = {
     
     search: (req,res) => {
         const resultado = productos.filter( product => {
-            return product.nombre.includes(req.query.busqueda)
+            return product.instrumento.includes(req.query.busqueda)
         });
 
         /* res.send(resultado); */

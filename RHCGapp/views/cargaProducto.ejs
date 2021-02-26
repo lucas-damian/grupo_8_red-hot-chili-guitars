@@ -1,86 +1,159 @@
 <!-- head -->
 <%- include('partials/head') %>
-  <!-- /head -->
+<!-- /head -->
 
-  
 <body class="body--home">
-  
+	<!-- header -->
+	<%- include('partials/header') %>
+	<!-- /header -->
 
-    <!-- header -->
-    <%- include('partials/header') %>
-    <!-- /header -->
+	<!-- carrito -->
+	<%- include('partials/carrito') %>
+	<!-- /carrito -->
 
-    <!-- carrito -->
-    <%- include('partials/carrito') %>
-    <!-- /carrito -->
-    
-    <main class="cargaProductos">
-      <h2 class="cargaProductos-title">cargando instrumento</h2>
-      
-      <form class="carga" action="/products/store" method="POST" enctype="multipart/form-data">
-        
-        <div class="carjaIzquierda">
-            
-            <div class="log-row">
-              <label class="log--label" for="tipo">Tipo de instrumento :</label>
-              <input class="log--input" type="text" name="tipo" id="tipo" placeholder="electrica,acustica,etc.." >
-            </div>
-            
-            <div class="log-row">
-              <label class="log--label" for="marca">Marca :</label>
-              <input class="log--input" type="text" name="marca" id="marca" placeholder="Gibson,Fender,Yamaha,etc..">
-            </div>
-            
-            <div class="log-row">
-              <label for="nombre" class="log--label">Nombre :</label>
-              <input class="log--input" type="text" name="nombre" placeholder="Nombre del artículo" id="nombre">
-            </div>
-          
-        </div>
+	<main class="cargaProductos">
+		<h2 class="cargaProductos-title">cargando instrumento</h2>
 
-        <div class="cajaDerecha">
-          
-          <div class="log-row">
-            <label for="color" class="log--label">Color :</label>
-            <input class="log--input" type="text"  name="color" placeholder="blanco,negro,etc..." id="color"
-            >
-          </div>
-         
-          <div class="log-row">
-            <label for="valor" class="log--label">Valor :</label>
-            <input class="log--input" type="text"  name="valor" placeholder="$10,$1000,etc.." id="valor"
-            >
-          </div>
-          
-          <div class="log-row">
-            <label for="formImg" class="log--label">Fotos :</label>
-            <input class="log--input" type="file"  name="file" class="form-control-file" id="formImg"
-             >
-          </div>
-        
-        <button class="btn--submit">cargar</button>
-            <a href="/products/list" class="btn--productos">ver lista</a>
-        
-        
-        </div>    
+		<form
+			class="carga"
+			action="/products/store"
+			method="POST"
+			enctype="multipart/form-data"
+		>
+			<div class="carjaIzquierda">
+				<div class="log-row">
+					<label class="log--label" for="instrumento">Instrumentos: </label>
+					<select class="log--input" name="instrumento" id="instrumento">
+						<option value="elegí instrumento"  selected disabled>
+							elegí instrumento
+						</option>
+
+						<option value="guitarra">guitarra</option>
+						<option value="bajo">bajo</option>
+						<option value="ukelele">ukelele</option>
+						<option value="bateria">bateria</option>
+						<option value="teclado">teclado</option>
+						<option value="piano">piano</option>
+						<option value="amplificador">amplificador</option>
+						<option value="cuerda">cuerda</option>
+						<option value="microfono">microfono</option>
+						<option value="pie">pie</option>
+						<option value="consola">consola</option>
+						<option value="accesorio">accesorio</option>
+						<option value="trompeta">trompeta</option>
+						<option value="flauta">flauta</option>
+						<option value="armonica">armonica</option>
+					</select>
+
+				</div>
+
+				<div class="log-row">
+					<label class="log--label" for="tipo">Tipo de instrumento:</label>
+
+					<input
+						class="log--input"
+						type="text"
+						name="tipo"
+						id="tipo"
+						placeholder="Criolla,Acustica,eléctrica,etc..."
+					/>
+				</div>
+
+				<div class="log-row">
+					<label for="marca" class="log--label">Marca :</label>
+					<input
+						class="log--input"
+						type="text"
+						name="marca"
+						placeholder="Nombre del artículo"
+						id="marca"
+					/>
+				</div>
+
+				<div class="log-row">
+					<label class="log--label" for="categoria">Categorias: </label>
+					
+          <select class="log--input" name="categoria" id="categoria" selected="elegí categoria">
             
-      </form>
-      
-    </main>
-   <!-- footer -->
-   <%- include('partials/footer') %>
- <!-- /footer -->
-   
-   
-   
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-   integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-   crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
-   integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
-   crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-   integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-   crossorigin="anonymous"></script>
- <script src="/javascript/slider.js"></script>
+            <option value="elegí instrumento"  selected disabled>elegí categoria</option>
+						<option value="accesorios">accesorios</option>
+						<option value="cuerdas">cuerdas</option>
+						<option value="percusion">percusion</option>
+						<option value="teclados">teclados</option>
+						<option value="vientos">vientos</option>
+					
+          </select>
+				</div>
+			</div>
+
+			<div class="cajaDerecha">
+				<div class="log-row">
+					<label for="modelo" class="log--label">Modelo :</label>
+					<input
+						class="log--input"
+						type="text"
+						name="modelo"
+						placeholder="blanco,negro,etc..."
+						id="modelo"
+					/>
+				</div>
+
+				<div class="log-row">
+					<label for="color" class="log--label">Color :</label>
+					<input
+						class="log--input"
+						type="text"
+						name="color"
+						placeholder="blanco,negro,etc..."
+						id="color"
+					/>
+				</div>
+
+				<div class="log-row">
+					<label for="valor" class="log--label">Valor :</label>
+					<input
+						class="log--input"
+						type="text"
+						name="valor"
+						placeholder="$10,$1000,etc.."
+						id="valor"
+					/>
+				</div>
+
+				<div class="log-row">
+					<label for="formImg" class="log--label">Fotos :</label>
+					<input
+						class="log--input"
+						type="file"
+						name="file"
+						class="form-control-file"
+						id="formImg"
+					/>
+				</div>
+
+				<button class="btn--submit">cargar</button>
+				<a href="/products/list" class="btn--productos">ver lista</a>
+			</div>
+		</form>
+	</main>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+		integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+		integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"
+	></script>
+	<script src="/javascript/slider.js"></script>
 </body>

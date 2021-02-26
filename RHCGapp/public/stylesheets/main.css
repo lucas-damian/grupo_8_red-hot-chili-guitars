@@ -3,6 +3,9 @@
 
 @import "base/base.css";
 
+@import "errores/formError.css";
+
+
 @import "forms/cargaDeProductos.css";
 @import "forms/carrito.css";
 @import "forms/ingreso.css";

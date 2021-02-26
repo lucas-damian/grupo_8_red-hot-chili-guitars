@@ -1,0 +1,17 @@
+.error-list{
+    width:80vw;
+    padding: 2rem;
+    background-color: var(--color-primary-yellow);
+    box-shadow: var(--primary-shadow-down);
+    font-family: arimo;
+    font-size: 1.8rem;
+    color: var(--color-primary-red);
+    border-radius: 1rem;
+    margin: 0 auto;
+
+}
+
+.error-item{
+    text-align: center;
+    text-transform: capitalize;
+}

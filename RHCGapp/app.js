@@ -8,6 +8,7 @@ var expressValidator = require("express-validator");
 var methodOverride = require("method-override");
 var session = require("express-session");
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/producto');
