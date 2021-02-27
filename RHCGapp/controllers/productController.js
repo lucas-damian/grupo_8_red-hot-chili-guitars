@@ -5,14 +5,14 @@ const productos = JSON.parse(fs.readFileSync(Db_products,"utf-8"));
 
 module.exports = {
     cargaProduc:(req,res) =>{
-        res.render("cargaProducto", {
+        res.render("admin/cargaProducto", {
             title: "cargando instrumento"
            
         });
     },
 
     listar: (req,res) => {
-       res.render("adminProducts",{
+       res.render("admin/adminProducts",{
            title:"productos",
            productos:productos,
            msg: "Estos son tus instrumentos"
@@ -57,7 +57,7 @@ module.exports = {
         fs.writeFileSync(path.join(Db_products), JSON.stringify(productos,null,2));
 
 
-        res.redirect("/products/list")
+        res.redirect("products/admin/list")
     },
 
 
@@ -65,7 +65,7 @@ module.exports = {
 
         let producto = productos.find( producto => producto.id === +req.params.id);
 
-        res.render("editProduct", {
+        res.render("admin/editProduct", {
             title: "editando instrumento",
             producto
         })

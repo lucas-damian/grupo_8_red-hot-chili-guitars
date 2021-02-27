@@ -8,7 +8,7 @@ router.get('/', cargaProduc);
 router.post('/store',uploadImages.any(),store);
 
 
-router.get('/list', listar);
+router.get('/admin/list', listar);
 
 
 router.get("/edit/:id", produEdit);
