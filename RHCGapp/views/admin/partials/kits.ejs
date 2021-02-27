@@ -1,0 +1,45 @@
+<section class="kits">
+    <h2 class="kits--title">Kits para iniciados</h2>
+    <!-- slider de instrumentos acá -->
+
+    <div class="kits--slider">
+      <div class="slide">
+      <% kits.forEach(kit => { %>
+        <div class="article-container">
+          <h2 class="article--title"><%= kit.tipo %> </h2>
+          <div class="article--icon">
+            <img src="/img/icons/icon_sketch.svg" alt="">
+          </div>
+          <div class="article--card">
+            <figure class="article--figure">
+              <img src="<%= kit.img %> " alt="" class="article--img">
+            </figure>
+            <figcaption class="article--text">
+              <div class="article--content">
+                <h3 class="article--sub-title">marca:</h3>
+                <p class="article--text"><%= kit.marca %> </p>
+              </div>
+              <div class="article--content">
+                <h3 class="article--sub-title">tipo:</h3>
+                <p class="article--text"><%= kit.tipo %> </p>
+              </div>
+              <div class="article--content">
+                <h3 class="article--sub-title">modelo:</h3>
+                <p class="article--text"><%= kit.nombre %> </p>
+              </div>
+              <div class="article--content">
+                <h3 class="article--sub-title">valor:</h3>
+                <p class="article--text"><%= kit.valor %></p>
+              </div>
+            </figcaption>
+            <a href="/detalle-del-producto" class="article--btn">+info!</a>
+          </div>
+        </div>
+      <% }) %>
+        
+     
+
+      </div>
+    </div>
+
+  </section>
