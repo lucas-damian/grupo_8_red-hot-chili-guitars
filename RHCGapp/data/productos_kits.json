@@ -1,83 +1,100 @@
 [
     {
         "id": 1,
-        "nombre": "acustica_00",
+        "instrumento": "guitarra acustica_00",
         "tipo": "acustica",
         "marca": "cort",
+        "modelo":"abc-123",
+        "categoria": "cuerdas",
         "color": "ligth brown",
-        "valor": "$10.000",
-        "img": "img/instrumentos/guitarras/acustica/guitarra_acustica_00.png"
+        "valor": "$1000",
+        "img": "guitarra_acustica_00.png"
     },
     {
         "id": 2,
-        "nombre": "criolla_00",
+        "instrumento": "guitarra criolla_00",
         "tipo": "criolla",
         "marca": "alpujarra",
-        "color": "light brown",
-        "valor": "$15.000",
-        "img": "/img/instrumentos/guitarras/criollas/guitarra_criolla_00.png"
+        "modelo":"abc-123",
+        "categoria": "cuerdas",
+        "color": "brown",
+        "valor": "$1000",
+        "img": "guitarra_criolla_00.png"
     },
     {
         "id": 3,
-        "nombre": "electrica_01",
         "tipo": "electrica",
-        "marca": "MK",
-        "color": "black",
-        "valor": "$20.000",
-        "img": "/img/instrumentos/guitarras/electrica/guitarra_electrica_00.png"
+        "marca": "Cort",
+        "modelo":"abc-123",
+        "categoria": "cuerdas",
+        "color": "brown",
+        "valor": "$1000",
+        "img": "guitarra_electrica_01.png"
     },
     {
         "id": 4,
-        "nombre": "ampli_01",
+        "instrumento": "ampli_01",
         "tipo": "amplificador",
         "marca": "Marshall",
+        "modelo":"abc-123",
+        "categoria": "accesorios",
         "color": "White",
-        "valor": "$30.000",
-        "img": "/img/instrumentos/amplificadores/ampli_00.png"
+        "valor": "$1000",
+        "img": "ampli_01.png"
     },
     {
         "id": 5,
-        "nombre": "micro_02",
-        "tipo": "accesorios",
-        "marca": "MK",
-        "color": "Gray",
-        "valor": "$5.000",
-        "img": "/img/instrumentos/accesorios/micro_02.png"
+        "instrumento": "micro_02",
+    "tipo": "accesorio",
+    "marca": "MK",
+    "modelo":"abc-123",
+    "categoria": "accesorios",
+    "color": "Gray",
+    "valor": "$1000",
+    "img": "micro_02.png"
     },
     {
         "id": 6,
-        "nombre": "bajo_01",
-        "tipo": "bajos",
-        "marca": "Fender",
-        "color": "Brown",
-        "valor": "$15.000",
-        "img": "/img/instrumentos/bajos/bajo_00.png"
+        "instrumento": "bajo_01",
+    "tipo": "bajo",
+    "marca": "Fender",
+    "modelo":"abc-123",
+    "categoria": "cuerdas",
+    "color": "Brown",
+    "valor": "$1000",
+    "img": "bajo_01.png"
     },
     {
         "id": 7,
-        "nombre": "bateria_01",
+        "instrumento": "bateria_01",
         "tipo": "bateria",
         "marca": "yamaha",
+        "modelo":"abc-123",
+        "categoria": "percusion",
         "color": "Red",
-        "valor": "$50.000",
-        "img": "/img/instrumentos/baterias/bateria_00.png"
+        "valor": "$1000",
+        "img": "bateria_01.png"
     },
     {
         "id": 8,
-        "nombre": "teclado_00",
+        "instrumento": "teclado_00",
         "tipo": "teclado",
         "marca": "Akai",
+        "modelo":"abc-123",
+        "categoria": "teclados",
         "color": "Black",
-        "valor": "$25.000",
-        "img": "/img/instrumentos/teclados/teclado_00.png"
+        "valor": "$1000",
+        "img": "teclado_00.png"
     },
     {
         "id": 9,
-        "nombre": "trompeta_00",
+        "instrumento": "trompeta_00",
         "tipo": "viento",
         "marca": "Knight",
+        "modelo":"abc-123",
+        "categoria": "vientos",
         "color": "Golden",
-        "valor": "$40.000",
-        "img": "/img/instrumentos/vientos/trompeta_00.png"
+        "valor": "$1000",
+        "img": "trompeta_00.png"
     } 
 ] 

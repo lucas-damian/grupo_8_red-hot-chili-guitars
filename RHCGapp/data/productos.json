@@ -4,6 +4,7 @@
     "instrumento": "guitarra acustica_00",
     "tipo": "acustica",
     "marca": "cort",
+    "modelo": "123-abc",
     "categoria": "cuerdas",
     "color": "ligth brown",
     "valor": "$1000",
@@ -14,6 +15,7 @@
     "instrumento": "guitarra acustica_01   ",
     "tipo": "acustica   ",
     "marca": "cort ",
+    "modelo": "123-abc",
     "categoria": "cuerdas",
     "color": "red",
     "valor": "$1000   ",
@@ -24,6 +26,7 @@
     "instrumento": "guitarra criolla_00",
     "tipo": "criolla",
     "marca": "alpujarra",
+    "modelo": "123-abc",
     "categoria": "cuerdas",
     "color": "brown",
     "valor": "$1000",
@@ -34,6 +37,7 @@
     "instrumento": "guitarra criolla_01",
     "tipo": "criolla",
     "marca": "Gracia",
+    "modelo": "123-abc",
     "categoria": "cuerdas",
     "color": "light-brown",
     "valor": "$1000",
@@ -44,6 +48,7 @@
     "instrumento": "guitarra electrica_00",
     "tipo": "electrica",
     "marca": "MK",
+    "modelo": "123-abc",
     "categoria": "cuerdas",
     "color": "black",
     "valor": "$1000",
@@ -54,6 +59,7 @@
     "instrumento": "guitarra electrica_01",
     "tipo": "electrica",
     "marca": "Cort",
+    "modelo": "123-abc",
     "categoria": "cuerdas",
     "color": "brown",
     "valor": "$1000",
@@ -64,6 +70,7 @@
     "instrumento": "consola_00",
     "tipo": "consola",
     "marca": "Pioneer",
+    "modelo": "123-abc",
     "categoria": "accesorios",
     "color": "Black",
     "valor": "$1000",
@@ -74,6 +81,7 @@
     "instrumento": "consola_01",
     "tipo": "consola",
     "marca": "Pioneer",
+    "modelo": "123-abc",
     "categoria": "accesorios",
     "color": "Black",
     "valor": "$1000",
@@ -84,6 +92,7 @@
     "instrumento": "ampli_00",
     "tipo": "amplificador",
     "marca": "Fender",
+    "modelo": "123-abc",
     "categoria": "accesorios",
     "color": "Black",
     "valor": "$1000",
@@ -94,199 +103,229 @@
     "instrumento": "ampli_01",
     "tipo": "amplificador",
     "marca": "Marshall",
+    "modelo": "123-abc",
+    "categoria": "accesorios",
     "color": "White",
     "valor": "$1000",
-    "img": "amplificadores/ampli_01.png"
+    "img": "ampli_01.png"
   },
   {
     "id": 11,
     "instrumento": "cuerdas_guitarra_00",
     "tipo": "accesorio",
     "marca": "Ernie-ball",
+    "modelo": "123-abc",
+    "categoria": "accesorios",
     "color": "black",
     "valor": "$1000",
-    "img": "accesorios/cuerdas_guitarra_00.png"
+    "img": "cuerdas_guitarra_00.png"
   },
   {
     "id": 12,
     "instrumento": "cuerdas_guitarra_01",
     "tipo": "accesorio",
     "marca": "Ernie-ball",
+    "modelo": "123-abc",
+    "categoria": "accesorios",
     "color": "Gray",
     "valor": "$1000",
-    "img": "accesorios/cuerdas_guitarra_01.png"
+    "img": "cuerdas_guitarra_01.png"
   },
   {
     "id": 13,
     "instrumento": "micro_00",
-    "tipo": "accesorio",
+    "tipo": "",
     "marca": "Shure",
+    "modelo": "123-abc",
+    "categoria": "accesorios",
     "color": "Black",
-    "valor": "$1000",
-    "img": "accesorios/micro_00.png"
+    "img": "micro_00.png"
   },
   {
     "id": 14,
     "instrumento": "micro_01",
     "tipo": "accesorio",
     "marca": "MK",
+    "modelo": "123-abc",
+    "categoria": "accesorios",
     "color": "Black",
     "valor": "$1000",
-    "img": "accesorios/micro_01.png"
+    "img": "micro_01.png"
   },
   {
     "id": 15,
     "instrumento": "micro_02",
     "tipo": "accesorio",
     "marca": "MK",
+    "modelo": "123-abc",
+    "categoria": "accesorios",
     "color": "Gray",
     "valor": "$1000",
-    "img": "accesorios/micro_02.png"
+    "img": "micro_02.png"
   },
   {
     "id": 16,
     "instrumento": "pie_micro_00",
     "tipo": "accesorio",
     "marca": "Tiger",
+    "modelo": "123-abc",
+    "categoria": "accesorios",
     "color": "Black",
     "valor": "$1000",
-    "img": "accesorios/pie_micro_00.png"
+    "img": "pie_micro_00.png"
   },
   {
     "id": 17,
     "instrumento": "pie_micro_01",
     "tipo": "accesorio",
     "marca": "Pulse",
+    "modelo": "123-abc",
+    "categoria": "accesorios",
     "color": "Black",
     "valor": "$1000",
-    "img": "accesorios/pie_micro_01.png"
+    "img": "pie_micro_01.png"
   },
   {
     "id": 18,
     "instrumento": "bajo_00",
     "tipo": "bajo",
     "marca": "Fender",
+    "modelo": "123-abc",
+    "categoria": "cuerdas",
     "color": "White-red",
     "valor": "$1000",
-    "img": "bajos/bajo_00.png"
+    "img": "bajo_00.png"
   },
   {
     "id": 19,
     "instrumento": "bajo_01",
     "tipo": "bajo",
     "marca": "Fender",
+    "modelo": "123-abc",
+    "categoria": "cuerdas",
     "color": "Brown",
     "valor": "$1000",
-    "img": "bajos/bajo_01.png"
+    "img": "bajo_01.png"
   },
   {
     "id": 20,
     "instrumento": "bateria_00",
     "tipo": "bateria",
     "marca": "yamaha",
+    "modelo": "123-abc",
+    "categoria": "percusion",
     "color": "Blue",
     "valor": "$1000",
-    "img": "baterias/bateria_00.png"
+    "img": "bateria_00.png"
   },
   {
     "id": 21,
     "instrumento": "bateria_01",
     "tipo": "bateria",
     "marca": "yamaha",
+    "modelo": "123-abc",
+    "categoria": "percusion",
     "color": "Red",
     "valor": "$1000",
-    "img": "baterias/bateria_01.png"
+    "img": "bateria_01.png"
   },
   {
     "id": 22,
     "instrumento": "teclado_00",
     "tipo": "teclado",
     "marca": "Akai",
+    "modelo": "123-abc",
+    "categoria": "teclados",
     "color": "Black",
     "valor": "$1000",
-    "img": "teclados/teclado_00.png"
+    "img": "teclado_00.png"
   },
   {
     "id": 23,
     "instrumento": "teclado_01",
     "tipo": "teclado",
     "marca": "Akai",
+    "modelo": "123-abc",
+    "categoria": "teclados",
     "color": "Black",
     "valor": "$1000",
-    "img": "teclados/teclado_01.png"
+    "img": "teclado_01.png"
   },
   {
     "id": 24,
     "instrumento": "ukelele_00",
     "tipo": "ukelele",
     "marca": "Matn",
+    "modelo": "123-abc",
+    "categoria": "cuerdas",
     "color": "brown",
     "valor": "$1000",
-    "img": "ukeleles/uquelele_00.png"
+    "img": "uquelele_00.png"
   },
   {
     "id": 25,
     "instrumento": "ukelele_01",
     "tipo": "ukelele",
     "marca": "Lanai",
+    "modelo": "123-abc",
+    "categoria": "cuerdas",
     "color": "brown",
     "valor": "$1000",
-    "img": "ukeleles/uquelele_01.png"
+    "img": "uquelele_01.png"
   },
   {
     "id": 26,
     "instrumento": "armonica_00",
     "tipo": "vientos",
     "marca": "Hohner",
+    "modelo": "123-abc",
+    "categoria": "vientos",
     "color": "Gray",
     "valor": "$1000",
-    "img": "vientos/armonica_00.png"
+    "img": "armonica_00.png"
   },
   {
     "id": 27,
     "instrumento": "flauta_00",
     "tipo": "viento",
     "marca": "Hammelin",
+    "modelo": "123-abc",
+    "categoria": "vientos",
     "color": "brown",
     "valor": "$1000",
-    "img": "vientos/flauta_00.png"
+    "img": "flauta_00.png"
   },
   {
     "id": 28,
     "instrumento": "flauta_01",
     "tipo": "viento",
     "marca": "Hudrogoth",
+    "modelo": "123-abc",
+    "categoria": "vientos",
     "color": "brown",
     "valor": "$1000",
-    "img": "vientos/flauta_01.png"
+    "img": "flauta_01.png"
   },
   {
     "id": 29,
     "instrumento": "trompeta_00",
     "tipo": "viento",
     "marca": "Knight",
+    "modelo": "123-abc",
+    "categoria": "vientos",
     "color": "Golden",
     "valor": "$1000",
-    "img": "vientos/trompeta_00.png"
+    "img": "trompeta_00.png"
   },
   {
     "id": 30,
     "instrumento": "trompeta_01",
     "tipo": "viento",
     "marca": "Knight",
+    "modelo": "123-abc",
+    "categoria": "vientos",
     "color": "Golden",
     "valor": "$1000",
-    "img": "vientos/trompeta_01.png"
-  },
-  {
-    "id": 31,
-    "tipo": "criolla ",
-    "marca": "seba-1 ",
-    "instrumento": "guitarra",
-    "categoria": "cuerdas",
-    "modelo": "abc-123 ",
-    "valor": "$123 ",
-    "color": "roja ",
-    "img": "file-1614307399575.png"
+    "img": "trompeta_01.png"
   }
 ]

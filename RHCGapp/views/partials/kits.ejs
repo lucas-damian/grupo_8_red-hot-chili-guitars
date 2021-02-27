@@ -6,13 +6,13 @@
       <div class="slide">
       <% kits.forEach(kit => { %>
         <div class="article-container">
-          <h2 class="article--title"><%= kit.tipo %> </h2>
+          <h2 class="article--title"><%= kit.categoria %> </h2>
           <div class="article--icon">
             <img src="/img/icons/icon_sketch.svg" alt="">
           </div>
           <div class="article--card">
             <figure class="article--figure">
-              <img src="<%= kit.img %> " alt="" class="article--img">
+              <img src="/img/instrumentos/<%= kit.categoria %>/<%= kit.img %> " alt="" class="article--img">
             </figure>
             <figcaption class="article--text">
               <div class="article--content">
@@ -25,7 +25,7 @@
               </div>
               <div class="article--content">
                 <h3 class="article--sub-title">modelo:</h3>
-                <p class="article--text"><%= kit.nombre %> </p>
+                <p class="article--text"><%= kit.modelo %> </p>
               </div>
               <div class="article--content">
                 <h3 class="article--sub-title">valor:</h3>

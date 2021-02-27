@@ -32,15 +32,14 @@
     margin-bottom: 3rem;
 }
 
-/* .productos .productos-item:not(:last-child){
-    margin-bottom: 2.5rem;
-} */
+
 
 .producto-img{
     width: 100%;
     height: 30rem;
     margin-bottom: 2rem;
-    background-color: white;
+    border: .3rem solid var(--color-primary-darkRed);
+    border-radius: 1rem;
     padding: .5rem 0;
 }
 
@@ -79,6 +78,9 @@
     font-size: 1.8rem;
     font-family: lobster;
     text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+    transition: all .2s;
 }
 
 .productos .btn--editar{
@@ -128,5 +130,15 @@
 
     .productos .productos-item{
         width: 23vw;
+    }
+
+    .productos .btn--editar:hover,
+    .productos .btn--borrar:hover{
+        transform: scale(1.1);
+    }
+    .productos .btn--editar:active,
+    .productos .btn--borrar:active{
+        transform: scale(0.9);
+        opacity: .9;
     }
 }
