@@ -250,7 +250,7 @@
       "marca": "",
       "categoria": "vientos",
       "color": "brown",
-      "img": "/img/instrumentos/vientos/flauta_01.png"
+      "img": "flauta_01.png"
   },
   {
       "id": 29,
@@ -259,7 +259,7 @@
       "marca": "Knight",
       "categoria": "vientos",
       "color": "Golden",
-      "img": "/img/instrumentos/vientos/trompeta_00.png"
+      "img": "trompeta_00.png"
   },
   {
       "id": 30,
