@@ -32,12 +32,12 @@ module.exports = {
            }
        });
 
-       let hashPass = bcrypt.hashSync(pass.Trim(),12);
+       let hashPass = bcrypt.hashSync(pass,12);
 
 
        let newUser = {
            id: +lastID + 1,
-           userName : username.Trim(),
+           userName : username,
            email,
            pass: hashPass
        }
