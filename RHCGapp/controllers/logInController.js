@@ -3,8 +3,11 @@ const path = require("path");
 const {validationResult} = require("express-validator")
 const userRout = "./data/users.json"
 const bcrypt = require("bcrypt");
+const { setUsers } = require("../data/users");
 const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
 
+
+const {getUsers, setUsers} = require(path.join('..', 'data', 'users'))
 
 module.exports = {
 
@@ -30,18 +33,22 @@ module.exports = {
            }
        });
 
-       let hashPass = bcrypt.hashSync(pass,12);
+       let hashPass = bcrypt.hashSync(pass.Trim(),12);
 
 
        let newUser = {
            id: +lastID + 1,
-           userName,
+           userName : username.Trim(),
            email,
            pass: hashPass
        }
   
       
        users_db.push(newUser);
+
+       setUsers(users);
+
+       res.redirect('/logeo')
        
        fs.writeFileSync(path.join("./data/users.json"), JSON.stringify(users_db,null,2),"utf-8");
  
