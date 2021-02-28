@@ -234,6 +234,12 @@
 		animation: pulse 2s infinite;
 	}
 
+
+	.header .header__form {
+		width: 100%;
+
+	}
+
 	.btn--cross {
 		left: 4.8rem;
 		top: -7.5rem;
