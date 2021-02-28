@@ -122,7 +122,7 @@ module.exports = {
         });
 
         /* res.send(resultado); */
-        res.render("adminProducts",{
+        res.render("admin/adminProducts",{
             title:"resultado de la búsqueda",
             productos:resultado,
             msg: "Resultados de la búsqueda"

@@ -152,6 +152,10 @@
 		padding: 20rem 0;
 	}
 
+	.kits .kits--title{
+		font-size: 5rem;
+	}
+
 	.kits .kits--slider{
 		margin: 0 auto;
 		
@@ -170,6 +174,7 @@
 	.kits .article--title{
 		font-size: 2.5rem;
 		text-transform: capitalize;
+		font-weight: 400;
 	}
 
 	.kits .article--btn:hover{
