@@ -110,7 +110,7 @@ module.exports = {
         
         fs.writeFileSync(path.join(Db_products), JSON.stringify(productos,null,2));
 
-       res.redirect("/products/list");
+       res.redirect("/products/admin/list");
     },
     
     

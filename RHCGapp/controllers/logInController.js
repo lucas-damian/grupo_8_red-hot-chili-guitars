@@ -6,7 +6,8 @@ const bcrypt = require("bcrypt");
 const { setUsers } = require("../data/users");
 const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
 
-/* const {getUsers, setUsers} = require(path.join('..', 'data', 'users')) */
+/* const {getUsers, setUsers} = require(path.join('..', 'data', 'users'))  */
+
 
 module.exports = {
 
@@ -37,7 +38,7 @@ module.exports = {
 
        let newUser = {
            id: +lastID + 1,
-           userName : username,
+           userName,
            email,
            pass: hashPass
        }
@@ -45,9 +46,9 @@ module.exports = {
       
        users_db.push(newUser);
 
-       setUsers(users);
+       setUsers(users_db);
 
-       res.redirect('/logeo')
+       res.redirect('/users')
        
        fs.writeFileSync(path.join("./data/users.json"), JSON.stringify(users_db,null,2),"utf-8");
  
@@ -64,6 +65,38 @@ module.exports = {
     },
 
     processLogin: (req,res) => {
-        res.send(req.body);
+       /*  res.send(req.body);   */
+
+         const {userName, pass} = req.body;
+
+         let result = users_db.find( admin => admin.userName === userName);
+
+
+        return res.send(result)
+
+         if (result){
+             if(bcrypt.compareSync(pass.trim(), result.pass)){
+
+                req.session.userAdmin = {
+                    id : result.id,
+                    userName : result.userName,
+                }
+
+
+                 return res.redirect("/index")
+             }
+         }
+
+         res.render('users',{
+             error: 'datos incorrectos!'
+         })
+
+        
+    }, 
+    logout: (req, res) => {
+
+        
+
+
     }
 }

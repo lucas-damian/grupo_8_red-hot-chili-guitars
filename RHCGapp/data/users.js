@@ -6,7 +6,7 @@ module.exports = {
     getUsers : () => {
         return JSON.parse(fs.readFileSync(users_db, 'utf-8'));
     },
-    setUsers : (data) => {
-        fs.writeFileSync(users_db, JSON.stringify(data), 'utf-8');
+    setUsers : (user) => {
+        fs.writeFileSync(users_db, JSON.stringify(user), 'utf-8');
     }
 }

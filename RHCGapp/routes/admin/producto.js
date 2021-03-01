@@ -1,23 +1,26 @@
 var express = require('express');
 var router = express.Router();
-let uploadImages = require("/Users/gabkr/OneDrive/Escritorio/comision 04/final_proyect/grupo_8_red-hot-chili-guitars/RHCGapp/middlewares/uploadImages")
-const {cargaProduc,listar,crear,store,produEdit,prodUpdate,borrar,search}= require("/Users/gabkr/OneDrive/Escritorio/comision 04/final_proyect/grupo_8_red-hot-chili-guitars/RHCGapp/controllers/productController");
+let uploadImages = require("../../middlewares/uploadImages")
+const {cargaProduc,listar,crear,store,produEdit,prodUpdate,borrar,search}= require('../../controllers/productController');
+const adminCheck = require('../../middlewares/adminCheck') 
 
 
-router.get('/', cargaProduc);
+
+
+router.get('/',adminCheck , cargaProduc);
 router.post('/store',uploadImages.any(),store);
 
 
-router.get('/admin/list', listar);
+router.get('/admin/list',adminCheck , listar);
 
 
-router.get("/edit/:id", produEdit);
+router.get("/edit/:id", adminCheck , produEdit);
 router.put("/update/:id",uploadImages.any(), prodUpdate);
 
 router.delete('/delete/:id',borrar);
 
 
-router.get('/admin/search', search);
+router.get('/admin/search' , search);
 
 
 /*

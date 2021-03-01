@@ -1,3 +1,14 @@
 [
-  
+  {
+    "id": 1,
+    "userName": "admin",
+    "email": "admin",
+    "pass": "admin"
+  },
+  {
+    "id": 2,
+    "userName": "sebastiangato",
+    "email": "elpelaseba@gmail.com",
+    "pass": "$2b$12$hIKH9C5shacL2dN0L4JieeOs0oRn/c4ZwKlMN5Lud4a65tx.8BjJy"
+  }
 ]
