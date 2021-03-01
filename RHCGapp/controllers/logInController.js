@@ -94,9 +94,14 @@ module.exports = {
         
     }, 
     logout: (req, res) => {
-
-        
+        req.session.destroy();
+        if(req.cookies.userAcampada){
+            res.cookie('userAcampada','',{
+                maxAge : -1
+            })
+        }
+        res.redirect('/')
 
 
     }
-}
+} 
