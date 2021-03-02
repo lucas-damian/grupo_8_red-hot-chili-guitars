@@ -1,18 +1,19 @@
 [
+
   {
-    "id": 1,
+    "id":1,
     "instrumento": "guitarra acustica_00",
-    "tipo": "acustica",
-    "marca": "cort",
+    "tipo": "acustica   ",
+    "marca": "cort ",
     "modelo": "123-abc",
     "categoria": "cuerdas",
-    "color": "ligth brown",
-    "valor": "$1000",
+    "color": "brown",
+    "valor": "$1000   ",
     "img": "guitarra_acustica_00.png"
   },
   {
     "id": 2,
-    "instrumento": "guitarra acustica_01   ",
+    "instrumento": "guitarra acustica_01",
     "tipo": "acustica   ",
     "marca": "cort ",
     "modelo": "123-abc",
@@ -163,7 +164,6 @@
     "valor": "$1000",
     "img": "micro_02.png"
   },
-
   {
     "id": 16,
     "instrumento": "pie_micro_00",

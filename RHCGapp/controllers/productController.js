@@ -118,7 +118,7 @@ module.exports = {
     
     search: (req,res) => {
         const resultado = productos.filter( product => {
-            return product.instrumento.includes(req.query.busqueda)
+            return product.instrumento.toLowerCase().trim().includes(req.query.busqueda.toLowerCase().trim())
         });
 
         /* res.send(resultado); */
@@ -128,6 +128,34 @@ module.exports = {
             msg: "Resultados de la búsqueda"
 
         });
-    }
+    },
+    listarUser: (req,res) => {
+        res.render("userProducts",{
+            title:"productos",
+            productos:productos,
+            msg: "Estos son tus instrumentos"
+        });
+     },
+     searchUser: (req,res) => {
+        const resultado = productos.filter( product => {
+            return product.instrumento.toLowerCase().trim().includes(req.query.busqueda.toLowerCase().trim())
+        });
 
+        /* res.send(resultado); */
+        res.render("userProducts",{
+            title:"resultado de la búsqueda",
+            productos:resultado,
+            msg: "Resultados de la búsqueda"
+
+        });
+     },
+     detailProduct : (req, res) => {
+         
+        let producto = productos.find( producto => producto.id === +req.params.id);
+
+        res.render("detalleProducto", {
+            title: "+ Info del producto",
+            producto
+        })
+     }
 }

@@ -444,6 +444,7 @@
 		background-color: var(--color-primary-red) !important;
 		box-shadow: var(--primary-shadow-down) !important;
 		transition: all 0.2s !important;
+		border: none;
 	}
 
 	.btn--logeoRegistro:hover,

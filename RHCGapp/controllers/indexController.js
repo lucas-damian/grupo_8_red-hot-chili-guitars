@@ -1,6 +1,6 @@
 const fs = require("fs");
 const Db_products = "./data/productos_kits.json";
-
+const productos = JSON.parse(fs.readFileSync(Db_products,"utf-8"));
 module.exports = {
     index: (req,res) =>{
 
@@ -12,10 +12,13 @@ module.exports = {
             kits
         });
     },
-    detalleProducto: (req, res)=>{
-        res.render("detalleProducto",{
-            title: "detalle-del-producto",
+    detailProduct : (req, res) => {
+         
+        let producto = productos.find( producto => producto.id === +req.params.id);
 
+        res.render("detalleProducto", {
+            title: "+ Info del producto",
+            producto
         })
-    }
+     }
 }

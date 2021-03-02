@@ -65,7 +65,7 @@
     width: 19rem;
     height: 18rem;
     margin: 0;
-    margin-left: 21%;
+    
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
@@ -171,13 +171,16 @@ p.modelo{
     transform: scale(1.1);
 }
 
+.container-description{
+    display: flex;
+    justify-content: center;
+}
 
 .description-product{
     background-image: linear-gradient(157deg, rgba(251,185,130,1) 0%, rgba(247,222,180,1) 60%);
     border-radius: 34px;
     width: 19rem;
     margin: 0;
-    margin-left: 21%;
     margin-top: 32px;
     display: flex;
     flex-direction: column;
@@ -207,22 +210,32 @@ p.modelo{
 }
 
 
+.container-title-payment-method{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .title-payment-method{
     background: rgb(210,128,90);
     background-image: linear-gradient(114deg, rgba(210,128,90,0.8519782913165266) 46%, rgba(76,5,5,0.8883928571428571) 100%);
     /* background: linear-gradient(90deg, rgba(240,124,77,1) 0%, rgba(93,48,48,1) 100%); */
     margin: 40px 0px;
+    width: 100%;
 }
 .title-payment-method h3{
     margin: 0;
     height: 44px;
     display: flex;
     align-items: center;
-    margin-left:25px ;
     font-size: 22px;
     color: #4c0505;
     font-weight: unset;
     font-family: 'lobster';
+    margin-left: 20px;
 }
 
 .payment-method-main{
@@ -233,7 +246,6 @@ p.modelo{
     width: 19rem;
     height: 23rem;
     padding: 21px 0px;
-    margin-left: 21%;
     display: flex;
     flex-direction: column;
     flex-direction: flex;
@@ -260,18 +272,6 @@ p.modelo{
 
 }
 
-@media screen and (min-width: 375px){
-    .price{
-        margin-left: 25%;
-    }
-    .description-product{
-        margin-left: 25%;
-    }
-    .payment-method-main{
-        margin-left: 25%;
-    }
-}
-
 @media screen and (min-width: 425px){
 
     .container-main{
@@ -282,9 +282,14 @@ p.modelo{
         height: 50vh;
     }
 
+    .container-price{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .price{
         width: 23rem;
-        margin-left: 25%;
     }
 
     .precionum{
@@ -297,12 +302,10 @@ p.modelo{
 
     .description-product{
         width: 23rem;
-        margin-left: 25%;
     }
 
     .payment-method-main{
         width: 23rem;
-        margin-left: 25%;
     }
 
     .payment-method-main p{
@@ -313,7 +316,15 @@ p.modelo{
         width: 180px;
     }
 
-}
+    }
+    
+
+    @media screen and (min-width: 690px){
+        .price {
+        width: 28rem;
+        }
+    }
+
 
     @media screen and (min-width: 768px) {
 
@@ -328,13 +339,12 @@ p.modelo{
         .price {
             width: 25rem;
             height: 20rem;
-            margin-left: 263px;
+
         }
 
         .description-product {
             width: 26rem;
             height: 23rem;
-            margin-left: 263px;
         }
 
         .description-product p{
@@ -348,31 +358,10 @@ p.modelo{
 
         .payment-method-main{
             width: 25rem;
-            margin-left: 263px;
-        }
-    
-       /*  .payment-method-main p{
-            font-size: 
-        } */
-    
-       /*  .deb, .cred, .mp, .pg {
-            width: 
-        } */
+        
 
     }
         
-
-    @media screen and (min-width: 1024px){
-        .price{
-            margin-left: 383px;
-        }
-        .description-product{
-            margin-left: 383px;
-        }
-        .payment-method-main{
-            margin-left: 383px;
-        }
-    }
 
 
     @media screen and (min-width: 1200px){
@@ -388,7 +377,6 @@ p.modelo{
         .price{
             width: 65rem;
             height: 25rem;
-            margin-left: 275px;
             margin-top: 8rem;
             margin-bottom: 8rem;
         }
@@ -427,7 +415,7 @@ p.modelo{
             .description-product{
                 width: 65rem;
                 height: 21rem;
-                margin-left: 275px;
+
             }
 
             .title-description{
@@ -444,14 +432,12 @@ p.modelo{
 
             .title-payment-method h3{
                 height: 60px;
-                margin-left: 70px;
                 font-size: 37px;
             }
 
             .payment-method-main  {
                 width: 65rem;
                 height: 32rem;
-                margin-left: 275px;
             } 
 
             .payment-method-main p{
@@ -459,4 +445,5 @@ p.modelo{
                 height: 53px;
                 width: 44rem;
             }
+    }
 }

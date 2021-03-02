@@ -20,7 +20,7 @@ router.put("/update/:id",uploadImages.any(), prodUpdate);
 router.delete('/delete/:id',borrar);
 
 
-router.get('/admin/search' , search);
+router.get('/admin/search' , adminCheck, search);
 
 
 /*

@@ -18,7 +18,7 @@
             <!------------titulo primer cajita------------->
 
             <div class="title-main">
-                <h1>Guitarras</h1>
+                <h1><%= producto.categoria %></h1>
             </div>
 
 
@@ -31,17 +31,19 @@
 
             <div class="product-main">
                 <div class="title-guitar">
-                    <h2>Guitarra Gibson ATB-123</h2>
+                    <h2><%= producto.instrumento%>  </h2>
                 </div>
                 <div class="product-img">
-                    <img src="img/instrumentos/guitarras/acustica/guitarra_acustica_00.png" alt="">
+                    <img src="/img/instrumentos/<%= producto.categoria %>/<%= producto.img %>" alt="">
                 </div>
-
-                <div class="price">
-                    <p class="precionum">$30.000</p>
-                    <p class="marca">Fender</p>
-                    <p class="modelo">Acustica</p>
+                <div class="container-price">
+                    <div class="price">
+                        <p class="precionum"><%= producto.valor %></p>
+                        <p class="marca"><%= producto.marca %></p>
+                        <p class="modelo"><%= producto.modelo %></p>
+                    </div>
                 </div>
+                
 
                 <div class="buttons-product">
                     <div class="buy">
@@ -53,8 +55,8 @@
                     
                 </div>
             
-
-                <div class="description-product">
+                <div class='container-description'>
+                    <div class="description-product">
                     
                         <h1 class="title-description">
                         Descripcion
@@ -64,8 +66,9 @@
                             </p>
                         </div>
                         
-                    
-                </div>  
+                    </div>
+                </div>
+               
 
             </div>
             <!-- ----------------------------------------------------->
@@ -74,17 +77,19 @@
 
 
             <!-------------------- metodo de pagos ---------------->
-
-            <div class="title-payment-method">
-                <h3>Medios de pago</h3>
+            <div class="container-title-payment-method">
+                <div class="title-payment-method">
+                    <h3>Medios de pago</h3>
+                </div>
+                <div class="payment-method-main">
+                    <P class="deb">tarjeta de debito</P>
+                    <P class="cred">tarjeta de credito</P>
+                    <P class="mp">mercado pago</P>
+                    <P class="pg">pago facil</P>
+                    <P>rapipago</P>
+                </div>
             </div>
-            <div class="payment-method-main">
-                <P class="deb">tarjeta de debito</P>
-                <P class="cred">tarjeta de credito</P>
-                <P class="mp">mercado pago</P>
-                <P class="pg">pago facil</P>
-                <P>rapipago</P>
-            </div>
+            
             <!------------------------------------------------------>
 
 
