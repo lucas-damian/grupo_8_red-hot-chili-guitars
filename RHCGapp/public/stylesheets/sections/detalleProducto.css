@@ -59,6 +59,11 @@
     margin-top: 40px
 }
 
+.container-price {
+    display: flex;
+    justify-content: center;
+}
+
 .price{
     background-image: linear-gradient(157deg, rgba(251,185,130,1) 0%, rgba(247,222,180,1) 60%);
     border-radius: 34px;

@@ -135,8 +135,8 @@ module.exports = {
             productos:productos,
             msg: "Estos son tus instrumentos"
         });
-     },
-     searchUser: (req,res) => {
+    },
+    searchUser: (req,res) => {
         const resultado = productos.filter( product => {
             return product.instrumento.toLowerCase().trim().includes(req.query.busqueda.toLowerCase().trim())
         });

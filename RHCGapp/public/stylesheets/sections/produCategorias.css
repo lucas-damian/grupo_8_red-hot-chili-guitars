@@ -1,18 +1,4 @@
-body{
-    background-image: var(--background);
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-blend-mode: color-burn; */
-}
 .container-products{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    /* background-image: var(--background); */
-}
-
-.productos{
     width: 100vw;
     height: 100%;
     padding: 5rem;
@@ -20,9 +6,11 @@ body{
     flex-direction: column;
     align-items: center;
     background-image: var(--background);
+    background-size: cover;
+    background-repeat: no-repeat 
 }
 
-.productos-title{
+ .productos-title{
     font-family: lobster;
     font-size: 3rem;
     color: var(--color-primary-red);
@@ -62,7 +50,7 @@ body{
     height: 100%;
 }
 
-.productos-text{
+ .productos-text{
     color: var(--color-primary-darkRed);
     font-family: arimo;
     font-size: 1.5rem;
@@ -70,9 +58,11 @@ body{
     font-weight: bold;
     text-transform: capitalize;
 }
+
 .productos-text:nth-child(even){
     background-color: rgba(255, 68, 0, 0.5);
 }
+
 
 .btns--container{
     margin-top: 2rem;
@@ -80,7 +70,8 @@ body{
     flex-direction: column;
 }
 
- .btn--borrar{
+.btn--editar,
+.btn--borrar{
     border: none;
     padding: .2rem 1rem;
     border-radius: .3rem;
@@ -94,18 +85,18 @@ body{
     transition: all .2s;
 }
 
- .btn--editar{
+.btn--editar{
     margin-bottom: 1.5rem;
     background-color: var(--color-primary-green);
 
 }
 
- .btn--borrar{
+.btn--borrar{
     background-color: var(--color-primary-red);
 }
 
 
- .btn--goTop{
+.btn--goTop{
     background-color: var(--color-primary-darkRed);
     color: var(--color-primary-yellow);
     position: fixed;
@@ -118,24 +109,24 @@ body{
 }
 
 @media screen and (min-width:768px){
-     .productos-container{
+    .productos-container{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
 
-     .productos-item{
+    .productos-item{
         width: 35vw;
     }
 
-     .productos-item:not(:last-child){
+    .productos-item:not(:last-child){
         margin-bottom: 3rem;
     }
 }
 
 @media screen and (min-width: 1200px){
 
-    .productos-container{
+    .container-products{
         padding: 20rem 0;
     }
 
@@ -147,7 +138,7 @@ body{
     .btn--borrar:hover{
         transform: scale(1.1);
     }
-     .btn--editar:active,
+    .btn--editar:active,
     .btn--borrar:active{
         transform: scale(0.9);
         opacity: .9;

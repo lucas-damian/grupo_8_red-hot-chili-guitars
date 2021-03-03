@@ -2,7 +2,7 @@
 
   {
     "id":1,
-    "instrumento": "guitarra acustica_00",
+    "instrumento": "guitarra acustica cort",
     "tipo": "acustica   ",
     "marca": "cort ",
     "modelo": "123-abc",
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "instrumento": "guitarra acustica_01",
+    "instrumento": "guitarra acustica cort",
     "tipo": "acustica   ",
     "marca": "cort ",
     "modelo": "123-abc",
@@ -24,7 +24,7 @@
   },
   {
     "id": 3,
-    "instrumento": "guitarra criolla_00",
+    "instrumento": "guitarra criolla alpujarra",
     "tipo": "criolla",
     "marca": "alpujarra",
     "modelo": "123-abc",
@@ -35,7 +35,7 @@
   },
   {
     "id": 4,
-    "instrumento": "guitarra criolla_01",
+    "instrumento": "guitarra criolla gracia",
     "tipo": "criolla",
     "marca": "Gracia",
     "modelo": "123-abc",
@@ -46,7 +46,7 @@
   },
   {
     "id": 5,
-    "instrumento": "guitarra electrica_00",
+    "instrumento": "guitarra electrica MK",
     "tipo": "electrica",
     "marca": "MK",
     "modelo": "123-abc",
@@ -57,7 +57,7 @@
   },
   {
     "id": 6,
-    "instrumento": "guitarra electrica_01",
+    "instrumento": "guitarra electrica cort",
     "tipo": "electrica",
     "marca": "Cort",
     "modelo": "123-abc",
@@ -68,7 +68,7 @@
   },
   {
     "id": 7,
-    "instrumento": "consola_00",
+    "instrumento": "consola pioneer",
     "tipo": "consola",
     "marca": "Pioneer",
     "modelo": "123-abc",
@@ -79,7 +79,7 @@
   },
   {
     "id": 8,
-    "instrumento": "consola_01",
+    "instrumento": "consola pioneer",
     "tipo": "consola",
     "marca": "Pioneer",
     "modelo": "123-abc",
@@ -90,7 +90,7 @@
   },
   {
     "id": 9,
-    "instrumento": "ampli_00",
+    "instrumento": "amplificador fender",
     "tipo": "amplificador",
     "marca": "Fender",
     "modelo": "123-abc",
@@ -101,7 +101,7 @@
   },
   {
     "id": 10,
-    "instrumento": "ampli_01",
+    "instrumento": "amplificador marshall",
     "tipo": "amplificador",
     "marca": "Marshall",
     "modelo": "123-abc",
@@ -112,7 +112,7 @@
   },
   {
     "id": 11,
-    "instrumento": "cuerdas_guitarra_00",
+    "instrumento": "cuerdas de guitarra ",
     "tipo": "accesorio",
     "marca": "Ernie-ball",
     "modelo": "123-abc",
@@ -123,7 +123,7 @@
   },
   {
     "id": 12,
-    "instrumento": "cuerdas_guitarra_01",
+    "instrumento": "cuerdas de guitarra ",
     "tipo": "accesorio",
     "marca": "Ernie-ball",
     "modelo": "123-abc",
@@ -134,7 +134,7 @@
   },
   {
     "id": 13,
-    "instrumento": "micro_00",
+    "instrumento": "microfono shure",
     "tipo": "",
     "marca": "Shure",
     "modelo": "123-abc",
@@ -144,7 +144,7 @@
   },
   {
     "id": 14,
-    "instrumento": "micro_01",
+    "instrumento": "microfono MK",
     "tipo": "accesorio",
     "marca": "MK",
     "modelo": "123-abc",
@@ -155,7 +155,7 @@
   },
   {
     "id": 15,
-    "instrumento": "micro_02",
+    "instrumento": "microfono MK",
     "tipo": "accesorio",
     "marca": "MK",
     "modelo": "123-abc",
@@ -166,7 +166,7 @@
   },
   {
     "id": 16,
-    "instrumento": "pie_micro_00",
+    "instrumento": "pie de micro tiger",
     "tipo": "accesorio",
     "marca": "Tiger",
     "modelo": "123-abc",
@@ -177,7 +177,7 @@
   },
   {
     "id": 17,
-    "instrumento": "pie_micro_01",
+    "instrumento": "pie de micro pulse",
     "tipo": "accesorio",
     "marca": "Pulse",
     "modelo": "123-abc",
@@ -188,7 +188,7 @@
   },
   {
     "id": 18,
-    "instrumento": "bajo_00",
+    "instrumento": "bajo fender",
     "tipo": "bajo",
     "marca": "Fender",
     "modelo": "123-abc",
@@ -199,7 +199,7 @@
   },
   {
     "id": 19,
-    "instrumento": "bajo_01",
+    "instrumento": "bajo fender",
     "tipo": "bajo",
     "marca": "Fender",
     "modelo": "123-abc",
@@ -210,73 +210,73 @@
   },
   {
     "id": 20,
-    "instrumento": "bateria_00",
+    "instrumento": "bateria yamaha blue",
     "tipo": "bateria",
     "marca": "yamaha",
     "modelo": "123-abc",
-    "categoria": "percusion",
+    "categoria": "baterias",
     "color": "Blue",
     "valor": "$1000",
     "img": "bateria_00.png"
   },
   {
     "id": 21,
-    "instrumento": "bateria_01",
+    "instrumento": "bateria yamaha red",
     "tipo": "bateria",
     "marca": "yamaha",
     "modelo": "123-abc",
-    "categoria": "percusion",
+    "categoria": "baterias",
     "color": "Red",
     "valor": "$1000",
     "img": "bateria_01.png"
   },
   {
     "id": 22,
-    "instrumento": "teclado_00",
+    "instrumento": "teclado akai",
     "tipo": "teclado",
     "marca": "Akai",
     "modelo": "123-abc",
-    "categoria": "teclados",
+    "categoria": "pianos",
     "color": "Black",
     "valor": "$1000",
     "img": "teclado_00.png"
   },
   {
     "id": 23,
-    "instrumento": "teclado_01",
+    "instrumento": "teclado akai",
     "tipo": "teclado",
     "marca": "Akai",
     "modelo": "123-abc",
-    "categoria": "teclados",
+    "categoria": "pianos",
     "color": "Black",
     "valor": "$1000",
     "img": "teclado_01.png"
   },
   {
     "id": 24,
-    "instrumento": "ukelele_00",
+    "instrumento": "ukelele matn",
     "tipo": "ukelele",
     "marca": "Matn",
     "modelo": "123-abc",
     "categoria": "cuerdas",
     "color": "brown",
     "valor": "$1000",
-    "img": "uquelele_00.png"
+    "img": "ukelele_00.png"
   },
   {
     "id": 25,
-    "instrumento": "ukelele_01",
+    "instrumento": "ukelele lanai",
     "tipo": "ukelele",
     "marca": "Lanai",
     "modelo": "123-abc",
     "categoria": "cuerdas",
     "color": "brown",
     "valor": "$1000",
-    "img": "uquelele_01.png"
+    "img": "ukelele_01.png"
   },
   {
     "id": 26,
-    "instrumento": "armonica_00",
+    "instrumento": "armonica",
     "tipo": "vientos",
     "marca": "Hohner",
     "modelo": "123-abc",
@@ -287,7 +287,7 @@
   },
   {
     "id": 27,
-    "instrumento": "flauta_00",
+    "instrumento": "flauta hammelin",
     "tipo": "viento",
     "marca": "Hammelin",
     "modelo": "123-abc",
@@ -298,7 +298,7 @@
   },
   {
     "id": 28,
-    "instrumento": "flauta_01",
+    "instrumento": "flauta hudrogoth",
     "tipo": "viento",
     "marca": "Hudrogoth",
     "modelo": "123-abc",
@@ -309,7 +309,7 @@
   },
   {
     "id": 29,
-    "instrumento": "trompeta_00",
+    "instrumento": "trompeta knight",
     "tipo": "viento",
     "marca": "Knight",
     "modelo": "123-abc",
@@ -320,7 +320,7 @@
   },
   {
     "id": 30,
-    "instrumento": "trompeta_01",
+    "instrumento": "trompeta knight",
     "tipo": "viento",
     "marca": "Knight",
     "modelo": "123-abc",
@@ -328,5 +328,38 @@
     "color": "Golden",
     "valor": "$1000",
     "img": "trompeta_01.png"
+  },
+  {
+    "id": 31,
+    "instrumento": "armonica",
+    "tipo": "vientos",
+    "marca": "Hohner",
+    "modelo": "123-abc",
+    "categoria": "vientos",
+    "color": "Gray",
+    "valor": "$1000",
+    "img": "armonica_01.png"
+  },
+  {
+    "id": 32,
+    "instrumento": "teclado akai",
+    "tipo": "teclado",
+    "marca": "Akai",
+    "modelo": "123-abc",
+    "categoria": "pianos",
+    "color": "Black",
+    "valor": "$1000",
+    "img": "teclado_02.png"
+  },
+  {
+    "id": 33,
+    "instrumento": "bateria kids",
+    "tipo": "bateria",
+    "marca": "generico",
+    "modelo": "123-abc",
+    "categoria": "baterias",
+    "color": "Blue",
+    "valor": "$1000",
+    "img": "bateria_02.png"
   }
 ]

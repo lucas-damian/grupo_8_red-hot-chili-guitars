@@ -7,5 +7,7 @@ let indexController = require("../controllers/indexController");
 router.get('/', indexController.index);
 /* router.get('/detalle-del-producto', indexController.detalleProducto); */
 router.get('/detalle-del-producto/:id', indexController.detailProduct);
+router.get('/carrito', indexController.carrito); 
+router.get('/categoria/:instrumento', indexController.categoria)
 
 module.exports = router;

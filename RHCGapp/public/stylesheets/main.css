@@ -13,6 +13,7 @@
 @import "layout/footer.css";
 @import "layout/header.css";
 
+@import "sections/produCategorias.css";
 @import "sections/categorias.css";
 @import "sections/detalleProducto.css";
 @import "sections/error404.css";
