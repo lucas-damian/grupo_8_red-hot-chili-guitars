@@ -23,15 +23,15 @@ router.delete('/delete/:id',borrar);
 router.get('/admin/search' , adminCheck, search);
 
 
-/*
 
-router.get('/:id', produDetalle);
+
+/* router.get('/:id', produDetalle);
 router.get('/:id/edit',produEdit); 
 
 router.put('/:id/edit',produEdit);
-router.delete('/:id/edit',borrar); */
+router.delete('/:id/edit',borrar);
 
-
+ */
 
 
 

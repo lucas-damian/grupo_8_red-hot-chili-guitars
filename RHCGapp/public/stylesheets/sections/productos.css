@@ -135,10 +135,12 @@ body{
 
 @media screen and (min-width: 1200px){
 
-    .productos-container{
+
+    .productos{
+        background-image: unset;
         padding: 20rem 0;
     }
-
+    
     .productos-item{
         width: 23vw;
     }

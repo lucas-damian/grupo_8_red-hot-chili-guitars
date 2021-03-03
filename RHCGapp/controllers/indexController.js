@@ -74,6 +74,14 @@ module.exports = {
 
         }
     },
+    listar : (req, res) => {
+        res.render('listProducts',{
+            title: 'productos',
+            productos: productos,
+            msg: 'Estos son tus instrumentos'
+        })
+    },
+   
    
 
      

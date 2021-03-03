@@ -1,1 +1,1 @@
-El usuario ingreso a la ruta: /categoria/search?busqueda=guitarras
+El usuario ingreso a la ruta: /stylesheets/sections/productSearch.css

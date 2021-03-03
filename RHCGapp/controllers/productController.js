@@ -145,8 +145,6 @@ module.exports = {
         res.render("userProducts",{
             title:"resultado de la búsqueda",
             productos:resultado,
-            msg: "Resultados de la búsqueda"
-
         });
      },
      detailProduct : (req, res) => {
@@ -157,5 +155,6 @@ module.exports = {
             title: "+ Info del producto",
             producto
         })
-     }
+     },
+     
 }

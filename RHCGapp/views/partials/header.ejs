@@ -3,11 +3,11 @@
         <a class="link--logo" href="/" class="link">
             <img class="header__logo" src="/img/icons/logo_01.svg" alt="" class="img__logo">
         </a>
-        <a  class="hamburguer" href="/categoria/search">
+        <a  class="hamburguer" href="#barra">
             <img class="mobile-logo" src="/img/icons/icon_sketch.svg" alt="">
         </a>
         <div class="nav__container">
-            <form class="header__form" action="/categoria/search" method="GET">
+            <form class="header__form" action='/categoria/search/:busqueda' method="GET">
                 <div class="search-bar">
                     <input class="barra-busqueda" type="text" placeholder="buscá tú instrumento..." name="busqueda">
                     <button  class="btn--search" type="submit">
@@ -72,10 +72,10 @@
             <a href="/categoria/vientos" class="btn--header">vientos </a>
         </li>
         <li class="item--header">
-            <a href="" class="btn--header">amplis/ accesorios/ electronicos</a>
+            <a href="/categoria/accesorios" class="btn--header">amplis/ accesorios/ electronicos</a>
         </li>
         <li class="item--header">
-            <a href="/categoria/accesorios" class="btn--header">home</a>
+            <a href="/" class="btn--header">home</a>
         </li>
     </ul>
     <a href="#header" class="btn--cross"><i class="far fa-times-circle"></i></a>
