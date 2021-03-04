@@ -53,7 +53,7 @@ module.exports = {
                 modelo,
                 valor,
                 color,
-                img: req.files[0].filename || "sin imagen"
+                img
             }
     
             productos.push(newProduct);

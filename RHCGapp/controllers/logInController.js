@@ -68,7 +68,7 @@ module.exports = {
 
 
     processLogin: (req,res) => {
-
+ 
         let errores = validationResult(req);
 
         if(!errores.isEmpty()){
@@ -78,20 +78,31 @@ module.exports = {
             })
         } else {
             
-            const {userEmail, password} = req.body;
+            const {userEmail, password, recordar} = req.body;
             let result = users_db.find( admin => admin.email.toLowerCase() == userEmail.toLowerCase().trim());
-    
-             
+            
+
             if (result){
                 if(bcrypt.compareSync(password.trim(), result.pass.trim())){
-    
-                    req.session.userAdmin = {
-                        id : result.id,
-                        userName : result.userName,
-                    }
-    
-                     return res.redirect("/")
-                 } else {
+
+                        
+                            req.session.user = {
+                                
+                                userName : result.userEmail,
+                               
+                            }
+
+                            if(req.body.recordar){
+
+                                res.cookie("userStar", req.session.user, {
+                                    maxAge: 1000 * 60
+                                })
+                            }
+                        
+                       
+                    return res.redirect("/users/profile")
+                 
+                } else {
                     res.render('logeo',{
                         title: "logueo",
                         errores: error.errors
@@ -107,17 +118,23 @@ module.exports = {
         }
          
     }, 
+
+    profile:(req,res) => {
+        res.redirect("/");
+    },
     
  
-    logout: (req, res) => {
+    fatality: (req, res) => {
+        
         req.session.destroy();
-        if(req.cookies.userAcampada){
-            res.cookie('userAcampada','',{
+        
+        if(req.cookies.userStar){
+            
+            res.cookie('userStar','',{
                 maxAge : -1
             })
         }
-        res.redirect('/')
-
-
+        
+        res.redirect("/")
     }
 } 

@@ -212,6 +212,7 @@
 
 .carrito-mobile .img--carrito {
 	width: 30%;
+	object-fit: contain;
 }
 
 

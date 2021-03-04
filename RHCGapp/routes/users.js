@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 
-const {processRegister,logIn,processLogin} = require("../controllers/logInController");
+const {processRegister,logIn,processLogin,profile,fatality} = require("../controllers/logInController");
 const registerValidation = require('../validations/registerValidation');
 const loginValidation = require('../validations/loginValidation');
-const adminCheck = require("../middlewares/adminCheck");
+const userCheck = require("../middlewares/userCheck");
 
 
 
@@ -13,9 +13,12 @@ router.post('/log-in',loginValidation,processLogin);
 
 router.post('/register',registerValidation, processRegister);
 
-router.post('/logout', )
+router.get('/logout', fatality);
 
 router.get('/', logIn);
+
+router.get('/profile', userCheck,profile);
+
 
 
 

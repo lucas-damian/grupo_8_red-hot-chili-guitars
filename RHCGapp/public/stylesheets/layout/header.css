@@ -121,6 +121,13 @@
 	font-size: 1.6rem;
 }
 
+.btn--cierre{
+	padding: 1rem 2rem;
+	background-color: var(--color-primary-red)!important;
+	color: var(--color-primary-yellow)!important;
+}
+
+
 /* 
 
 ////////// NAV-BAR ESCONDIDA (mobile)
@@ -205,7 +212,7 @@
 	padding: 0.5rem 1.5rem;
 	border-radius: 0.8rem;
 	z-index: 10;
-	background-color: var(--color-primary-red);
+	background-color: var(--color-primary-green);
 	font-family: lobster;
 	color: var(--color-primary-yellow);
 }
@@ -245,8 +252,8 @@
 	.btn--cross {
 		left: 4.8rem;
 		top: -7.5rem;
-		font-size: 2.5rem;
-		padding: 0.5rem 0.9rem;
+		font-size: 2.8rem;
+		padding: .8rem;
 	}
 
 	.header .search-bar {
@@ -288,7 +295,7 @@
 		font-size: 1.5rem;
 	}
 	.btn--logeoRegistro__mobile {
-		top: -8.3rem;
+		top: -7.5rem;
 		left: 8rem;
 		font-size: 1.8rem;
 	}
@@ -420,11 +427,7 @@
 		width: 80%;
 	}
 
-	.btn--logeoRegistro {
-		display: block;
-		font-family: lobster;
-		border-radius: 1rem;
-	}
+	
 
 	.btn--home,
 	.link--kart,
@@ -437,26 +440,45 @@
 	.btn--logeoRegistro,
 	.link--message,
 	.link--kart {
-		padding: 1rem !important;
-		font-size: 1.8rem !important;
-		display: flex !important;
-		justify-content: center !important;
-		align-items: center !important;
-		color: var(--color-primary-yellow) !important;
-		background-color: var(--color-primary-red) !important;
-		box-shadow: var(--primary-shadow-down) !important;
-		transition: all 0.2s !important;
+		padding: 1rem ;
+		font-size: 1.8rem ;
+		display: flex ;
+		justify-content: center ;
+		align-items: center ;
+		color: var(--color-primary-yellow) ;
+		background-color: var(--color-primary-red) ;
+		box-shadow: var(--primary-shadow-down) ;
+		transition: all 0.2s ;
 		border: none;
+	}
+
+	.btn--logeoRegistro {
+		display: block;
+		font-family: lobster;
+		border-radius: 1rem;
+		background-color: var(--color-primary-green) !important;
+
+	}
+
+	.btn--cierre{
+		padding: 1rem 3rem !important;
+		background-color: var(--color-primary-red) !important;
+
 	}
 
 	.btn--logeoRegistro:hover,
 	.link--message:hover,
 	.link--kart:hover,
 	.btn--home:hover {
-		color: var(--color-primary-yellow);
+		color: var(--color-primary-darkRed);
 		text-decoration: none;
 		transform: scale(1.1);
-		background-color: var(--color-primary-darkRed);
+		background-color: var(--color-primary-yellow);
+	}
+
+	.btn--logeoRegistro:hover{
+		background-color: var(--color-primary-yellow) !important;
+		color: var(--color-primary-darkRed);
 	}
 
 	.btn--logeoRegistro:active,

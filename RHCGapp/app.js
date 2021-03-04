@@ -8,12 +8,13 @@ const expressValidator = require("express-validator");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const userLog = require("./middlewares/logMiddleware");
-
+const localsCheck = require("./middlewares/localsCheck");
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/admin/producto');
 const userProducts = require('./routes/userProducts')
+const cookieCheck = require("./middlewares/cookieCheck");
 
 const app = express();
 
@@ -29,6 +30,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
 app.use(session({secret: "red hot chilli guitars"}));
 app.use(userLog);
+app.use(localsCheck);
+app.use(cookieCheck);
+
 
 
 app.use('/', indexRouter);

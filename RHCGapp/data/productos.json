@@ -360,5 +360,16 @@
     "valor": "$10.000",
     "color": "natural",
     "img": "file-1614854590876.png"
+  },
+  {
+    "id": 35,
+    "tipo": " ",
+    "marca": " ",
+    "instrumento": "guitarra",
+    "categoria": "accesorios",
+    "modelo": " ",
+    "valor": "$1234 ",
+    "color": " ",
+    "img": "file-1614867633180.png"
   }
 ]
