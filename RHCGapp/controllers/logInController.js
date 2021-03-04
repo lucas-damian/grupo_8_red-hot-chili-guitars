@@ -11,6 +11,13 @@ const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
 
 module.exports = {
 
+    logIn:(req,res) => {
+
+        res.render("logeo", {
+            title: "ingresando"
+        });
+    },
+
     processRegister: (req,res) => {
 
         let errores = validationResult(req);
@@ -20,7 +27,8 @@ module.exports = {
             
            res.render("logeo",{
                title:"login page",
-                errores: errores.errors
+                errores: errores.errors,
+                old: req.body
            })
        } else {
         
@@ -33,12 +41,12 @@ module.exports = {
            }
        });
 
-       let hashPass = bcrypt.hashSync(pass,12);
+       let hashPass = bcrypt.hashSync(pass.trim(),12);
 
 
        let newUser = {
            id: +lastID + 1,
-           userName,
+           userName: userName.trim(),
            email,
            pass: hashPass
        }
@@ -58,41 +66,41 @@ module.exports = {
 
     },
 
-    logIn:(req,res) => {
-        res.render("logeo", {
-            title: "ingresando"
-        });
-    },
 
     processLogin: (req,res) => {
-       /*  res.send(req.body);   */
-
-         const {userName, pass} = req.body;
-
-         let result = users_db.find( admin => admin.userName === userName);
 
 
-        return res.send(result)
+        const {userEmail, password} = req.body;
+        let result = users_db.find( admin => admin.email.toLowerCase() == userEmail.toLowerCase().trim());
 
-         if (result){
-             if(bcrypt.compareSync(pass.trim(), result.pass)){
+         
+        if (result){
+            if(bcrypt.compareSync(password.trim(), result.pass.trim())){
 
                 req.session.userAdmin = {
                     id : result.id,
                     userName : result.userName,
                 }
 
-
-                 return res.redirect("/index")
+                 return res.redirect("/")
+             } else {
+                res.render('logeo',{
+                    title: "logueo",
+                    error: 'datos incorrectos!'
+                })
+       
              }
+         } else {
+            res.render('logeo',{
+                title: "logueo",
+                error: 'datos incorrectos!'
+            })
          }
 
-         res.render('users',{
-             error: 'datos incorrectos!'
-         })
-
+         
         
     }, 
+    
     logout: (req, res) => {
         req.session.destroy();
         if(req.cookies.userAcampada){

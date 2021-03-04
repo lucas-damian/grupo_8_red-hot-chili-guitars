@@ -15,3 +15,12 @@
     text-align: center;
     text-transform: capitalize;
 }
+
+
+@media screen and (min-width:1200px){
+    .error-list{
+        width:60vw;
+        margin: 0 auto 2rem auto;
+    }
+
+}

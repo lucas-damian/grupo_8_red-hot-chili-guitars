@@ -102,6 +102,7 @@ body{
 
  .btn--borrar{
     background-color: var(--color-primary-red);
+    cursor: pointer;
 }
 
 

@@ -5,10 +5,11 @@ var router = express.Router();
 const {processRegister,logIn,processLogin} = require("../controllers/logInController");
 const registerValidation = require('../validations/registerValidation');
 const loginValidation = require('../validations/loginValidation');
+const adminCheck = require("../middlewares/adminCheck");
 
 
 
-router.post('/log-in',loginValidation ,processLogin);
+router.post('/log-in',loginValidation,processLogin);
 
 router.post('/register',registerValidation, processRegister);
 

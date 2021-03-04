@@ -11,7 +11,7 @@ router.get('/',adminCheck , cargaProduc);
 router.post('/store',uploadImages.any(),store);
 
 
-router.get('/admin/list',adminCheck , listar);
+router.get('/admin/list', listar);
 
 
 router.get("/edit/:id", adminCheck , produEdit);

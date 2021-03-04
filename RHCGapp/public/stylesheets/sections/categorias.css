@@ -67,7 +67,7 @@
 
 #cat-pianos{
 	background-color: #79935171;
-	color: var(--color-primary-yellow);
+	color: black;
 
 }
 #cat-baterias{
@@ -133,7 +133,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding: 10rem 0 30rem 0;
+		padding: 10rem 0 15rem 0;
 	}
 
 	.categorias--title--desktop{
@@ -328,123 +328,4 @@
 		transform: translateX(0);
 	}
 
-
-
-	
-
-
-
-
-
-/* 	#cat-amplis__desktop .categorias--content-2,
-	#cat-vientos__desktop .categorias--content-2{
-		position: relative;
-		z-index: 2;
-	} */
-
-	/* .categorias--content-2
-	{
-		transform: translateY(100%);
-	} */
-
-
-/* 	#cat-guitarras__desktop div{
-		background-color: brown;
-	} */
-
-	/* .box-c{
-		width: 80vw;
-		margin: 0 auto;
-		height: 800px;
-		display: flex;
-	}
-	.box-i{
-		width: 50%;
-		height: 80%;
-		display: flex;
-		flex-direction: column;
-	}
-	.box-d{
-		width: 50%;
-		height: 80%;
-		display: flex;
-		flex-direction: column;
-	}
-	.guitarra{
-		background-image: url("/img/bg-images/bg-guitarra.jpg");
-		height: 100%;
-		width: 100%;
-		background-size: cover;
-		color: var(--color-primary-yellow);
-	}
-	.guitarra:before{
-		display: block;
-		height: 100%;
-		width: 100%;
-		content: "";
-		background-color: rgba(167, 38, 38, 0.507);
-		translate: (100%);
-		transition: .9s;
-
-	}
-
-	.viento{
-		background-image: url("/img/bg-images/bg-saxo.jpg");
-		height: 100%;
-		width: 100%;
-		background-size: cover;
-		color: var(--color-primary-yellow);
-	}
-	.bateria{
-		background-image: url("/img/bg-images/bg-bateria.jpg");
-		height: 40%;
-		width: 100%;
-		background-size: cover;
-		color: var(--color-primary-yellow);
-	}
-	.ampli{
-		background-image: url("/img/bg-images/bg-ampli.jpg");
-		height: 100%;
-		width: 100%;
-		background-size: cover;
-		color: var(--color-primary-yellow);
-	}
-	.piano{
-		background-image: url("/img/bg-images/bg-piano.jpg");
-		height: 100%;
-		width: 100%;
-		background-size: cover;
-		color: var(--color-primary-yellow);
-	}
-	.botton{
-		height: 50%;
-		display: flex;
-	}
-	.box-d-botton{
-		height: 60%;
-	}
-	.categorias .categorias--title{
-		font-size: 3rem;
-		text-align: center;
-	}
-	.categorias--sub-title{
-		padding: 0 16px;
-		font-size: 4.4rem;
-		font-family: lobster;
-	}
-	
-	.categorias--text{
-		padding: 0 16px;
-		font-size: 1.9rem;
-		font-family: arimo;
-	}
-	.categorias--title{
-		display: block;
-		width: 80vw;
-		margin: 0 auto 2rem auto;
-		font-size: 3rem;
-		text-transform: capitalize;
-		color: var(--color-primary-red);
-		font-family: lobster;
-	} */
 }

@@ -4,10 +4,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-image: var(--background);
+/* 	background-image: var(--background);
 	background-size: cover;
-	background-repeat: no-repeat;
-	/* background-blend-mode: color-burn; */
+	background-repeat: repeat; */
+
 }
 
 .home__main {
