@@ -3,12 +3,13 @@ var router = express.Router();
 let uploadImages = require("../../middlewares/uploadImages")
 const {cargaProduc,listar,crear,store,produEdit,prodUpdate,borrar,search}= require('../../controllers/productController');
 const adminCheck = require('../../middlewares/adminCheck') 
+const uploadCheck = require("../../validations/uploadValidation");
 
 
 
 
-router.get('/',adminCheck , cargaProduc);
-router.post('/store',uploadImages.any(),store);
+router.get('/', cargaProduc);
+router.post('/store',uploadImages.any(), uploadCheck,store);
 
 
 router.get('/admin/list', listar);

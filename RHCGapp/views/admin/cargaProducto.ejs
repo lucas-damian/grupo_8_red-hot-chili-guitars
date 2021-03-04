@@ -13,6 +13,14 @@
 
 	<main class="cargaProductos">
 		<h2 class="cargaProductos-title">cargando instrumento</h2>
+		<% if (typeof errores !== "undefined") { %>
+            <ul class="error-list" id="errores">
+                <% errores.forEach(error => { %>
+                    <li class="error-item"><%= error.msg %> </li>
+                <% }); %>
+            </ul>
+         
+        <% } %>
 
 		<form
 			class="carga"
@@ -136,9 +144,9 @@
 			</div>
 		</form>
 	</main>
-	<!-- footer -->
-	<%- include('partials/footer') %>
-	<!-- /footer -->
 
+		<!-- carrito -->
+		<%- include('partials/footer') %>
+		<!-- /carrito -->
 	<script src="/javascript/slider.js"></script>
 </body>

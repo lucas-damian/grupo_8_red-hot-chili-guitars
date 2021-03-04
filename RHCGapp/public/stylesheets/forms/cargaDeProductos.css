@@ -20,7 +20,7 @@
 .cargaProductos .carga{
 	padding: 2rem;
 	background-color:  var(--color-primary-yellow);
-	margin: 0 auto;
+	margin: 2rem auto 0 auto;
 	width: 80vw;
 	display: flex;
 	flex-direction: column;

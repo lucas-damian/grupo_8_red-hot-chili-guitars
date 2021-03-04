@@ -1,3 +1,4 @@
+const { validationResult } = require("express-validator");
 const fs = require("fs");
 const Db_products = "./data/productos.json";
 const path = require("path");
@@ -22,42 +23,46 @@ module.exports = {
    
 
     store: (req,res) => {
-        const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
-        const img = req.files[0].filename; 
+        let errores = validationResult(req);
 
-/*         let img;
-        if(categoria.length !== 0){
-            img = categoria + req.files[0].filename;
-
+        if(!errores.isEmpty()){
+            res.render("admin/cargaProducto",{
+                title:"cargando producto",
+                 errores: errores.errors,
+                 old: req.body
+            })
         } else {
-            img = req.files[0].filename; 
-        } */
 
-        let lastId = 0;
+            const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
+            const img = req.files[0].filename; 
+
+            let lastId = 0;
         
-        productos.forEach( product => {
-            if(product.id> lastId){
-                lastId = product.id;
+            productos.forEach( product => {
+                if(product.id> lastId){
+                    lastId = product.id;
+                }
+            })
+    
+            const newProduct = {
+                id: +lastId + 1,
+                tipo,
+                marca,
+                instrumento,
+                categoria,
+                modelo,
+                valor,
+                color,
+                img
             }
-        })
-
-        const newProduct = {
-            id: +lastId + 1,
-            tipo,
-            marca,
-            instrumento,
-            categoria,
-            modelo,
-            valor,
-            color,
-            img
+    
+            productos.push(newProduct);
+            fs.writeFileSync(path.join(Db_products), JSON.stringify(productos,null,2));
+    
+    
+            res.redirect("/products/admin/list")
         }
-
-        productos.push(newProduct);
-        fs.writeFileSync(path.join(Db_products), JSON.stringify(productos,null,2));
-
-
-        res.redirect("products/admin/list")
+       
     },
 
 
@@ -95,7 +100,7 @@ module.exports = {
         
        fs.writeFileSync(path.join(Db_products), JSON.stringify(productos,null,2));
 
-       res.redirect("/products/list");
+       res.redirect("/products/admin/list");
     },
 
     
