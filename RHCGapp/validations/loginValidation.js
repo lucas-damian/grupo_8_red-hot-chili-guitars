@@ -6,17 +6,10 @@ const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
 
 module.exports =[
 
-  /*   check("userName")
-    .notEmpty().withMessage("debes ingresar un usuario"),
+    check("userEmail")
+    .isEmail().withMessage("debes ingresar tu email"),
 
-    check('email')
-    .notEmpty()
-    .withMessage('debes ingresar un email'), */
-
-    check("user-email")
-    .notEmpty().withMessage("debes ingresar tu usuario"),
-
-    check('pass')
+    check('password')
     .notEmpty()
     .withMessage('debes ingresar una contraseña')
 ]

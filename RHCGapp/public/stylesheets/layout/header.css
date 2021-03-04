@@ -135,17 +135,19 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.288);
-	transform: translateX(100%);
 	transition: all 0.3s;
 	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .nav-bar--desktop {
 	display: none;
 }
 
-#barra:target {
-	transform: translateX(0%);
+.nav-bar.active {
+	opacity: 1;
+	visibility: visible;
 }
 
 .list--header {
@@ -183,8 +185,8 @@
 	top: -6.9rem;
 	left: 2rem;
 	z-index: 11;
-	padding: 0.5rem 0.8rem;
-	font-size: 2rem;
+	padding: .8rem;
+	font-size: 2.5rem;
 	background-color: var(--color-primary-red);
 	border-radius: 50%;
 	cursor: pointer;
@@ -197,7 +199,7 @@
 
 .btn--logeoRegistro__mobile {
 	position: relative;
-	top: -7.5rem;
+	top: -7rem;
 	left: 5rem;
 	font-size: 1.8rem;
 	padding: 0.5rem 1.5rem;

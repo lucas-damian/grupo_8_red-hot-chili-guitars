@@ -53,7 +53,7 @@ module.exports = {
                 modelo,
                 valor,
                 color,
-                img
+                img: req.files[0].filename || "sin imagen"
             }
     
             productos.push(newProduct);
@@ -70,7 +70,7 @@ module.exports = {
 
         let producto = productos.find( producto => producto.id === +req.params.id);
 
-        res.render("admin/editProduct", {
+        res.render("admin/editProducts", {
             title: "editando instrumento",
             producto
         })

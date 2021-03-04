@@ -1,26 +1,22 @@
 <!-- head -->
-<%- include('partials/head') %>
+<%- include('../partials/head') %>
 <!-- /head -->
 
 <body class="body--home">
 	<!-- header -->
-	<%- include('partials/header') %>
+	<%- include('../partials/header') %>
 	<!-- /header -->
 
 	<!-- carrito -->
-	<%- include('partials/carrito') %>
+	<%- include('../partials/carrito') %>
 	<!-- /carrito -->
 
 	<main class="cargaProductos">
 		<h2 class="cargaProductos-title">cargando instrumento</h2>
-		<% if (typeof errores !== "undefined") { %>
-            <ul class="error-list" id="errores">
-                <% errores.forEach(error => { %>
-                    <li class="error-item"><%= error.msg %> </li>
-                <% }); %>
-            </ul>
-         
-        <% } %>
+		
+		<!-- mensaje de error-->
+        <%- include('../partials/error-msg') %>
+        <!-- /mensaje de error-->
 
 		<form
 			class="carga"
@@ -140,13 +136,13 @@
 				</div>
 
 				<button class="btn--submit">cargar</button>
-				<a href="products/admin/list" class="btn--productos">ver lista</a>
+				<a href="/admin/list" class="btn--productos">ver lista</a>
 			</div>
 		</form>
 	</main>
 
 		<!-- carrito -->
-		<%- include('partials/footer') %>
+		<%- include('../partials/footer') %>
 		<!-- /carrito -->
 	<script src="/javascript/slider.js"></script>
 </body>

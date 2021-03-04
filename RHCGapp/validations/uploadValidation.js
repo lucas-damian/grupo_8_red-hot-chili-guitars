@@ -13,10 +13,4 @@ module.exports = [
             min: 3,
         }).withMessage("debes agregar un valor"),
 
-   /*  body("file")
-        .custom( value => {
-            if(value.length === 0){
-                return value = "default";
-            }
-        }) */
 ]

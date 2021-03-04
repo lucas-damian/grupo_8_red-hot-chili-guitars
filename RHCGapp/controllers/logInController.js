@@ -69,38 +69,46 @@ module.exports = {
 
     processLogin: (req,res) => {
 
+        let errores = validationResult(req);
 
-        const {userEmail, password} = req.body;
-        let result = users_db.find( admin => admin.email.toLowerCase() == userEmail.toLowerCase().trim());
-
-         
-        if (result){
-            if(bcrypt.compareSync(password.trim(), result.pass.trim())){
-
-                req.session.userAdmin = {
-                    id : result.id,
-                    userName : result.userName,
-                }
-
-                 return res.redirect("/")
+        if(!errores.isEmpty()){
+            res.render('logeo',{
+                title: "logueo",
+                errores: errores.errors
+            })
+        } else {
+            
+            const {userEmail, password} = req.body;
+            let result = users_db.find( admin => admin.email.toLowerCase() == userEmail.toLowerCase().trim());
+    
+             
+            if (result){
+                if(bcrypt.compareSync(password.trim(), result.pass.trim())){
+    
+                    req.session.userAdmin = {
+                        id : result.id,
+                        userName : result.userName,
+                    }
+    
+                     return res.redirect("/")
+                 } else {
+                    res.render('logeo',{
+                        title: "logueo",
+                        errores: error.errors
+                    })
+           
+                 }
              } else {
                 res.render('logeo',{
                     title: "logueo",
-                    error: 'datos incorrectos!'
+                    errores: error.errors
                 })
-       
              }
-         } else {
-            res.render('logeo',{
-                title: "logueo",
-                error: 'datos incorrectos!'
-            })
-         }
-
+        }
          
-        
     }, 
     
+ 
     logout: (req, res) => {
         req.session.destroy();
         if(req.cookies.userAcampada){

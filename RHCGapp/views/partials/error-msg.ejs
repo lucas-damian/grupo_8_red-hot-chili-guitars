@@ -1,0 +1,8 @@
+<% if (typeof errores !== "undefined") { %>
+    <ul class="error-list" id="errores">
+        <% errores.forEach(error => { %>
+            <li class="error-item"><%= error.msg %> </li>
+        <% }); %>
+    </ul>
+ 
+<% } %>

@@ -16,19 +16,15 @@
     
     
     <section class="ingreso">
-        <% if (typeof errores !== "undefined") { %>
-            <ul class="error-list" id="errores">
-                <% errores.forEach(error => { %>
-                    <li class="error-item"><%= error.msg %> </li>
-                <% }); %>
-            </ul>
-         
-        <% } %>
+        <!-- mensaje de error -->
+        <%- include('partials/error-msg') %>
+        <!-- /mensaje de error -->
+        
         <div class="principal">
             <form class="form-izq" action="/users/log-in" method="POST">
                     <div class="log-container">
                         <div class="log-row">
-                            <label for="user" class="log--label">Usuario o email:</label>
+                            <label for="user" class="log--label">Email:</label>
                             <input class="log--input" type="text" placeholder="ingresá tu usuario o email" id="user" name="userEmail">
                         </div>
                         <div class="log-row">

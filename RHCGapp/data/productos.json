@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "instrumento": "guitarra acustica cort",
-    "tipo": "acustica   ",
-    "marca": "cort ",
-    "modelo": "123-abc",
-    "categoria": "cuerdas",
-    "color": "brown",
-    "valor": "$1000   ",
-    "img": "guitarra_acustica_00.png"
-  },
-  {
     "id": 2,
     "instrumento": "guitarra acustica cort",
     "tipo": "acustica   ",
@@ -360,5 +349,16 @@
     "color": "Blue",
     "valor": "$1000",
     "img": "bateria_02.png"
+  },
+  {
+    "id": 34,
+    "tipo": "acustica",
+    "marca": "Gibson",
+    "instrumento": "guitarra",
+    "categoria": "cuerdas",
+    "modelo": "abc-123",
+    "valor": "$10.000",
+    "color": "natural",
+    "img": "file-1614854590876.png"
   }
 ]

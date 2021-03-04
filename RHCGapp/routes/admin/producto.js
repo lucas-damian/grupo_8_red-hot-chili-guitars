@@ -15,7 +15,7 @@ router.post('/store',uploadImages.any(), uploadCheck,store);
 router.get('/admin/list', listar);
 
 
-router.get("/edit/:id", adminCheck , produEdit);
+router.get("/edit/:id" , produEdit);
 router.put("/update/:id",uploadImages.any(), prodUpdate);
 
 router.delete('/delete/:id',borrar);
