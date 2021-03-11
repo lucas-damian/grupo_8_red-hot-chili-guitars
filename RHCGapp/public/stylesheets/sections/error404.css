@@ -1,8 +1,9 @@
 .error404 {
 	background-image: linear-gradient(#f6eec95b, #f6eec96b),
 		url(/img/fondos/texturas_19.jpg);
+		background-size: cover;
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -24,8 +25,9 @@
 }
 
 .error404 .error404-title {
-	font-family: lobster;
-	font-size: 6rem;
+	font-family: "lobster";
+	font-size: 3rem;
+	width: 100%;
 }
 
 .error404 .error404-text {
@@ -49,6 +51,22 @@
 	box-shadow: var(--primary-shadow-down);
 }
 
+@media screen and (min-width: 768px) {
+
+	.error404 .error404-container {
+		width: 70vw;
+		padding: 2rem;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.error404 .error404-text {
+		width: 100%;
+	}
+}
+
+
+
 @media screen and (min-width: 1200px) {
 	.error404 .btn-error404--home {
 		width: 5rem;
@@ -57,6 +75,13 @@
 		left: 85vw;
 		top: 10%;
 		transition: all .2s;
+	}
+
+	.error404 .error404-container {
+		width: 60vw;
+		padding: 3rem;
+		border-radius: 2rem;
+
 	}
 
 	.error404 .btn-error404--home:hover{

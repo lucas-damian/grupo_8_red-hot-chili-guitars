@@ -2,7 +2,9 @@ const fs = require("fs");
 const Db_productsKits = "./data/productos_kits.json";
 const Db_products = "./data/productos.json";
 const productos = JSON.parse(fs.readFileSync(Db_products,"utf-8"));
+
 module.exports = {
+    
     index: (req,res) =>{
 
        let kits = JSON.parse(fs.readFileSync(Db_products,"utf-8"));
@@ -13,6 +15,7 @@ module.exports = {
             kits
         });
     },
+    
     detailProduct : (req, res) => {
          
         let producto = productos.find( producto => producto.id === +req.params.id);
@@ -23,6 +26,7 @@ module.exports = {
             producto
         })
     },
+    
     carrito: (req, res) => {
         let producto = productos.find( producto => producto.id === +req.params.id);
 
@@ -31,6 +35,7 @@ module.exports = {
             producto
         })
     },
+    
     categoria : (req, res) => {
 
         let producto = productos.filter( producto => producto.categoria === req.params.instrumento);
@@ -74,6 +79,7 @@ module.exports = {
 
         }
     },
+    
     listar : (req, res) => {
         res.render('listProducts',{
             title: 'productos',
@@ -82,8 +88,4 @@ module.exports = {
         })
     },
    
-   
-
-     
-
 }

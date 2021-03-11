@@ -2,13 +2,13 @@ var express = require('express');
 var router = express.Router();
 let uploadImages = require("../../middlewares/uploadImages")
 const {cargaProduc,listar,crear,store,produEdit,prodUpdate,borrar,search}= require('../../controllers/productController');
-const userCheck = require('../../middlewares/userCheck') 
+const adminCheck = require('../../middlewares/adminCheck');
 const uploadCheck = require("../../validations/uploadValidation");
 
 
 
 
-router.get('/', cargaProduc);
+router.get('/', adminCheck,cargaProduc);
 router.post('/store',uploadImages.any(), uploadCheck,store);
 
 
@@ -21,7 +21,7 @@ router.put("/update/:id",uploadImages.any(), prodUpdate);
 router.delete('/delete/:id',borrar);
 
 
-router.get('/admin/search' , userCheck, search);
+router.get('/admin/search', search);
 
 
 

@@ -461,10 +461,15 @@
 	}
 
 	.btn--cierre{
-		padding: 1rem 3rem !important;
+		padding: .5rem 2rem !important;
 		background-color: var(--color-primary-red) !important;
 
 	}
+
+	.btn--cierre:hover{
+		background-color: var(--color-primary-yellow) !important;
+		color: var(--color-primary-darkRed) !important;
+	} 
 
 	.btn--logeoRegistro:hover,
 	.link--message:hover,

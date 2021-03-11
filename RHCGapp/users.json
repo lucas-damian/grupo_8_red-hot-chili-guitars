@@ -1,1 +1,1 @@
-[{"id":1,"userName":"sebastian","email":"sebastian@gmail.com","pass":"$2b$12$CyYX.BtimKZNyx0tdAl7puHQ77e/u166rei9Y.d.IbKM2mQa/DzOq"}]
+[{"id":1,"userName":"sebastian","email":"sebastian@gmail.com","admin":true,"pass":"$2b$12$VCIrDhi3evQpJYGAhoech.a2nChmHGPFkkZS1A6KhRepf6kMUv4XS"},{"id":2,"userName":"jose","email":"jose@gmail.com","pass":"$2b$12$K2ZVnIEPoaDkyNfFSu0T2.4rGSIy85aPjmmZpwUuXirHxnR7oX0dy"}]

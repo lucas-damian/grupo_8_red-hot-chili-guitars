@@ -89,17 +89,17 @@ module.exports = {
                             req.session.user = {
                                 
                                 userName : result.userEmail,
+                                admin: result.admin
                                
                             }
 
-                            if(req.body.recordar){
+                            if(recordar){
 
                                 res.cookie("userStar", req.session.user, {
                                     maxAge: 1000 * 60
                                 })
                             }
-                        
-                       
+                           
                     return res.redirect("/users/profile")
                  
                 } else {

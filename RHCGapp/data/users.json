@@ -1,3 +1,16 @@
 [
-  
+  {
+    "id": 1,
+    "admin": true,
+    "userName": "sebastian",
+    "email": "sebastian@gmail.com",
+    "pass": "$2b$12$VCIrDhi3evQpJYGAhoech.a2nChmHGPFkkZS1A6KhRepf6kMUv4XS"
+  },
+  {
+    "id": 2,
+    "admin": false,
+    "userName": "jose",
+    "email": "jose@gmail.com",
+    "pass": "$2b$12$K2ZVnIEPoaDkyNfFSu0T2.4rGSIy85aPjmmZpwUuXirHxnR7oX0dy"
+  }
 ]
