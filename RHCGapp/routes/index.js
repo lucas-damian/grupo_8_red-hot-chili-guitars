@@ -7,6 +7,7 @@ const cookieCheck = require("../middlewares/cookieCheck");
 const userCheck = require("../middlewares/userCheck");
 
 
+
 /* GET home page. */
 router.get('/', cookieCheck ,indexController.index);
 /* router.get('/detalle-del-producto', indexController.detalleProducto); */
