@@ -94,7 +94,6 @@ module.exports = {
                             }
 
                             if(recordar){
-
                                 res.cookie("userStar", req.session.user, {
                                     maxAge: 1000 * 60
                                 })
@@ -103,16 +102,17 @@ module.exports = {
                     return res.redirect("/users/profile")
                  
                 } else {
+                    
                     res.render('logeo',{
                         title: "logueo",
-                        errores: error.errors
+                        errores: "contraseña inválida"
                     })
            
                  }
              } else {
                 res.render('logeo',{
                     title: "logueo",
-                    errores: error.errors
+                    errores: errores.errors
                 })
              }
         }

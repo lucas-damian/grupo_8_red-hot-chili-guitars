@@ -21,7 +21,7 @@
                         <% productos.forEach(producto => { %>                
                             <li class="productos-item">                    
                                 <div class="producto-img">                        
-                                    <img src="/img/instrumentos/<%= producto.categoria %>/<%= producto.img %>"  alt="<%= producto.nombre %> " class="img--productos">                   
+                                    <img src="/img/instrumentos/<%= producto.categoria %>/<%= producto.img %>"  alt="<%= producto.nombre %> " class="img--productos" load="lazy">                   
                                  </div>                                        
                                 <p class="productos-text">                    
                                     <%= producto.instrumento %>                    

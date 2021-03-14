@@ -11,5 +11,5 @@ module.exports =[
 
     check('password')
     .notEmpty()
-    .withMessage('debes ingresar una contraseña')
+    .withMessage('debes ingresar una contraseña'),
 ]

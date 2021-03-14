@@ -1,1 +1,1 @@
-El usuario ingreso a la ruta: /img/instrumentos/accesorios/file-1614867633180.png
+El usuario ingreso a la ruta: /stylesheets/sections/productSearch.css

@@ -4,11 +4,12 @@ let uploadImages = require("../../middlewares/uploadImages")
 const {cargaProduc,listar,crear,store,produEdit,prodUpdate,borrar,search}= require('../../controllers/productController');
 const adminCheck = require('../../middlewares/adminCheck');
 const uploadCheck = require("../../validations/uploadValidation");
+const userCheck = require('../../middlewares/userCheck');
 
 
 
 
-router.get('/', adminCheck,cargaProduc);
+router.get('/',userCheck,adminCheck,cargaProduc);
 router.post('/store',uploadImages.any(), uploadCheck,store);
 
 

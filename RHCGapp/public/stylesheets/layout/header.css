@@ -25,6 +25,7 @@
 		var(--bg-color-orange),
 		var(--bg-color-darkRed)
 	);
+/* 	background-size: cover; */
 	box-shadow: var(--primary-shadow-down);
 	display: flex;
 	z-index: 10;
