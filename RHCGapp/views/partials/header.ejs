@@ -36,18 +36,34 @@
 						</a>
 
 
+						<% if (locals.user) { %>
+							<% if (locals.user.admin) { %>
+								<a href="/products" class="link--message">
+									<i class="fas fa-key"></i>
+								</a>
+								<a href="/products/admin/list" class="link--kart">
+									<i class="fas fa-list"></i>
+								</a>
+							<% } else { %>
+								<a href="" class="link--message">
+									<i class="far fa-envelope"></i>
+								</a>
+								<a href="#carrito" class="link--kart">
+									<i class="fas fa-shopping-cart"></i>
+								</a>
+							<% } %>
 						
-				
+						<% } else { %>
+							
+							<a href="" class="link--message">
+								<i class="far fa-envelope"></i>
+							</a>
+							<a href="#carrito" class="link--kart">
+								<i class="fas fa-shopping-cart"></i>
+							</a>
 						
-						<a href="" class="link--message">
-							<i class="far fa-envelope"></i>
-						</a>
-				
+						<% } %>
 						
-						<a href="#carrito" class="link--kart">
-							<i class="fas fa-shopping-cart"></i>
-						</a>
-
 					
 					</div>
 
@@ -64,17 +80,17 @@
 			<nav class="nav-bar--desktop">
 				<ul class="list--header__desktop">
 					<li class="item item--header">
-						<a href="/categoria/cuerdas" class="btn--header__desktop"
+						<a href="/categoria/guitarras-cuerdas" class="btn--header__desktop"
 							>guitarras/ cuerdas</a
 						>
 					</li>
 					<li class="item item--header">
-						<a href="/categoria/baterias" class="btn--header__desktop"
+						<a href="/categoria/baterias-percusion" class="btn--header__desktop"
 							>baterias/ percusion</a
 						>
 					</li>
 					<li class="item item--header">
-						<a href="/categoria/pianos" class="btn--header__desktop"
+						<a href="/categoria/pianos-teclados" class="btn--header__desktop"
 							>pianos/ teclados</a
 						>
 					</li>
@@ -84,7 +100,7 @@
 						</a>
 					</li>
 					<li class="item item--header">
-						<a href="/categoria/accesorios" class="btn--header__desktop"
+						<a href="/categoria/amplis-accesorios" class="btn--header__desktop"
 							>amplis/ accesorios/ electronicos</a
 						>
 					</li>
@@ -97,19 +113,19 @@
 <nav class="nav-bar" id="barra">
 	<ul class="list--header">
 		<li class="item--header">
-			<a href="/categoria/cuerdas" class="btn--header">guitarras/ cuerdas</a>
+			<a href="/categoria/guitarras-cuerdas" class="btn--header">guitarras/ cuerdas</a>
 		</li>
 		<li class="item--header">
-			<a href="/categoria/baterias" class="btn--header">baterias/ percusion</a>
+			<a href="/categoria/baterias-percusion" class="btn--header">baterias/ percusion</a>
 		</li>
 		<li class="item--header">
-			<a href="/categoria/pianos" class="btn--header">pianos/ teclados</a>
+			<a href="/categoria/pianos-teclados" class="btn--header">pianos/ teclados</a>
 		</li>
 		<li class="item--header">
 			<a href="/categoria/vientos" class="btn--header">vientos </a>
 		</li>
 		<li class="item--header">
-			<a href="/categoria/accesorios" class="btn--header"
+			<a href="/categoria/amplis-accesorios" class="btn--header"
 				>amplis/ accesorios/ electronicos</a
 			>
 		</li>
@@ -119,11 +135,16 @@
 		</li>
 		
 
-		<li class="item--header">
-			<a href="/products" class="btn--header">administrador</a>
-		</li>
-		
-
+	
+			
+	<% if (locals.user) { %>
+		<% if (locals.user.admin) { %>
+			<li class="item--header">
+				<a href="/products" class="btn--header">administrador</a>
+			</li>
+		<% } %>
+	<% } %>
+	
 	</ul>
 	<a class="btn--cross menu-btn"><i class="far fa-times-circle"></i></a>
 	<% if (locals.user) { %>

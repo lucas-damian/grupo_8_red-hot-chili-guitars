@@ -9,37 +9,37 @@ module.exports = (sequelize, dataTypes)=>{
             allowNull : false,
             primaryKey : true
         },
-        intrument : {
-            type : dataTypes.STRING(100),
+        instrument : {
+            type : dataTypes.STRING,
             allowNull : false
         },
         type : {
-            type : dataTypes.STRING(100),
-            allowNull : false
+            type : dataTypes.STRING,
+            allowNull : true
         },
         mark : {
-            type : dataTypes.STRING(150),
-            allowNull : false
+            type : dataTypes.STRING,
+            allowNull : true
         },
         model : {
-            type : dataTypes.STRING(100),
-            allowNull : false
+            type : dataTypes.STRING,
+            allowNull : true
         },
         color : {
-            type : dataTypes.STRING(100),
-            allowNull : false
+            type : dataTypes.STRING,
+            allowNull : true
         },
         price : {
             type : dataTypes.INTEGER,
             allowNull : false
         },
         img : {
-            type : dataTypes.STRING(600),
-            allowNull : false,
+            type : dataTypes.STRING,
+            allowNull : true
         },
         description : {
-            type : dataTypes.STRING(1200),
-            allowNull : false
+            type : dataTypes.STRING,
+            allowNull : true
         },
         id_category : {
             type : dataTypes.INTEGER
@@ -54,9 +54,10 @@ module.exports = (sequelize, dataTypes)=>{
 
     const Product = sequelize.define(alias, cols, config)
 
-    product.associate = function (models){
-        product.belongsTo(models.Category, {
-            as : "category",
+    Product.associate = function (models){
+        
+        Product.belongsTo(models.Category, {
+            as : "categorias",
             foreignKey : "id_category"
         })
     }

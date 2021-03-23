@@ -280,7 +280,7 @@
 	}
 
 	.iconos {
-    	width: 55%;
+    	width: 44%;
     	padding: unset;
 		font-size: 4rem;
 		display: flex;
@@ -354,84 +354,4 @@
 		margin-top: 6px;
 		margin-bottom: 6px;
 	}
-
-	/* .footer{
-		display: flex;
-		flex-direction: row;
-		background-image: url("/img/fondos/footer_fondo.svg");
-		width: 100vw;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-	.footer__container{
-		width: 80vw;
-		margin: 0 auto;
-		background-color: deepskyblue;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.logo-footer{
-		display: block;
-		width: 40vw;
-	}
-
-	.segundo-container{
-		padding: unset;
-		margin-left: unset !important;
-		width: 70%;
-		border-top: none;
-		background-color: forestgreen;
-		align-items: center;
-	}
-
-	.container-arriba{
-		flex-direction: column;
-		background-color: ivory;
-	}
-
-	.footer .nav-bar--desktop{
-		width: 100%;
-		margin-bottom: unset !important;
-	}
-
-	.medios-de-pago{
-		margin-top: unset !important;
-		width: 10rem;
-		flex-direction: row !important;
-		justify-content: space-between !important;
-		width: unset;
-		background-color: fuchsia;
-	}
-
-	.iconos{
-		width: 30rem !important;
-		background-color: greenyellow;
-	}
-
-	.container-abajo{
-		width: 100% !important;
-		flex-direction: row-reverse !important;
-		background-color: khaki !important;
-		justify-content: space-between !important;
-		align-items: center !important;
-		margin: unset !important;
-	}
-
-	.redes{
-		margin: unset !important;
-		width: 60%;
-	}
-
-	.medios-texto{
-		background-color: goldenrod;
-	}
-
-	.contacto{
-		padding: unset !important;
-		margin: unset !important;
-	} */
 }

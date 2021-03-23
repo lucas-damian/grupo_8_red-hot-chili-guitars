@@ -80,11 +80,16 @@
           <select class="log--input" name="categoria" id="categoria" selected="elegí categoria">
             
             <option value="elegí instrumento"  selected disabled>elegí categoria</option>
-						<option value="accesorios">accesorios</option>
-						<option value="cuerdas">cuerdas</option>
+					
+			<% categorias.forEach(categoria => { %>
+				
+				<option value="<%=categoria.id%>"><%=categoria.name%></option>
+				
+			<% }) %>
+						<!-- <option value="cuerdas">cuerdas</option>
 						<option value="percusion">percusion</option>
 						<option value="teclados">teclados</option>
-						<option value="vientos">vientos</option>
+						<option value="vientos">vientos</option> -->
 					
           </select>
 				</div>

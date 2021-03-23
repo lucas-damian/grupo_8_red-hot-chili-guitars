@@ -20,15 +20,13 @@
                     <ul class="productos-container">                
                         <% productos.forEach(producto => { %>                
                             <li class="productos-item">                    
-                                <div class="producto-img">                        
-                                    <img src="/img/instrumentos/<%= producto.categoria %>/<%= producto.img %>"  alt="<%= producto.nombre %> " class="img--productos" load="lazy">                   
-                                 </div>                                        
+                                                                   
                                 <p class="productos-text">                    
                                     <%= producto.instrumento %>                    
                                 </p>
                                     
                         <p class="productos-text">                        
-                            <%= producto.categoria %>                    
+                            <%= producto.categorias.name %>                    
                         </p>                                       
                          <p class="productos-text">                    
                             <%=producto.marca %>                    
@@ -46,7 +44,7 @@
                         </p>
                                    
                         <div class="btns--container">                                        
-                            <a class="btn--editar" href="/detalle-del-producto/<%= producto.id %>">+ info</a>
+                            <a class="btn--editar" href="/products/detalle-del-producto/<%= producto.id %>">+ info</a>
                                                 
                         </div>                
                     </li>                

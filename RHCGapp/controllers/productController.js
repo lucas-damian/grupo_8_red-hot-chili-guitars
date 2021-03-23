@@ -1,67 +1,70 @@
 const { validationResult } = require("express-validator");
-const fs = require("fs");
-const Db_products = "./data/productos.json";
-const path = require("path");
-const productos = JSON.parse(fs.readFileSync(Db_products,"utf-8"));
+const db = require("../database/models");
 
 module.exports = {
     cargaProduc:(req,res) =>{
-        res.render("admin/cargaProducto", {
-            title: "cargando instrumento"
-           
-        });
+
+        db.Category.findAll()
+            .then(categorias => res.render("admin/cargaProducto", {
+                title: "cargando instrumento",
+                categorias     
+            }))
+            .catch(error => res.send(error))
     },
 
     listar: (req,res) => {
-       res.render("admin/adminProducts",{
-           title:"productos",
-           productos:productos,
-           msg: "Estos son tus instrumentos"
-       });
+
+       db.Product.findAll({
+           include:[{association:"categorias"}]
+       })
+        .then(productos => {
+            
+            res.render("admin/adminProducts",{
+                title:"productos",
+                productos:productos,
+                msg: "Estos son tus instrumentos"
+            })
+        })
+        .catch(error => res.send(error))
+
     },
 
+        
+    detailProduct : (req, res) => {
+
+        db.Product.findOne({
+            where:{
+                id : req.params.id
+            },
+            include:[{association:"categorias"}]
+            })
+            .then( producto => {
+           
+                res.render("/products/detalleProducto", {
+                    title: "+ Info del producto",
+                    producto
+                })
+            })
+            .catch(error => res.send(error))
+
+    },
    
 
     store: (req,res) => {
-        let errores = validationResult(req);
 
-        if(!errores.isEmpty()){
-            res.render("admin/cargaProducto",{
-                title:"cargando producto",
-                 errores: errores.errors,
-                 old: req.body
+        const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
+        const img = req.files[0].filename; 
+
+            db.Product.create({
+                type:tipo,
+                mark:marca,
+                instrument:instrumento,
+                id_category:categoria,
+                model:modelo,
+                price:valor,
+                color:color
             })
-        } else {
-
-            const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
-            const img = req.files[0].filename; 
-
-            let lastId = 0;
-        
-            productos.forEach( product => {
-                if(product.id> lastId){
-                    lastId = product.id;
-                }
-            })
-    
-            const newProduct = {
-                id: +lastId + 1,
-                tipo,
-                marca,
-                instrumento,
-                categoria,
-                modelo,
-                valor,
-                color,
-                img
-            }
-    
-            productos.push(newProduct);
-            fs.writeFileSync(path.join(Db_products), JSON.stringify(productos,null,2));
-    
-    
-            res.redirect("/products/admin/list")
-        }
+            .then(() => res.redirect("/")) 
        
     },
 
@@ -151,15 +154,6 @@ module.exports = {
             title:"resultado de la búsqueda",
             productos:resultado,
         });
-     },
-     detailProduct : (req, res) => {
-         
-        let producto = productos.find( producto => producto.id === +req.params.id);
-
-        res.render("detalleProducto", {
-            title: "+ Info del producto",
-            producto
-        })
-     },
+     }
      
 }

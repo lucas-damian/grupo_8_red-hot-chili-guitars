@@ -1,6 +1,6 @@
 module.exports = {
 	development: {
-		username: "root",//usuario y contraseña debe coincidir con los mismos en la base de datos
+		username: "root",//usuario y contraseña deben coincidir con los mismos en la base de datos
 		password: "root",
 		database: "db_red-hot-chili-guitars",
 		host: "127.0.0.1",

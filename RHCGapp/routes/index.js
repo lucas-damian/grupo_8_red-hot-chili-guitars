@@ -2,17 +2,15 @@ var express = require('express');
 const { cookie } = require('express-validator');
 var router = express.Router();
 
-let indexController = require("../controllers/indexController");
+let {index, detailProduct, categoria} = require("../controllers/indexController");
 const cookieCheck = require("../middlewares/cookieCheck");
 const userCheck = require("../middlewares/userCheck");
 
 
 
 /* GET home page. */
-router.get('/', cookieCheck ,indexController.index);
-/* router.get('/detalle-del-producto', indexController.detalleProducto); */
-router.get('/detalle-del-producto/:id',indexController.detailProduct);
-router.get('/categoria/:instrumento', indexController.categoria)
+router.get('/', cookieCheck ,index);
+router.get('/categoria/:instrumento', categoria)
 
 
 module.exports = router;

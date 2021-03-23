@@ -24,16 +24,14 @@
 			<ul class="productos-container">
 				<% productos.forEach(producto => { %>
 				<li class="productos-item">
-                    <div class="producto-img">
-                        <img src="/img/instrumentos/<%= producto.categoria %>/<%= producto.img %>"  alt="<%= producto.nombre %> " class="img--productos">
-                    </div>
+                  
                     
                     <p class="productos-text">
 					<%= producto.instrumento %>
                     </p>
 
 					<p class="productos-text">
-						<%= producto.categoria %>
+						<%= producto.categorias.name %>
 					</p>
                     
                     <p class="productos-text">

@@ -7,46 +7,49 @@
 
 <section class="container-products">
 	<ul class="productos-container">
-		<% producto.forEach(producto => { %>
-		<li class="productos-item">
-			<div class="producto-img">
-				<img src="/img/instrumentos/<%= producto.categoria %>/<%= producto.img %>"  alt="<%= producto.instrumento %> " class="img--productos">
-			</div>
+		
+		<% for(let i = 0; i < categoria.length ; i++ ) { %>
 			
-			<p class="productos-text">
-			<%= producto.instrumento %>
-			</p>
-	
-			<p class="productos-text">
-				<%= producto.categoria %>
-			</p>
+			<%	for(let j = 0 ; j < categoria[i].productos.length ; j++) {%>
+				
+				<li class="productos-item">
+
+					<p class="productos-text">
+					<%= categoria[i].productos[j].instrument %>
+					</p>
 			
-			<p class="productos-text">
-			<%=producto.marca %>
-			</p>
+					<p class="productos-text">
+						<%= categoria[i].name %>
+					</p>
+					
+					<p class="productos-text">
+					<%=categoria[i].productos[j].mark %>
+					</p>
+					
+					<p class="productos-text">
+					<%= categoria[i].productos[j].type %>  
+					</p>
+					
+					<p class="productos-text">
+					<%= categoria[i].productos[j].color %>
+					</p>
 			
-			<p class="productos-text">
-			<%= producto.tipo %>  
-			</p>
+					<p class="productos-text">
+						<%= categoria[i].productos[j].price %>
+					</p>
 			
-			<p class="productos-text">
-			<%= producto.color %>
-			</p>
-	
-			<p class="productos-text">
-				<%= producto.valor %>
-				</p>
-	
-			<div class="btns--container">
-	
-					<a class="btn--editar" href="/detalle-del-producto/<%= producto.id %> ">+info!</a> <!-- ARMAR LA RUTA POR GET, SEGUN SU ID -->
-	
-				<form action="<%= producto.id %>?_method=PUT" method="POST">
-					<button class="btn--borrar" type="submit">Agregar al carrito</button>
-				</form>
-			</div>
-		</li>
-		<% }) %>
+					<div class="btns--container">
+			
+							<a class="btn--editar" href="/products/detalle-del-producto/<%= categoria[i].productos[j].id %> ">+info!</a> <!-- ARMAR LA RUTA POR GET, SEGUN SU ID -->
+			
+						<form action="<%= categoria[i].productos[j].id %>?_method=PUT" method="POST">
+							<button class="btn--borrar" type="submit">Agregar al carrito</button>
+						</form>
+					</div>
+				</li>
+		<%	} %>
+		
+		<% } %>
 	</ul>
 	
 </section>
