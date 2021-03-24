@@ -54,6 +54,7 @@
 	font-family: lobster;
 	font-size: 2rem;
 	box-shadow: var(--primary-shadow-down);
+	transition: all .2s;
 
 }
 
@@ -101,5 +102,19 @@
 		top: 2rem;
 		right: 49%;
 		border-radius: .3rem;
+	}
+
+	.cargaProductos .btn--submit{
+		cursor: pointer;
+	}
+
+	.cargaProductos .btn--submit:hover,
+	.cargaProductos .btn--productos:hover{
+		transform: scale(1.1);
+	}
+
+	.cargaProductos .btn--submit:active,
+	.cargaProductos .btn--productos:active{
+		transform: scale(.9);
 	}
 }

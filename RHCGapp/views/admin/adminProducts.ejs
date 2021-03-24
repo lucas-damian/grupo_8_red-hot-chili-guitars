@@ -24,10 +24,13 @@
 			<ul class="productos-container">
 				<% productos.forEach(producto => { %>
 				<li class="productos-item">
-                  
+					
+					<div class="producto-img">
+						<img class="img--productos" src="/img/instrumentos/<%=producto.imagenes[0].name%>" alt="imagen de un/a <%=producto.instrument%>">
+					</div>
                     
                     <p class="productos-text">
-					<%= producto.instrumento %>
+					<%= producto.instrument %>
                     </p>
 
 					<p class="productos-text">
@@ -35,11 +38,11 @@
 					</p>
                     
                     <p class="productos-text">
-                    <%=producto.marca %>
+                    <%=producto.mark %>
                     </p>
                     
                     <p class="productos-text">
-                    <%= producto.tipo %>  
+                    <%= producto.tipe %>  
                     </p>
                     
                     <p class="productos-text">
@@ -47,7 +50,7 @@
                     </p>
 
 					<p class="productos-text">
-						<%= producto.valor %>
+						$<%= producto.price %>
 						</p>
 
                     <div class="btns--container">

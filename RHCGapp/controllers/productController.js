@@ -4,7 +4,7 @@ const db = require("../database/models");
 module.exports = {
     cargaProduc:(req,res) =>{
 
-        db.Category.findAll()
+        db.Categories.findAll()
             .then(categorias => res.render("admin/cargaProducto", {
                 title: "cargando instrumento",
                 categorias     
@@ -14,11 +14,12 @@ module.exports = {
 
     listar: (req,res) => {
 
-       db.Product.findAll({
-           include:[{association:"categorias"}]
+       db.Products.findAll({
+           include:[{association:"categorias"},
+                    {association:"imagenes"}]
        })
         .then(productos => {
-            
+            /* res.send(productos) */
             res.render("admin/adminProducts",{
                 title:"productos",
                 productos:productos,
@@ -32,7 +33,7 @@ module.exports = {
         
     detailProduct : (req, res) => {
 
-        db.Product.findOne({
+        db.Products.findOne({
             where:{
                 id : req.params.id
             },
@@ -40,7 +41,7 @@ module.exports = {
             })
             .then( producto => {
            
-                res.render("/products/detalleProducto", {
+                res.render("detalleProducto", {
                     title: "+ Info del producto",
                     producto
                 })
@@ -53,9 +54,8 @@ module.exports = {
     store: (req,res) => {
 
         const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
-        const img = req.files[0].filename; 
 
-            db.Product.create({
+            db.Products.create({
                 type:tipo,
                 mark:marca,
                 instrument:instrumento,
@@ -64,79 +64,104 @@ module.exports = {
                 price:valor,
                 color:color
             })
-            .then(() => res.redirect("/")) 
+            .then((newProduct) => {  
+                db.Images.create({
+                    name: (req.files[0]) ? req.files[0].filename : "default-image.png",
+                    id_product: newProduct.id
+                })
+                .then(() => {
+                    res.redirect("/products/admin/list")
+                })
+                .catch(error => res.send(error))
+
+            })
+            .catch(error => res.send(error))
        
     },
 
 
     produEdit: (req,res) => {
 
-        let producto = productos.find( producto => producto.id === +req.params.id);
-
-        res.render("admin/editProducts", {
-            title: "editando instrumento",
-            producto
-        })
+        let categorias = db.Categories.findAll();
         
+        let producto = db.Products.findOne({
+            where:{
+                id: req.params.id
+            }
+        })
+
+        Promise.all([categorias,producto])
+            .then(([categorias,producto]) => {
+                res.render("admin/editProducts",{
+                    title: "editando instrumento",
+                    producto,
+                    categorias
+                })
+            })
     },
 
     prodUpdate: (req, res) => {
-        
-        const {tipo, marca,instrumento,categoria, modelo, color, valor, file} = req.body
 
-       productos.forEach( producto => {
-        
-        if(producto.id === +req.params.id){
-           
-            producto.id = Number(req.params.id);
-            producto.tipo = tipo;
-            producto.marca = marca;
-            producto.categoria = categoria;
-            producto.instrumento = instrumento;
-            producto.modelo = modelo;
-            producto.color = color;
-            producto.valor = valor;
-            producto.file = file;
+        const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
 
-         }
-       });
-        
-       fs.writeFileSync(path.join(Db_products), JSON.stringify(productos,null,2));
-
-       res.redirect("/products/admin/list");
+            db.Products.update({
+                type:tipo.trim(),
+                mark:marca.trim(),
+                instrument:instrumento.trim(),
+                id_category:categoria,
+                model:modelo.trim(),
+                price:valor.trim(),
+                color:color.trim()
+            },{
+                where:{
+                    id:req.params.id
+                }
+            })
+            .then(() => {
+                res.redirect("/products/detalle-del-producto/"+req.params.id)
+            })
+            .catch(error => res.send(error))
+            
     },
 
     
     borrar: (req,res) => {
 
-        productos.forEach( producto => {
-            if(producto.id === +req.params.id){
-                let aEliminar = productos.indexOf(producto);
-                productos.splice(aEliminar,1);
+        db.Images.destroy({
+            where:{
+                id_product:req.params.id
             }
         })
-        
-        fs.writeFileSync(path.join(Db_products), JSON.stringify(productos,null,2));
+        .then( () => {
+            
+            db.Products.destroy({
+                where:{
+                    id:req.params.id
+                }
+            })
+                .then(() => {
+                    res.redirect("/products/admin/list")
+                })
+                .catch(error => res.send(error))
+        })
 
-       res.redirect("/products/admin/list");
+        
+
+
     },
     
     
     
     
     search: (req,res) => {
-        const resultado = productos.filter( product => {
-            return product.instrumento.toLowerCase().trim().includes(req.query.busqueda.toLowerCase().trim())
-        });
 
-        /* res.send(resultado); */
-        res.render("admin/adminProducts",{
-            title:"resultado de la búsqueda",
-            productos:resultado,
-            msg: "Resultados de la búsqueda"
-
-        });
+        db.Products.findAll()
+            .then()
+            .catch(error => res.send(error))
+      
     },
+    
+    
     listarUser: (req,res) => {
         res.render("userProducts",{
             title:"productos",
@@ -144,6 +169,7 @@ module.exports = {
             msg: "Estos son tus instrumentos"
         });
     },
+    
     searchUser: (req,res) => {
         const resultado = productos.filter( product => {
             return product.instrumento.toLowerCase().trim().includes(req.query.busqueda.toLowerCase().trim())

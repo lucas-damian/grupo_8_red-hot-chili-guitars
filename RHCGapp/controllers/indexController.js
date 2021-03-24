@@ -27,7 +27,7 @@ module.exports = {
     },
     
     categoria : (req, res) => {
-        db.Category.findAll({
+        db.Categories.findAll({
             include:[{association:"productos"}],
             where:{
                 name: req.params.instrumento 

@@ -8,16 +8,17 @@
   },
   {
     "id": 2,
-    "admin":false,
+    "admin": false,
     "userName": "pepe",
     "email": "pepe@gmail.com",
     "pass": "$2b$12$y06j.PPmKt8F6oCAvEJu.OXbYGWUoNz8SfS0MW2g..SSXR1sYUmFO"
   },
   {
     "id": 3,
-    "admin":false,
+    "admin": false,
     "userName": "gabriel",
     "email": "gabriel@gmail.com",
     "pass": "$2b$12$E4dVfntOjudlezH4xLE.xenJObXULwashlf4ARbGviEzwg5Sdry0i"
   }
+
 ]

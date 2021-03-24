@@ -23,7 +23,7 @@
         <div class="carjaIzquierda">
             
             <div class="log-row">
-              <select class="log--input" name="instrumento" id="instrumento" value="<%= producto.tipo %>" selected="<%= producto.tipo %>">
+              <select class="log--input" name="instrumento" id="instrumento" value="<%= producto.instrument %>" selected="<%= producto.instrument %>">
                 <option value="elegí instrumento" disabled>
                   elegí instrumento
                 </option>
@@ -50,25 +50,26 @@
             <div class="log-row">
               <label class="log--label" for="marca">Tipo de Instrumento :</label>
               
-              <input class="log--input" type="text" name="tipo" id="marca" placeholder="Gibson,Fender,Yamaha,etc.." value="<%= producto.tipo %> ">
+              <input class="log--input" type="text" name="tipo" id="marca" placeholder="Gibson,Fender,Yamaha,etc.." value="<%= producto.type %> ">
             </div>
             
             <div class="log-row">
               <label class="log--label" for="marca">Marca :</label>
               
-              <input class="log--input" type="text" name="marca" id="marca" placeholder="Gibson,Fender,Yamaha,etc.." value="<%= producto.marca %> ">
+              <input class="log--input" type="text" name="marca" id="marca" placeholder="Gibson,Fender,Yamaha,etc.." value="<%= producto.mark %> ">
             </div>
 
             <div class="log-row">
               <label class="log--label" for="categoria">Categorias: </label>
-              <select class="log--input"  name="categoria" id="categoria" selected="<%= producto.categoria %>"  value="<%= producto.categoria %>">
-                <option value="accesorios" disabled>elegí tu categoria</option>
-                <option value="accesorios">accesorios</option>
-                <option value="cuerdas">cuerdas</option>
-                <option value="percusion">percusion</option>
-                <option value="teclados">teclados</option>
-                <option value="vientos">vientos</option>
+              <select class="log--input"  name="categoria" id="categoria">
+                
+                <% categorias.forEach(categoria => { %>
+				
+                  <option <%=categoria.id == producto.id_category ? "selected" : null%> value="<%=categoria.id%>"><%=categoria.name%></option>
+                  
+                <% }) %>
               </select>
+             
               
             </div>
             
@@ -81,7 +82,7 @@
             <label for="color" class="log--label">Modelo :</label>
             
             <input class="log--input" type="text"  name="modelo" placeholder="blanco,negro,etc..." id="color"
-            value="<%= producto.modelo %> ">
+            value="<%= producto.model %> ">
           </div>
           
           <div class="log-row">
@@ -95,7 +96,7 @@
             <label for="valor" class="log--label">Valor :</label>
             
             <input class="log--input" type="text"  name="valor" placeholder="$10,$1000,etc.." id="valor"
-            value="<%= producto.valor %> ">
+            value="<%= producto.price %> ">
           </div>
           
           <div class="log-row">
@@ -106,7 +107,7 @@
           </div>
         
         <button class="btn--submit">guardar cambios</button>
-            <a href="/products/list" class="btn--productos">ver lista</a>
+            <a href="/products/admin/list" class="btn--productos">ver lista</a>
         
         
         </div>    
