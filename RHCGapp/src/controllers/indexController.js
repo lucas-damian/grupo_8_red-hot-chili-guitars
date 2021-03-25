@@ -1,19 +1,14 @@
 const fs = require("fs");
-const Db_productsKits = "./data/productos_kits.json";
-const Db_products = "./data/productos.json";
-const productos = JSON.parse(fs.readFileSync(Db_products,"utf-8"));
 const db = require("../database/models")
 
 module.exports = {
     
     index: (req,res) =>{
 
-       let kits = JSON.parse(fs.readFileSync(Db_products,"utf-8"));
-
-
+      /*  let kits = JSON.parse(fs.readFileSync(Db_products,"utf-8"));*/
         res.render("index", {
             title: "Red Hot Chilli Guitars",
-            kits
+            /* kits */
         });
     },
     
@@ -27,17 +22,20 @@ module.exports = {
     },
     
     categoria : (req, res) => {
+        
         db.Categories.findAll({
-            include:[{association:"productos"}],
             where:{
-                name: req.params.instrumento 
-            }
+                name:req.params.instrumento
+            },
+            include: [{association: 'productos',
+            include: [{association: 'imagenes'}]
+        }]
         })
-            .then(category => {
-                /* res.send(req.params.instrumento) */
-                res.render('produCategorias',{
-                    title:"estos son los instrumenos en stock",
-                    categoria: category
+            .then( categorias => {
+                /* res.send(categorias) */
+                res.render("produCategorias",{
+                    title:"categorias",
+                    categorias
                 })
             })
             .catch(error => res.send(error))
@@ -63,3 +61,5 @@ module.exports = {
     },
    
 }
+
+

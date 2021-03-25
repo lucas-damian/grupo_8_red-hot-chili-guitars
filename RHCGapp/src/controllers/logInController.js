@@ -1,10 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 const {validationResult} = require("express-validator")
-const userRout = "./data/users.json"
+/* const userRout = "/data/users.json" */
 const bcrypt = require("bcrypt");
 const { setUsers } = require("../data/users");
-const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
+/* const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8")); */
 
 /* const {getUsers, setUsers} = require(path.join('..', 'data', 'users'))  */
 

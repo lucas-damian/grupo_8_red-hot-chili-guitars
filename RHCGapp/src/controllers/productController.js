@@ -1,5 +1,6 @@
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
+const {Op} = require('sequelize');
 
 module.exports = {
     cargaProduc:(req,res) =>{
@@ -154,9 +155,22 @@ module.exports = {
     
     
     search: (req,res) => {
+        let buscar = req.query.busqueda.toLowerCase();
 
-        db.Products.findAll()
-            .then()
+        db.Products.findAll({
+            where:{
+                instrument:{
+                    [Op.substring]:buscar
+                }},
+            })
+            .then(productos => {
+                /* res.send(productos) */
+                res.render("listProducts",{
+                    title:"productos",
+                    productos:productos,
+                    msg: "Estos son tus instrumentos"
+                })
+            })
             .catch(error => res.send(error))
       
     },
