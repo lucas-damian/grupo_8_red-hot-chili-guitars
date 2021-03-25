@@ -2,6 +2,7 @@ const {check, body} = require("express-validator");
 /* const fs = require("fs");
 const userRout = "./data/users.json"
 const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8")); */
+const db = require("../database/models")
 
 module.exports = [
     check("userName")
@@ -10,20 +11,25 @@ module.exports = [
 
    check("email")
    .isEmail().withMessage("el email es requerido"),
+   
 
 
-   body("email")
+   body("email") 
    .custom(value => {
-       let result = users_db.find( user => {
-            return user.email === value;
-       });
-
-       if(result){
-           return false
-       } else {
-           return true
-       }
-   }).withMessage("el email, ya se encuentra registrado"),
+      
+        return db.Users.findOne({
+            where: {
+                email : value
+            }
+        })
+        .then(user =>{
+            console.log('user', user)
+            if(user){
+                return Promise.reject("el email ya esta registrado")
+            }
+        })
+      
+   }),
 
    check("pass")
     .notEmpty().withMessage("Es necesario una contraseña"),
@@ -36,12 +42,12 @@ module.exports = [
    
 
    body("pass2")
-   .custom((value,{req}) => {
-        if(value !== req.body.pass){
-            return false
-        }else{
-            return true
-        }
-   }).withMessage("las contraseñas no coinciden"),
+    .custom((value,{req}) => {
+            if(value !== req.body.pass){
+                return false
+            }else{
+                return true
+            }
+    }).withMessage("las contraseñas no coinciden"),
 
-]
+    ]

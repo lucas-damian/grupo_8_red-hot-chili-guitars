@@ -22,48 +22,27 @@ module.exports = {
 
         let errores = validationResult(req);
 
-       
-        if(!errores.isEmpty()){
+
+        if(errores.isEmpty()){
+
+            const {userName, email, pass} = req.body
+
             
-           res.render("logeo",{
-               title:"login page",
-                errores: errores.errors,
-                old: req.body
-           })
-       } else {
-        
-        const{userName,email,pass} = req.body;
 
-       let lastID = 0;
-       users_db.forEach(user => {
-           if(user.id > lastID){
-               lastID = user.id;
-           }
-       });
-
-       let hashPass = bcrypt.hashSync(pass.trim(),12);
-
-
-       let newUser = {
-           id: +lastID + 1,
-           userName: userName.trim(),
-           email,
-           pass: hashPass
-       }
-  
-      
-       users_db.push(newUser);
-
-       setUsers(users_db);
-
-       res.redirect('/users')
-       
-       fs.writeFileSync(path.join("./data/users.json"), JSON.stringify(users_db,null,2),"utf-8");
- 
-       return res.redirect("/users");
-    
-    }
-
+            db.Users.create({
+                name: userName.trim(),
+                email,
+                password : bcrypt.hashSync(pass, 12), 
+            })
+            .then(() =>res.redirect('/users'))
+            .catch(error => res.send(error))
+        }else{
+            return res.render('logeo',{
+                title:"login page",
+                errores : errores.errors,
+                old : req.body
+            })
+        }
     },
 
 

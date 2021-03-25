@@ -2,6 +2,7 @@ const menuBtn = document.querySelectorAll(".menu-btn");
 const barra = document.getElementById("barra");
 const carritoBtn = document.querySelectorAll(".carrito--row");
 const extendedBtn = document.querySelectorAll(".carrito-extended");
+const botonRegister = document.querySelector('.btn--register')
 
 for(let i = 0; i < menuBtn.length ; i++){
     menuBtn[i].addEventListener("click", () => {
@@ -20,6 +21,12 @@ for(let i = 0; i < carritoBtn.length ; i++){
         } 
     })
 } 
+
+window.addEventListener('load',{
+    function(event){
+        botonRegister.preventDefault(event)
+    }
+})
 
 /* let carritoBtn = document.getElementById("c1");
 
