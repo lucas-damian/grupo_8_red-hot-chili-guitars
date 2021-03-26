@@ -1,11 +1,11 @@
 const fs = require("fs");
 const path = require("path");
 const {validationResult} = require("express-validator")
-/* const userRout = "/data/users.json" */
+const userRout = "./data/users.json"
 const bcrypt = require("bcrypt");
 const { setUsers } = require("../data/users");
-const db = require("../database/models")
 /* const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8")); */
+const db = require("../database/models")
 /* const {getUsers, setUsers} = require(path.join('..', 'data', 'users'))  */
 
 
@@ -47,7 +47,6 @@ module.exports = {
 
 
     processLogin: (req,res) => {
-
         let errores = validationResult(req);
         if(errores.isEmpty()){
             const { email, password, recordar} = req.body;
@@ -84,9 +83,10 @@ module.exports = {
                 errores: errores.errors
             })
         }
- 
-     /*    let errores = validationResult(req);
 
+    /* 
+     let errores = validationResult(req);
+  
         if(!errores.isEmpty()){
             res.render('logeo',{
                 title: "logueo",
@@ -94,45 +94,43 @@ module.exports = {
             })
         } else {
             
-            const {userEmail, password, recordar} = req.body;
-            let result = users_db.find( admin => admin.email.toLowerCase() == userEmail.toLowerCase().trim());
-            
+          const { userEmail, pass, recordar} = req.body;
 
-            if (result){
+          
+           
+            db.Users.findOne({
+                where: {
+                    userEmail
+                }
+            })
+            .then(result => {
                 if(bcrypt.compareSync(password.trim(), result.pass.trim())){
 
-                        
-                            req.session.user = {
-                                
-                                userName : result.userEmail,
-                                admin: result.admin
-                               
-                            }
-
-                            if(recordar){
-                                res.cookie("userStar", req.session.user, {
-                                    maxAge: 1000 * 60
-                                })
-                            }
-                           
+                    req.session.user = {
+                        id : result.id,
+                        email : result.userEmail,
+                       /*  rol */
+                    /*}
+                    if(recordar){
+                        res.cookie('userStar', req.session.user, {
+                            maxAge : 1000 * 60
+                        })
+                    }   
+                    res.send(req.body)
                     return res.redirect("/users/profile")
-                 
-                } else {
-                    
-                    res.render('logeo',{
-                        title: "logueo",
-                        errores: "contraseña inválida"
+
+                }else{
+
+                    res.render('logeo', {    
+                        title: "logueo",                  
+                        errores: "contraseña inválida",
+                        
                     })
-           
-                 }
-            } else {
-                res.render('logeo',{
-                    title: "logueo",
-                    errores: errores.errors
-                })
-            }
-        } */
-         
+            
+                }
+            })
+        } */ 
+
     }, 
 
     profile:(req,res) => {
