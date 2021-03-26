@@ -1,15 +1,12 @@
 {
-  "name": "src",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "rhcpapp",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node ./src/bin/www"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "bcrypt": "^4.0.0",
+    "bcrypt": "^5.0.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",

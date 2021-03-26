@@ -6,7 +6,6 @@ const bcrypt = require("bcrypt");
 const { setUsers } = require("../data/users");
 const db = require("../database/models")
 /* const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8")); */
-
 /* const {getUsers, setUsers} = require(path.join('..', 'data', 'users'))  */
 
 
