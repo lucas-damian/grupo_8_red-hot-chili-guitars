@@ -1,15 +1,15 @@
 const {check, body} = require("express-validator");
 /* const fs = require("fs");
 const userRout = "./data/users.json"
-const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
- */
+const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8")); */
+
 
 module.exports =[
 
     check("email")
-    .isEmail().withMessage("credenciales inválidas"),
+    .isEmail().withMessage("Email incorrecto"),
 
     check('password')
     .notEmpty()
-    .withMessage('debes ingresar una contraseña'),
+    .withMessage('Debes ingresar una contraseña'),
 ]

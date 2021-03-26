@@ -1,1 +1,1 @@
-El usuario ingreso a la ruta: /img/instrumentos/cuerdas/guitarra_acustica_00.png
+El usuario ingreso a la ruta: /stylesheets/sections/productSearch.css
