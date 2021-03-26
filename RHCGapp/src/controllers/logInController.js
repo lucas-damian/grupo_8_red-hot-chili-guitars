@@ -4,6 +4,7 @@ const {validationResult} = require("express-validator")
 /* const userRout = "/data/users.json" */
 const bcrypt = require("bcrypt");
 const { setUsers } = require("../data/users");
+const db = require("../database/models")
 /* const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8")); */
 
 /* const {getUsers, setUsers} = require(path.join('..', 'data', 'users'))  */
@@ -47,8 +48,45 @@ module.exports = {
 
 
     processLogin: (req,res) => {
- 
+
         let errores = validationResult(req);
+        if(errores.isEmpty()){
+            const { email, password, recordar} = req.body;
+
+            return db.Users.findOne({
+                where : {
+                    email
+                }
+            })
+            .then(result => {
+                
+                if(result && bcrypt.compareSync(password, result.password)){
+                  
+                    req.session.user = {
+                        id : result.id,
+                        name : result.email,
+                    }
+                    if(recordar){
+                        res.cookie('userStar',req.session.user, {
+                            maxAge : 1000 * 60
+                        })
+                    }
+                    return res.redirect('/users/profile')
+                }else {
+                    res.render('logeo',{
+                        title: "logueo",
+                        errores: "contraseña inválida"
+                    })
+                }
+            })
+        } else {
+            res.render('logeo',{
+                title: "logueo",
+                errores: errores.errors
+            })
+        }
+ 
+     /*    let errores = validationResult(req);
 
         if(!errores.isEmpty()){
             res.render('logeo',{
@@ -88,13 +126,13 @@ module.exports = {
                     })
            
                  }
-             } else {
+            } else {
                 res.render('logeo',{
                     title: "logueo",
                     errores: errores.errors
                 })
-             }
-        }
+            }
+        } */
          
     }, 
 

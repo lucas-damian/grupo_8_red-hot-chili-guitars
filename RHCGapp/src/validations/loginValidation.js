@@ -6,7 +6,7 @@ const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
 
 module.exports =[
 
-    check("userEmail")
+    check("email")
     .isEmail().withMessage("credenciales inválidas"),
 
     check('password')
