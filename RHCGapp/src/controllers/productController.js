@@ -14,47 +14,64 @@ module.exports = {
     },
 
     listar: (req,res) => {
-
-       db.Products.findAll({
-           include:[{association:"categorias"},
-                    {association:"imagenes"}]
-       })
-        .then(productos => {
-            /* res.send(productos) */
-            res.render("admin/adminProducts",{
-                title:"productos",
-                productos:productos,
-                msg: "Estos son tus instrumentos"
+        const error = validationResult(req)
+        
+        if(error.isEmpty()){
+            db.Products.findAll({
+                include:[{association:"categorias"},
+                         {association:"imagenes"}],
+                order:[["id","DESC"]]
             })
-        })
-        .catch(error => res.send(error))
+             .then(productos => {
+                 /* res.send(productos) */
+                 res.render("admin/adminProducts",{
+                     title:"productos",
+                     productos:productos,
+                     msg: "Estos son tus instrumentos"
+                 })
+             })
+             .catch(error => res.send(error))
+        }else{
+            res.send(error)
+        }
+      
 
     },
 
         
     detailProduct : (req, res) => {
 
-        db.Products.findOne({
-            where:{
-                id : req.params.id
-            },
-            include:[{association:"categorias"}]
-            })
-            .then( producto => {
-           
-                res.render("detalleProducto", {
-                    title: "+ Info del producto",
-                    producto
-                })
-            })
-            .catch(error => res.send(error))
+        const error = validationResult(req)
 
+        if(error.isEmpty()){
+
+            db.Products.findOne({
+                where:{
+                    id : req.params.id
+                },
+                include:[{association:"categorias"}]
+                })
+                .then( producto => {
+               
+                    res.render("detalleProducto", {
+                        title: "+ Info del producto",
+                        producto
+                    })
+                })
+                .catch(error => res.send(error))
+        
+        }else{
+            res.send(error)
+        }
     },
    
 
     store: (req,res) => {
 
         const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
+        const error = validationResult(req)
+            
+        if(error.isEmpty()){
 
             db.Products.create({
                 type:tipo,
@@ -66,17 +83,27 @@ module.exports = {
                 color:color
             })
             .then((newProduct) => {  
+                
                 db.Images.create({
                     name: (req.files[0]) ? req.files[0].filename : "default-image.png",
                     id_product: newProduct.id
                 })
                 .then(() => {
+                    
                     res.redirect("/products/admin/list")
                 })
                 .catch(error => res.send(error))
 
             })
             .catch(error => res.send(error))
+        
+        }else{
+            /* res.send(error) */
+            res.render("partials/error-msg",{
+                errores:error
+            })
+            /* res.send(error.msg) */
+        }
        
     },
 
@@ -194,6 +221,10 @@ module.exports = {
             title:"resultado de la búsqueda",
             productos:resultado,
         });
-     }
+     },
+
+/*      kits: (req,res) =>{
+         db.Products.
+     } */
      
 }
