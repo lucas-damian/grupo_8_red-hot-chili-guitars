@@ -26,7 +26,7 @@ Nos dedicamos a la venta de Instrumentos y accesorios musicales, ofrecemos las m
 
 ## Breve descripcion de los integrantes del grupo:
 
-### Red hot chili guitars es un grupo integrado por 4 personas, nos inspiramos en la banda Red Hot Chili Peppers para orientarnos, todos tenemos un gusto en común que nos representa y es el amor por la música y el Rock, estos son algunos datos de nosotros para que nos conozcas mas :
+### Somo sun grupo de estudiantes de programación WEB FULLSTACK que decidió tomar su trabajo integrador de manera más artística y apareció la casualidad de que todos conocemos a la emblematica banda(los red hot chilli peppers). Así que eh aquí nuestro proyecto :
 
 • Sebastian krawiec, tengo 26 años, estudié diseño grafico en la UBA, recibido del secundario de diseñador de interiores, fanático del buen diseño y las mejoras constantes
 acróbata callejero por hobbie, estudiando de todo y jugador de todo lo que sea jugable.
