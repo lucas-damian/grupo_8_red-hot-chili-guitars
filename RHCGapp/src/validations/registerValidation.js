@@ -1,7 +1,7 @@
 const {check, body} = require("express-validator");
-const fs = require("fs");
+/* const fs = require("fs");
 const userRout = "./data/users.json"
-const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8"));
+const users_db = JSON.parse(fs.readFileSync(userRout,"utf-8")); */
 const db = require("../database/models")
 
 module.exports = [
@@ -23,7 +23,6 @@ module.exports = [
             }
         })
         .then(user =>{
-            console.log('user', user)
             if(user){
                 return Promise.reject("el email ya esta registrado")
             }

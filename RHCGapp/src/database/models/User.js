@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes)=>{
         },
         first_name : {
             type : dataTypes.STRING(100),
-            allowNull : false
+
         },
         email : {
             type : dataTypes.STRING(150),
@@ -27,15 +27,12 @@ module.exports = (sequelize, dataTypes)=>{
         },
         dni : {
             type : dataTypes.INTEGER,
-            allowNull : false
         },
         address : {
             type : dataTypes.STRING(100),
-            allowNull : false
         },
         rol : {
             type : dataTypes.STRING(100),
-            allowNull : false,
             defaultValue: 'user'
         }
     }
@@ -48,13 +45,7 @@ module.exports = (sequelize, dataTypes)=>{
     
     const User = sequelize.define(alias, cols, config)
 
-  /*   User.associate = function (models){
-        
-        User.hasOne(models.Cart, {
-            as : "carrito",
-            foreignKey : "id_category"
-        })
-    } */
+   
 
 
     return User
