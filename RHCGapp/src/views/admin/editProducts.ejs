@@ -73,6 +73,17 @@
               
             </div>
             
+            <div class="kit--row">
+              <label class="log--label" for="kit">Habilitar para Kit</label>
+        
+              <input class="kit--check" type="checkbox" name="kit" id="kit"/>
+              </div>
+        
+              <div class="desc-row">
+              <label class="log--label" for="desc">Descripción</label>
+        
+              <textarea class="description log--input" name="description" id="desc" cols="30" rows="3"><%= producto.description%></textarea>
+              </div>
           
         </div>
 
@@ -105,9 +116,12 @@
             <input class="log--input" type="file"  name="file" class="form-control-file" id="formImg"
             value="<%= producto.img %>" >
           </div>
-        
-        <button class="btn--submit">guardar cambios</button>
-            <a href="/products/admin/list" class="btn--productos">ver lista</a>
+       
+          <div class="log-row">
+          <button class="btn--submit">guardar cambios</button>
+          <a href="/products/admin/list" class="btn--productos">ver lista</a>
+        </div>
+      
         
         
         </div>    

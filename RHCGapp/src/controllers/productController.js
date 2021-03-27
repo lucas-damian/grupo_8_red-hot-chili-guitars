@@ -68,7 +68,7 @@ module.exports = {
 
     store: (req,res) => {
 
-        const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
+        const {tipo,modelo,marca,instrumento,categoria,valor,color,kit,description} = req.body;
         const error = validationResult(req)
             
         if(error.isEmpty()){
@@ -80,6 +80,8 @@ module.exports = {
                 id_category:categoria,
                 model:modelo,
                 price:valor,
+                description,
+                kit: kit.length != 0 ? "on" : "off" ,
                 color:color
             })
             .then((newProduct) => {  
@@ -130,14 +132,17 @@ module.exports = {
 
     prodUpdate: (req, res) => {
 
-        const {tipo,modelo,marca,instrumento,categoria,valor,color} = req.body;
+        const {tipo,modelo,marca,instrumento,categoria,valor,color,kit,description} = req.body;
 
+            /* res.send(req.body) */
             db.Products.update({
                 type:tipo.trim(),
                 mark:marca.trim(),
                 instrument:instrumento.trim(),
                 id_category:categoria,
                 model:modelo.trim(),
+                description: description.trim(),
+                kit:kit,
                 price:valor.trim(),
                 color:color.trim()
             },{
@@ -145,7 +150,7 @@ module.exports = {
                     id:req.params.id
                 }
             })
-            .then(() => {
+            .then((product) => {
                 res.redirect("/products/detalle-del-producto/"+req.params.id)
             })
             .catch(error => res.send(error))
@@ -209,22 +214,19 @@ module.exports = {
             productos:productos,
             msg: "Estos son tus instrumentos"
         });
-    },
+    }/* ,
     
     searchUser: (req,res) => {
         const resultado = productos.filter( product => {
             return product.instrumento.toLowerCase().trim().includes(req.query.busqueda.toLowerCase().trim())
         });
 
-        /* res.send(resultado); */
+        res.send(resultado);
         res.render("userProducts",{
             title:"resultado de la búsqueda",
             productos:resultado,
         });
-     },
-
-/*      kits: (req,res) =>{
-         db.Products.
      } */
+
      
 }

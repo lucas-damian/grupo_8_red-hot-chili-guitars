@@ -28,7 +28,7 @@ module.exports = {
             const {userName, email, pass} = req.body
 
             
-
+           
             db.Users.create({
                 name: userName.trim(),
                 email,
@@ -36,11 +36,13 @@ module.exports = {
             })
             .then(() =>res.redirect('/users'))
             .catch(error => res.send(error))
+            
         }else{
-            return res.render('logeo',{
-                title:"login page",
-                errores : errores.errors,
-                old : req.body
+                
+                return res.render('logeo',{
+                    title:"login page",
+                    errores : errores.errors,
+                    old : req.body
             })
         }
     },
@@ -48,6 +50,7 @@ module.exports = {
 
     processLogin: (req,res) => {
         let errores = validationResult(req);
+        
         if(errores.isEmpty()){
             const { email, password, recordar} = req.body;
 
@@ -63,13 +66,16 @@ module.exports = {
                     req.session.user = {
                         id : result.id,
                         name : result.email,
+                        rol: result.rol
                     }
                     if(recordar){
-                        res.cookie('userStar',req.session.user, {
+                        res.cookie('userStar', req.session.user, {
                             maxAge : 1000 * 60
                         })
                     }
+                   
                     return res.redirect('/users/profile')
+                
                 }else {
                     res.render('logeo',{
                         title: "logueo",

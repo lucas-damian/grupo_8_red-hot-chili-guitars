@@ -15,7 +15,6 @@ module.exports = (sequelize, dataTypes)=>{
         },
         first_name : {
             type : dataTypes.STRING(100),
-
         },
         email : {
             type : dataTypes.STRING(150),
@@ -42,12 +41,12 @@ module.exports = (sequelize, dataTypes)=>{
         timestamps : false
     }
 
-    
+
     const User = sequelize.define(alias, cols, config)
 
-   
+
 
 
     return User
 
-}   
+}

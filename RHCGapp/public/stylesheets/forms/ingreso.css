@@ -71,14 +71,14 @@ justify-content: space-between;
 	font-family: arimo;
 }
 
-.ingreso .log--check{
+.log--check{
 	font-size: 1.5rem;
 	font-family: arimo;
 	text-align: center;
 	margin-right: 1rem;
 }
 
-.ingreso .check-row{
+.check-row{
 	flex-direction: row;
 	align-self: center;
 	align-items: center;

@@ -28,10 +28,35 @@
 	font-size: 1.5rem;
     box-shadow: var(--primary-shadow-down);
 }
-.cargaProductos .carga div{	
+.cargaProductos .log-row{	
 	margin-bottom: 1rem;
 	display: flex;
 	flex-direction: column;	
+}
+
+
+.cargaProductos .kit--row{
+	
+	margin: 1.5rem 0 1rem 0;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: .3rem;
+	padding: .3rem 1rem;
+	background-color: transparent;
+	box-shadow: inset .3rem .3rem 1rem rgba(126, 126, 126, 0.4), inset -.3rem -.3rem 1rem rgba(126, 126, 126, 0.4);
+}
+
+.cargaProductos .kit--check{
+	margin-left: 2rem;
+}
+
+.cargaProductos .desc-row{
+	margin-bottom: unset;
+}
+
+.cargaProductos .description{
+	padding: 1rem;
 }
 
 .cargaProductos .formSelect{
@@ -55,7 +80,7 @@
 	font-size: 2rem;
 	box-shadow: var(--primary-shadow-down);
 	transition: all .2s;
-
+	cursor: pointer;
 }
 
 .cargaProductos .btn--submit{
@@ -69,6 +94,13 @@
 .cargaProductos .btn--productos{
 	background-color: var(--color-primary-green);
 	color: var(--color-primary-yellow);
+}
+
+
+@media screen and (min-width:768px){
+	.cargaProductos .desc-row{
+		margin-bottom: 3rem;
+	}
 }
 
 
@@ -102,6 +134,10 @@
 		top: 2rem;
 		right: 49%;
 		border-radius: .3rem;
+	}
+
+	.cargaProductos .desc-row{
+		margin-bottom: unset;
 	}
 
 	.cargaProductos .btn--submit{

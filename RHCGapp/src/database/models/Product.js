@@ -37,6 +37,10 @@ module.exports = (sequelize, dataTypes)=>{
             type : dataTypes.STRING,
             allowNull : true
         },
+        kit : {
+            type : dataTypes.STRING,
+            allowNull : true
+        },
         id_category : {
             type : dataTypes.INTEGER
         },

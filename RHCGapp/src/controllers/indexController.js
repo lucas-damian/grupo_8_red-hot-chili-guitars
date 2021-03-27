@@ -2,14 +2,25 @@ const fs = require("fs");
 const db = require("../database/models")
 
 module.exports = {
+
     
     index: (req,res) =>{
-
-      /*  let kits = JSON.parse(fs.readFileSync(Db_products,"utf-8"));*/
-        res.render("index", {
-            title: "Red Hot Chilli Guitars",
-            /* kits */
-        });
+        db.Products.findAll({
+            where:{
+                kit: "on"
+            },
+            include:[{association:"categorias"},
+                       {association:"imagenes"}]
+        })
+           .then( kits => {
+               
+               /* res.send(kits) */
+               res.render("index",{
+                   title:"la casa de los instrumentos",
+                   kits
+               })
+           })
+           .catch(error => res.send(error))
     },
     
     carrito: (req, res) => {

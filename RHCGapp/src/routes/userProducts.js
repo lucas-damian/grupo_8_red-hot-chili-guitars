@@ -7,7 +7,7 @@ router.get('/productos', listarUser)
 router.get('/productos/:id', detailProduct)
 
 /* router.get('/search' , searchUser); */
-router.get('/search/:busqueda' , searchUser);
+/* router.get('/search/:busqueda' , searchUser); */
 
 
 

@@ -89,7 +89,20 @@
 
 					
           </select>
-				</div>
+		</div>
+		  
+		<div class="kit--row">
+			<label class="log--label" for="kit">Habilitar para Kit</label>
+
+			<input class="kit--check" type="checkbox" name="kit" id="kit"/>
+		  </div>
+
+		  <div class="desc-row">
+			<label class="log--label" for="desc">Descripción</label>
+
+			<textarea class="description log--input" name="description" id="desc" cols="30" rows="3"></textarea>
+		  </div>
+				
 			</div>
 
 			<div class="cajaDerecha">
@@ -137,8 +150,11 @@
 					/>
 				</div>
 
-				<button class="btn--submit">cargar</button>
-				<a href="products/admin/list" class="btn--productos">ver lista</a>
+				<div class="log-row">
+
+					<button class="btn--submit">cargar</button>
+					<a href="products/admin/list" class="btn--productos">ver lista</a>
+				</div>
 			</div>
 		</form>
 	</main>
