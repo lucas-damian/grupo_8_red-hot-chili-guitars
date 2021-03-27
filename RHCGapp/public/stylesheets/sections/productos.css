@@ -1,16 +1,9 @@
-body{
+/* body{
     background-image: var(--background);
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-blend-mode: color-burn; */
-}
-.container-products{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    /* background-image: var(--background); */
-}
+    background-blend-mode: color-burn; 
+} */
 
 .productos{
     width: 100vw;
@@ -19,7 +12,17 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: var(--background);
+    background-image: var(--background) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    /* background-image: var(--background); */
 }
 
 .productos-title{
@@ -107,16 +110,36 @@ body{
 }
 
 
- .btn--goTop{
-    background-color: var(--color-primary-darkRed);
-    color: var(--color-primary-yellow);
-    position: fixed;
-    right: 1rem;
-    bottom: 12rem;
-    font-size: 1.8rem;
-    padding: .5rem .8rem;
-    border-radius: 5rem;
-    box-shadow: var(--primary-shadow-down);
+.paginator-row{
+
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paginator-index{
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    background-color: rgba(216, 216, 216, 0.473);
+    border-radius: 50%;
+    text-align: center;
+    font-family: arimo;
+    color: var(--color-primary-darkRed);
+}
+
+.paginator-btn{
+    height: 4rem;
+    width: 4rem;
+    display: inline-block;
+    background-image: url("/img/icons/icon_chevron.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .2s;
+}
+
+.paginator-btn:nth-child(1){
+    transform: rotate(180deg);
 }
 
 @media screen and (min-width:768px){
@@ -142,7 +165,7 @@ body{
         background-image: unset;
         padding: 15rem 0 20rem 0;
     }
-    
+
     .productos-item{
         width: 23vw;
     }
@@ -155,5 +178,43 @@ body{
     .btn--borrar:active{
         transform: scale(0.9);
         opacity: .9;
+    }
+
+
+    .error-row{
+        margin: 10rem 0 3rem 0;
+    }
+
+    .paginator-row{
+
+        width: 20%;
+        margin-top: 4rem;
+    }
+
+    .paginator-index{
+        padding: 1rem 2rem;
+        font-size: 3rem;
+    }
+
+    .paginator-btn{
+        width: 5rem;
+        height: 5rem;
+    }
+
+
+    .paginator-btn:not(:nth-child(1)):hover{
+        transform: scale(1.1);
+    }
+
+    .paginator-btn:not(:nth-child(1)):active{
+        transform: scale(0.9);
+    }
+
+    .paginator-btn:nth-child(1):hover{
+        transform: rotate(180deg) scale(1.1);
+    }
+
+    .paginator-btn:nth-child(1):active{
+        transform: rotate(180deg) scale(0.9);
     }
 }

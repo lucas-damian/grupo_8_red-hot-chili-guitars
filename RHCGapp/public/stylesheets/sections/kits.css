@@ -1,6 +1,9 @@
 .kits {
 	padding: 6rem 0;
 	width: 100vw;
+	background-image: var(--background);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .kits .kits--title {

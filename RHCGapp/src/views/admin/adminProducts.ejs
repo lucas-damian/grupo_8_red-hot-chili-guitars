@@ -13,7 +13,11 @@
 		<section class="productos">
 
 		<% if (productos.length === 0){ %>
-			<h2 class="productos-title" id="top">No se encontró la búsqueda</h2>
+
+			<div class="error-row">
+				
+				<h2 class="productos-title" id="top">No se encontró la búsqueda</h2>
+			</div>
 		<!-- mensaje de error -->
 		<%- include('../partials/error-msg') %>
 		<!-- /mensaje de error -->
@@ -64,9 +68,23 @@
 				</li>
 				<% }) %>
 			</ul>
-		<% } %>	
+		
+			<div class="paginator-row">
+				<a href="" class="paginator-btn">
+					
+				</a>
+	
+				<span class="paginator-index">1</span>
+				
+				<a href="" class="paginator-btn">
+					
+				</a>
+			</div>
 			
-            <a href="#top" class="btn--goTop"><i class="fas fa-chevron-circle-up"></i></a>
+
+		
+		<% } %>	
+		
 		</section>
 
 		<!-- footer -->

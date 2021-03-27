@@ -15,7 +15,7 @@
 		<div class="nav__container">
 			<form
 				class="header__form"
-				action="/categoria/search/:busqueda"
+				action="/products/:busqueda"
 				method="GET"
 			>
 				<div class="search-bar">
@@ -133,11 +133,13 @@
 		<li class="item--header">
 			<a href="/" class="btn--header">home</a>
 		</li>
-		
-
 	
 	</ul>
-	<a class="btn--cross menu-btn"><i class="far fa-times-circle"></i></a>
+	
+	<a class="drumstick menu-btn">
+		<img class="drumstick--img" src="/img/icons/icon_01.png" alt="" load="lazy"/>
+	</a>
+	
 	<% if (locals.user) { %>
 		<a href="/users/logout" class="btn--logeoRegistro__mobile btn--cierre"> cerrar sesion </a>
 		

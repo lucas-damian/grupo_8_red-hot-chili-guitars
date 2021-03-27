@@ -17,10 +17,27 @@ module.exports = {
         const error = validationResult(req)
         
         if(error.isEmpty()){
+
+           /*  const pageAsNumber = Number.parseInt(req.query.page)
+            const sizeAsNumber = Number.parseInt(req.query.size)
+
+
+            let page = 0
+            if(!Number.isNaN(pageAsNumber) && pageAsNumber > 0){
+                page = pageAsNumber;
+            }
+
+            let size = 6;
+            if(!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0 && sizeAsNumber < 6){
+                size = sizeAsNumber
+            } */
+            
             db.Products.findAll({
                 include:[{association:"categorias"},
                          {association:"imagenes"}],
-                order:[["id","DESC"]]
+                order:[["id","DESC"]],
+             /*    limit:size,
+                offset: page * size */
             })
              .then(productos => {
                  /* res.send(productos) */
@@ -31,6 +48,9 @@ module.exports = {
                  })
              })
              .catch(error => res.send(error))
+       
+       
+       
         }else{
             res.send(error)
         }
@@ -142,7 +162,7 @@ module.exports = {
                 id_category:categoria,
                 model:modelo.trim(),
                 description: description.trim(),
-                kit:kit,
+                kit:kit != "on" ? "off" : "on",
                 price:valor.trim(),
                 color:color.trim()
             },{
@@ -189,19 +209,24 @@ module.exports = {
     search: (req,res) => {
         let buscar = req.query.busqueda.toLowerCase();
 
+       
         db.Products.findAll({
             where:{
                 instrument:{
-                    [Op.substring]:buscar
+                    [Op.like]:`%${buscar}%`
                 }},
+                include:[{association:"categorias"},
+                         {association:"imagenes"}]
             })
             .then(productos => {
-                /* res.send(productos) */
-                res.render("listProducts",{
+
+                    /* res.send(productos) */
+                    res.render("admin/adminProducts",{
                     title:"productos",
                     productos:productos,
                     msg: "Estos son tus instrumentos"
                 })
+ 
             })
             .catch(error => res.send(error))
       
@@ -214,7 +239,9 @@ module.exports = {
             productos:productos,
             msg: "Estos son tus instrumentos"
         });
-    }/* ,
+    }
+    
+    /* ,
     
     searchUser: (req,res) => {
         const resultado = productos.filter( product => {

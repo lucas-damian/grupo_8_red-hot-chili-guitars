@@ -16,7 +16,7 @@ module.exports = {
                
                /* res.send(kits) */
                res.render("index",{
-                   title:"la casa de los instrumentos",
+                   title:"Red Hot Chili Guitars",
                    kits
                })
            })
