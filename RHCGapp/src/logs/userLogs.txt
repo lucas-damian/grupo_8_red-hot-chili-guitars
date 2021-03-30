@@ -1,1 +1,1 @@
-El usuario ingreso a la ruta: /favicon.ico
+El usuario ingreso a la ruta: /
