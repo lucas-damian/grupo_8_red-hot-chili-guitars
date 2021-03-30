@@ -11,15 +11,13 @@ window.addEventListener('load', function(){
     $passErrors=qs('#passErrors'),
     $pass2=qs('#pass2'),
     $pass2Errors=qs('#pass2Errors'),
-    $avatar=qs('#avatar'),
-    $avatarErrors=qs('#avatarErrors'),
     regExAlpha= /^[a-zA-Z\sñáéíóúü ]*$/,
     regExEmail= /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExPass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
     
     
     
-    $inputName.addEventListener('blur', function(){
+    $inputName.addEventListener('submit', function(){
         console.log($inputName.value.trim())
         switch (true) {
             case !$inputName.value.trim():
@@ -38,7 +36,7 @@ window.addEventListener('load', function(){
         }
     })
     
-    $email.addEventListener('blur', function() {
+    $email.addEventListener('submit', function() {
         switch (true) {
             case !$email.value.trim():
             $emailErrors.innerHTML = 'el email es requerido';
@@ -55,7 +53,7 @@ window.addEventListener('load', function(){
             break;
         }
     })
-    $pass.addEventListener('blur', function() {
+    $pass.addEventListener('submit', function() {
         switch (true) {
             case !$pass.value.trim():
             $passErrors.innerHTML = 'Es necesario una contraseña';
@@ -72,7 +70,7 @@ window.addEventListener('load', function(){
             break;
         }
     })
-    $pass2.addEventListener('blur', function(){
+    $pass2.addEventListener('submit', function(){
         switch (true) {
             case !$pass2.value.trim():
             $pass2Errors.innerHTML = 'Debes reingresar la contraseña';
