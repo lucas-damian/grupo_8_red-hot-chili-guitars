@@ -69,10 +69,11 @@ module.exports = {
                 where:{
                     id : req.params.id
                 },
-                include:[{association:"categorias"}]
+                include:[{association:"categorias"},
+                         {association:"imagenes"}]
                 })
                 .then( producto => {
-               
+                    /* res.send(producto) */
                     res.render("detalleProducto", {
                         title: "+ Info del producto",
                         producto

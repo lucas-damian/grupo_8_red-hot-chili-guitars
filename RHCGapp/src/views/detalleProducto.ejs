@@ -3,106 +3,86 @@
 <!-- /head --> 
 
 <body>
-    <!-- header -->    
-    <%- include('partials/header')  %>
-    <!-- /header -->
+    <div class="detalle-main">
+        <!-- header -->    
+        <%- include('partials/header')  %>
+        <!-- /header -->
 
-    <main class="container-main">
+        <section class="detalle-product">
 
+        <h1 class="title-main"><%= producto.categorias.name %></h1>
 
-        <div class="subcontainer-main">
-
-
-
-
-            <!------------titulo primer cajita------------->
-
-            <div class="title-main">
-                <h1><%= producto.categorias.name %></h1>
-            </div>
-
-
-            <!------------------------------------------------------>
-
-
-
-
-            <!-----producto con los botones de comprar------>
-
-            <div class="product-main">
-                <div class="title-guitar">
-                    <h2><%= producto.instrument%> </h2>
-                </div>
-              
-                <div class="container-price">
-                    <div class="price">
-                        <p class="precionum"><%= producto.price %></p>
-                        <p class="marca"><%= producto.mark %></p>
-                        <p class="modelo"><%= producto.model %></p>
-                    </div>
-                </div>
+            <div class="detalle-container">
                 
-
-                <div class="buttons-product">
-                    <div class="buy">
-                        <a  href="/partials/carrito/<%= producto.id %>">Comprar!</a>
-                    </div>
-                    <div class="carrito">
-                        <a href="#">Añadir al carrito</a>
-                    </div>
+                <div class="detalle-subContainer">
                     
-                </div>
-            
-                <div class='container-description'>
-                    <div class="description-product">
-                    
-                        <h1 class="title-description">
-                        Descripcion
-                        </h1>
-                        <div class="text-description">
-                            <p class="text">
-                                <%= producto.description %>
-                            </p>
+                    <div class="detalle-images">
+                        <h2 class="sub-title"><%= producto.instrument %> <%= producto.mark %></h2>
+                        
+                        <div class="img-display">
+                            <figure class="img-container">
+                                <img src="/img/instrumentos/<%= producto.imagenes[0].name%>" alt="" class="img--detalle">
+                            </figure>
+                            
+                            <div class="img-gallery">
+                                <div class="img-sub">
+                                    <img src="/img/instrumentos/<%= producto.imagenes[0].name%>" alt="" class="img--detalle">
+                                </div>
+                                <div class="img-sub">
+                                    <img src="/img/instrumentos/<%= producto.imagenes[0].name%>" alt="" class="img--detalle">
+                                </div>
+                                <div class="img-sub">
+                                    <img src="/img/instrumentos/<%= producto.imagenes[0].name%>" alt="" class="img--detalle">
+                                </div>
+        
+        
+                            </div>
                         </div>
                         
                     </div>
+                    
+                    
+                    <div class="detalle-datos">
+                        <h2 class="detalle-title">modelo:</h2>
+                        <p class="detalle-text">
+                            <%= producto.model %>
+                        </p>
+                        
+                        <h2 class="detalle-title">tipo:</h2>
+                        <p class="detalle-text">
+                            <%= producto.type %>
+                        </p>
+                        
+                        <h2 class="detalle-title">color:</h2>
+                        <p class="detalle-text">
+                            <%= producto.color %>
+                        </p>
+                        
+                        <h2 class="detalle-title">descripcion:</h2>
+                        <p class="detalle-text">
+                            <%= producto.description %>
+                        </p>
+                    </div>
                 </div>
-               
+                <div class="btn-container">
+                    <a href="" class="btn--detalle">comprar!</a>
+                    <a href="" class="btn--detalle">agregar al carrito</a>
+                </div>
+                
 
             </div>
-            <!-- ----------------------------------------------------->
 
-
-
-
-            <!-------------------- metodo de pagos ---------------->
-            <div class="container-title-payment-method">
-                <div class="title-payment-method">
-                    <h3>Medios de pago</h3>
-                </div>
-                <div class="payment-method-main">
-                    <P class="deb">tarjeta de debito</P>
-                    <P class="cred">tarjeta de credito</P>
-                    <P class="mp">mercado pago</P>
-                    <P class="pg">pago facil</P>
-                    <P>rapipago</P>
-                </div>
-            </div>
-            
-            <!------------------------------------------------------>
-
-
-
-        </div>
-
-    </main>
+        
+        </section>
 
 
 
 
 
-    <!-- footer -->
-    <%- include('partials/footer')  %> 
-    <!-- footer -->
+        <!-- footer -->
+        <%- include('partials/footer')  %> 
+        <!-- footer -->
+    </div>
+    
 </body>
 </html>

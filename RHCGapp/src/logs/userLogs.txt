@@ -1,1 +1,1 @@
-El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /public/javascript/cargaValidator.js
