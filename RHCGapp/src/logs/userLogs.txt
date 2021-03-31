@@ -1,1 +1,1 @@
-El usuario ingreso a la ruta: /guitarra-768.jpg
+El usuario ingreso a la ruta: /public/javascript/cargaValidator.js
