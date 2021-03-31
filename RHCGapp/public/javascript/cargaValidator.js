@@ -1,4 +1,5 @@
 window.addEventListener('load', function(){   
+    
     let $nombre=qs('#modelo'),
     $nombreErrors=qs('#modeloErrors'),
     $ps=qs("#valor"),
