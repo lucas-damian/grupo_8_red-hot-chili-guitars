@@ -1,0 +1,103 @@
+<!-- head -->
+<%- include('partials/head') %>
+  <!-- /head -->
+
+  
+<body class="body--home">
+    <div class="form-container">
+
+    <!-- header -->
+    <%- include('partials/header') %>
+    <!-- /header -->
+
+    <!-- carrito -->
+    <%- include('partials/carrito') %>
+    <!-- /carrito -->
+    
+    
+    <section class="ingreso">
+        <!-- mensaje de error -->
+        <%- include('partials/error-msg') %>
+        <!-- /mensaje de error -->
+        
+        <div class="principal">
+            <form class="form-izq" action="/users/log-in" method="POST">
+                    <div class="log-container">
+                        <div class="log-row">
+                            <label for="user" class="log--label">Email:</label>
+                            <input class="log--input" type="text" placeholder="ingresá tu email" id="user" name="email">
+                        </div>
+                        <div class="log-row">
+                            <label for="pass" class="log--label">Contraseña:</label>
+                            <input class="log--input" type="password" placeholder="ingresá tu contraseña" id="pass" name="password">
+                        </div>
+                       
+                        <div class="log-row check-row">
+                            <label for="check" for="check" class="log--check">
+                                recordarme
+                            </label>
+                                <input type="checkbox" id="check" name="recordar">
+                        </div>
+                        
+                    
+                        <button type="submit" class="btn--logIn">Ingresá</button>
+                    </div>
+    
+                    <div class="social-register">
+                        <a class="btn--faceLog" href="">ingresá con Facebook</a>
+                        <a class="btn--googLog" href="">ingresá con Google</a>
+                    </div>
+            </form>
+            <form class="form-der" action="/users/register" method="POST">
+                    <div class="register-container">
+                        <div class="log-row">
+                            <label for="userName" class="log--label" >Ingresá tú nombre:</label>
+                            <input class="log--input" type="text" placeholder="ingresá tú nombre" id="userName" name="userName" >
+                            <span class="error" id="nameErrors"></span>
+                        </div>
+    
+                        <div class="log-row">
+                            <label for="emailRegister" class="log--label">Ingresá un email:</label>
+                            <input class="log--input" type="email" placeholder="ingresá un email" id="emailRegister" name="email">
+                            <span class="error" id="emailErrors"></span>
+                        </div>
+
+                        <div class="log-row">  
+                            <label for="passRegister" class="log--label">Ingresá una contraseña:</label>
+                            <input class="log--input" type="password" placeholder="ingresá una contraseña" id="passRegister" name="pass">
+                            <span class="error" id="passErrors"></span>
+                        </div>
+    
+                        <div class="log-row">
+                            <label for="pass2-Register" class="log--label">Reingresá la contraseña:</label>
+                            <input class="log--input" type="password" placeholder="Reingresá la contraseña" id="pass2-Register" name="pass2">
+                            <span class="error" id="pass2Errors"></span>
+                        </div>
+                
+                    <button id="submit" type="submit" class="btn--register">Registrate</button>
+                    </div>
+                    
+    
+                    <div class="social-register">
+                        <a class="btn--faceLog" href="">ingresá con Facebook</a>
+                        <a class="btn--googLog" href="">ingresá con Google</a>
+                    </div>
+            </form>
+         
+        </div>
+
+      
+       
+    </section>
+
+    
+   
+
+
+<!-- footer -->
+   <%- include('partials/footer') %>
+   <!-- /footer -->
+
+    </div>
+
+  </body>
