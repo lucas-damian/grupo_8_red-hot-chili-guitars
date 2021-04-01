@@ -258,3 +258,25 @@ module.exports = {
 
      
 }
+
+
+/* 
+agregar muchas imagenes
+
+addImg: (req, res) => {
+        let imagen;
+        let imagenes = [];
+        for (let i = 0; i < req.files.length; i++) {
+            imagen = {
+                archivo: req.files[i].filename,
+                autoId: +req.params.id
+            }
+            imagenes.push(imagen)
+        }
+        db.Imagen.bulkCreate(imagenes, {validate : true})
+            .then(() => res.redirect('/cars/show/' + req.params.id))
+            .catch(error => res.send(error))
+    },
+
+
+*/
