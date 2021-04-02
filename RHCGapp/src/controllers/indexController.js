@@ -39,7 +39,7 @@ module.exports = {
                 name:req.params.instrumento
             },
             include: [{association: 'productos',
-            include: [{association: 'imagenes'}]
+                include: [{association: 'imagenes'}]
         }]
         })
             .then( categorias => {
