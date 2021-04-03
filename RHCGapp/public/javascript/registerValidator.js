@@ -1,76 +1,95 @@
-let qs = function(elemento){
-    return document.querySelector(elemento)
+let qs = function(element){
+   return document.querySelector(element);
 }
 
-window.addEventListener('load', function(){   
-    let $inputName=qs('#userName'),
-    $nameErrors=qs('#nameErrors'),
-    $email=qs("#email"),
-    $emailErrors=qs('#emailErrors'),
-    $pass=qs("#pass")
-    $passErrors=qs('#passErrors'),
-    $pass2=qs('#pass2'),
-    $pass2Errors=qs('#pass2Errors'),
+
+let $formRegister = qs("#formRegister"),
+    $userName = qs('#userName'),
+    $nameErrors = qs('#nameErrors'),
+    
+    $emailRegister = qs("#emailRegister"),
+    $emailErrors = qs('#emailErrors'),
+    
+    $pass= qs("#passRegister")
+    $passErrors = qs('#passErrors'),
+    
+    $pass2 = qs('#pass2-Register'),
+    $pass2Errors = qs('#pass2Errors'),
+    
     regExAlpha= /^[a-zA-Z\sñáéíóúü ]*$/,
     regExEmail= /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExPass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+
+
+window.onload = function() {
     
-    
-    
-    $inputName.addEventListener('submit', function(){
-        console.log($inputName.value.trim())
+    $userName.addEventListener("blur", function(){
+        
         switch (true) {
-            case !$inputName.value.trim():
-            $nameErrors.innerHTML = 'debes ingresar un usuario'
-            $inputName.classList.add('is-invalid')
+            
+            case !this.value.trim():
+            $nameErrors.innerHTML += 'debes ingresar un usuario';
+            $userName.classList.add('is-invalid')
             break;
-            case !regExAlpha.test($inputName.value):
-            $nameErrors.innerHTML = 'el usuario ya esta registrado'
-            $inputName.classList.add('is-invalid')  
+            
+            
+            case !regExAlpha.test($userName.value):
+            $nameErrors.innerHTML = 'el usuario ya esta registrado';
+            $userName.classList.add('is-invalid')  
             break; 
+            
+            
             default:
-            $inputName.classList.remove('is-invalid');
-            $inputName.classList.add('is-valid');
+            $userName.classList.remove('is-invalid');
+            $userName.classList.add('is-valid');
             $nameErrors.innerHTML = ''
             break;
         }
     })
-    
-    $email.addEventListener('submit', function() {
+
+    $emailRegister.addEventListener("blur", function(){
+        
         switch (true) {
-            case !$email.value.trim():
+            case !this.value.trim():
             $emailErrors.innerHTML = 'el email es requerido';
-            $email.classList.add('is-invalid')
+            $emailRegister.classList.add('is-invalid')
             break;
-            case !regExEmail.test($email.value):
+            case !regExEmail.test($emailRegister.value):
             $emailErrors.innerHTML = 'el email ya esta registrado';
-            $email.classList.add('is-invalid')
+            $emailRegister.classList.add('is-invalid')
             break
             default:
-            $email.classList.remove('is-invalid');
-            $email.classList.add('is-valid');
+            $emailRegister.classList.remove('is-invalid');
+            $emailRegister.classList.add('is-valid');
             $emailErrors.innerHTML = ''
             break;
         }
     })
-    $pass.addEventListener('submit', function() {
+
+    $pass.addEventListener("blur", function(){
+
         switch (true) {
-            case !$pass.value.trim():
+            case !this.value.trim():
             $passErrors.innerHTML = 'Es necesario una contraseña';
             $pass.classList.add('is-invalid')
             break;
+            
             case !regExPass.test($pass.value):
             $passErrors.innerHTML = 'Minimo 3 caracteres y máximo 6 caracteres';
             $pass.classList.add('is-invalid')
             break
+            
             default:
             $pass.classList.remove('is-invalid');
             $pass.classList.add('is-valid');
             $passErrors.innerHTML = ''
             break;
         }
+
     })
-    $pass2.addEventListener('submit', function(){
+
+    $pass2.addEventListener("blur", function(){
+
         switch (true) {
             case !$pass2.value.trim():
             $pass2Errors.innerHTML = 'Debes reingresar la contraseña';
@@ -86,5 +105,7 @@ window.addEventListener('load', function(){
             $pass2Errors.innerHTML = ''
             break;
         }
+
     })
-})
+
+}
