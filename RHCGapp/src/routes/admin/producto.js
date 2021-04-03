@@ -27,17 +27,4 @@ router.get('/:busqueda', search);
 
 
 
-
-
-/* router.get('/:id', produDetalle);
-router.get('/:id/edit',produEdit); 
-
-router.put('/:id/edit',produEdit);
-router.delete('/:id/edit',borrar);
-
- */
-
-
-
-
 module.exports = router;

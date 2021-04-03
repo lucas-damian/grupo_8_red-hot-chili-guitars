@@ -1,0 +1,68 @@
+<!-- head -->
+<%- include('../partials/head') %>
+  <!-- /head -->
+
+  
+<body class="body--home">
+  
+
+    <!-- header -->
+    <%- include('../partials/header') %>
+    <!-- /header -->
+
+    <!-- carrito -->
+    <%- include('../partials/carrito') %>
+    <!-- /carrito -->
+    
+    <main class="cargaProductos">
+      
+      <h2 class="cargaProductos-title">editando usuario</h2>
+      
+      <form class="carga" action="/master/user-data/<%=user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        
+            <div class="register-container">
+                <div class="log-row">
+                    <label for="userName" class="log--label" >Ingresá tú nombre:</label>
+                    <input class="log--input" type="text" placeholder="ingresá tú nombre" id="userName" name="userName" value="<%=user.name%>">
+                    <span class="error" id="nameErrors"></span>
+                </div>
+
+                <div class="log-row">
+                    <label for="emailRegister" class="log--label">Ingresá un email:</label>
+                    <input class="log--input" type="email" placeholder="ingresá un email" id="emailRegister" name="email" value="<%=user.email%>">
+                    <span class="error" id="emailErrors"></span>
+                </div>
+
+                <div class="log-row">  
+                    <label for="passRegister" class="log--label">Ingresá una contraseña:</label>
+                    <input class="log--input" type="password" placeholder="ingresá una contraseña" id="passRegister" name="pass" value="<%=user.pass%>">
+                    <span class="error" id="passErrors"></span>
+                </div>
+
+                <div class="log-row">
+                    <label for="pass2-Register" class="log--label">Reingresá la contraseña:</label>
+                    <input class="log--input" type="password" placeholder="Reingresá la contraseña" id="pass2-Register" name="pass2" value="<%=user.pass2%>">
+                    <span class="error" id="pass2Errors"></span>
+                </div>
+
+                <div class="kit--row">
+                    <label class="log--label" for="admin">Habilitar para Admin</label>
+              
+                    <input class="kit--check" type="checkbox" name="rol" id="admin"/>
+                    </div>
+
+                <div class="log-row">
+                    <button class="btn--submit">guardar cambios</button>
+                    <a href="/master/" class="btn--productos">ver lista</a>
+                  </div>
+      </form>
+      
+    </main>
+   <!-- footer -->
+   <%- include('../partials/footer') %>
+ <!-- /footer -->
+   
+   
+   
+ <script src="/javascript/slider.js"></script>
+</body>

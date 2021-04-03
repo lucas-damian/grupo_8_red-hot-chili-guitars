@@ -1,0 +1,84 @@
+<!-- carrito -->
+<%- include('../partials/head') %>
+<!-- /carrito -->
+<body>
+    <!-- carrito -->
+    <%- include('../partials/carrito') %>
+    <!-- /carrito -->
+
+    <!-- header -->
+    <%- include('../partials/header') %>
+    <!-- /header -->
+
+    <section class="productos">
+
+    <% if (users.length === 0){ %>
+
+        <div class="error-row">
+            
+            <h2 class="productos-title" id="top">No se encontró la búsqueda</h2>
+        </div>
+    <!-- mensaje de error -->
+    <%- include('../partials/error-msg') %>
+    <!-- /mensaje de error -->
+
+    <% } else { %>
+
+        <h2 class="productos-title" id="top"><%= msg %></h2>
+        <ul class="productos-container">
+            <% users.forEach(user => { %>
+            <li class="productos-item">
+                
+                <p class="productos-text">
+                <%= user.id %>
+                </p>
+
+                <p class="productos-text">
+                    <%= user.name %>
+                </p>
+                
+                <p class="productos-text">
+                <%=user.email %>
+                </p>
+                
+                <p class="productos-text">
+                <%= user.rol %>  
+                </p>
+
+                <div class="btns--container">
+
+                    
+                            <a class="btn--editar" href="/master/user-data/<%= user.id %>">editar</a>
+
+                            <form action="/master/delete/<%= user.id %>?_method=DELETE" method="POST">
+                                <button class="btn--borrar" type="submit">borrar</button>
+                            </form>
+                
+                </div>
+            </li>
+            <% }) %>
+        </ul>
+    
+        <div class="paginator-row">
+            <a href="" class="paginator-btn">
+                
+            </a>
+
+            <span class="paginator-index">1</span>
+            
+            <a href="" class="paginator-btn">
+                
+            </a>
+        </div>
+        
+
+    
+    <% } %>	
+    
+    </section>
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+    <!-- /footer -->
+</body>
+</html>
