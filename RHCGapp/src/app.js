@@ -15,6 +15,8 @@ const usersRouter = require('./routes/users');
 const productRouter = require('./routes/admin/producto');
 const userProducts = require('./routes/userProducts')
 const cookieCheck = require("./middlewares/cookieCheck");
+const masterRout = require("./routes/admin/master");
+
 
 const app = express();
 
@@ -39,7 +41,9 @@ app.use('/', indexRouter);
 app.use('/detalle-del-producto', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
-app.use('/categoria', userProducts)
+app.use('/categoria', userProducts);
+app.use('/master', masterRout);
+
 
 
 // catch 404 and forward to error handler

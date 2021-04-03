@@ -10,6 +10,6 @@
 	--primary-shadow-up: 0 -0.2rem 0.5rem rgba(0, 0, 0, 0.4);
  	--primary-shadow-down: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.8); 
 	--background: 	linear-gradient(#f6eec95b, #f6eec96b),
-	url(/img/fondos/texturas_19.jpg);
+		url(/img/fondos/texturas_19.jpg);
 
 }
