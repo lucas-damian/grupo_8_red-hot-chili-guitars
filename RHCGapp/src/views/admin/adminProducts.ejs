@@ -58,13 +58,32 @@
 						</p>
 
                     <div class="btns--container">
-			
-							<a class="btn--editar" href="/products/edit/<%= producto.id %>">editar</a>
 
-						<form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
-                        	<button class="btn--borrar" type="submit">borrar</button>
-						</form>
-                    </div>
+
+			
+					
+                    
+
+						<% if (locals.user) { %>
+							<% if (locals.user.rol == "admin") { %>
+								<a class="btn--editar" href="/products/edit/<%= producto.id %>">editar</a>
+
+								<form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+									<button class="btn--borrar" type="submit">borrar</button>
+								</form>
+							<% } %>
+						
+						<% } else { %>
+							
+							<a class="btn--editar" href="/products/detalle-del-producto/<%= producto.id %> ">+ info!</a>
+
+								<form action="?_method=PUT" method="POST">
+									<button class="btn--borrar" type="submit">agregar al carrito</button>
+								</form>
+						
+						<% } %>
+					
+					</div>
 				</li>
 				<% }) %>
 			</ul>
