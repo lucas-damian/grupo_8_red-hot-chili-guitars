@@ -12,12 +12,13 @@
 	position: relative;
 }
 
-.slider{
+.slider {
 	display: flex;
 	width: 300%;
-	height: 40rem;
+	height: 22rem;
 	margin-left: -100%;
 }
+
 
 .slider__section { 
 	width: 100%
@@ -59,14 +60,27 @@
 }
 
 
+@media screen and (min-width: 768px){
+	.slider {
+		height: 40rem;		
+	}
+}
 
 
+@media screen and (min-width: 1200px) {
 
+	.slider{
+		height: 60rem;		
+	}
 
+}
 
+@media screen and (min-width: 1400px) {
 
-
-
+    .slider {
+		height: 75rem;
+	}
+}
 
 
 /* ----------------EL QUE ESTABA ANTES -------------------- */
