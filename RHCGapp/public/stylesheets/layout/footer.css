@@ -357,3 +357,14 @@
 		margin-bottom: 6px;
 	}
 }
+
+
+@media screen and (min-width: 1400px){
+	.contacto{
+		margin-left:2.5rem;
+	}
+
+	.redes{
+		margin-right:2.5rem;
+	}
+}
