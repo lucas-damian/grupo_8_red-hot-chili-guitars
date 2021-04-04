@@ -33,22 +33,18 @@
 
 .slider__btn{
 	position: absolute;
-	width: 40px;
-	height: 40px;
+	width: 31px;
+	height: 28px;
 	background: rgba(255, 255, 255, 0.7);
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: 30px;
+	font-size: 22px;
 	font-weight: bold;
 	font-family: monospace;
 	text-align: center;
 	border-radius: 50%;
 	cursor: pointer;
 	color: #a20a0a;
-}
-
-.slider__btn:hover{
- 	background: white;
 }
 
 .slider__btn--left{
@@ -59,10 +55,22 @@
 	right: 10px;
 }
 
+.slider__btn:hover{
+ 	background: white;
+}
+
+
+
 
 @media screen and (min-width: 768px){
 	.slider {
 		height: 40rem;		
+	}
+
+	.slider__btn {
+		width: 35px;
+		height: 35px;
+		font-size: 27px;
 	}
 }
 
@@ -72,7 +80,12 @@
 	.slider{
 		height: 60rem;		
 	}
-
+	.slider__btn{
+		width: 40px;
+		height: 40px;
+		font-size: 30px;
+	}
+	
 }
 
 @media screen and (min-width: 1400px) {
@@ -80,6 +93,7 @@
     .slider {
 		height: 75rem;
 	}
+
 }
 
 
