@@ -12,12 +12,13 @@
 	position: relative;
 }
 
-.slider{
+.slider {
 	display: flex;
 	width: 300%;
-	height: 40rem;
+	height: 22rem;
 	margin-left: -100%;
 }
+
 
 .slider__section { 
 	width: 100%
@@ -32,14 +33,15 @@
 
 .slider__btn{
 	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content:  center;
-	padding: .3rem 1rem;
+	width: 31px;
+	height: 28px;
 	background: rgba(255, 255, 255, 0.7);
 	top: 50%;
 	transform: translateY(-50%);
-
+	font-size: 22px;
+	font-weight: bold;
+	font-family: monospace;
+	text-align: center;
 	border-radius: 50%;
 	cursor: pointer;
 }
@@ -54,10 +56,6 @@
 
 }
 
-.slider__btn:hover{
- 	background: white;
-}
-
 .slider__btn--left{
 	left: 10px
 }
@@ -66,15 +64,46 @@
 	right: 10px;
 }
 
+.slider__btn:hover{
+ 	background: white;
+}
 
 
 
 
+@media screen and (min-width: 768px){
+	.slider {
+		height: 40rem;		
+	}
+
+	.slider__btn {
+		width: 35px;
+		height: 35px;
+		font-size: 27px;
+	}
+}
 
 
+@media screen and (min-width: 1200px) {
 
+	.slider{
+		height: 60rem;		
+	}
+	.slider__btn{
+		width: 40px;
+		height: 40px;
+		font-size: 30px;
+	}
+	
+}
 
+@media screen and (min-width: 1400px) {
 
+    .slider {
+		height: 75rem;
+	}
+
+}
 
 
 /* ----------------EL QUE ESTABA ANTES -------------------- */
