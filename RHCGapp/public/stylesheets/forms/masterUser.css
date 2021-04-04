@@ -1,0 +1,13 @@
+@media screen and (min-width:1200px){
+    .editUser{
+        padding: 20rem;
+    }
+
+    .editUser .editUser--carga{
+        width: 40vw;
+    }
+
+    .editUser .editUser--container{
+        width: 100%;
+    }
+}

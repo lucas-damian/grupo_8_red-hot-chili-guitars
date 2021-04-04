@@ -3,6 +3,18 @@ const db = require("../database/models");
 const {Op} = require('sequelize');
 const bcrypt = require("bcrypt");
 
+
+/* 
+
+MASTER 
+
+email: master@gmail.com
+pass: master123
+
+
+*/
+
+
 module.exports = {
     listar:(req,res) => {
         db.Users.findAll()
@@ -32,20 +44,24 @@ module.exports = {
             })
             .catch(error => res.send(error))
     },
+
     
-    userEdit:(req,res) => {
+    userUpdate:(req,res) => {
 
-        const {id, name, email,pass,rol} = req.body
         
-
+        const {userName, email,pass,rol} = req.body;
+        
+        /* res.send(req.body) */
+        
         db.Users.update({
-            id: id.trim(),
-            name: name.trim(),
+            
+            name: userName.trim(),
             email: email.trim(),
             pass: bcrypt.hashSync(pass, 12),
-            rol:rol.trim(),
+            rol:rol == "on" ? "admin" : "user",
 
-        },{
+        },
+        {
             where:{
                 id: req.params.id
             }

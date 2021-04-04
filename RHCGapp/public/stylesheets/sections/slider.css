@@ -32,18 +32,26 @@
 
 .slider__btn{
 	position: absolute;
-	width: 40px;
-	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content:  center;
+	padding: .3rem 1rem;
 	background: rgba(255, 255, 255, 0.7);
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: 30px;
-	font-weight: bold;
-	font-family: monospace;
-	text-align: center;
+
 	border-radius: 50%;
 	cursor: pointer;
-	color: #a20a0a;
+}
+
+.slider__btn span{
+	display: block;
+	width: 100%;
+	font-size: 3rem;
+	font-weight: bold;
+	font-family: monospace;
+	color: var(--color-primary-red);
+
 }
 
 .slider__btn:hover{
@@ -104,4 +112,4 @@
 } */
 
 
- */
+ 

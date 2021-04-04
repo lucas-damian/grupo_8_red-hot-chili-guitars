@@ -155,7 +155,8 @@ module.exports = {
 
         const {tipo,modelo,marca,instrumento,categoria,valor,color,kit,description} = req.body;
 
-            /* res.send(req.body) */
+            res.send(req.body)
+            
             db.Products.update({
                 type:tipo.trim(),
                 mark:marca.trim(),
