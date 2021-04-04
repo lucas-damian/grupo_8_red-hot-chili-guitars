@@ -38,7 +38,7 @@
 
 
 						<% if (locals.user) { %>
-							<% if (locals.user.rol == "admin") { %>
+							<% if (locals.user.rol == "admin" || locals.user.rol == "master") { %>
 								<a href="/products" class="link--message">
 									<i class="fas fa-key"></i>
 								</a>

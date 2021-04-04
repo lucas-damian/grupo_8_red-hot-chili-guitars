@@ -119,12 +119,12 @@
 		padding: 2rem;
 	}
 	
-	.cargaProductos .carjaIzquierda,
-	.cargaProductos .carjaDerecha{
+	.cargaProductos .cajaIzquierda,
+	.cargaProductos .cajaDerecha{
 		width: 48%;
 	}
 	
-	.cargaProductos .carjaIzquierda ::after{
+	.cargaProductos .cajaIzquierda ::after{
 		content: "";
 		display: block;
 		width: .5rem;

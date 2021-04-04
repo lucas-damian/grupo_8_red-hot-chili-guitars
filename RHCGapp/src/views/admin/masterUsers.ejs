@@ -48,11 +48,34 @@
                 <div class="btns--container">
 
                     
-                            <a class="btn--editar" href="/master/user-data/<%= user.id %>">editar</a>
+                    <% if (user.rol == "master") { %>
+                                    
+                        <a class="btn--editar" href="/master/edit/<%= user.id %>" disabled style="display: none;"></a>
+
+                    
+                    <% } else { %>
+
+                        <a class="btn--editar" href="/master/edit/<%= user.id %>">editar</a>
+                        
+                        
+                    <% } %>
+
 
                             <form action="/master/delete/<%= user.id %>?_method=DELETE" method="POST">
+
+                            
+                            <% if (user.rol == "master") { %>
+                                    
+                                <button class="btn--borrar" type="submit" disabled style="display: none;"></button>
+                            
+                            <% } else { %>
+
                                 <button class="btn--borrar" type="submit">borrar</button>
-                            </form>
+                                
+                            <% } %>
+                                </form>
+
+                           
                 
                 </div>
             </li>

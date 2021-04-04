@@ -44,7 +44,16 @@
 	text-align: center;
 	border-radius: 50%;
 	cursor: pointer;
-	color: #a20a0a;
+}
+
+.slider__btn span{
+	display: block;
+	width: 100%;
+	font-size: 3rem;
+	font-weight: bold;
+	font-family: monospace;
+	color: var(--color-primary-red);
+
 }
 
 .slider__btn--left{
@@ -129,7 +138,7 @@
 			border: none;
 	}
 	
-}
+} */
 
 
- */
+ 
