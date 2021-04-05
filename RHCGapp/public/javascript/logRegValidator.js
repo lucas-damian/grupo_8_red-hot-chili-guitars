@@ -23,8 +23,13 @@ let $formRegister = qs("#formRegister"),
     $passwordErrors=qs('#passwordErrors')
     
     regExAlpha= /^[a-zA-Z\sñáéíóúü ]*$/,
+    
     regExEmail= /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-    regExPass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    
+    regExPass= /^(?=.*\d).{3,6}$/;
+
+  /*   regExPass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/; */
+
 
 
 
@@ -84,7 +89,7 @@ window.onload = function() {
             break;
             
             case !regExPass.test($pass.value):
-            $passErrors.innerHTML = 'Minimo 3 caracteres y máximo 6 caracteres con letras minusculasy mayusculas';
+            $passErrors.innerHTML = 'Minimo 3 caracteres y máximo 6 caracteres';
             $pass.classList.add('is-invalid');
             break
             
@@ -100,14 +105,17 @@ window.onload = function() {
     $pass2.addEventListener("blur", function(){
 
         switch (true) {
+           
             case !$pass2.value.trim():
             $pass2Errors.innerHTML = 'Debes reingresar la contraseña';
             $pass2.classList.add('is-invalid')
             break;
+            
             case $pass2.value != $pass.value:
             pass2Errors.innerHTML = 'Las contraseñas no coinciden';
             $pass2.classList.add('is-invalid')
             break;
+            
             default:
             $pass2.classList.remove('is-invalid');
             $pass2.classList.add('is-valid');
