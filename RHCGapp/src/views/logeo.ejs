@@ -21,15 +21,17 @@
         <!-- /mensaje de error -->
         
         <div class="principal">
-            <form class="form-izq" action="/users/log-in" method="POST">
+            <form class="form-izq" action="/users/log-in" method="POST" id="formLogin">
                     <div class="log-container">
                         <div class="log-row">
                             <label for="user" class="log--label">Email:</label>
                             <input class="log--input" type="text" placeholder="ingresá tu email" id="user" name="email">
+                            <span class="error" id="userErrors"></span>
                         </div>
                         <div class="log-row">
                             <label for="pass" class="log--label">Contraseña:</label>
-                            <input class="log--input" type="password" placeholder="ingresá tu contraseña" id="pass" name="password">
+                            <input class="log--input" type="password" placeholder="ingresá tu contraseña" id="password" name="password">
+                            <span class="error" id="passwordErrors"></span>
                         </div>
                        
                         <div class="log-row check-row">
