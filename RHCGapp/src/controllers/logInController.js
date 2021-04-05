@@ -30,9 +30,9 @@ module.exports = {
             
            
             db.Users.create({
-                name: userName.trim(),
-                email,
-                password : bcrypt.hashSync(pass, 12), 
+                name: userName.toLowerCase().trim(),
+                email: email.trim(),
+                password : bcrypt.hashSync(pass.trim(), 12), 
             })
             .then(() =>res.redirect('/users'))
             .catch(error => res.send(error))
@@ -89,53 +89,6 @@ module.exports = {
                 errores: errores.errors
             })
         }
-
-    /* 
-     let errores = validationResult(req);
-  
-        if(!errores.isEmpty()){
-            res.render('logeo',{
-                title: "logueo",
-                errores: errores.errors
-            })
-        } else {
-            
-          const { userEmail, pass, recordar} = req.body;
-
-          
-           
-            db.Users.findOne({
-                where: {
-                    userEmail
-                }
-            })
-            .then(result => {
-                if(bcrypt.compareSync(password.trim(), result.pass.trim())){
-
-                    req.session.user = {
-                        id : result.id,
-                        email : result.userEmail,
-                       /*  rol */
-                    /*}
-                    if(recordar){
-                        res.cookie('userStar', req.session.user, {
-                            maxAge : 1000 * 60
-                        })
-                    }   
-                    res.send(req.body)
-                    return res.redirect("/users/profile")
-
-                }else{
-
-                    res.render('logeo', {    
-                        title: "logueo",                  
-                        errores: "contraseña inválida",
-                        
-                    })
-            
-                }
-            })
-        } */ 
 
     }, 
 
