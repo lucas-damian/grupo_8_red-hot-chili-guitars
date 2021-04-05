@@ -17,7 +17,6 @@ router.get('/logout', fatality);
 
 router.get('/', logIn);
 
-router.get('/profile', userCheck,profile);
 
 
 

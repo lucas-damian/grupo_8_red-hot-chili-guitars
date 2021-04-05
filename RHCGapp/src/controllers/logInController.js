@@ -61,6 +61,7 @@ module.exports = {
             })
             .then(result => {
                 
+                /* res.send(result) */
                 if(result && bcrypt.compareSync(password, result.password)){
                   
                     req.session.user = {
@@ -74,7 +75,7 @@ module.exports = {
                         })
                     }
                    
-                    return res.redirect('/users/profile')
+                    return res.redirect('/')
                 
                 }else {
                     res.render('logeo',{
@@ -92,10 +93,6 @@ module.exports = {
 
     }, 
 
-    profile:(req,res) => {
-        res.redirect("/");
-    },
-    
  
     fatality: (req, res) => {
         

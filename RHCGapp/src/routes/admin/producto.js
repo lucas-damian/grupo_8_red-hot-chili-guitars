@@ -4,20 +4,19 @@ let uploadImages = require("../../middlewares/uploadImages")
 const {cargaProduc,listar,store,produEdit,prodUpdate,borrar,search,detailProduct}= require('../../controllers/productController');
 const adminCheck = require('../../middlewares/adminCheck');
 const uploadCheck = require("../../validations/uploadValidation");
-const userCheck = require('../../middlewares/userCheck');
 
 
 /// /products
 
-router.get('/',cargaProduc);
+router.get('/',adminCheck,cargaProduc);
 router.post('/store',uploadImages.any(), uploadCheck,store);
 
 
-router.get('/admin/list', listar);
+router.get('/admin/list', adminCheck, listar);
 router.get('/detalle-del-producto/:id',detailProduct);
 
 
-router.get("/edit/:id" , produEdit);
+router.get("/edit/:id",adminCheck , produEdit);
 router.put("/update/:id",uploadImages.any(), prodUpdate);
 
 router.delete('/delete/:id',borrar);

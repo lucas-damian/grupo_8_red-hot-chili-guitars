@@ -155,7 +155,7 @@ module.exports = {
 
         const {tipo,modelo,marca,instrumento,categoria,valor,color,kit,description} = req.body;
 
-            res.send(req.body)
+            /* res.send(req.body) */
             
             db.Products.update({
                 type:tipo.trim(),
@@ -212,7 +212,7 @@ module.exports = {
         db.Products.findAll({
             where:{
                 instrument:{
-                    [Op.like]:`%${buscar}%`
+                    [Op.substring]:buscar
                 }},
                 include:[{association:"categorias"},
                          {association:"imagenes"}]
