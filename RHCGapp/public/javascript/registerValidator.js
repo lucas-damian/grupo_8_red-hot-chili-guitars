@@ -34,7 +34,7 @@ window.onload = function() {
             
             
             case !regExAlpha.test($userName.value):
-            $nameErrors.innerHTML = 'el usuario ya esta registrado';
+            $nameErrors.innerHTML = 'el usuario no puede llevar simbolos';
             $userName.classList.add('is-invalid')  
             break; 
             
@@ -55,7 +55,7 @@ window.onload = function() {
             $emailRegister.classList.add('is-invalid')
             break;
             case !regExEmail.test($emailRegister.value):
-            $emailErrors.innerHTML = 'el email ya esta registrado';
+            $emailErrors.innerHTML = 'el email no puede llevar mayusculas y siempre debe que tener @';
             $emailRegister.classList.add('is-invalid')
             break
             default:
@@ -75,7 +75,7 @@ window.onload = function() {
             break;
             
             case !regExPass.test($pass.value):
-            $passErrors.innerHTML = 'Minimo 3 caracteres y máximo 6 caracteres';
+            $passErrors.innerHTML = 'Minimo 3 caracteres y máximo 6 caracteres con letras minusculasy mayusculas';
             $pass.classList.add('is-invalid')
             break
             
