@@ -1,104 +1,139 @@
-window.addEventListener('load', function(){   
-    
-    let $nombre=qs('#modelo'),
-    $nombreErrors=qs('#modeloErrors'),
-    $ps=qs("#valor"),
-    $psErrors=qs("#valorErrors"),
+let qs = function(element){
+    return document.querySelector(element);
+ }
+
+ let $formCarga = qs("#formCarga"),
+ /*--caja izquierda--*/
+    $instrumento=qs("#instrumento"),
+    $instrumentoErrors=qs("#instrumentoErrors"),
+    $tipo=qs("#tipo"),
+    $tipoErrors=qs("#tipoErrors"),
+    $marca=qs("#marca"),
+    $marcaErrors=qs("#marcaErrors"),
+    $categoria=qs("#categoria"),
+    $categoriaErrors=qs("#categoriaErrors"),
     $desc=qs("#desc"),
     $descErrors=qs("#descErrors"),
-    $descr=qs("#descr"),
-    $descrErrors=qs("#descrErrors"),
-    $img=qs("#formImg"),
-    $imgErrors=qs("#imgErrors"),
+    $categoria=qs("#categoria"),
+    $categoriaErrors=qs("#categoriaErrors"),
+    /*--caja derecha--*/
+    $modelo=qs("#modelo"),
+    $modeloErrors=qs("#modeloErrors"),
+    $color=qs("#color"),
+    $colorErrors=qs("#colorErrors"),
+    $valor=qs("#valor"),
+    $valorErrors=qs("#valorErrors"),
     regExAlpha= /^[a-zA-Z\sñáéíóúü ]*$/,
-    regnumber= /^[0-9]{0,100000}$/;
-    
-    
-    $nombre.addEventListener('blur', function(){
-        console.log($nombre.value.trim())
-        switch (true) {
-            case !$nombre.value.trim():
-            $nombreErrors.innerHTML = 'El campo nombre es obligatorio'
-            $nombre.classList.add('is-invalid')
-            break;
-            case !regExAlpha.test($nombre.value):
-            $nombreErrors.innerHTML = 'Debes ingresar un nombre válido'
-            $nombre.classList.add('is-invalid')  
-            break; 
-            default:
-            $nombre.classList.remove('is-invalid');
-            $nombre.classList.add('is-valid');
-            $nombreErrors.innerHTML = ''
-            break;
+    regExNum=/[^0-9]/;
+
+window.onload=function(){
+    $instrumento.addEventListener("blur",function(){
+        switch (true){
+            case !this.value.trim():
+                $instrumentoErrors.innerHTML += 'debes ingresar un instrumento';
+                $instrumento.classList.add('is-invalid')
+                break;
+                case !regExAlpha.test($instrumento.value):
+                    $instrumentoErrors.innerHTML = 'el instrumento no puede llevar simbolos';
+                    $instrumento.classList.add('is-invalid')  
+                    break
+                    default:
+                    $instrumento.classList.remove('is-invalid');
+                    $instrumento.classList.add('is-valid');
+                    $nameErrors.innerHTML = ''
+                    break;
         }
     })
-    $ps.addEventListener('blur', function(){
-        console.log($ps.value.trim())
-        switch (true) {
-            case !$ps.value.trim():
-            $psErrors.innerHTML = 'El campo precio es obligatorio'
-            $ps.classList.add('is-invalid')
-            break;
-            case !regnumber.test($ps.value):
-            $psErrors.innerHTML = 'Debes ingresar un precio válido'
-            $ps.classList.add('is-invalid')  
-            break; 
-            default:
-            $ps.classList.remove('is-invalid');
-            $ps.classList.add('is-valid');
-            $psErrors.innerHTML = ''
-            break;
-        }
-    })
-    $desc.addEventListener('blur', function(){
-        console.log($desc.value.trim())
-        switch (true) {
-            case !$desc.value.trim():
-            $descErrors.innerHTML = 'El campo descuento es obligatorio'
-            $desc.classList.add('is-invalid')
-            break;
-            case !regnumber.test($desc.value):
-            $descErrors.innerHTML = 'Debes ingresar un descuento válido'
-            $desc.classList.add('is-invalid')  
-            break; 
-            default:
-            $desc.classList.remove('is-invalid');
-            $desc.classList.add('is-valid');
-            $descErrors.innerHTML = ''
-            break;
-        }
-    })
-    $descr.addEventListener('blur', function(){
-        console.log($descr.value.trim())
-        switch (true) {
-            case !$descr.value.trim():
-            $descrErrors.innerHTML = 'El campo descripcion es obligatorio'
-            $descr.classList.add('is-invalid')
-            break;
-            case !regExAlpha.test($descr.value):
-            $descrErrors.innerHTML = 'Debes ingresar un descripcion válido'
-            $descr.classList.add('is-invalid')  
-            break; 
-            default:
-            $descr.classList.remove('is-invalid');
-            $descr.classList.add('is-valid');
-            $descrErrors.innerHTML = ''
-            break;
-        }
-    })
-    $img.addEventListener('change', 
-    function fileValidation(){
+    $tipo.addEventListener("blur", function(){
         
-        let filePath = $img.value, //Capturo el valor del input
-        allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
-        if(!allowefExtensions.exec(filePath)){ //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
-            $imgErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
-            $img.value = '';
-            return false;
-        }else{     
-            $imgErrors.innerHTML = '';
-            $img.classList.remove('is-invalid')
-        }       
+        switch (true) {
+            case !this.value.trim():
+            $tipoErrors.innerHTML = 'el tipo de instrumento es requerido';
+            $tipo.classList.add('is-invalid')
+            break;
+            default:
+            $tipo.classList.remove('is-invalid');
+            $tipo.classList.add('is-valid');
+            $tipoErrors.innerHTML = ''
+            break;
+        }
     })
-    
-})
+    $marca.addEventListener("blur", function(){
+        
+        switch (true) {
+            case !this.value.trim():
+            $marcaErrors.innerHTML = 'La marca es requerido';
+            $marca.classList.add('is-invalid')
+            break;
+            default:
+            $marca.classList.remove('is-invalid');
+            $marca.classList.add('is-valid');
+            $marcaErrors.innerHTML = ''
+            break;
+        }
+    })
+    $categoria.addEventListener("blur", function(){
+        
+        switch (true) {
+            case !this.value.trim():
+            $categoriaErrors.innerHTML = 'Ingrese una categoria';
+            $categoria.classList.add('is-invalid')
+            break;
+            default:
+            $categoria.classList.remove('is-invalid');
+            $categoria.classList.add('is-valid');
+            $categoriaErrors.innerHTML = ''
+            break;
+        }
+    })
+    $modelo.addEventListener("blur", function(){
+        
+        switch (true) {
+            case !this.value.trim():
+            $modeloErrors.innerHTML = 'Cual es el modelo?';
+            $modelo.classList.add('is-invalid')
+            break;
+            default:
+            $modelo.classList.remove('is-invalid');
+            $modelo.classList.add('is-valid');
+            $modeloErrors.innerHTML = ''
+            break;
+        }
+    })
+    $color.addEventListener("blur", function(){
+        
+        switch (true) {
+            case !this.value.trim():
+            $colorErrors.innerHTML = 'Cual es el color de su instrumento';
+            $color.classList.add('is-invalid')
+            break;
+            case !regExAlpha.test($color.value):
+            $colorErrors.innerHTML = 'El color no puede llevar simbolos';
+            $color.classList.add('is-invalid')
+            break
+            default:
+            $color.classList.remove('is-invalid');
+            $color.classList.add('is-valid');
+            $colorErrors.innerHTML = ''
+            break;
+        }
+    })
+    $valor.addEventListener("blur", function(){
+        
+        switch (true) {
+            case !this.value.trim():
+            $valorErrors.innerHTML = 'el valor del instrumento es requerido';
+            $valor.classList.add('is-invalid')
+            break;
+            case !regExNum.test($valor.value):
+            $valorErrors.innerHTML = 'el valor no puede llevar Letras';
+            $valor.classList.add('is-invalid')  
+            break; 
+            default:
+            $valor.classList.remove('is-invalid');
+            $valor.classList.add('is-valid');
+            $valorErrors.innerHTML = ''
+            break;
+        }
+    })
+}
