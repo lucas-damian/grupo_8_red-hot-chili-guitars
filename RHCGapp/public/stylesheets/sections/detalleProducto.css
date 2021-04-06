@@ -85,6 +85,9 @@
 
 
 .detalle-product .img-sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 31%;
     height: 8rem;
     background-color: var(--color-primary-yellow);
@@ -93,8 +96,8 @@
 }
 
 .detalle-product .img--detalle{
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    /* height: 100%; */
 }
 
 .detalle-product .img-container,

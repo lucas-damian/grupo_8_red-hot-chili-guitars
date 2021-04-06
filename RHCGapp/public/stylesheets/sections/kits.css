@@ -155,7 +155,7 @@
 
 @media screen and (min-width: 1200px){
     .kits{
-		padding: 20rem 0;
+		padding: 10rem 0 20rem 0;
 	}
 
 	.kits .kits--title{
