@@ -33,6 +33,10 @@
 	scrollbar-width: none;
 }
 
+.kits .kits--slider::-webkit-scrollbar{
+	display: none;
+}
+
 .kits .slide {
 	flex-shrink: 0;
 	display: flex;
@@ -50,9 +54,10 @@
 
 .kits .article-container {
 	position: relative;
-	margin-right: 2.5rem;
+	margin-right: 2.8rem;
 	width: 23rem;
 	padding: 1rem 1rem 1rem 0;
+
 }
 
 .kits .article--title {
@@ -83,7 +88,7 @@
 	height: 23rem;
 	display: flex;
 	flex-direction: column;
-
+	box-shadow: var(--primary-shadow-down);
 }
 
 .kits .article--content {
