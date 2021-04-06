@@ -23,6 +23,7 @@
 			action="/products/store"
 			method="POST"
 			enctype="multipart/form-data"
+			id="formCarga"
 		>
 			<div class="cajaIzquierda">
 				<div class="log-row">
@@ -61,7 +62,6 @@
 						id="tipo"
 						placeholder="Criolla,Acustica,eléctrica,etc..."
 					/>
-					<span class="error" id="tipoErrors"></span>
 				</div>
 
 				<div class="log-row">
@@ -73,7 +73,6 @@
 						placeholder="Nombre del artículo"
 						id="marca"
 					/>
-					<span class="error" id="marcaErrors"></span>
 				</div>
 
 				<div class="log-row">
@@ -155,6 +154,7 @@
 						id="formImg"
 						multiple
 					/>
+					<span class="error" id="formImgErrors"></span>
 				</div>
 
 				<div class="log-row">
