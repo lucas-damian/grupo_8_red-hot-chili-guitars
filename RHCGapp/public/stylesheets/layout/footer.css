@@ -1,10 +1,10 @@
 .footer {
-	background: linear-gradient(0.4turn, #4c0505, #f6eec9);
+	background: linear-gradient(0.4turn, var(--color-primary-darkRed), var(--color-primary-yellow));
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-self: flex-start;
-	color: #f6eec9;
+	color: var(--color-primary-yellow);
 	width: 100vw;
 	position: relative;
 	z-index: 2;
@@ -57,7 +57,7 @@
 	text-align: center;
 	font-size: 2.2rem;
 	padding-bottom: .3rem;
-	border-bottom: 0.3rem solid #f6eec9;
+	border-bottom: 0.3rem solid var(--color-primary-yellow);
 	font-weight: unset;
 	font-family: "lobster";
 }
@@ -253,10 +253,10 @@
 	}
 
 	.container-arriba {
-		color: #f6eec9;
+	color: var(--color-primary-yellow);
     padding: unset;
     display: flex;
-		flex-direction: column !important;
+	flex-direction: column !important;
     justify-content: space-between;
 
 	}
@@ -345,7 +345,7 @@
 		display: block;
 		width: 100%;
     	margin-top: 3rem;
-		color: #f6eec9;
+		color: var(--color-primary-yellow);
 		font-size: 2rem;
 		border-top: 0.5rem solid;
     	font-family: arimo;

@@ -4,13 +4,17 @@
 .categorias{
 	width: 100vw;
 	height: 100%;
-	padding: 4rem 0;
+	padding: 1rem 0 4rem 0;
 	background-color: var(--color-primary-yellow);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .categorias .categorias--list{
 	width: 80vw;
-	margin: 0 auto;
+/* 	margin: 0 auto; */
 }
 
 .categorias .categorias--title{
@@ -60,57 +64,41 @@
 	justify-content: space-between;
 }
 
-#cat-guitarras{
-	background-color: #a20a0a7c;
-	color: var(--color-primary-yellow);
-}
-
-#cat-pianos{
-	background-color: #79935171;
-	color: black;
-
-}
-#cat-baterias{
-	background-color: #cf8f7154;
-	color: black;
-}
-#cat-vientos{
-	background-color: #f6eec97c;
-	color: var(--color-primary-darkRed);
-
-}
+#cat-guitarras,
+#cat-pianos,
+#cat-baterias,
+#cat-vientos,
 #cat-amplis{
-	background-color: #4c050575;
+	background-color: var(--hover-black);
 	color: var(--color-primary-yellow);
-
 }
+
 
 .categorias .categorias--item:not(:last-of-type){
 	margin-bottom: 2rem;
 }
 
 .categorias .categorias--item:nth-child(1){
-	background-image: url(/img/bg-images/bg-guitarra.jpg);
+	background-image: url("/img/bg-images/bg-guitarra.jpg");
 }
 
 .categorias .categorias--item:nth-child(2){
-	background-image: url(/img/bg-images/bg-piano.jpg);
+	background-image: url("/img/bg-images/bg-piano.jpg");
 	background-position: 50% 50%;
 }
 
 .categorias .categorias--item:nth-child(3){
-	background-image: url(/img/bg-images/bg-bateria.jpg);
+	background-image: url("/img/bg-images/bg-bateria.jpg");
 }
 
 .categorias .categorias--item:nth-child(4){
-	background-image: url(/img/bg-images/bg-saxo.jpg);
+	background-image: url("/img/bg-images/bg-saxo.jpg");
 	background-position: 50% 50%;
 }
 
 .categorias .categorias--item:nth-child(5){
-	background-image: url(/img/bg-images/bg-ampli.jpg);
+	background-image: url("/img/bg-images/bg-ampli_325.jpg");
 	background-position: 50% 10%;
-
 }
 .box-c{
 	display: none;
@@ -124,6 +112,29 @@
 		height: unset;
 		padding: 4rem 0 6rem 0;
 	}
+
+	/* .categorias .categorias--item:nth-child(1){
+		background-image: url(/img/bg-images/bg-guitarra.jpg);
+	}
+	
+	.categorias .categorias--item:nth-child(2){
+		background-image: url(/img/bg-images/bg-piano.jpg);
+	
+	}
+	
+	.categorias .categorias--item:nth-child(3){
+		background-image: url(/img/bg-images/bg-bateria.jpg);
+	}
+	
+	.categorias .categorias--item:nth-child(4){
+		background-image: url(/img/bg-images/bg-saxo.jpg);
+
+	}
+	
+	.categorias .categorias--item:nth-child(5){
+		background-image: url(/img/bg-images/bg-ampli.jpg);
+	
+	} */
 }
 
 @media screen and (min-width: 1200px){
@@ -241,7 +252,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: var(--hover-black);
 		transition: all .4s;
 	}
 

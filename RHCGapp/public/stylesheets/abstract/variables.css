@@ -9,10 +9,51 @@
 	--bg-color-darkRed: #8d2e21;
 	--primary-shadow-up: 0 -0.2rem 0.5rem rgba(0, 0, 0, 0.4);
  	--primary-shadow-down: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.8); 
+	--hover-black: rgba(0, 0, 0, 0.6);
 	--background: 	linear-gradient(#f6eec95b, #f6eec96b),
 		url(/img/fondos/texturas_19.jpg);
 
 }
+
+
+.darkMode{
+
+	--color-primary-red: #f8dc61;
+	/* --color-primary-orange: #c5704a; */
+
+	
+	--color-primary-darkRed: #f6eec9;
+	/* --color-primary-yellow: #f6eec9; */
+
+	
+	--color-primary-orange: #a20a0a;
+	/* --color-primary-red: #a20a0a; */
+
+	
+	--color-primary-yellow: #4c0505;
+	/* --color-primary-darkRed: #4c0505; */
+
+	
+	--color-primary-green: #799351;
+	
+	--bg-color-orange: #8d2e21;
+	/* --bg-color-darkRed: #8d2e21; */
+
+	
+	--bg-color-darkRed: #f07c4d;
+	/* --bg-color-orange: #f07c4d; */
+
+	
+	--hover-black: #f6eec9a4;
+	--primary-shadow-up: 0 -0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+ 	--primary-shadow-down: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.8); 
+	
+	 --background: 	linear-gradient(#4c05057c, #4c050583),
+		url(/img/fondos/texturas_19.jpg);
+
+}
+
+
 
 /* 
 .dark.theme{
@@ -29,7 +70,7 @@
 	--background: 	linear-gradient(#4c0505, #4c0505),
 		url(/img/fondos/texturas_19.jpg);
 
-
+}
 
 ////// ORIGINAL
 

@@ -81,6 +81,7 @@
 }
 
 .kits .article--card {
+	color: var(--color-primary-darkRed);
 	background-color: var(--color-primary-yellow);
 	border-radius: 3rem;
 	padding: 1.5rem;
