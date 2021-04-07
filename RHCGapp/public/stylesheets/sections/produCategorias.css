@@ -17,6 +17,7 @@
     text-align: center;
     line-height: .9;
     margin-bottom: 3.5rem;
+    text-transform: capitalize;
 }
 
 .productos-container{
@@ -128,7 +129,7 @@
 @media screen and (min-width: 1200px){
 
     .container-products{
-        padding: 20rem 0;
+        padding: 25rem 0 30rem 0;
     }
 
     .productos-item{

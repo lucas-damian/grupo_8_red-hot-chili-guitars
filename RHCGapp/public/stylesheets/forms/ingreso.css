@@ -2,9 +2,8 @@
 	width: 100vw;
 	height: 100%;
 	padding: 6rem 0;
-	background-image: 
-	linear-gradient(#f6eec973, #f07b4d7e),
-	url(/img/fondos/texturas_19.jpg);
+	background-image: var(--background);
+	object-fit: contain;
 }
 
 .ingreso .principal{
@@ -12,6 +11,7 @@
 	width: 80vw;
 	display: flex;
 	flex-direction: column;
+
 }
 
 .ingreso .form-izq,
@@ -28,14 +28,14 @@
 
 .ingreso .form-izq{
 	margin-bottom: 4rem;
-	background-image: linear-gradient(40deg ,var(--color-primary-green) -20%,var(--color-primary-yellow));
+	background-image: linear-gradient(40deg ,#799351 -20%,#f6eec9);
 	justify-content: space-between;
 	margin-top: 3rem;
 
 }
 
 .ingreso .form-der{
-	background-image: linear-gradient(-40deg ,var(--color-primary-orange) -20%,var(--color-primary-yellow));
+	background-image: linear-gradient(-40deg ,#c5704a -20%,#f6eec9);
 	
 }
 
@@ -56,7 +56,7 @@ justify-content: space-between;
 	font-size: 1.8rem;
 	margin-bottom: .3em;
 	font-family: lobster;
-	color: var(--color-primary-darkRed);
+	color:#4c0505;
 }
 
 .log--input{
@@ -118,13 +118,13 @@ justify-content: space-between;
 }
 
 .ingreso .btn--logIn{
-	background-color: var(--color-primary-green);
-	color: var(--color-primary-yellow);
+	background-color: #799351 ;
+	color: #f6eec9;
 }
 
 .ingreso .btn--register{
 	background-color: var(--bg-color-orange);
-	color: var(--color-primary-yellow);
+	color: #f6eec9;
 }
 
 

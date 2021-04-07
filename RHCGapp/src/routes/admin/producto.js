@@ -4,6 +4,7 @@ let uploadImages = require("../../middlewares/uploadImages")
 const {cargaProduc,listar,store,produEdit,prodUpdate,borrar,search,detailProduct}= require('../../controllers/productController');
 const adminCheck = require('../../middlewares/adminCheck');
 const uploadCheck = require("../../validations/uploadValidation");
+const masterCheck = require('../../middlewares/masterCheck');
 
 
 /// /products

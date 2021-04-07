@@ -9,6 +9,7 @@
 	
 
 <section class="container-products">
+	<h2 class="productos-title"><%= categorias[0].name %></h2>
 	<ul class="productos-container">
 		
 		<% for(let i = 0; i< categorias.length ; i++){%>
@@ -42,7 +43,7 @@
 					</p>
 			
 					<p class="productos-text">
-						<%= categorias[i].productos[j].price %>
+						$<%= categorias[i].productos[j].price %>
 					</p>
 			
 					<div class="btns--container">
