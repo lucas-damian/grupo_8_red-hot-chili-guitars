@@ -102,7 +102,7 @@ module.exports = {
                 model:modelo,
                 price:valor,
                 description,
-                kit: kit.length != 0 ? "on" : "off" ,
+                kit: kit ? "on" : null ,
                 color:color
             })
             .then((newProduct) => {  

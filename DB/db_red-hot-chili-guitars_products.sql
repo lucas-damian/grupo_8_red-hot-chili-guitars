@@ -38,7 +38,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `fk_products_categories_idx` (`id_category`),
   CONSTRAINT `fk_products_categories` FOREIGN KEY (`id_category`) REFERENCES `categories` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +47,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (7,'guitarra','criolla','gibson','abc-123','negra',12345,NULL,'la mejor guitarra del mundo mundial',1,NULL,'on'),(8,'teclado','','yamaha','bbc-123','negro',23456,NULL,NULL,2,NULL,NULL),(9,'bateria','','yamaha','ddc-234','roja',34567,NULL,NULL,4,NULL,NULL),(10,'flauta','','ahab','flauta-1','amarilla',99843,NULL,NULL,5,NULL,NULL),(11,'amplificador','','marshall','amp-445','blanco',88473,NULL,NULL,3,NULL,NULL),(20,'bajo','soprano','fender','baj-123','blanco',12345,NULL,'bajo de madera laqueada, perfecto para iniciar la carrera musical',1,NULL,'on'),(21,'ukelele','meso soprano','oberture','uqu-122','natural',223341,NULL,'ukelele chico de color natural, perfecto para recién iniciados en l amúsica',1,NULL,'on'),(22,'bateria','acustica','yamaha','bat-223','roja',33344222,NULL,'excelente bateria de 4 cuerpos, con hi-hat y bocina, perfecta para iniciados',4,NULL,'on'),(23,'trompeta','soprana','jazzola','tro-334','dorada',33452,NULL,'trompeta jazzola soprana, excelente para aprender a respirar y tocar',5,NULL,'on'),(24,'teclado','','yamaha','pia-123','natural',33445,NULL,'piano vertical, excelente estado, apto para rocksatrs',2,NULL,'on');
+INSERT INTO `products` VALUES (7,'guitarra','criolla','gibson','abc-123','negra',12345,NULL,'la mejor guitarra del mundo mundial',1,NULL,'on'),(8,'teclado','','yamaha','bbc-123','negro',23456,NULL,NULL,2,NULL,NULL),(9,'bateria','','yamaha','ddc-234','roja',34567,NULL,NULL,4,NULL,NULL),(10,'flauta','abc','ahab','flauta-1','amarilla',33425,NULL,'',5,NULL,'off'),(11,'amplificador','','marshall','amp-445','blanco',88473,NULL,NULL,3,NULL,NULL),(20,'bajo','soprano','fender','baj-123','blanco',12345,NULL,'bajo de madera laqueada, perfecto para iniciar la carrera musical',1,NULL,'on'),(21,'ukelele','meso soprano','oberture','uqu-122','natural',223341,NULL,'ukelele chico de color natural, perfecto para recién iniciados en l amúsica',1,NULL,'on'),(23,'trompeta','soprana','jazzola','tro-334','dorada',33452,NULL,'trompeta jazzola soprana, excelente para aprender a respirar y tocar',5,NULL,'on'),(24,'teclado','','yamaha','pia-123','natural',33445,NULL,'piano vertical, excelente estado, apto para rocksatrs',2,NULL,'on'),(26,'armonica','varitona','ahab','arm-123','metal',55443,NULL,'la mejor harmonica para darle armonia a tú vida',5,NULL,'on'),(28,'guitarra','acusti','yamaha','blu-123','azul',66557,NULL,'guitarra yamaha edicion blue',4,NULL,'off'),(29,'bateria','acustica','yamaha','kid-123','azul',55443,NULL,'edicion kids',4,NULL,NULL),(30,'teclado','electrico','yamaha','tec-223','negro',778483,NULL,'teclado mc. kalister, para arendices',2,NULL,NULL),(31,'microfono','dinamico','elpepe','mic-223','negro',66574,NULL,'excelente microfono para principiantes',3,NULL,'on'),(32,'accesorio','repuesto','fender','cue-2245','metal',66578,NULL,'las mejores cuerdas en toda la tienda',3,NULL,'on');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-31 10:15:23
+-- Dump completed on 2021-04-07 13:50:58

@@ -26,14 +26,14 @@
     if($darkMode === "enabled" && !$btnPoint.classList.contains("active")){
         enableDarkMode();
         $btnPoint.classList.add("active");
-        $btnIconMobile.classList.add("active")
+        $btnIconMobile.classList.add("active");
     }
 
 
     const theme = () => {
         $darkMode = localStorage.getItem("darkMode")
 
-        if($darkMode !== "enabled" && !$btnPoint.classList.contains("active")){
+        if($darkMode !== "enabled" && !$btnPoint.classList.contains("active") && !$btnPointMobile.classList.contains("pushed")){
             enableDarkMode();
             $btnPoint.classList.add("active");
             $btnPointMobile.classList.add("pushed");

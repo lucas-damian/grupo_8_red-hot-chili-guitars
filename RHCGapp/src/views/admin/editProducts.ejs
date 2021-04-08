@@ -23,8 +23,10 @@
         <div class="cajaIzquierda">
             
             <div class="log-row">
+              <label class="log--label" for="marca">Instrumento :</label>
+
               <select class="log--input" name="instrumento" id="instrumento" value="<%= producto.instrument %>" selected="<%= producto.instrument %>">
-                <option value="elegí instrumento" disabled>
+                <option value="" disabled>
                   elegí instrumento
                 </option>
     
@@ -134,7 +136,7 @@
    <%- include('../partials/footer') %>
  <!-- /footer -->
    
-   
+   <script src="/javascript/cargaEditValidation.js"></script>
    
  <script src="/javascript/slider.js"></script>
 </body>

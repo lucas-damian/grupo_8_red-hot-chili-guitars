@@ -54,13 +54,16 @@
                     <div class="register-container">
                         <div class="log-row">
                             <label for="userName" class="log--label" >Ingresá tú nombre:</label>
-                            <input class="log--input" type="text" placeholder="ingresá tú nombre" id="userName" name="userName">
+                            <input class="log--input" type="text" placeholder="ingresá tú nombre" 
+                            id="userName" name="userName" 
+                            value="<%= (typeof old != 'undefined' && old.usarName)?old.userName:'' %>">
                             <span class="error" id="nameErrors"></span>
                         </div>
     
                         <div class="log-row">
                             <label for="emailRegister" class="log--label">Ingresá un email:</label>
-                            <input class="log--input" type="email" placeholder="ingresá un email" id="emailRegister" name="email">
+                            <input class="log--input" type="email" placeholder="ingresá un email" id="emailRegister" name="email"
+                            value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>">
                             <span class="error" id="emailErrors"></span>
                         </div>
 

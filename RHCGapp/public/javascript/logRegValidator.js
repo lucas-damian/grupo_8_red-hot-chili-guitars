@@ -3,6 +3,8 @@ let qs = function(element){
  }
 
 let $formRegister = qs("#formRegister"),
+    $formLogin = qs("#formLogin"),
+
     $userName = qs('#userName'),
     $nameErrors = qs('#nameErrors'),
     
@@ -34,96 +36,137 @@ let $formRegister = qs("#formRegister"),
 
 
 window.onload = function() {
+
+
+
+        
+
+        $userName.addEventListener("blur", function(){
+        
+            switch (true) {
+                
+                case !$userName.value.trim():
+                $nameErrors.innerHTML = 'debes ingresar un usuario';
+                $userName.classList.add('is-invalid');
+                break;
+                
+                
+                case !regExAlpha.test($userName.value):
+                $nameErrors.innerHTML = 'el usuario no puede llevar simbolos';
+                $userName.classList.add('is-invalid');
+                break; 
+                
+                
+                default:
+                $userName.classList.remove('is-invalid');
+                $userName.classList.add('is-valid');
+                $nameErrors.innerHTML = ''
+                break;
+            }
+        })
     
-    $userName.addEventListener("blur", function(){
-        
-        switch (true) {
+        $emailRegister.addEventListener("blur", function(){
             
-            case !$userName.value.trim():
-            $nameErrors.innerHTML = 'debes ingresar un usuario';
-            $userName.classList.add('is-invalid');
-            break;
-            
-            
-            case !regExAlpha.test($userName.value):
-            $nameErrors.innerHTML = 'el usuario no puede llevar simbolos';
-            $userName.classList.add('is-invalid');
-            break; 
-            
-            
-            default:
-            $userName.classList.remove('is-invalid');
-            $userName.classList.add('is-valid');
-            $nameErrors.innerHTML = ''
-            break;
-        }
-    })
+            switch (true) {
+                case !this.value.trim():
+                $emailErrors.innerHTML = 'el email es requerido';
+                $emailRegister.classList.add('is-invalid');
+                break;
+                
+                case !regExEmail.test($emailRegister.value):
+                $emailErrors.innerHTML = 'el email no puede llevar mayusculas y siempre debe que tener @';
+                $emailRegister.classList.add('is-invalid');
+                break
+                
+                default:
+                $emailRegister.classList.remove('is-invalid');
+                $emailRegister.classList.add('is-valid');
+                $emailErrors.innerHTML = ''
+                break;
+            }
+        })
+    
+        $pass.addEventListener("blur", function(){
+    
+            switch (true) {
+                case !this.value.trim():
+                $passErrors.innerHTML = 'Es necesario una contraseña';
+                $pass.classList.add('is-invalid');
+                break;
+                
+                case !regExPass.test($pass.value):
+                $passErrors.innerHTML = 'Minimo 3 caracteres y máximo 6 caracteres';
+                $pass.classList.add('is-invalid');
+                break
+                
+                default:
+                $pass.classList.remove('is-invalid');
+                $pass.classList.add('is-valid');
+                $passErrors.innerHTML = ''
+                break;
+            }
+    
+        })
+    
+        $pass2.addEventListener("blur", function(){
+    
+            switch (true) {
+               
+                case !$pass2.value.trim():
+                $pass2Errors.innerHTML = 'Debes reingresar la contraseña';
+                $pass2.classList.add('is-invalid')
+                break;
+                
+                case $pass2.value != $pass.value:
+                pass2Errors.innerHTML = 'Las contraseñas no coinciden';
+                $pass2.classList.add('is-invalid')
+                break;
+                
+                default:
+                $pass2.classList.remove('is-invalid');
+                $pass2.classList.add('is-valid');
+                $pass2Errors.innerHTML = ''
+                break;
+            }
+    
+        })
 
-    $emailRegister.addEventListener("blur", function(){
-        
-        switch (true) {
-            case !this.value.trim():
-            $emailErrors.innerHTML = 'el email es requerido';
-            $emailRegister.classList.add('is-invalid');
-            break;
-            
-            case !regExEmail.test($emailRegister.value):
-            $emailErrors.innerHTML = 'el email no puede llevar mayusculas y siempre debe que tener @';
-            $emailRegister.classList.add('is-invalid');
-            break
-            
-            default:
-            $emailRegister.classList.remove('is-invalid');
-            $emailRegister.classList.add('is-valid');
-            $emailErrors.innerHTML = ''
-            break;
-        }
-    })
 
-    $pass.addEventListener("blur", function(){
 
-        switch (true) {
-            case !this.value.trim():
-            $passErrors.innerHTML = 'Es necesario una contraseña';
-            $pass.classList.add('is-invalid');
-            break;
+        $formRegister.addEventListener("submit", function(event){
+
+            switch(true){
+                
+                case $userName.classList.contains("is-invalid") || $userName.value.length == 0:
+                    alert("hay campos erroneos");
+                    event.preventDefault();
+                    break
+                
+                case $emailRegister.classList.contains("is-invalid") || $emailRegister.value.length == 0:
+                    alert("hay campos erroneos");
+                    event.preventDefault();
+                    break
             
-            case !regExPass.test($pass.value):
-            $passErrors.innerHTML = 'Minimo 3 caracteres y máximo 6 caracteres';
-            $pass.classList.add('is-invalid');
-            break
+                case $pass.classList.contains("is-invalid") || $pass.value.length == 0:
+                    alert("hay campos erroneos");
+                    event.preventDefault();
+
+                    break
+                    
+                case $pass2.classList.contains("is-invalid") || $pass2.value.length == 0:
+                    alert("hay campos erroneos");
+                    event.preventDefault();
+                    break
+
+                default:
+                    event.submit();
+                    break   
+            }
             
-            default:
-            $pass.classList.remove('is-invalid');
-            $pass.classList.add('is-valid');
-            $passErrors.innerHTML = ''
-            break;
-        }
+        })
 
-    })
-
-    $pass2.addEventListener("blur", function(){
-
-        switch (true) {
-           
-            case !$pass2.value.trim():
-            $pass2Errors.innerHTML = 'Debes reingresar la contraseña';
-            $pass2.classList.add('is-invalid')
-            break;
-            
-            case $pass2.value != $pass.value:
-            pass2Errors.innerHTML = 'Las contraseñas no coinciden';
-            $pass2.classList.add('is-invalid')
-            break;
-            
-            default:
-            $pass2.classList.remove('is-invalid');
-            $pass2.classList.add('is-valid');
-            $pass2Errors.innerHTML = ''
-            break;
-        }
-
-    })
+    
+   
 
 /* 
         ////// LOGUEO

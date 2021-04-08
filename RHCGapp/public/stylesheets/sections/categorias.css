@@ -79,7 +79,7 @@
 }
 
 .categorias .categorias--item:nth-child(1){
-	background-image: url("/img/bg-images/bg-guitarra.jpg");
+	background-image: url("/img/bg-images/bg-guitarra_325.png");
 }
 
 .categorias .categorias--item:nth-child(2){
@@ -88,7 +88,7 @@
 }
 
 .categorias .categorias--item:nth-child(3){
-	background-image: url("/img/bg-images/bg-bateria.jpg");
+	background-image: url("/img/bg-images/bg-bateria_325.png");
 }
 
 .categorias .categorias--item:nth-child(4){
@@ -97,7 +97,7 @@
 }
 
 .categorias .categorias--item:nth-child(5){
-	background-image: url("/img/bg-images/bg-ampli_325.jpg");
+	background-image: url("/img/bg-images/bg-ampli_325.png");
 	background-position: 50% 10%;
 }
 .box-c{
