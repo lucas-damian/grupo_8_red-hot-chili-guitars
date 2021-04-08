@@ -6,10 +6,10 @@ const {processRegister,logIn,processLogin,profile,fatality} = require("../contro
 const registerValidation = require('../validations/registerValidation');
 const loginValidation = require('../validations/loginValidation');
 const userCheck = require("../middlewares/userCheck");
+const cookieCheck = require("../middlewares/cookieCheck");
 
 
-
-router.post('/log-in',loginValidation,processLogin);
+router.post('/log-in',loginValidation,cookieCheck,processLogin);
 
 router.post('/register',registerValidation, processRegister);
 

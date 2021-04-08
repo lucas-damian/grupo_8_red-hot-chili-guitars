@@ -22,7 +22,7 @@ router.put("/update/:id",uploadImages.any(), prodUpdate);
 router.delete('/delete/:id',borrar);
 
 
-router.get('/:busqueda', search);
+router.get('/:busqueda' ,search);
 
 
 

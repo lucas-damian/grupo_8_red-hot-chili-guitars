@@ -80,7 +80,7 @@ module.exports = {
                 }else {
                     res.render('logeo',{
                         title: "logueo",
-                        errores: "contraseña inválida"
+                        errores: "credenciales invalidas"
                     })
                 }
             })
