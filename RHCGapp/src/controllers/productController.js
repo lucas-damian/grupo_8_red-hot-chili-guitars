@@ -212,7 +212,7 @@ module.exports = {
         db.Products.findAll({
             where:{
                 instrument:{
-                    [Op.substring]:buscar
+                    [Op.like]:`${buscar}`
                 }},
                 include:[{association:"categorias"},
                          {association:"imagenes"}]
