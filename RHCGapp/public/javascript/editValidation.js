@@ -2,7 +2,7 @@ let qs = function(element){
     return document.querySelector(element);
  }
 
- let $formCarga = qs("#formCarga"),
+ let $formCarga = qs("#formEdit"),
  /*--caja izquierda--*/
     $instrumento=qs("#instrumento"),
     $instrumentoErrors=qs("#instrumentoErrors"),
