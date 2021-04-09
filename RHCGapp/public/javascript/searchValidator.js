@@ -1,10 +1,11 @@
-let qs = function(element){
+/* let qs = function(element){
     return document.querySelector(element);
- }
+ } */
 
  let $formSearch = qs("#formSearch"),
 
  $search= qs("#search")
+ $searchMobile = qs("#searchBtn")
  
  regExAlpha= /^[a-zA-Z\sñáéíóúü ]*$/
 
