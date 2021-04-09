@@ -39,8 +39,6 @@ window.onload = function() {
 
 
 
-        
-
         $userName.addEventListener("blur", function(){
         
             switch (true) {
@@ -132,29 +130,28 @@ window.onload = function() {
         })
 
 
-
         $formRegister.addEventListener("submit", function(event){
 
             switch(true){
                 
                 case $userName.classList.contains("is-invalid") || $userName.value.length == 0:
-                    alert("hay campos erroneos");
+                    alert("hay campos erroneos o vacío: Nombre");
                     event.preventDefault();
                     break
                 
                 case $emailRegister.classList.contains("is-invalid") || $emailRegister.value.length == 0:
-                    alert("hay campos erroneos");
+                    alert("hay campos erroneos o vacío: Email");
                     event.preventDefault();
                     break
             
                 case $pass.classList.contains("is-invalid") || $pass.value.length == 0:
-                    alert("hay campos erroneos");
+                    alert("hay campos erroneos o vacío: Contraseña");
                     event.preventDefault();
 
                     break
                     
                 case $pass2.classList.contains("is-invalid") || $pass2.value.length == 0:
-                    alert("hay campos erroneos");
+                    alert("hay campos erroneos o vacío: Confirmar contraseña");
                     event.preventDefault();
                     break
 
@@ -215,6 +212,29 @@ window.onload = function() {
             $passwordErrors.innerHTML = ''
             break;
         }
+    })
+
+    $formLogin.addEventListener("submit", function(event){
+
+        switch(true){
+            
+            case $user.classList.contains("is-invalid") || $user.value.length == 0:
+                alert("hay campos erroneos o vacio: Email ");
+                event.preventDefault();
+                break
+        
+            case $password.classList.contains("is-invalid") || $password.value.length == 0:
+                alert("hay campos erroneos o vacío: Contraseña ");
+                event.preventDefault();
+
+                break
+                
+
+            default:
+                event.submit();
+                break   
+        }
+        
     })
 
 }

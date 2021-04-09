@@ -240,31 +240,41 @@ module.exports = {
         let buscar = req.query.busqueda.toLowerCase().trim();
 
        
-        db.Products.findAll({
+        let productos = db.Products.findAll({
             where:{
                 [Op.or]:[
                     
                     {instrument:{[Op.like]:`%${buscar}%`}},
                     {mark:{[Op.like]:`%${buscar}%`}}
-
                     
                 ]
             },
                 include:[{association:"categorias"},
                          {association:"imagenes"}]
             })
-            .then(productos => {
+            
+        let categorias = db.Categories.findOne({
+            where:{
+                name:{[Op.like]:`%${buscar}%`}
+            }
+        })
+            
+            Promise.all([productos, categorias])
+                .then(([productos, categorias]) => {
 
-                    /* res.send(productos) */
+                    res.send(productos)
+                    
                     res.render("admin/adminProducts",{
-                    title:"productos",
-                    productos:productos,
-                    msg: "Estos son tus instrumentos"
+                        title:"productos",
+                        productos:productos,
+                        categorias,
+                        msg: "Estos son tus instrumentos"
+                    
+                    })
+
                 })
- 
-            })
-            .catch(error => res.send(error))
-      
+                .catch(error => res.send(error))
+        
     },
     
     
@@ -275,21 +285,6 @@ module.exports = {
             msg: "Estos son tus instrumentos"
         });
     }
-    
-    /* ,
-    
-    searchUser: (req,res) => {
-        const resultado = productos.filter( product => {
-            return product.instrumento.toLowerCase().trim().includes(req.query.busqueda.toLowerCase().trim())
-        });
-
-        res.send(resultado);
-        res.render("userProducts",{
-            title:"resultado de la búsqueda",
-            productos:resultado,
-        });
-     } */
-
      
 }
 

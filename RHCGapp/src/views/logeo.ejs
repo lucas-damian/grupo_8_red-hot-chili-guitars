@@ -54,9 +54,11 @@
                     <div class="register-container">
                         <div class="log-row">
                             <label for="userName" class="log--label" >Ingresá tú nombre:</label>
+                            
                             <input class="log--input" type="text" placeholder="ingresá tú nombre" 
                             id="userName" name="userName" 
                             value="<%= (typeof old != 'undefined' && old.usarName)?old.userName:'' %>">
+                            
                             <span class="error" id="nameErrors"></span>
                         </div>
     

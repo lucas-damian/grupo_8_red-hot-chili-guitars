@@ -18,6 +18,7 @@
 				class="header__form"
 				action="/products/:busqueda"
 				method="GET"
+				id="formSearch"
 			>
 				<div class="search-bar">
 					<input
@@ -25,6 +26,7 @@
 						type="text"
 						placeholder="buscá tú instrumento..."
 						name="busqueda"
+						id="search"
 					/>
 					<button class="btn--search" type="submit">
 						<i class="fas fa-search"></i>
@@ -116,6 +118,8 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="/javascript/searchValidator.js"></script>
 </header>
 <nav class="nav-bar" id="barra">
 	<ul class="list--header">
