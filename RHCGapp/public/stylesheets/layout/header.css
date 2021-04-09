@@ -388,7 +388,7 @@
 	}
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
 	.nav-bar {
 		display: none;
 	}
@@ -430,7 +430,7 @@
 
 	.header .login a {
 		padding: 0.8rem 1rem;
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	.header .link--logo {
@@ -486,7 +486,7 @@
 
 	.btn--header__desktop {
 		display: inline-block;
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 		line-height: 1;
 		color: var(--color-primary-yellow);
 		transition: color 0.3s;

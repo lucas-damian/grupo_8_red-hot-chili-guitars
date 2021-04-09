@@ -32,8 +32,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride("_method"));
 app.use(session({secret: "red hot chilli guitars"}));
 app.use(userLog);
-app.use(localsCheck);
 app.use(cookieCheck);
+app.use(localsCheck);
 
 
 

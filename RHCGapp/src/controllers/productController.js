@@ -172,10 +172,41 @@ module.exports = {
                     id:req.params.id
                 }
             })
-            .then((product) => {
-                res.redirect("/products/detalle-del-producto/"+req.params.id)
+            .then((product) => {  
+
+                db.Products.findOne({
+                    where:{
+                        id: req.params.id
+                    },
+                    include:[{association:"imagenes"}]
+                })
+                    .then(product => {
+                        /* res.send(product) */
+                        /* res.send(req.files) */
+                        db.Images.update({
+                            name: req.files[0] ? req.files[0].filename : product.imagenes[0].name,
+                            id_product: product.id
+                        },
+                        {
+                            where:{
+                                id:req.params.id
+                            }
+                        })
+
+                        .then(() => {
+                    
+                            res.redirect("/products/detalle-del-producto/"+req.params.id)
+                        })
+                        .catch(error => res.send(error))
+                    })
+
             })
             .catch(error => res.send(error))
+           
+            /* .then((product) => {
+                res.redirect("/products/detalle-del-producto/"+req.params.id)
+            })
+            .catch(error => res.send(error)) */
             
     },
 
@@ -206,14 +237,19 @@ module.exports = {
     
     
     search: (req,res) => {
-        let buscar = req.query.busqueda.toLowerCase();
+        let buscar = req.query.busqueda.toLowerCase().trim();
 
        
         db.Products.findAll({
             where:{
-                instrument:{
-                    [Op.substring]:buscar
-                }},
+                [Op.or]:[
+                    
+                    {instrument:{[Op.like]:`%${buscar}%`}},
+                    {mark:{[Op.like]:`%${buscar}%`}}
+
+                    
+                ]
+            },
                 include:[{association:"categorias"},
                          {association:"imagenes"}]
             })

@@ -205,7 +205,7 @@
 
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
 	.footer {
 		background-image: url("/img/fondos/footer_fondo.svg");
 		background-repeat: no-repeat;
@@ -284,7 +284,7 @@
 	.iconos {
     	width: 44%;
     	padding: unset;
-		font-size: 4rem;
+		font-size: 3rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -303,11 +303,11 @@
 	}
 
 	 .contacto {
-    padding: .5rem 1rem;
+    	padding: .5rem 1rem;
 		margin: unset;
 		text-decoration: none;
 		color: var(--color-primary-yellow);
-    box-shadow: var(--primary-shadow-down);
+    	box-shadow: var(--primary-shadow-down);
 	}
 
 	 .contacto:hover {
@@ -319,7 +319,7 @@
   	}
 
 	.contactanos-text {
-   
+		font-size: 1.8rem;
 		margin: 0;
 		display: flex;
 		align-items: center;
@@ -328,16 +328,16 @@
 	}
 
 	.redes {
-		margin: unset;
+	margin: unset;
     width: unset;
     padding: .5rem 1rem;
-		font-family: lobster;
+	font-family: lobster;
     box-shadow: var(--primary-shadow-down);
 	}
 
   	.redes-text{
-		  font-size: 2rem;
-    margin-right: 3rem;
+		  font-size: 1.8rem;
+    	margin-right: 3rem;
   	}
 
 
@@ -346,7 +346,7 @@
 		width: 100%;
     	margin-top: 3rem;
 		color: var(--color-primary-yellow);
-		font-size: 2rem;
+		font-size: 1.8rem;
 		border-top: 0.5rem solid;
     	font-family: arimo;
 	}

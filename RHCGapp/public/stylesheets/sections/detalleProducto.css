@@ -98,6 +98,7 @@
 .detalle-product .img--detalle{
     width: 80%;
     height: 100%;
+    object-fit: contain;
 }
 
 .detalle-product .img-container,
@@ -222,7 +223,7 @@
 
 }
 
-@media screen and (min-width:1200px){
+@media screen and (min-width:1024px){
 
 
     .detalle-product{
@@ -282,114 +283,4 @@
         transform: scale(0.9);
     }
 
-
-    /* .detalle-product .detalle-container{
-        background-color: turquoise;
-    }
-    
-    .detalle-product{
-        padding: 20rem 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .detalle-product .title-main{
-        position: unset;
-        width: 80vw;
-        display: inline-block;
-        margin-bottom: 3rem;
-        border-radius: 1rem;
-        padding: 2rem;
-    }
-
-    .detalle-product .sub-title{
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-        font-weight: 600;
-        text-align: left;
-    }
-
-    .detalle-product .detalle-subContainer{
-        height: 70vh;
-    }
-
-    .detalle-product .detalle-datos{
-        height: 100%;
-        margin-top: 5rem;
-
-         margin-top: 5rem;
-        margin-bottom: unset;
-        height: unset;
-        padding-bottom: 2rem; 
-    }
-  
-    .detalle-product .detalle-text:not(:last-of-type){
-        margin-bottom: 2rem;
-    }
-    
-
-    .detalle-product .img-gallery{
-        flex-direction: column;
-        width: 65%;
-        height: 80%;
-        margin-right: 1rem;
-    }
-
-    .detalle-product .img-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-    }
-
-    .detalle-product .img--detalle{
-        width: 90%;
-    }
-
-    .detalle-product .img-sub{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        height: 30%;
-    }
-
-    .detalle-product .img-display{
-        display: flex;
-        flex-direction: row-reverse;
-        width: 100%;
-        height: 100%;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .detalle-product .img-container{
-        width: 95vw;
-        height: 100%;
-    }
-
-    .detalle-product .btn-container{
-        width: 40%;
-        align-self: flex-end;
-        margin-top: 8rem;
-        flex-direction: row-reverse;
-    }
-
-    .detalle-product .btn--detalle{
-        margin-top: unset;
-        width: 48%; 
-        transition: all .2s;
-        font-size: 2rem;
-        padding: .8rem 1.5rem;
-    }
-    
-    .detalle-product .btn--detalle:hover{
-        transform: scale(1.1);
-    }
-
-    .detalle-product .btn--detalle:active{
-        transform: scale(0.9);
-    } */
 }

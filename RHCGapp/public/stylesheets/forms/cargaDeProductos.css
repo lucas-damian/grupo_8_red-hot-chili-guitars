@@ -104,7 +104,7 @@
 }
 
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1024px){
     .cargaProductos{
         padding: 20rem 0 25rem 0;
     }

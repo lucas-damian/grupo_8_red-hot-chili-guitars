@@ -71,7 +71,7 @@ module.exports = {
                     }
                     if(recordar){
                         res.cookie('userStar', req.session.user, {
-                            maxAge : 1000 * 60 * 60 * 60
+                            maxAge : 1000 * 60 * 60 
                         })
                     }
                    
