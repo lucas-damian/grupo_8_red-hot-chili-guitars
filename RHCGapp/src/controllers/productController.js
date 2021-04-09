@@ -262,7 +262,7 @@ module.exports = {
             Promise.all([productos, categorias])
                 .then(([productos, categorias]) => {
 
-                    res.send(productos)
+                    /* res.send(productos) */
                     
                     res.render("admin/adminProducts",{
                         title:"productos",

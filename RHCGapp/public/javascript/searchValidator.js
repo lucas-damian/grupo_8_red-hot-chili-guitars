@@ -1,6 +1,6 @@
-/* let qs = function(element){
+qs = function(element){
     return document.querySelector(element);
- } */
+ }
 
  let $formSearch = qs("#formSearch"),
 

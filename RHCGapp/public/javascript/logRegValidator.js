@@ -1,6 +1,4 @@
-let qs = function(element){
-    return document.querySelector(element);
- }
+
 
 let $formRegister = qs("#formRegister"),
     $formLogin = qs("#formLogin"),

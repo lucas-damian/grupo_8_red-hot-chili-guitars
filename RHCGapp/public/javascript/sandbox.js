@@ -1,4 +1,6 @@
-
+let qs = function(element){
+    return document.querySelector(element);
+ }
 
 const menuBtn = document.querySelectorAll(".menu-btn");
 const barra = document.getElementById("barra");
