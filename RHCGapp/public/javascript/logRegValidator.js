@@ -28,7 +28,7 @@ let $formRegister = qs("#formRegister"),
     
     regExEmail= /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     
-    regExPass= /^(?=.*\d).{3,6}$/;
+    regExPass= /^(?=.*\d).{3,12}$/;
 
   /*   regExPass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/; */
 
@@ -202,7 +202,7 @@ window.onload = function() {
             break;
             
             case !regExPass.test($password.value):
-            $passwordErrors.innerHTML = 'Minimo 3 caracteres y máximo 6 caracteres con letras minusculasy mayusculas';
+            $passwordErrors.innerHTML = 'contraseña incorrecta o vacia';
             $password.classList.add('is-invalid')
             break;
             

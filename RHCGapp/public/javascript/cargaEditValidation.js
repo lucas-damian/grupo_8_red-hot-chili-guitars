@@ -114,8 +114,8 @@ window.addEventListener('load',function(){
         }
       });
 
+      
       if($formCarga){ $formCarga.addEventListener("submit", validador);}
-      if($formEdit){$formEdit.addEventListener("submit", validador);
-    }
+      if($formEdit){$formEdit.addEventListener("submit", validador);}
    
 })
