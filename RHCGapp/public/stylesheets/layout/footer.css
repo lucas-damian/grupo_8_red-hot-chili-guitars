@@ -340,6 +340,10 @@
     	margin-right: 3rem;
   	}
 
+	  .redes i:hover {
+		transform: scale(1.1);
+	}
+
 
 	.footer-text {
 		display: block;
