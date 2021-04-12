@@ -65,7 +65,7 @@
                     
 
 						<% if (locals.user) { %>
-							<% if (locals.user.rol == "admin") { %>
+							<% if (locals.user.rol == "admin" || locals.user.rol == "master") { %>
 								<a class="btn--editar" href="/products/edit/<%= producto.id %>">editar</a>
 
 								<form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">

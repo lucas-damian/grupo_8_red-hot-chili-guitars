@@ -83,7 +83,7 @@
 }
 
 .categorias .categorias--item:nth-child(2){
-	background-image: url("/img/bg-images/bg-piano.jpg");
+	background-image: url("/img/bg-images/bg-piano_325.png");
 	background-position: 50% 50%;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .categorias .categorias--item:nth-child(4){
-	background-image: url("/img/bg-images/bg-saxo.jpg");
+	background-image: url("/public/img/bg-images/bg-saxo_325.png");
 	background-position: 50% 50%;
 }
 
@@ -113,28 +113,29 @@
 		padding: 4rem 0 6rem 0;
 	}
 
-	/* .categorias .categorias--item:nth-child(1){
-		background-image: url(/img/bg-images/bg-guitarra.jpg);
+	.categorias .categorias--item:nth-child(1){
+		background-image: url("/img/bg-images/bg-guitarra_768.png");
 	}
 	
 	.categorias .categorias--item:nth-child(2){
-		background-image: url(/img/bg-images/bg-piano.jpg);
-	
+		background-image: url("/img/bg-images/bg-piano_768.png");
+		background-position: 50% 50%;
 	}
 	
 	.categorias .categorias--item:nth-child(3){
-		background-image: url(/img/bg-images/bg-bateria.jpg);
+		background-image: url("/img/bg-images/bg-bateria_768.png");
 	}
 	
 	.categorias .categorias--item:nth-child(4){
-		background-image: url(/img/bg-images/bg-saxo.jpg);
-
+		background-image: url("/public/img/bg-images/bg-saxo_768.png");
+		background-position: 50% 50%;
 	}
 	
 	.categorias .categorias--item:nth-child(5){
-		background-image: url(/img/bg-images/bg-ampli.jpg);
+		background-image: url("/img/bg-images/bg-ampli_768.png");
+		background-position: 50% 10%;
+	}
 	
-	} */
 }
 
 @media screen and (min-width: 1024px){
@@ -278,12 +279,12 @@
 
 	#cat-vientos__desktop{
 		width: 25rem;
-		background-image: url("/img/bg-images/bg-saxo.jpg");
+		background-image: url("/img/bg-images/bg-saxo_768.png");
 		background-size: cover;
 	}
 
 	#cat-amplis__desktop{
-		background-image:url("/img/bg-images/bg-ampli.jpg");
+		background-image:url("/img/bg-images/bg-ampli_768.png");
 		background-size: cover;
 	}
 
@@ -314,7 +315,7 @@
 
 	#cat-pianos__desktop{
 		display: block;
-		background-image: url("/img/bg-images/bg-piano.jpg");
+		background-image: url("/img/bg-images/bg-piano_768.png");
 		background-size: cover;
 		width: 100%;
 		height: 30rem;
@@ -327,7 +328,7 @@
 
 	#cat-baterias__desktop{
 		display: block;
-		background-image: url("/img/bg-images/bg-bateria.jpg");
+		background-image: url("/img/bg-images/bg-bateria_768.png");
 		background-size: cover;
 		width: 100%;
 		height: 17rem;

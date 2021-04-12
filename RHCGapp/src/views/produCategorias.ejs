@@ -47,12 +47,28 @@
 					</p>
 			
 					<div class="btns--container">
+
+						<% if (locals.user) { %>
+							<% if (locals.user.rol == "admin" || locals.user.rol == "master") { %>
+								<a class="btn--editar" href="/products/edit/<%= categorias[i].productos[j].id %> ">editar</a>
+
+								<form action="<%= categorias[i].productos[j].id %>?_method=PUT" method="POST">
+									<button class="btn--borrar" type="submit">borrar</button>
+								</form>
+							<% } %>
+						
+						<% } else { %>
+							
+							<a class="btn--editar" href="/products/detalle-del-producto/<%= categorias[i].productos[j].id %> ">+info!</a>
+
+							<form action="<%= categorias[i].productos[j].id %>?_method=PUT" method="POST">
+								<button class="btn--borrar" type="submit">Agregar al carrito</button>
+							</form>
+						<% } %>
 			
-							<a class="btn--editar" href="/products/detalle-del-producto/<%= categorias[i].productos[j].id %> ">+info!</a> <!-- ARMAR LA RUTA POR GET, SEGUN SU ID -->
+							 <!-- ARMAR LA RUTA POR GET, SEGUN SU ID -->
 			
-						<form action="<%= categorias[i].productos[j].id %>?_method=PUT" method="POST">
-							<button class="btn--borrar" type="submit">Agregar al carrito</button>
-						</form>
+					
 					</div>
 				</li>
 

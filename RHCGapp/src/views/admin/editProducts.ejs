@@ -18,7 +18,7 @@
       
       <h2 class="cargaProductos-title">editando instrumento</h2>
       
-      <form class="carga" action="/products/update/<%=producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <form class="carga" action="/products/update/<%=producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formEdit">
         
         <div class="cajaIzquierda">
             
@@ -52,7 +52,7 @@
             <div class="log-row">
               <label class="log--label" for="marca">Tipo de Instrumento :</label>
               
-              <input class="log--input" type="text" name="tipo" id="marca" placeholder="Gibson,Fender,Yamaha,etc.." value="<%= producto.type %> ">
+              <input class="log--input" type="text" name="tipo" id="tipo" placeholder="Gibson,Fender,Yamaha,etc.." value="<%= producto.type %> ">
             </div>
             
             <div class="log-row">
@@ -120,7 +120,7 @@
           </div>
        
           <div class="log-row">
-          <a href="/products/admin/list" class="btn--submit">guardar cambios</a> 
+          <button class="btn--submit">guardar cambios</button> 
          
           <a href="/products/admin/list" class="btn--productos">ver lista</a>
         </div>
@@ -136,7 +136,7 @@
    <%- include('../partials/footer') %>
  <!-- /footer -->
    
-   <script src="/javascript/cargaEditValidation.js"></script>
+   <!-- <script src="/javascript/cargaEditValidation.js"></script> -->
    
- <script src="/javascript/slider.js"></script>
+
 </body>

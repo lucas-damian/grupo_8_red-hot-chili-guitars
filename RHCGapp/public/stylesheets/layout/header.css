@@ -2,6 +2,10 @@
 	display: none;
 }
 
+.search-bg{
+	display: none;
+}
+
 .header .link--logo {
 	display: none;
 }
@@ -45,7 +49,7 @@
 	align-items: center;
 }
 
-.header .hamburguer {
+.hamburguer {
 	display: inline-block;
 	cursor: pointer;
 	width: 6.5rem;
@@ -64,18 +68,18 @@
 	justify-content: space-between;
 }
 
-.header .btn--search {
+.btn--search {
 	background-color: var(--color-primary-red);
 	color: var(--color-primary-yellow);
 	box-shadow: var(--primary-shadow--up);
 	border: none;
 }
 
-.header .barra-busqueda {
+.barra-busqueda {
 	display: none;
 }
 
-.header .login {
+.login {
 	width: 40%;
 	display: flex;
 	justify-content: space-between;
@@ -111,28 +115,7 @@
 	margin-left: -0.2rem;
 }
 
-.btn--logeoRegistro {
-	display: none;
-}
 
-.btn--logeoRegistro__mobile {
-	display: inline-block;
-	position: relative;
-	top: -7.5rem;
-	left: 4rem;
-	z-index: 11;
-	background-color: var(--color-primary-red);
-	color: var(--color-primary-yellow);
-	border-radius: 1rem;
-	font-family: lobster;
-	font-size: 1.6rem;
-}
-
-.btn--cierre {
-	padding: 1rem 2rem;
-	background-color: var(--color-primary-red) !important;
-	color: var(--color-primary-yellow) !important;
-}
 
 /* 
 
@@ -236,6 +219,30 @@
 	color: var(--color-primary-yellow);
 }
 
+
+.btn--logeoRegistro {
+	display: none;
+}
+
+.btn--logeoRegistro__mobile {
+	display: inline-block;
+	position: relative;
+	top: -7.5rem;
+	left: 4rem;
+	z-index: 11;
+	background-color: var(--color-primary-red);
+	color: var(--color-primary-yellow);
+	border-radius: 1rem;
+	font-family: lobster;
+	font-size: 1.6rem;
+}
+
+.btn--cierre {
+	padding: 1rem 2rem;
+	background-color: var(--color-primary-red) !important;
+	color: var(--color-primary-yellow) !important;
+}
+
 .switch__mobile{
 	display: block;
 	position: absolute;
@@ -300,6 +307,53 @@
 	inset 0 0 1rem .2rem rgba(0, 0, 0, 0.5);;
 }
 
+.btn-none{
+	display: none;
+}
+
+.search-header{
+		height: 25rem;
+}
+
+
+.busqueda__mobile {
+	width: 100%;
+	display: flex;
+	background-color: var(--color-primary-darkRed);
+	border-radius: 1rem;
+	position: relative;
+	padding: .5rem;
+	top: -9rem;
+}
+
+.searchInput-mobile{
+	display: block;
+	background-color: transparent;
+	border: none;
+	border-radius: 1rem;
+	padding: .5rem;
+	outline: none;
+	color: var(--color-primary-yellow);
+	font-family: arimo;
+}
+
+.btn--search__active{
+	background-color: unset;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	box-shadow: unset;
+}
+
+
+.ham-search{
+	transform: translateY(-9rem) !important;
+}
+
+
+
+
+
 /* 
 
 ////////// FIN NAV-BAR ESCONDIDA (mobile)
@@ -358,7 +412,7 @@
 		color: var(--color-primary-yellow);
 	}
 
-	.header .btn--search {
+	.btn--search {
 		padding: 0.8rem 1rem;
 		background-color: transparent;
 	}
@@ -515,6 +569,10 @@
 
 	.header .barra-busqueda {
 		width: 80%;
+	}
+
+	.btn--search{
+		box-shadow: none;
 	}
 
 	.btn--home,

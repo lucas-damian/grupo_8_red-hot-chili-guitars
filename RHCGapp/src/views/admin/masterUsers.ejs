@@ -50,7 +50,7 @@
                     
                     <% if (user.rol == "master") { %>
                                     
-                        <a class="btn--editar" href="/master/edit/<%= user.id %>" disabled style="display: none;"></a>
+                        <a class="btn--editar" href="/master/edit/<%= user.id %>" style="pointer-events: none">disabled</a>
 
                     
                     <% } else { %>
@@ -66,7 +66,7 @@
                             
                             <% if (user.rol == "master") { %>
                                     
-                                <button class="btn--borrar" type="submit" disabled style="display: none;"></button>
+                                <button class="btn--borrar" type="submit" style="pointer-events: none">disabled</button>
                             
                             <% } else { %>
 

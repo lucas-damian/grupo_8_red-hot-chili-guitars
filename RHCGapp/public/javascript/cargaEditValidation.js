@@ -1,14 +1,16 @@
-let qs = function(element){
+qs = function(element){
     return document.querySelector(element);
  }
 
  let $formEdit = qs("#formEdit"),
     $formCarga=qs('#formCarga')
- /*--caja izquierda--*/
+
+    /*--caja izquierda--*/
     $instrumento=qs("#instrumento"),
     $instrumentoErrors=qs("#instrumentoErrors"),
     $categoria=qs("#categoria"),
     $categoriaErrors=qs("#categoriaErrors"),
+   
     /*--caja derecha--*/
     $valor=qs("#valor"),
     $valorErrors=qs("#valorErrors"),
@@ -24,17 +26,17 @@ let qs = function(element){
         switch(true){
             
             case $instrumento.classList.contains("is-invalid") || $instrumento.value.length == 0:
-                alert("Los campos Intrumento, Categoria, y Valor deben ser completados");
+                alert("El campo Instrumento debe ser completado");
                 event.preventDefault();
                 break
             
             case $categoria.classList.contains("is-invalid") || $categoria.value.length == 0:
-                alert("Los campos deben ser completados");
+                alert("El campo Categoria debe ser completado");
                 event.preventDefault();
                 break
         
             case $valor.classList.contains("is-invalid") || $valor.value.length == 0:
-                alert("Los campos deben ser completados");
+                alert("El campo Valor debe ser completado");
                 event.preventDefault();
 
                 break

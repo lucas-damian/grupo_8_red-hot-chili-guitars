@@ -154,26 +154,88 @@ module.exports = {
     prodUpdate: (req, res) => {
 
         const {tipo,modelo,marca,instrumento,categoria,valor,color,kit,description} = req.body;
+        const img = req.body.file;
+        
 
-            /* res.send(req.body) */
+            res.send(img)
             
             db.Products.update({
-                type:tipo.trim(),
-                mark:marca.trim(),
-                instrument:instrumento.trim(),
+                type:tipo? tipo.trim() : tipo,
+                mark:marca? marca.trim() : marca,
+                instrument:instrumento? instrumento.trim() : instrumento,
                 id_category:categoria,
-                model:modelo.trim(),
-                description: description.trim(),
+                model:modelo? modelo.trim() : modelo,
+                description: description? description.trim() : description,
                 kit:kit != "on" ? "off" : "on",
-                price:valor.trim(),
-                color:color.trim()
+                price:valor? valor.trim() : 0,
+                color:color? color.trim() : color
             },{
                 where:{
                     id:req.params.id
                 }
             })
-            .then((product) => {  
+            .then(() => {  
+                /* res.send(req.files) */
+                
+                db.Products.findOne({
+                    where:{
+                        id: req.params.id
+                    },
+                    include:[{association:"imagenes"}]
+                })
+                    .then(product => {
+                       
+                       /*  res.send(req.files) */
+                        db.Images.update({
+                            name: req.files[0] ? req.files[0].filename : product.imagenes[0].name,
+                            id_product: product.id
+                        },
+                        {
+                            where:{
+                                id:req.params.id
+                            }
+                        })
 
+                        .then(() => {
+                            /* res.send(req.files) */
+                            
+                            res.redirect("/products/admin/list")
+                        })
+                        .catch(error => res.send(error))
+                    })
+
+            }) 
+           
+             .then((product) => {
+                res.send(req.files)
+                res.redirect("/products/admin/list")
+            })
+            .catch(error => res.send(error))
+           
+            /* .then((product) => {
+               
+                res.send(product)
+                db.Images.update({
+                    name: req.files[0] ? req.files[0].filename : product.imagenes[0].name,
+                    id_product: product.id
+               },
+               {
+                   where:{
+                       id:req.params.id
+                   }
+               })
+               .then((product) => {
+               
+                res.redirect("/products/admin/list")
+               })
+                .catch(error => res.send(error))
+               
+           })
+           .catch(error => res.send(error)) */
+          
+          
+           /*  .then(() => {  
+                res.send()
                 db.Products.findOne({
                     where:{
                         id: req.params.id
@@ -182,7 +244,7 @@ module.exports = {
                 })
                     .then(product => {
                         /* res.send(product) */
-                        /* res.send(req.files) */
+                        /* res.send(req.files) 
                         db.Images.update({
                             name: req.files[0] ? req.files[0].filename : product.imagenes[0].name,
                             id_product: product.id
@@ -200,8 +262,7 @@ module.exports = {
                         .catch(error => res.send(error))
                     })
 
-            })
-            .catch(error => res.send(error))
+            }) */
            
             /* .then((product) => {
                 res.redirect("/products/detalle-del-producto/"+req.params.id)

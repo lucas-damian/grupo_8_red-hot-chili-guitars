@@ -168,71 +168,71 @@ window.onload = function() {
 
 */
 
-    $user.addEventListener("blur", function(){
-        switch (true) {
-        
-            case !this.value.trim():
-            $userErrors.innerHTML = 'Debes ingresar el email de un usuario';
-            $user.classList.add('is-invalid')
-            break;
+        $user.addEventListener("blur", function(){
+            switch (true) {
             
-            
-            case !regExEmail.test($user.value):
-            $userErrors.innerHTML = 'el email esta mal escrito';
-            $user.classList.add('is-invalid')  
-            break; 
-             
-            
-            default:
-            $userErrors.innerHTML = " ";
-            $user.classList.remove('is-invalid');
-            $user.classList.add('is-valid');
-            break;
-        }
-    });
-    
-    $password.addEventListener("blur", function(){
-        switch (true) {
-        
-            case !this.value.trim():
-            $passwordErrors.innerHTML = 'Escribe la contraseña';
-            $password.classList.add('is-invalid')
-            break;
-            
-            case !regExPass.test($password.value):
-            $passwordErrors.innerHTML = 'contraseña incorrecta o vacia';
-            $password.classList.add('is-invalid')
-            break;
-            
-            default:
-            $password.classList.remove('is-invalid');
-            $password.classList.add('is-valid');
-            $passwordErrors.innerHTML = ''
-            break;
-        }
-    })
-
-    $formLogin.addEventListener("submit", function(event){
-
-        switch(true){
-            
-            case $user.classList.contains("is-invalid") || $user.value.length == 0:
-                alert("hay campos erroneos o vacio: Email ");
-                event.preventDefault();
-                break
-        
-            case $password.classList.contains("is-invalid") || $password.value.length == 0:
-                alert("hay campos erroneos o vacío: Contraseña ");
-                event.preventDefault();
-
-                break
+                case !this.value.trim():
+                $userErrors.innerHTML = 'Debes ingresar el email de un usuario';
+                $user.classList.add('is-invalid')
+                break;
                 
-
-            default:
-                event.submit();
-                break   
-        }
+                
+                case !regExEmail.test($user.value):
+                $userErrors.innerHTML = 'el email esta mal escrito';
+                $user.classList.add('is-invalid')  
+                break; 
+                
+                
+                default:
+                $userErrors.innerHTML = " ";
+                $user.classList.remove('is-invalid');
+                $user.classList.add('is-valid');
+                break;
+            }
+        });
         
-    })
+        $password.addEventListener("blur", function(){
+            switch (true) {
+            
+                case !this.value.trim():
+                $passwordErrors.innerHTML = 'Escribe la contraseña';
+                $password.classList.add('is-invalid')
+                break;
+                
+                case !regExPass.test($password.value):
+                $passwordErrors.innerHTML = 'contraseña incorrecta o vacia';
+                $password.classList.add('is-invalid')
+                break;
+                
+                default:
+                $password.classList.remove('is-invalid');
+                $password.classList.add('is-valid');
+                $passwordErrors.innerHTML = ''
+                break;
+            }
+        })
+
+        $formLogin.addEventListener("submit", function(event){
+
+            switch(true){
+                
+                case $user.classList.contains("is-invalid") || $user.value.length == 0:
+                    alert("hay campos erroneos o vacio: Email ");
+                    event.preventDefault();
+                    break
+            
+                case $password.classList.contains("is-invalid") || $password.value.length == 0:
+                    alert("hay campos erroneos o vacío: Contraseña ");
+                    event.preventDefault();
+
+                    break
+                    
+
+                default:
+                    event.submit();
+                    break   
+            }
+            
+        })
 
 }
