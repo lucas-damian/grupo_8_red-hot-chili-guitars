@@ -1,1 +1,1 @@
-El usuario ingreso a la ruta: /products/update/28?_method=PUT
+El usuario ingreso a la ruta: /stylesheets/sections/productSearch.css

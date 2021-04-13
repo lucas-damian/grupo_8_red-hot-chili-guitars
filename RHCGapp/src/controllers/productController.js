@@ -1,78 +1,78 @@
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
-const {Op} = require('sequelize');
+const { Op } = require('sequelize');
 
 module.exports = {
-    cargaProduc:(req,res) =>{
+    cargaProduc: (req, res) => {
 
         db.Categories.findAll()
             .then(categorias => res.render("admin/cargaProducto", {
                 title: "cargando instrumento",
-                categorias     
+                categorias
             }))
             .catch(error => res.send(error))
     },
 
-    listar: (req,res) => {
+    listar: (req, res) => {
         const error = validationResult(req)
-        
-        if(error.isEmpty()){
 
-           /*  const pageAsNumber = Number.parseInt(req.query.page)
-            const sizeAsNumber = Number.parseInt(req.query.size)
+        if (error.isEmpty()) {
 
+            /*  const pageAsNumber = Number.parseInt(req.query.page)
+             const sizeAsNumber = Number.parseInt(req.query.size)
+ 
+ 
+             let page = 0
+             if(!Number.isNaN(pageAsNumber) && pageAsNumber > 0){
+                 page = pageAsNumber;
+             }
+ 
+             let size = 6;
+             if(!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0 && sizeAsNumber < 6){
+                 size = sizeAsNumber
+             } */
 
-            let page = 0
-            if(!Number.isNaN(pageAsNumber) && pageAsNumber > 0){
-                page = pageAsNumber;
-            }
-
-            let size = 6;
-            if(!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0 && sizeAsNumber < 6){
-                size = sizeAsNumber
-            } */
-            
             db.Products.findAll({
-                include:[{association:"categorias"},
-                         {association:"imagenes"}],
-                order:[["id","DESC"]],
-             /*    limit:size,
-                offset: page * size */
+                include: [{ association: "categorias" },
+                { association: "imagenes" }],
+                order: [["id", "DESC"]],
+                /*    limit:size,
+                   offset: page * size */
             })
-             .then(productos => {
-                 /* res.send(productos) */
-                 res.render("admin/adminProducts",{
-                     title:"productos",
-                     productos:productos,
-                     msg: "Estos son tus instrumentos"
-                 })
-             })
-             .catch(error => res.send(error))
-       
-       
-       
-        }else{
+                .then(productos => {
+                    /* res.send(productos) */
+                    res.render("admin/adminProducts", {
+                        title: "productos",
+                        productos: productos,
+                        msg: "Estos son tus instrumentos"
+                    })
+                })
+                .catch(error => res.send(error))
+
+
+
+        } else {
             res.send(error)
         }
-      
+
 
     },
 
-        
-    detailProduct : (req, res) => {
+
+    detailProduct: (req, res) => {
 
         const error = validationResult(req)
 
-        if(error.isEmpty()){
+        if (error.isEmpty()) {
 
             db.Products.findOne({
-                where:{
-                    id : req.params.id
+                where: {
+                    id: req.params.id
                 },
-                include:[{association:"categorias"},
-                         {association:"imagenes"}]
-                })
-                .then( producto => {
+                include: [{ association: "categorias" },
+                { association: "imagenes" }]
+            })
+                .then(producto => {
                     /* res.send(producto) */
                     res.render("detalleProducto", {
                         title: "+ Info del producto",
@@ -80,70 +80,70 @@ module.exports = {
                     })
                 })
                 .catch(error => res.send(error))
-        
-        }else{
+
+        } else {
             res.send(error)
         }
     },
-   
 
-    store: (req,res) => {
 
-        const {tipo,modelo,marca,instrumento,categoria,valor,color,kit,description} = req.body;
+    store: (req, res) => {
+
+        const { tipo, modelo, marca, instrumento, categoria, valor, color, kit, description } = req.body;
         const error = validationResult(req)
-            
-        if(error.isEmpty()){
+
+        if (error.isEmpty()) {
 
             db.Products.create({
-                type:tipo,
-                mark:marca,
-                instrument:instrumento,
-                id_category:categoria,
-                model:modelo,
-                price:valor,
+                type: tipo,
+                mark: marca,
+                instrument: instrumento,
+                id_category: categoria,
+                model: modelo,
+                price: valor,
                 description,
-                kit: kit ? "on" : null ,
-                color:color
+                kit: kit ? "on" : null,
+                color: color
             })
-            .then((newProduct) => {  
-                
-                db.Images.create({
-                    name: (req.files[0]) ? req.files[0].filename : "default-image.png",
-                    id_product: newProduct.id
-                })
-                .then(() => {
-                    
-                    res.redirect("/products/admin/list")
+                .then((newProduct) => {
+
+                    db.Images.create({
+                        name: (req.files[0]) ? req.files[0].filename : "default-image.png",
+                        id_product: newProduct.id
+                    })
+                        .then(() => {
+
+                            res.redirect("/products/admin/list")
+                        })
+                        .catch(error => res.send(error))
+
                 })
                 .catch(error => res.send(error))
 
-            })
-            .catch(error => res.send(error))
-        
-        }else{
+        } else {
             /* res.send(error) */
-            res.render("partials/error-msg",{
-                errores:error
+            res.render("partials/error-msg", {
+                errores: error
             })
             /* res.send(error.msg) */
         }
-       
+
     },
 
 
-    produEdit: (req,res) => {
+    produEdit: (req, res) => {
 
         let categorias = db.Categories.findAll();
-        
+
         let producto = db.Products.findOne({
-            where:{
+            where: {
                 id: req.params.id
             }
         })
 
-        Promise.all([categorias,producto])
-            .then(([categorias,producto]) => {
-                res.render("admin/editProducts",{
+        Promise.all([categorias, producto])
+            .then(([categorias, producto]) => {
+                res.render("admin/editProducts", {
                     title: "editando instrumento",
                     producto,
                     categorias
@@ -153,204 +153,180 @@ module.exports = {
 
     prodUpdate: (req, res) => {
 
-        const {tipo,modelo,marca,instrumento,categoria,valor,color,kit,description} = req.body;
-        const img = req.body.file;
-        
+        const { tipo, modelo, marca, instrumento, categoria, valor, color, kit, description } = req.body;
 
-            res.send(img)
-            
-            db.Products.update({
-                type:tipo? tipo.trim() : tipo,
-                mark:marca? marca.trim() : marca,
-                instrument:instrumento? instrumento.trim() : instrumento,
-                id_category:categoria,
-                model:modelo? modelo.trim() : modelo,
-                description: description? description.trim() : description,
-                kit:kit != "on" ? "off" : "on",
-                price:valor? valor.trim() : 0,
-                color:color? color.trim() : color
-            },{
-                where:{
-                    id:req.params.id
-                }
-            })
-            .then(() => {  
-                /* res.send(req.files) */
-                
-                db.Products.findOne({
-                    where:{
-                        id: req.params.id
-                    },
-                    include:[{association:"imagenes"}]
-                })
-                    .then(product => {
-                       
-                       /*  res.send(req.files) */
-                        db.Images.update({
-                            name: req.files[0] ? req.files[0].filename : product.imagenes[0].name,
-                            id_product: product.id
-                        },
-                        {
-                            where:{
-                                id:req.params.id
-                            }
-                        })
 
-                        .then(() => {
-                            /* res.send(req.files) */
-                            
-                            res.redirect("/products/admin/list")
-                        })
-                        .catch(error => res.send(error))
+
+        db.Products.update({
+            type: tipo ? tipo.trim() : tipo,
+            mark: marca ? marca.trim() : marca,
+            instrument: instrumento ? instrumento.trim() : instrumento,
+            id_category: categoria,
+            model: modelo ? modelo.trim() : modelo,
+            description: description ? description.trim() : description,
+            kit: kit != "on" ? "off" : "on",
+            price: valor ? valor.trim() : 0,
+            color: color ? color.trim() : color
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(() => {
+                db.Images.update({
+                    name: req.files[0] ? req.files[0].filename : undefined,
+                },
+                    {
+                        where: {
+                            id_product: req.params.id
+                        }
                     })
 
-            }) 
-           
-             .then((product) => {
-                res.send(req.files)
-                res.redirect("/products/admin/list")
+                    .then(() => {
+                        res.redirect("/products/admin/list")
+                    })
             })
             .catch(error => res.send(error))
+
+        /* .then((product) => {
            
-            /* .then((product) => {
-               
-                res.send(product)
-                db.Images.update({
-                    name: req.files[0] ? req.files[0].filename : product.imagenes[0].name,
-                    id_product: product.id
-               },
-               {
-                   where:{
-                       id:req.params.id
-                   }
-               })
-               .then((product) => {
-               
-                res.redirect("/products/admin/list")
-               })
-                .catch(error => res.send(error))
-               
+            res.send(product)
+            db.Images.update({
+                name: req.files[0] ? req.files[0].filename : product.imagenes[0].name,
+                id_product: product.id
+           },
+           {
+               where:{
+                   id:req.params.id
+               }
            })
-           .catch(error => res.send(error)) */
-          
-          
-           /*  .then(() => {  
-                res.send()
-                db.Products.findOne({
-                    where:{
-                        id: req.params.id
-                    },
-                    include:[{association:"imagenes"}]
-                })
-                    .then(product => {
-                        /* res.send(product) */
-                        /* res.send(req.files) 
-                        db.Images.update({
-                            name: req.files[0] ? req.files[0].filename : product.imagenes[0].name,
-                            id_product: product.id
-                        },
-                        {
-                            where:{
-                                id:req.params.id
-                            }
-                        })
-
-                        .then(() => {
-                    
-                            res.redirect("/products/detalle-del-producto/"+req.params.id)
-                        })
-                        .catch(error => res.send(error))
-                    })
-
-            }) */
+           .then((product) => {
            
-            /* .then((product) => {
-                res.redirect("/products/detalle-del-producto/"+req.params.id)
-            })
-            .catch(error => res.send(error)) */
-            
+            res.redirect("/products/admin/list")
+           })
+            .catch(error => res.send(error))
+           
+       })
+       .catch(error => res.send(error)) */
+
+
+        /*  .then(() => {  
+             res.send()
+             db.Products.findOne({
+                 where:{
+                     id: req.params.id
+                 },
+                 include:[{association:"imagenes"}]
+             })
+                 .then(product => {
+                     /* res.send(product) */
+        /* res.send(req.files) 
+        db.Images.update({
+            name: req.files[0] ? req.files[0].filename : product.imagenes[0].name,
+            id_product: product.id
+        },
+        {
+            where:{
+                id:req.params.id
+            }
+        })
+
+        .then(() => {
+    
+            res.redirect("/products/detalle-del-producto/"+req.params.id)
+        })
+        .catch(error => res.send(error))
+    })
+
+}) */
+
+        /* .then((product) => {
+            res.redirect("/products/detalle-del-producto/"+req.params.id)
+        })
+        .catch(error => res.send(error)) */
+
     },
 
-    
-    borrar: (req,res) => {
+
+    borrar: (req, res) => {
 
         db.Images.destroy({
-            where:{
-                id_product:req.params.id
+            where: {
+                id_product: req.params.id
             }
         })
-        .then( () => {
-            
-            db.Products.destroy({
-                where:{
-                    id:req.params.id
-                }
-            })
-                .then(() => {
-                    res.redirect("/products/admin/list")
+            .then(() => {
+
+                db.Products.destroy({
+                    where: {
+                        id: req.params.id
+                    }
                 })
-                .catch(error => res.send(error))
-        })
+                    .then(() => {
+                        res.redirect("/products/admin/list")
+                    })
+                    .catch(error => res.send(error))
+            })
 
     },
-    
-    
-    
-    
-    search: (req,res) => {
+
+
+
+
+    search: (req, res) => {
         let buscar = req.query.busqueda.toLowerCase().trim();
 
-       
+
         let productos = db.Products.findAll({
-            where:{
-                [Op.or]:[
-                    
-                    {instrument:{[Op.like]:`%${buscar}%`}},
-                    {mark:{[Op.like]:`%${buscar}%`}}
-                    
+            where: {
+                [Op.or]: [
+
+                    { instrument: { [Op.like]: `%${buscar}%` } },
+                    { mark: { [Op.like]: `%${buscar}%` } }
+
                 ]
             },
-                include:[{association:"categorias"},
-                         {association:"imagenes"}]
-            })
-            
+            include: [{ association: "categorias" },
+            { association: "imagenes" }]
+        })
+
         let categorias = db.Categories.findOne({
-            where:{
-                name:{[Op.like]:`%${buscar}%`}
+            where: {
+                name: { [Op.like]: `%${buscar}%` }
             }
         })
-            
-            Promise.all([productos, categorias])
-                .then(([productos, categorias]) => {
 
-                    /* res.send(productos) */
-                    
-                    res.render("admin/adminProducts",{
-                        title:"productos",
-                        productos:productos,
-                        categorias,
-                        msg: "Estos son tus instrumentos"
-                    
-                    })
+        Promise.all([productos, categorias])
+            .then(([productos, categorias]) => {
+
+                /* res.send(productos) */
+
+                res.render("admin/adminProducts", {
+                    title: "productos",
+                    productos: productos,
+                    categorias,
+                    msg: "Estos son tus instrumentos"
 
                 })
-                .catch(error => res.send(error))
-        
+
+            })
+            .catch(error => res.send(error))
+
     },
-    
-    
-    listarUser: (req,res) => {
-        res.render("userProducts",{
-            title:"productos",
-            productos:productos,
+
+
+    listarUser: (req, res) => {
+        res.render("userProducts", {
+            title: "productos",
+            productos: productos,
             msg: "Estos son tus instrumentos"
         });
     }
-     
+
 }
 
 
-/* 
+/*
 agregar muchas imagenes
 
 addImg: (req, res) => {
