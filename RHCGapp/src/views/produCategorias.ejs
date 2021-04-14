@@ -58,7 +58,7 @@
 							<% } else if (locals.user) { %>
 								<a class="btn--editar" href="/products/detalle-del-producto/<%= categorias[i].productos[j].id %> ">+info!</a>
 
-								<form action="<%= categorias[i].productos[j].id %>?_method=PUT" method="POST">
+								<form action="?_method=PUT" method="POST">
 									<button class="btn--borrar" type="submit">Agregar al carrito</button>
 								</form>
 							<% } %>
@@ -67,7 +67,7 @@
 							
 							<a class="btn--editar" href="/products/detalle-del-producto/<%= categorias[i].productos[j].id %> ">+info!</a>
 
-							<form action="<%= categorias[i].productos[j].id %>?_method=PUT" method="POST">
+							<form action="?_method=PUT" method="POST">
 								<button class="btn--borrar" type="submit">Agregar al carrito</button>
 							</form>
 						<% } %>

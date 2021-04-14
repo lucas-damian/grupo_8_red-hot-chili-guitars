@@ -72,7 +72,7 @@
 									<button class="btn--borrar" type="submit">borrar</button>
 								</form>
 							<% } else if (locals.user) { %>
-								<a class="btn--editar" href="/products/detalle-del-producto/<%= productos.id %> ">+info!</a>
+								<a class="btn--editar" href="/products/detalle-del-producto/<%= producto.id %> ">+info!</a>
 
 								<form action="?_method=PUT" method="POST">
 									<button class="btn--borrar" type="submit">Agregar al carrito</button>
