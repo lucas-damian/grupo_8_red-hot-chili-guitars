@@ -92,7 +92,7 @@
 }
 
 .categorias .categorias--item:nth-child(4){
-	background-image: url("/public/img/bg-images/bg-saxo_325.png");
+	background-image: url("/img/bg-images/bg-saxo_325.png");
 	background-position: 50% 50%;
 }
 
@@ -127,7 +127,7 @@
 	}
 	
 	.categorias .categorias--item:nth-child(4){
-		background-image: url("/public/img/bg-images/bg-saxo_768.png");
+		background-image: url("/img/bg-images/bg-saxo_768.png");
 		background-position: 50% 50%;
 	}
 	

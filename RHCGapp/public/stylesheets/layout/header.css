@@ -227,7 +227,7 @@
 .btn--logeoRegistro__mobile {
 	display: inline-block;
 	position: relative;
-	top: -7.5rem;
+	top: -9rem;
 	left: 4rem;
 	z-index: 11;
 	background-color: var(--color-primary-red);

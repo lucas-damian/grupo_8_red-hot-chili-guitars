@@ -45,6 +45,7 @@ margin-bottom: 1rem;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+position: relative;
 }
 
 
@@ -71,6 +72,28 @@ justify-content: space-between;
 	box-shadow: inset .3rem .3rem 1rem rgba(126, 126, 126, 0.4), inset -.3rem -.3rem 1rem rgba(126, 126, 126, 0.4);
 	font-family: arimo;
 }
+
+.view-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .5rem .3rem;
+	font-size: 1.3rem;
+	color: var(--color-primary-darkRed);
+	position: absolute;
+	right: 0;
+	top:0;
+	border-radius: 50%;
+	cursor:pointer;
+}
+
+.view-div .view-pass{
+	position: absolute;
+	visibility: hidden;
+}
+
+
+
 
 .log--check{
 	font-size: 1.5rem;

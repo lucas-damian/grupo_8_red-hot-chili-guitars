@@ -55,7 +55,7 @@ window.onload = function(){
     } 
 
    
-    $searchForm.addEventListener("submit", function(e){
+   /*  $searchForm.addEventListener("submit", function(e){
         
         e.preventDefault();
         
@@ -81,7 +81,7 @@ window.onload = function(){
                 $searchBar.classList.remove("busqueda__mobile");
                 $searchBtn.classList.remove("btn--search__active");
                 $searchInput.classList.remove("searchInput-mobile");
-                $hamBtn.classList.remove("ham-search") */
+                $hamBtn.classList.remove("ham-search") 
             
-    })
+    }) */
 }

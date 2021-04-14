@@ -20,7 +20,10 @@ let $formRegister = qs("#formRegister"),
     $userErrors=qs('#userErrors'),
 
     $password=qs('#password'),
-    $passwordErrors=qs('#passwordErrors')
+    $passwordErrors=qs('#passwordErrors'),
+
+    $passView = document.querySelectorAll(".view-div"),
+    $passIcon = qs ("#passIcon"),
     
     regExAlpha= /^[a-zA-Z\sñáéíóúü ]*$/,
     
@@ -36,7 +39,7 @@ let $formRegister = qs("#formRegister"),
 window.onload = function() {
 
 
-
+  
         $userName.addEventListener("blur", function(){
         
             switch (true) {
@@ -161,6 +164,7 @@ window.onload = function() {
         })
 
     
+        
    
 
 /* 
@@ -235,4 +239,27 @@ window.onload = function() {
             
         })
 
+
+        for(let i = 0; i < $passView.length; i++){
+
+            
+                
+            $passView[i].addEventListener("click", function(){
+               /*  alert("view touched") */
+
+               if($passView[0]){
+                $password.type = "text";
+               }
+
+               if($passView[1]){
+                $pass.type = "text";
+                }
+                
+                if($passView[2]){
+                $pass2.type = "text";
+                }
+
+            })
+        }
+        
 }
