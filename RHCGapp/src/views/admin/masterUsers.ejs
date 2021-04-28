@@ -25,24 +25,32 @@
     <% } else { %>
 
         <h2 class="productos-title" id="top"><%= msg %></h2>
+        
+        <form class="search-row">
+            <h3 class="search-subtitle">buscá a un usuario</h3>
+            <div class="search-container">
+                <input class="search-input" type="text" placeholder="buscá a tú usuario">
+            </div>
+        </form>
+        
         <ul class="productos-container">
             <% users.forEach(user => { %>
             <li class="productos-item">
-                
+            
                 <p class="productos-text">
-                <%= user.id %>
+                    nombre: <%= user.name %>
                 </p>
 
                 <p class="productos-text">
-                    <%= user.name %>
+                   id: <%= user.id %>
                 </p>
                 
                 <p class="productos-text">
-                <%=user.email %>
+                 email: <%=user.email %>
                 </p>
                 
                 <p class="productos-text">
-                <%= user.rol %>  
+                 rol: <%= user.rol %>  
                 </p>
 
                 <div class="btns--container">
@@ -103,5 +111,6 @@
     <!-- footer -->
     <%- include('../partials/footer') %>
     <!-- /footer -->
+    <script src="../../../javascript/searchUser.js"></script>
 </body>
 </html>

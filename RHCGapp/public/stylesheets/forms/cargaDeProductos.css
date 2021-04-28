@@ -19,7 +19,7 @@
 
 .cargaProductos .carga{
 	padding: 2rem;
-	background-color:  var(--color-primary-yellow);
+	background-color:  #f6eec9;
 	margin: 2rem auto 0 auto;
 	width: 80vw;
 	display: flex;
@@ -84,8 +84,8 @@
 }
 
 .cargaProductos .btn--submit{
-	background-color: var(--color-primary-darkRed);
-	color: var(--color-primary-yellow);
+	background-color: #4c0505;
+	color: #f6eec9;
 	border: none;
 	margin-top: 2rem;
 	margin-bottom: 1.3rem;
@@ -93,7 +93,7 @@
 
 .cargaProductos .btn--productos{
 	background-color: var(--color-primary-green);
-	color: var(--color-primary-yellow);
+	color: #f6eec9;
 }
 
 

@@ -240,12 +240,14 @@ window.onload = function() {
         })
 
 
+
+/* 
         for(let i = 0; i < $passView.length; i++){
 
             
                 
             $passView[i].addEventListener("click", function(){
-               /*  alert("view touched") */
+                alert("view touched")
 
                if($passView[0]){
                 $password.type = "text";
@@ -260,6 +262,6 @@ window.onload = function() {
                 }
 
             })
-        }
+        } */
         
 }

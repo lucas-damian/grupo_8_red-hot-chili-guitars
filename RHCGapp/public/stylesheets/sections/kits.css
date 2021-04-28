@@ -31,6 +31,7 @@
 	-webkit-overflow-scrolling: touch;
 	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
+
 }
 
 .kits .kits--slider::-webkit-scrollbar{
@@ -42,6 +43,7 @@
 	display: flex;
 	padding: 0.5rem 0 5rem 0;
 	padding-left: 3rem;
+
 }
 
 .kits .article--sub-title {

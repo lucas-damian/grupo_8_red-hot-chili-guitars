@@ -415,6 +415,7 @@
 	.btn--search {
 		padding: 0.8rem 1rem;
 		background-color: transparent;
+		box-shadow: none;
 	}
 
 	.header .list--header {

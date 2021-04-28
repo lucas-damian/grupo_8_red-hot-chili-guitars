@@ -18,19 +18,7 @@ module.exports = {
 
         if (error.isEmpty()) {
 
-            /*  const pageAsNumber = Number.parseInt(req.query.page)
-             const sizeAsNumber = Number.parseInt(req.query.size)
- 
- 
-             let page = 0
-             if(!Number.isNaN(pageAsNumber) && pageAsNumber > 0){
-                 page = pageAsNumber;
-             }
- 
-             let size = 6;
-             if(!Number.isNaN(sizeAsNumber) && sizeAsNumber > 0 && sizeAsNumber < 6){
-                 size = sizeAsNumber
-             } */
+
 
             db.Products.findAll({
                 include: [{ association: "categorias" },
@@ -52,7 +40,9 @@ module.exports = {
 
 
         } else {
-            res.send(error)
+            res.render("partials/error-msg", {
+                errores: error
+            })
         }
 
 
@@ -82,7 +72,9 @@ module.exports = {
                 .catch(error => res.send(error))
 
         } else {
-            res.send(error)
+            res.render("partials/error-msg", {
+                errores: error
+            })
         }
     },
 
